@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+
+# Optionnel: bloque les URLs techniques si tu en ajoutes plus tard
+# Disallow: /cdn-cgi/
+
+Sitemap: https://www.ccdeveloppement.eu/sitemap.xml

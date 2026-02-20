@@ -12,7 +12,6 @@
 <link rel="preload" href="./fonts/Morena-Embedded.otf" as="font" type="font/otf" crossorigin>
 <link rel="preload" href="./fonts/Morena-SemiBold-Embedded.otf" as="font" type="font/otf" crossorigin>
 <link rel="preload" href="./fonts/Morena-Bold-Embedded.otf" as="font" type="font/otf" crossorigin>
-<link rel="preload" href="./Images/Le-Divino-hero.jpg" as="image" fetchpriority="high">
 <meta property="og:locale" content="fr_FR">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Cyril Canon - Developpeur Web & Automatisation | CC Developpement">
@@ -116,8 +115,7 @@
 @font-face {
   font-family: 'Brandon';
   src: url('./fonts/Brandon_reg.otf') format('opentype');
-  font-weight: 400;
-  font-style: normal;
+  font-weight: 400; font-style: normal; font-display: swap;
 }
 
 :root {
@@ -278,7 +276,7 @@ nav {
   content: ''; width: 10px; height: 10px; flex: 0 0 10px;
   align-self: center;
   background: var(--accent);
-  border-radius: 50%; animation: pulse 2s infinite; box-shadow: 0 0 8px var(--accent);
+  border-radius: 50%;
 }
 .hero-badge::after,
 .nav-cta::before,
@@ -297,10 +295,6 @@ nav {
 .nav-cta:hover::before,
 .btn-primary:hover::before,
 .btn-whatsapp:hover::before { left: 130%; }
-@keyframes pulse {
-  0%, 100% { opacity: 1; transform: scale(1); }
-  50% { opacity: 0.5; transform: scale(0.8); }
-}
 .hero-title {
   font-size: clamp(44px, 8vw, 84px); font-weight: 700; line-height: 1.0;
   letter-spacing: -2px; margin-bottom: 28px; animation: none;
@@ -377,8 +371,7 @@ main#main-content { padding-top: 0; }
   letter-spacing: -2px; line-height: 1.1; margin-bottom: 20px;
 }
 .section-heading .muted { color: var(--gray-light); font-weight: 300; }
-.section-desc { font-size: 17px; color: var(--gray); max-width: 500px; line-height: 1.7; font-weight: 300; }
-.section-desc { font-size: 20px; max-width: 640px; font-weight: 700; }
+.section-desc { font-size: 20px; color: var(--gray); max-width: 640px; line-height: 1.7; font-weight: 700; }
 
 /* PARCOURS */
 .parcours-section { background: var(--dark); }
@@ -419,8 +412,8 @@ main#main-content { padding-top: 0; }
   transform-style: preserve-3d;
 }
 .project-card:hover {
-  border-color: rgba(57,255,20,0.28); transform: translateY(-10px) scale(1.015) rotateX(2deg);
-  box-shadow: 0 30px 90px rgba(0,0,0,0.5), 0 0 50px rgba(57,255,20,0.12);
+  border-color: rgba(57,255,20,0.24); transform: translateY(-6px);
+  box-shadow: 0 16px 48px rgba(0,0,0,0.45), 0 0 24px rgba(57,255,20,0.1);
 }
 .project-card.featured { grid-column: 1 / -1; display: grid; grid-template-columns: 1fr 1fr; }
 @media (max-width: 768px) { .project-card.featured { grid-template-columns: 1fr; } }
@@ -438,7 +431,7 @@ main#main-content { padding-top: 0; }
   width: 100%; height: 100%; object-fit: cover; position: absolute;
   top: 0; left: 0; z-index: 0; transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
 }
-.project-card:hover .project-visual img { transform: scale(1.06); }
+.project-card:hover .project-visual img { transform: scale(1.02); }
 .project-visual-overlay {
   position: absolute; top: 0; left: 0; right: 0; bottom: 0;
   background: linear-gradient(135deg, rgba(9,9,11,0.4) 0%, rgba(9,9,11,0.1) 100%);
@@ -448,7 +441,7 @@ main#main-content { padding-top: 0; }
   position: absolute; left: 50%; bottom: 14px; transform: translateX(-50%);
   font-size: 11px; font-weight: 600; padding: 6px 14px;
   border-radius: 100px; z-index: 3;
-  backdrop-filter: blur(4px); -webkit-backdrop-filter: blur(4px);
+  background-clip: padding-box;
   white-space: nowrap;
 }
 .status-live { background: rgba(57,255,20,0.12); color: var(--accent); border: 1px solid rgba(57,255,20,0.2); }
@@ -579,26 +572,6 @@ footer {
 }
 
 /* ANIMATIONS */
-@keyframes fadeInUp {
-  from { opacity: 0; transform: translateY(24px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-@keyframes fadeInDown {
-  from { opacity: 0; transform: translateY(-16px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-@keyframes badgeFloat {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-3px); }
-}
-@keyframes gentleFloat {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-6px); }
-}
-@keyframes haloPulse {
-  0%, 100% { box-shadow: 0 24px 80px rgba(0,0,0,0.5), 0 0 0 10px rgba(57,255,20,0.16), 0 0 60px rgba(57,255,20,0.34); }
-  50% { box-shadow: 0 24px 80px rgba(0,0,0,0.5), 0 0 0 14px rgba(57,255,20,0.22), 0 0 85px rgba(57,255,20,0.46); }
-}
 .reveal { opacity: 1; transform: none; filter: none; }
 .js .reveal { opacity: 0; transform: translateY(24px); filter: none; transition: opacity 0.45s ease, transform 0.45s ease; }
 .reveal.visible { opacity: 1; transform: translateY(0) scale(1); filter: blur(0); }
@@ -664,7 +637,7 @@ footer {
     </div>
     <div class="hero-photo">
       <div class="hero-photo-frame">
-        <img src="./Images/Cyril-Canon-portrait.jpg" alt="Cyril Canon - CC Développement" width="640" height="640" loading="eager" decoding="async" fetchpriority="high">
+        <img src="./Images/Cyril-Canon-portrait-640.jpg" srcset="./Images/Cyril-Canon-portrait-320.jpg 240w, ./Images/Cyril-Canon-portrait-640.jpg 480w" sizes="(max-width: 900px) 220px, 320px" alt="Cyril Canon - CC Développement" width="480" height="640" loading="eager" decoding="async" fetchpriority="high">
       </div>
     </div>
     <div class="hero-stats">
@@ -697,7 +670,7 @@ footer {
     <div class="parcours-timeline reveal">
       <div class="parcours-step" data-step="01">
         <div class="step-photo">
-          <img src="./Images/Cyril-Canon-karting.jpg" alt="Cyril Canon pilote karting">
+          <img src="./Images/Cyril-Canon-karting-720.jpg" srcset="./Images/Cyril-Canon-karting-480.jpg 480w, ./Images/Cyril-Canon-karting-720.jpg 720w" sizes="(max-width: 560px) 100vw, (max-width: 900px) 50vw, 25vw" alt="Cyril Canon pilote karting" width="720" height="562" loading="lazy" decoding="async">
         </div>
         <div class="step-period">1982 — 1997</div>
         <div class="step-title">Pilote Sport Automobile</div>
@@ -710,7 +683,7 @@ footer {
       </div>
       <div class="parcours-step" data-step="02">
         <div class="step-photo">
-          <img src="./Images/Entrepreneur.jpg" alt="Photo entrepreneuriat" loading="lazy" decoding="async">
+          <img src="./Images/Entrepreneur-800.jpg" srcset="./Images/Entrepreneur-480.jpg 480w, ./Images/Entrepreneur-800.jpg 800w" sizes="(max-width: 560px) 100vw, (max-width: 900px) 50vw, 25vw" alt="Photo entrepreneuriat" width="800" height="436" loading="lazy" decoding="async">
         </div>
         <div class="step-period">1993 — 2006</div>
         <div class="step-title">Entrepreneur</div>
@@ -724,7 +697,7 @@ footer {
       </div>
       <div class="parcours-step" data-step="03">
         <div class="step-photo">
-          <img src="./Images/Chauffeur%20poids%20lourds.jpg" alt="Photo logistique poids lourds" loading="lazy" decoding="async">
+          <img src="./Images/Chauffeur%20poids%20lourds-800.jpg" srcset="./Images/Chauffeur%20poids%20lourds-480.jpg 480w, ./Images/Chauffeur%20poids%20lourds-800.jpg 800w" sizes="(max-width: 560px) 100vw, (max-width: 900px) 50vw, 25vw" alt="Photo logistique poids lourds" width="800" height="436" loading="lazy" decoding="async">
         </div>
         <div class="step-period">2009 — 2024</div>
         <div class="step-title">Chauffeur Poids Lourds</div>
@@ -737,7 +710,7 @@ footer {
       </div>
       <div class="parcours-step" data-step="04">
         <div class="step-photo">
-          <img src="./Images/Expert%20IA%20-%20No%20Code.jpg" alt="Photo développement et IA" loading="lazy" decoding="async">
+          <img src="./Images/Expert%20IA%20-%20No%20Code-800.jpg" srcset="./Images/Expert%20IA%20-%20No%20Code-480.jpg 480w, ./Images/Expert%20IA%20-%20No%20Code-800.jpg 800w" sizes="(max-width: 560px) 100vw, (max-width: 900px) 50vw, 25vw" alt="Photo développement et IA" width="800" height="436" loading="lazy" decoding="async">
         </div>
         <div class="step-period">2017 — Aujourd'hui</div>
         <div class="step-title">Développeur Web, No-Code & IA</div>
@@ -991,7 +964,7 @@ footer {
 <!-- MAP -->
 <section class="map-section">
   <div class="map-container">
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2893.5!2d3.4731!3d43.3107!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12b1a8f5b4f5f5f5%3A0x0!2s27+Rue+Basse%2C+34300+Agde!5e0!3m2!1sfr!2sfr!4v1" title="Carte Google Maps - CC Developpement a Agde" allowfullscreen loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+    <iframe data-src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2893.5!2d3.4731!3d43.3107!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12b1a8f5b4f5f5f5%3A0x0!2s27+Rue+Basse%2C+34300+Agde!5e0!3m2!1sfr!2sfr!4v1" title="Carte Google Maps - CC Developpement a Agde" allowfullscreen loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
   </div>
 </section>
 
@@ -1039,6 +1012,29 @@ document.querySelectorAll('a[href^="#"]').forEach((a) => {
     if (navToggle) navToggle.setAttribute('aria-expanded', 'false');
   });
 });
+
+const mapIframe = document.querySelector('.map-container iframe[data-src]');
+if (mapIframe) {
+  const loadMap = () => {
+    if (!mapIframe.getAttribute('src')) {
+      mapIframe.setAttribute('src', mapIframe.dataset.src);
+    }
+  };
+
+  if ('IntersectionObserver' in window) {
+    const mapObserver = new IntersectionObserver((entries, obs) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          loadMap();
+          obs.disconnect();
+        }
+      });
+    }, { rootMargin: '300px 0px' });
+    mapObserver.observe(mapIframe);
+  } else {
+    loadMap();
+  }
+}
 </script>
 
 </body>
