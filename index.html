@@ -353,7 +353,7 @@ nav {
 }
 .hero-stat-value { font-size: 36px; font-weight: 700; color: var(--white); letter-spacing: -1px; }
 .hero-stat-value .unit { font-size: 20px; color: var(--accent); }
-.hero-stat-label { font-size: 13px; color: var(--gray-light); margin-top: 4px; font-weight: 300; }
+.hero-stat-label { font-size: 16px; color: var(--gray); margin-top: 6px; font-weight: 700; line-height: 1.35; }
 
 main#main-content { padding-top: 0; }
 
@@ -445,9 +445,11 @@ main#main-content { padding-top: 0; }
   z-index: 1;
 }
 .project-status {
-  position: absolute; top: 16px; right: 16px;
-  font-size: 11px; font-weight: 600; padding: 4px 12px;
-  border-radius: 100px; z-index: 2;
+  position: absolute; left: 50%; bottom: 14px; transform: translateX(-50%);
+  font-size: 11px; font-weight: 600; padding: 6px 14px;
+  border-radius: 100px; z-index: 3;
+  backdrop-filter: blur(4px); -webkit-backdrop-filter: blur(4px);
+  white-space: nowrap;
 }
 .status-live { background: rgba(57,255,20,0.12); color: var(--accent); border: 1px solid rgba(57,255,20,0.2); }
 .status-wip { background: rgba(245,158,11,0.15); color: var(--amber); border: 1px solid rgba(245,158,11,0.2); }
@@ -763,7 +765,7 @@ footer {
       <!-- LE DIVINO - Featured avec photo -->
       <div class="project-card featured reveal">
         <div class="project-visual">
-          <img src="./Images/Le-Divino-hero.jpg" alt="Le Divino Restaurant Agde" decoding="async" fetchpriority="high" style="width:100%;height:100%;object-fit:cover;position:absolute;top:0;left:0;">
+          <img src="./Images/Le-Divino-hero-1200.jpg" srcset="./Images/Le-Divino-hero-640.jpg 640w, ./Images/Le-Divino-hero-1200.jpg 1200w" sizes="(max-width: 768px) 100vw, 50vw" alt="Le Divino Restaurant Agde" width="1200" height="899" loading="eager" decoding="async" fetchpriority="high" style="width:100%;height:100%;object-fit:cover;position:absolute;top:0;left:0;">
           <div class="project-visual-overlay"></div>
           <span class="project-status status-wip">En cours</span>
         </div>
@@ -789,7 +791,7 @@ footer {
       <!-- CONTENTLAB -->
       <div class="project-card reveal">
         <div class="project-visual">
-          <img src="./Images/ContentLab.jpg" alt="Photo ContentLab" loading="lazy" decoding="async">
+          <img src="./Images/ContentLab-1200.jpg" srcset="./Images/ContentLab-640.jpg 640w, ./Images/ContentLab-1200.jpg 1200w" sizes="(max-width: 768px) 100vw, 50vw" alt="Photo ContentLab" width="1200" height="654" loading="lazy" decoding="async">
           <div class="project-visual-overlay"></div>
           <span class="project-status status-live">En production</span>
         </div>
@@ -813,7 +815,7 @@ footer {
       <!-- ARTIMON BIKE -->
       <div class="project-card reveal">
         <div class="project-visual">
-          <img src="./Images/Artimon%20Bike.jpg" alt="Photo Artimon Bike" loading="lazy" decoding="async">
+          <img src="./Images/Artimon%20Bike-1200.jpg" srcset="./Images/Artimon%20Bike-640.jpg 640w, ./Images/Artimon%20Bike-1200.jpg 1200w" sizes="(max-width: 768px) 100vw, 50vw" alt="Photo Artimon Bike" width="1200" height="654" loading="lazy" decoding="async">
           <div class="project-visual-overlay"></div>
           <span class="project-status status-live">En ligne</span>
         </div>
@@ -838,7 +840,7 @@ footer {
       <!-- VELVET ORACLE -->
       <div class="project-card reveal">
         <div class="project-visual">
-          <img src="./Images/Velvet%20Oracle.jpg" alt="Photo Velvet Oracle" loading="lazy" decoding="async">
+          <img src="./Images/Velvet%20Oracle-1200.jpg" srcset="./Images/Velvet%20Oracle-640.jpg 640w, ./Images/Velvet%20Oracle-1200.jpg 1200w" sizes="(max-width: 768px) 100vw, 50vw" alt="Photo Velvet Oracle" width="1200" height="654" loading="lazy" decoding="async">
           <div class="project-visual-overlay"></div>
           <span class="project-status status-live">Beta</span>
         </div>
@@ -862,7 +864,7 @@ footer {
       <!-- CC DÉVELOPPEMENT -->
       <div class="project-card reveal">
         <div class="project-visual">
-          <img src="./Images/CC%20developpement.jpg" alt="Photo CC Développement" loading="lazy" decoding="async">
+          <img src="./Images/CC%20developpement-1200.jpg" srcset="./Images/CC%20developpement-640.jpg 640w, ./Images/CC%20developpement-1200.jpg 1200w" sizes="(max-width: 768px) 100vw, 50vw" alt="Photo CC Développement" width="1200" height="654" loading="lazy" decoding="async">
           <div class="project-visual-overlay"></div>
           <span class="project-status status-live">Actif</span>
         </div>
