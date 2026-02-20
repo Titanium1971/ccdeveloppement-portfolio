@@ -10,8 +10,6 @@
 <meta name="author" content="Cyril Canon">
 <meta name="theme-color" content="#09090B">
 <link rel="preload" href="./fonts/Morena-Embedded.otf" as="font" type="font/otf" crossorigin>
-<link rel="preload" href="./fonts/Morena-W300-Embedded-1.otf" as="font" type="font/otf" crossorigin>
-<link rel="preload" href="./fonts/Morena-W400-Embedded-2.otf" as="font" type="font/otf" crossorigin>
 <link rel="preload" href="./fonts/Morena-SemiBold-Embedded.otf" as="font" type="font/otf" crossorigin>
 <link rel="preload" href="./fonts/Morena-Bold-Embedded.otf" as="font" type="font/otf" crossorigin>
 <link rel="preload" href="./Images/Le-Divino-hero.jpg" as="image" fetchpriority="high">
@@ -94,21 +92,25 @@
   font-family: 'Morena';
   src: url('./fonts/Morena-W300-Embedded-1.otf') format('opentype');
   font-weight: 300; font-style: normal;
+  font-display: swap;
 }
 @font-face {
   font-family: 'Morena';
   src: url('./fonts/Morena-W400-Embedded-2.otf') format('opentype');
   font-weight: 400; font-style: normal;
+  font-display: swap;
 }
 @font-face {
   font-family: 'Morena';
   src: url('./fonts/Morena-SemiBold-Embedded.otf') format('opentype');
   font-weight: 600; font-style: normal;
+  font-display: swap;
 }
 @font-face {
   font-family: 'Morena';
   src: url('./fonts/Morena-Bold-Embedded.otf') format('opentype');
   font-weight: 700; font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
@@ -184,10 +186,10 @@ nav {
   position: fixed; top: 0; left: 0; right: 0; z-index: 100;
   padding: 20px 32px;
   display: flex; justify-content: space-between; align-items: center;
-  backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: none; -webkit-backdrop-filter: none;
   background: rgba(9,9,11,0.75);
   border-bottom: 1px solid rgba(255,255,255,0.04);
-  animation: fadeInDown 0.55s ease-out;
+  animation: none;
 }
 .nav-logo {
   font-size: 22px; font-weight: 700; color: var(--white);
@@ -270,7 +272,7 @@ nav {
   font-family: 'Morena', sans-serif;
   line-height: 1; min-height: 52px; justify-content: center;
   position: relative; overflow: hidden;
-  margin-bottom: 32px; animation: fadeInUp 0.6s ease-out, badgeFloat 4s ease-in-out 0.8s infinite;
+  margin-bottom: 32px; animation: none;
 }
 .hero-badge::before {
   content: ''; width: 10px; height: 10px; flex: 0 0 10px;
@@ -301,16 +303,16 @@ nav {
 }
 .hero-title {
   font-size: clamp(44px, 8vw, 84px); font-weight: 700; line-height: 1.0;
-  letter-spacing: -2px; margin-bottom: 28px; animation: fadeInUp 0.6s ease-out 0.1s both;
+  letter-spacing: -2px; margin-bottom: 28px; animation: none;
 }
 .hero-title .line2 { color: var(--gray); font-weight: 300; }
 .hero-title .accent { color: var(--accent); text-shadow: 0 0 30px var(--accent-glow); }
 .hero-desc {
   font-size: 20px; color: var(--gray); max-width: 560px; line-height: 1.8;
-  margin-bottom: 40px; font-weight: 700; animation: fadeInUp 0.6s ease-out 0.2s both;
+  margin-bottom: 40px; font-weight: 700; animation: none;
 }
 .hero-actions {
-  display: flex; gap: 16px; flex-wrap: wrap; animation: fadeInUp 0.6s ease-out 0.3s both;
+  display: flex; gap: 16px; flex-wrap: wrap; animation: none;
 }
 .btn-primary {
   display: inline-flex; align-items: center; gap: 8px;
@@ -329,12 +331,12 @@ nav {
   font-family: 'Morena', sans-serif;
 }
 .btn-secondary:hover { border-color: var(--accent); color: var(--accent); }
-.hero-photo { animation: fadeInUp 0.6s ease-out 0.3s both, gentleFloat 6s ease-in-out 1s infinite; }
+.hero-photo { animation: none; }
 .hero-photo-frame {
   width: 320px; height: 320px; border-radius: 50%; overflow: hidden;
   position: relative; border: 10px solid rgba(57,255,20,0.72);
   box-shadow: 0 24px 80px rgba(0,0,0,0.5), 0 0 0 10px rgba(57,255,20,0.16), 0 0 70px rgba(57,255,20,0.42);
-  animation: haloPulse 3.2s ease-in-out infinite;
+  animation: none;
 }
 .hero-photo-frame img {
   width: 100%; height: 100%; object-fit: cover; object-position: center center;
@@ -347,7 +349,7 @@ nav {
 .hero-stats {
   display: flex; gap: 48px; margin-top: 64px; padding-top: 40px;
   border-top: 1px solid rgba(255,255,255,0.06);
-  animation: fadeInUp 0.6s ease-out 0.4s both; grid-column: 1 / -1;
+  animation: none; grid-column: 1 / -1;
 }
 .hero-stat-value { font-size: 36px; font-weight: 700; color: var(--white); letter-spacing: -1px; }
 .hero-stat-value .unit { font-size: 20px; color: var(--accent); }
@@ -595,10 +597,8 @@ footer {
   0%, 100% { box-shadow: 0 24px 80px rgba(0,0,0,0.5), 0 0 0 10px rgba(57,255,20,0.16), 0 0 60px rgba(57,255,20,0.34); }
   50% { box-shadow: 0 24px 80px rgba(0,0,0,0.5), 0 0 0 14px rgba(57,255,20,0.22), 0 0 85px rgba(57,255,20,0.46); }
 }
-.reveal {
-  opacity: 0; transform: translateY(40px) scale(0.98); filter: blur(8px);
-  transition: all 0.9s cubic-bezier(0.16, 1, 0.3, 1);
-}
+.reveal { opacity: 1; transform: none; filter: none; }
+.js .reveal { opacity: 0; transform: translateY(24px); filter: none; transition: opacity 0.45s ease, transform 0.45s ease; }
 .reveal.visible { opacity: 1; transform: translateY(0) scale(1); filter: blur(0); }
 .projects-grid .project-card.reveal:nth-child(1) { transition-delay: 0.05s; }
 .projects-grid .project-card.reveal:nth-child(2) { transition-delay: 0.12s; }
@@ -662,7 +662,7 @@ footer {
     </div>
     <div class="hero-photo">
       <div class="hero-photo-frame">
-        <img src="./Images/Cyril-Canon-portrait.jpg" alt="Cyril Canon - CC Développement">
+        <img src="./Images/Cyril-Canon-portrait.jpg" alt="Cyril Canon - CC Développement" width="640" height="640" loading="eager" decoding="async" fetchpriority="high">
       </div>
     </div>
     <div class="hero-stats">
@@ -1000,6 +1000,7 @@ footer {
 </footer>
 
 <script>
+document.documentElement.classList.add('js');
 const navLinks = document.getElementById('navLinks');
 const navToggle = document.getElementById('navToggle');
 const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
