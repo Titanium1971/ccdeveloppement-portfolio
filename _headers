@@ -15,3 +15,12 @@
 
 /tarifs.html
   Cache-Control: public, max-age=0, must-revalidate
+
+/creation-site-web-agde.html
+  Cache-Control: public, max-age=0, must-revalidate
+
+/seo-local-herault.html
+  Cache-Control: public, max-age=0, must-revalidate
+
+/rgpd-confidentialite.html
+  Cache-Control: public, max-age=0, must-revalidate

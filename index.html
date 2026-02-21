@@ -243,16 +243,12 @@ nav {
   content: ''; position: absolute; top: -200px; right: -100px;
   width: 800px; height: 800px;
   background: radial-gradient(circle, var(--accent-glow) 0%, transparent 70%);
-  pointer-events: none; animation: heroGlow 8s ease-in-out infinite alternate;
+  pointer-events: none;
 }
 .hero::after {
   content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0;
   background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.012'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
   pointer-events: none;
-}
-@keyframes heroGlow {
-  0% { transform: translate(0, 0) scale(1); opacity: 0.4; }
-  100% { transform: translate(-50px, 50px) scale(1.2); opacity: 0.7; }
 }
 .hero-container {
   max-width: 1200px; margin: 0 auto; width: 100%; position: relative; z-index: 1;
@@ -508,6 +504,22 @@ main#main-content { padding-top: 0; }
 .stack-item:hover { transform: translateY(-2px); }
 .stack-item-dot { width: 8px; height: 8px; border-radius: 50%; }
 
+/* PROOFS */
+.proofs-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 40px; }
+.proof-card {
+  background: var(--dark); border: 1px solid rgba(255,255,255,0.07); border-radius: 14px;
+  padding: 24px; transition: border-color 0.25s ease, transform 0.25s ease;
+}
+.proof-card:hover { border-color: rgba(57,255,20,0.3); transform: translateY(-3px); }
+.proof-kpi { font-size: 30px; color: var(--accent); font-weight: 700; line-height: 1.1; margin-bottom: 8px; }
+.proof-title { font-size: 19px; font-weight: 700; margin-bottom: 8px; }
+.proof-desc { font-size: 17px; color: var(--gray); font-weight: 700; line-height: 1.6; }
+.proof-link {
+  display: inline-flex; margin-top: 12px; font-size: 16px; font-weight: 700;
+  color: var(--accent); text-decoration: none;
+}
+.proof-link:hover { text-decoration: underline; }
+
 /* CTA / CONTACT */
 .cta-section { background: var(--dark); text-align: center; }
 .cta-box {
@@ -553,7 +565,7 @@ main#main-content { padding-top: 0; }
 }
 .cta-contact-item {
   display: flex; align-items: center; gap: 8px;
-  color: var(--gray); text-decoration: none; font-size: 18px; transition: color 0.3s; font-weight: 700;
+  color: var(--gray); text-decoration: none; font-size: 20px; transition: color 0.3s; font-weight: 700;
 }
 .cta-contact-item:hover { color: var(--accent); }
 
@@ -571,9 +583,11 @@ main#main-content { padding-top: 0; }
 
 /* FOOTER */
 footer {
-  padding: 32px; text-align: center; font-size: 13px;
-  color: var(--gray-light); border-top: 1px solid rgba(255,255,255,0.04); font-weight: 300;
+  padding: 32px; text-align: center; font-size: 16px;
+  color: var(--gray); border-top: 1px solid rgba(255,255,255,0.04); font-weight: 700;
 }
+footer a { color: var(--gray); text-decoration: none; }
+footer a:hover { color: var(--accent); }
 
 /* ANIMATIONS */
 .reveal { opacity: 1; transform: none; filter: none; }
@@ -596,6 +610,7 @@ footer {
   .section { padding: 80px 20px; }
   .cta-box { padding: 48px 24px; }
   .map-section { padding: 0 20px 40px; }
+  .proofs-grid { grid-template-columns: 1fr; }
 }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
@@ -743,7 +758,7 @@ footer {
       <!-- LE DIVINO - Featured avec photo -->
       <div class="project-card featured reveal">
         <div class="project-visual">
-          <picture><source srcset="./Images/Le-Divino-hero-640.webp 640w, ./Images/Le-Divino-hero-1200.webp 1200w" sizes="(max-width: 768px) 100vw, 50vw" type="image/webp"><img src="./Images/Le-Divino-hero-1200.jpg" srcset="./Images/Le-Divino-hero-640.jpg 640w, ./Images/Le-Divino-hero-1200.jpg 1200w" sizes="(max-width: 768px) 100vw, 50vw" alt="Le Divino Restaurant Agde" width="1200" height="899" loading="eager" decoding="async" fetchpriority="high" style="width:100%;height:100%;object-fit:cover;position:absolute;top:0;left:0;"></picture>
+          <picture><source srcset="./Images/Le-Divino-hero-640.webp 640w, ./Images/Le-Divino-hero-1200.webp 1200w" sizes="(max-width: 768px) 100vw, 50vw" type="image/webp"><img src="./Images/Le-Divino-hero-1200.jpg" srcset="./Images/Le-Divino-hero-640.jpg 640w, ./Images/Le-Divino-hero-1200.jpg 1200w" sizes="(max-width: 768px) 100vw, 50vw" alt="Le Divino Restaurant Agde" width="1200" height="899" loading="lazy" decoding="async" style="width:100%;height:100%;object-fit:cover;position:absolute;top:0;left:0;"></picture>
           <div class="project-visual-overlay"></div>
         </div>
         <div class="project-content">
@@ -937,6 +952,34 @@ footer {
   </div>
 </section>
 
+<!-- PREUVES -->
+<section class="section" id="preuves">
+  <div class="section-container">
+    <div class="section-tag reveal">Preuves</div>
+    <h2 class="section-heading reveal">Des résultats<br><span class="muted">mesurables localement.</span></h2>
+    <p class="section-desc reveal">Des pages conçues pour convertir et se positionner sur des recherches locales à forte intention.</p>
+    <div class="proofs-grid reveal">
+      <article class="proof-card">
+        <div class="proof-kpi">95+</div>
+        <h3 class="proof-title">Performance mesurée</h3>
+        <p class="proof-desc">Sites optimisés Core Web Vitals avec chargement rapide et structure SEO propre.</p>
+      </article>
+      <article class="proof-card">
+        <div class="proof-kpi">Agde</div>
+        <h3 class="proof-title">Page locale dédiée</h3>
+        <p class="proof-desc">Contenu ciblé création de site web pour capter la demande locale.</p>
+        <a class="proof-link" href="./creation-site-web-agde.html">Voir la page locale Agde</a>
+      </article>
+      <article class="proof-card">
+        <div class="proof-kpi">Hérault</div>
+        <h3 class="proof-title">SEO local actionnable</h3>
+        <p class="proof-desc">Méthode de référencement local appliquée aux TPE/PME du département.</p>
+        <a class="proof-link" href="./seo-local-herault.html">Voir la page SEO Hérault</a>
+      </article>
+    </div>
+  </div>
+</section>
+
 <!-- CONTACT -->
 <section class="section cta-section" id="contact">
   <div class="section-container">
@@ -955,6 +998,8 @@ footer {
       <div class="cta-contacts">
         <a href="https://www.linkedin.com/in/cyril-canon-kotylak-4bab9637a" target="_blank" rel="noopener noreferrer" class="cta-contact-item">💼 LinkedIn</a>
         <a href="./tarifs.html" class="cta-contact-item">💶 Voir les tarifs</a>
+        <a href="./creation-site-web-agde.html" class="cta-contact-item">📍 Site web à Agde</a>
+        <a href="./seo-local-herault.html" class="cta-contact-item">🔎 SEO local Hérault</a>
         <a href="https://www.ccdeveloppement.eu" target="_blank" rel="noopener noreferrer" class="cta-contact-item">🌐 ccdeveloppement.eu</a>
         <span class="cta-contact-item">📍 27 Rue Basse, 34300 Agde</span>
       </div>
@@ -972,7 +1017,7 @@ footer {
 </main>
 
 <footer>
-  <p>© 2026 CC Développement · Cyril Canon · SIRET : [à compléter] · 27 Rue Basse, 34300 Agde</p>
+  <p>© 2026 CC Développement · Cyril Canon · SIRET : [à compléter] · 27 Rue Basse, 34300 Agde · <a href="./rgpd-confidentialite.html">Politique de confidentialité</a></p>
 </footer>
 
 <script>
