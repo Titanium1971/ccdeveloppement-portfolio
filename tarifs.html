@@ -142,6 +142,7 @@ body { font-family: 'Morena', sans-serif; font-weight: 700; background: var(--bl
 .pricing-table .option { color: var(--amber); font-size: 13px; font-weight: 700; letter-spacing: .5px; }
 .pricing-table .price-row td { font-size: 24px; font-weight: 700; padding: 24px 18px; border-top: 2px solid var(--dark-3); color: var(--white); }
 .pricing-table .price-row td.pop { color: var(--accent); font-size: 28px; text-shadow: 0 0 20px var(--accent-glow); }
+.pricing-table .price-main { white-space: nowrap; }
 .pricing-table .price-row small { display: block; font-size: 14px; font-weight: 700; color: var(--gray); margin-top: 4px; }
 .pricing-table .delivery-row td { font-size: 16px; color: #E4E4E7; padding-top: 8px; border-bottom: none; font-weight: 700; }
 
@@ -218,6 +219,9 @@ body { font-family: 'Morena', sans-serif; font-weight: 700; background: var(--bl
   .section { padding: 80px 0; }
   .hero-metrics { gap: 24px; }
   .hero-divider { display: none; }
+  .pricing-table { min-width: 880px; }
+  .pricing-table th:nth-child(2),
+  .pricing-table td:nth-child(2) { min-width: 170px; }
   .sectors-grid { grid-template-columns: 1fr; }
   .maint-grid { grid-template-columns: 1fr; }
   .process-grid { grid-template-columns: 1fr 1fr; gap: 20px; }
@@ -345,10 +349,10 @@ body { font-family: 'Morena', sans-serif; font-weight: 700; background: var(--bl
           <tr><td>Formation incluse</td><td>1h</td><td class="pop">2h</td><td>3h</td><td>3h</td></tr>
           <tr class="price-row">
             <td><strong>Tarif</strong></td>
-            <td>2 000€<small>à 3 000€ HT</small></td>
-            <td class="pop">3 500€<small>à 6 000€ HT</small></td>
-            <td>6 000€<small>à 12 000€ HT</small></td>
-            <td>5 000€<small>à 10 000€ HT</small></td>
+            <td><span class="price-main">2 000€</span><small>à 3 000€ HT</small></td>
+            <td class="pop"><span class="price-main">3 500€</span><small>à 6 000€ HT</small></td>
+            <td><span class="price-main">6 000€</span><small>à 12 000€ HT</small></td>
+            <td><span class="price-main">5 000€</span><small>à 10 000€ HT</small></td>
           </tr>
           <tr class="delivery-row"><td>Délai</td><td>5 — 7 jours</td><td class="pop">2 — 3 semaines</td><td>3 — 5 semaines</td><td>3 — 6 semaines</td></tr>
         </tbody>
