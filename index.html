@@ -198,7 +198,9 @@ nav {
 .nav-logo {
   font-size: 22px; font-weight: 700; color: var(--white);
   text-decoration: none; letter-spacing: -0.5px;
+  display: inline-flex; align-items: center; gap: 10px;
 }
+.nav-logo img { height: 40px; width: auto; }
 .nav-logo span { color: var(--accent); }
 .nav-links { display: flex; gap: 24px; list-style: none; align-items: center; margin: 0; padding: 0; }
 .nav-links li { display: flex; align-items: center; }
@@ -631,7 +633,7 @@ footer a:hover { color: var(--accent); }
 <a href="#main-content" class="skip-link">Aller au contenu</a>
 
 <nav aria-label="Navigation principale">
-  <a href="#" class="nav-logo">CC Développement<span>.</span></a>
+  <a href="#" class="nav-logo"><img src="./Images/logo-cc-developpement.svg" alt="CC Développement" width="40" height="40">CC Développement<span>.</span></a>
   <ul class="nav-links" id="navLinks">
     <li><a href="#parcours">Parcours</a></li>
     <li><a href="#projets">Projets</a></li>
@@ -1023,7 +1025,7 @@ footer a:hover { color: var(--accent); }
 </main>
 
 <footer>
-  <p>© 2026 CC Développement · Cyril Canon · SIRET : [à compléter] · 27 Rue Basse, 34300 Agde · <a href="./rgpd-confidentialite.html">Politique de confidentialité</a></p>
+  <p>© 2026 CC Développement · Cyril Canon · SIRET : 444 114 011 · 27 Rue Basse, 34300 Agde · <a href="./rgpd-confidentialite.html">Politique de confidentialité</a></p>
 </footer>
 
 <script>
