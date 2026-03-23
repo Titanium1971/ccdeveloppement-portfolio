@@ -1,0 +1,725 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Estimateur de Prix | CC Développement Agde</title>
+<meta name="description" content="Configurez votre projet web sur-mesure : choisissez votre forfait, ajoutez des modules, estimez votre budget. Devis gratuit sous 48h.">
+<meta name="robots" content="index,follow">
+<link rel="canonical" href="https://ccdeveloppement.eu/estimateur.html">
+<meta name="theme-color" content="#09090B">
+<link rel="icon" href="./favicon.svg" type="image/svg+xml">
+<link rel="icon" href="./favicon.ico" sizes="any">
+<link rel="shortcut icon" href="./favicon.ico">
+<link rel="apple-touch-icon" href="./apple-touch-icon.png">
+<link rel="manifest" href="./site.webmanifest">
+<link rel="preload" href="./fonts/Morena-Embedded.otf" as="font" type="font/otf" crossorigin>
+<link rel="preload" href="./fonts/Morena-Bold-Embedded.otf" as="font" type="font/otf" crossorigin>
+<meta property="og:locale" content="fr_FR">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Estimateur de Prix — CC Développement">
+<meta property="og:description" content="Configurez votre projet web sur-mesure et estimez votre budget en quelques clics.">
+<meta property="og:url" content="https://ccdeveloppement.eu/estimateur.html">
+<meta property="og:site_name" content="CC Développement">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Estimateur de Prix CC Développement",
+  "url": "https://ccdeveloppement.eu/estimateur.html",
+  "inLanguage": "fr-FR",
+  "about": {
+    "@type": "ProfessionalService",
+    "name": "CC Développement",
+    "areaServed": ["Agde", "Hérault", "Occitanie"]
+  }
+}
+</script>
+<style>
+@font-face {
+  font-family: 'Morena';
+  src: url('./fonts/Morena-Embedded.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Morena';
+  src: url('./fonts/Morena-Bold-Embedded.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+:root {
+  --black: #09090B;
+  --dark: #111113;
+  --dark-2: #18181B;
+  --dark-3: #27272A;
+  --dark-4: #1E1E22;
+  --white: #FFFFFF;
+  --gray: #F0F0F2;
+  --gray-light: #D0D0D8;
+  --gray-dim: #B0B0B8;
+  --accent: #39FF14;
+  --accent-dim: rgba(57,255,20,0.10);
+  --accent-glow: rgba(57,255,20,0.28);
+  --amber: #F59E0B;
+  --radius: 16px;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Morena', sans-serif; font-weight: 700; background: var(--black); color: var(--white); overflow-x: hidden; -webkit-font-smoothing: antialiased; }
+::selection { background: var(--accent); color: var(--black); }
+
+/* NAV */
+.top-nav { position: sticky; top: 0; z-index: 20; background: rgba(9,9,11,0.92); backdrop-filter: blur(12px); border-bottom: 1px solid rgba(255,255,255,0.06); }
+.top-nav-inner { max-width: 1160px; margin: 0 auto; padding: 12px 24px; display: flex; justify-content: space-between; align-items: center; gap: 12px; }
+.top-nav a { color: var(--gray-light); text-decoration: none; font-size: 16px; font-weight: 700; }
+.top-nav a:hover { color: var(--white); }
+.top-nav .cta { background: var(--accent); color: var(--black); padding: 12px 18px; border-radius: 10px; font-size: 16px; font-weight: 700; }
+
+/* HERO */
+.est-hero { text-align: center; padding: 60px 24px 40px; position: relative; overflow: hidden; }
+.est-hero::before { content: ''; position: absolute; top: -60%; left: -50%; width: 200%; height: 200%; background: radial-gradient(circle at 50% 60%, var(--accent-dim) 0%, transparent 40%); pointer-events: none; }
+.est-hero h1 { font-size: clamp(32px, 5vw, 56px); font-weight: 700; line-height: 1.1; margin-bottom: 16px; position: relative; letter-spacing: -0.5px; }
+.est-hero h1 .green { color: var(--accent); text-shadow: 0 0 40px var(--accent-glow); }
+.est-hero p { font-size: 20px; color: var(--gray); max-width: 600px; margin: 0 auto; line-height: 1.6; font-weight: 700; position: relative; }
+
+/* STEP BAR */
+.step-bar { display: flex; max-width: 700px; margin: 0 auto; border-bottom: 2px solid var(--dark-3); position: sticky; top: 53px; z-index: 15; background: var(--black); }
+.step-bar-item { flex: 1; padding: 16px 8px; text-align: center; color: var(--gray-dim); font-size: 15px; font-weight: 700; position: relative; cursor: default; transition: color .3s; user-select: none; }
+.step-bar-item.active { color: var(--accent); }
+.step-bar-item.active::after { content: ''; position: absolute; bottom: -2px; left: 0; right: 0; height: 2px; background: var(--accent); }
+.step-bar-item.completed { color: var(--gray-light); cursor: pointer; }
+.step-bar-item .step-num { display: inline-flex; align-items: center; justify-content: center; width: 28px; height: 28px; border-radius: 50%; border: 2px solid var(--dark-3); font-size: 13px; margin-right: 6px; vertical-align: middle; transition: all .3s; }
+.step-bar-item.active .step-num { border-color: var(--accent); color: var(--accent); }
+.step-bar-item.completed .step-num { border-color: var(--accent); background: var(--accent); color: var(--black); }
+
+/* MAIN LAYOUT */
+.est-main { max-width: 1160px; margin: 0 auto; padding: 0 24px 120px; }
+
+/* STEP PANELS */
+.est-step { display: none; padding-top: 48px; }
+.est-step.active { display: block; animation: fadeIn .35s ease; }
+@keyframes fadeIn { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
+.step-title { font-size: clamp(26px, 4vw, 40px); font-weight: 700; margin-bottom: 8px; letter-spacing: -0.3px; }
+.step-title .accent { color: var(--accent); }
+.step-subtitle { font-size: 18px; color: var(--gray); margin-bottom: 40px; line-height: 1.6; font-weight: 700; }
+
+/* STEP 1: BASE PLANS */
+.base-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+.base-card { background: var(--dark-2); border: 2px solid var(--dark-3); border-radius: var(--radius); padding: 32px 24px; cursor: pointer; transition: all .3s; display: flex; flex-direction: column; position: relative; }
+.base-card:hover { border-color: rgba(57,255,20,0.25); transform: translateY(-4px); box-shadow: 0 20px 60px rgba(0,0,0,.3); }
+.base-card.selected { border-color: var(--accent); box-shadow: 0 0 40px var(--accent-dim); }
+.base-card.featured::before { content: 'POPULAIRE'; position: absolute; top: -11px; left: 50%; transform: translateX(-50%); background: var(--accent); color: var(--black); font-size: 10px; font-weight: 700; letter-spacing: 2px; padding: 4px 16px; border-radius: 100px; }
+.base-card .b-name { font-size: 22px; font-weight: 700; margin-bottom: 4px; }
+.base-card .b-desc { font-size: 14px; color: var(--gray-dim); margin-bottom: 20px; font-weight: 700; }
+.base-card .b-price { font-size: 40px; font-weight: 700; color: var(--white); line-height: 1; }
+.base-card.selected .b-price { color: var(--accent); text-shadow: 0 0 20px var(--accent-glow); }
+.base-card .b-price span { font-size: 16px; color: var(--gray); }
+.base-card .b-pages { font-size: 15px; color: var(--accent); font-weight: 700; margin-top: 4px; margin-bottom: 20px; }
+.base-card .b-features { list-style: none; flex: 1; }
+.base-card .b-features li { padding: 5px 0; font-size: 14px; color: var(--gray); display: flex; gap: 8px; align-items: flex-start; font-weight: 700; }
+.base-card .b-features li::before { content: '✓'; color: var(--accent); font-size: 11px; flex-shrink: 0; margin-top: 2px; }
+.base-card .select-indicator { margin-top: 20px; padding-top: 16px; border-top: 1px solid var(--dark-3); text-align: center; font-size: 14px; color: var(--gray-dim); font-weight: 700; transition: all .3s; }
+.base-card.selected .select-indicator { color: var(--accent); }
+
+/* STEP 2: MODULES */
+.modules-search { width: 100%; padding: 14px 20px; background: var(--dark-2); border: 1px solid var(--dark-3); border-radius: 12px; color: var(--white); font-family: 'Morena', sans-serif; font-size: 16px; font-weight: 700; margin-bottom: 32px; outline: none; transition: border-color .3s; }
+.modules-search:focus { border-color: var(--accent); }
+.modules-search::placeholder { color: var(--gray-dim); }
+.cat-section { margin-bottom: 24px; }
+.cat-header { display: flex; align-items: center; justify-content: space-between; padding: 16px 20px; background: var(--dark-2); border: 1px solid var(--dark-3); border-radius: 14px; cursor: pointer; user-select: none; transition: all .3s; }
+.cat-header:hover { border-color: rgba(57,255,20,0.15); }
+.cat-header-left { display: flex; align-items: center; gap: 12px; }
+.cat-header .cat-icon { font-size: 22px; }
+.cat-header .cat-name { font-size: 18px; font-weight: 700; }
+.cat-header .cat-count { background: var(--accent); color: var(--black); font-size: 12px; font-weight: 700; width: 24px; height: 24px; border-radius: 50%; display: none; align-items: center; justify-content: center; }
+.cat-header .cat-count.visible { display: inline-flex; }
+.cat-header .cat-toggle { font-size: 18px; color: var(--gray-dim); transition: transform .3s; }
+.cat-header[aria-expanded="true"] .cat-toggle { transform: rotate(180deg); }
+.cat-body { overflow: hidden; max-height: 0; transition: max-height .4s ease; }
+.cat-body.open { max-height: 2000px; }
+.cat-body-inner { padding: 12px 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 10px; }
+.mod-card { background: var(--dark-2); border: 1px solid var(--dark-3); border-radius: 12px; padding: 16px 18px; display: flex; align-items: center; gap: 14px; cursor: pointer; transition: all .25s; }
+.mod-card:hover { border-color: rgba(57,255,20,0.2); }
+.mod-card.selected { border-color: var(--accent); background: rgba(57,255,20,0.04); }
+.mod-card.hidden { display: none; }
+.mod-check { width: 22px; height: 22px; border: 2px solid var(--dark-3); border-radius: 6px; flex-shrink: 0; display: flex; align-items: center; justify-content: center; font-size: 12px; color: transparent; transition: all .2s; }
+.mod-card.selected .mod-check { background: var(--accent); border-color: var(--accent); color: var(--black); }
+.mod-info { flex: 1; min-width: 0; }
+.mod-info h4 { font-size: 16px; font-weight: 700; margin-bottom: 2px; }
+.mod-info p { font-size: 13px; color: var(--gray-dim); font-weight: 700; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.mod-price { font-size: 18px; font-weight: 700; color: var(--accent); white-space: nowrap; flex-shrink: 0; }
+.skip-link { display: inline-block; margin-top: 24px; color: var(--gray-dim); font-size: 15px; font-weight: 700; cursor: pointer; text-decoration: underline; text-underline-offset: 4px; transition: color .2s; }
+.skip-link:hover { color: var(--gray); }
+
+/* STEP 3: MAINTENANCE */
+.maint-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.maint-option { margin-top: 24px; text-align: center; }
+.m-card { background: var(--dark-2); border: 2px solid var(--dark-3); border-radius: var(--radius); padding: 36px 28px; cursor: pointer; transition: all .3s; position: relative; }
+.m-card:hover { border-color: rgba(57,255,20,0.2); transform: translateY(-2px); }
+.m-card.selected { border-color: var(--accent); box-shadow: 0 0 40px var(--accent-dim); }
+.m-card.featured::before { content: 'RECOMMANDÉ'; position: absolute; top: -11px; left: 50%; transform: translateX(-50%); background: var(--accent); color: var(--black); font-size: 10px; font-weight: 700; letter-spacing: 2px; padding: 4px 16px; border-radius: 100px; }
+.m-card .m-name { font-size: 22px; font-weight: 700; margin-bottom: 4px; }
+.m-card .m-desc { font-size: 15px; color: var(--gray); margin-bottom: 20px; font-weight: 700; }
+.m-card .m-price { font-size: 40px; font-weight: 700; color: var(--white); line-height: 1; }
+.m-card.selected .m-price { color: var(--accent); }
+.m-card .m-price span { font-size: 16px; font-weight: 700; color: var(--gray); }
+.m-card .m-annual { font-size: 13px; color: var(--accent); font-weight: 500; margin-bottom: 20px; opacity: .8; }
+.m-card .m-features { list-style: none; }
+.m-card .m-features li { padding: 6px 0; font-size: 15px; color: var(--gray); display: flex; gap: 10px; align-items: center; font-weight: 700; }
+.m-card .m-features li::before { content: '✓'; color: var(--accent); font-weight: 700; font-size: 12px; }
+
+/* STEP 4: SUMMARY */
+.summary-card { background: var(--dark-2); border: 1px solid var(--dark-3); border-radius: var(--radius); padding: 40px 36px; max-width: 700px; margin: 0 auto; }
+.summary-section { margin-bottom: 24px; }
+.summary-section-title { font-size: 13px; color: var(--gray-dim); text-transform: uppercase; letter-spacing: 2px; margin-bottom: 12px; font-weight: 700; }
+.summary-row { display: flex; justify-content: space-between; align-items: center; padding: 10px 0; border-bottom: 1px solid rgba(39,39,42,.5); font-size: 16px; color: var(--gray); font-weight: 700; }
+.summary-row:last-child { border-bottom: none; }
+.summary-row .sr-price { color: var(--gray-light); }
+.summary-divider { height: 2px; background: var(--dark-3); margin: 24px 0; }
+.summary-total { display: flex; justify-content: space-between; align-items: baseline; padding: 16px 0 8px; }
+.summary-total .st-label { font-size: 20px; font-weight: 700; }
+.summary-total .st-price { font-size: 36px; font-weight: 700; color: var(--accent); text-shadow: 0 0 20px var(--accent-glow); }
+.summary-ttc { text-align: right; font-size: 16px; color: var(--gray-dim); font-weight: 700; margin-bottom: 8px; }
+.summary-maint { display: flex; justify-content: space-between; align-items: center; padding: 12px 0; font-size: 16px; color: var(--gray); font-weight: 700; }
+.summary-maint .sm-price { color: var(--amber); }
+.summary-actions { display: flex; gap: 12px; margin-top: 36px; flex-wrap: wrap; }
+.btn-primary { display: inline-flex; align-items: center; justify-content: center; gap: 8px; background: var(--accent); color: var(--black); padding: 16px 32px; border-radius: 12px; font-family: 'Morena', sans-serif; font-size: 17px; font-weight: 700; border: none; cursor: pointer; text-decoration: none; transition: all .2s; flex: 1; min-width: 200px; }
+.btn-primary:hover { box-shadow: 0 0 30px var(--accent-glow); transform: translateY(-2px); }
+.btn-secondary { display: inline-flex; align-items: center; justify-content: center; gap: 8px; background: transparent; color: var(--gray); padding: 16px 32px; border-radius: 12px; font-family: 'Morena', sans-serif; font-size: 17px; font-weight: 700; border: 1px solid var(--dark-3); cursor: pointer; text-decoration: none; transition: all .2s; flex: 1; min-width: 200px; }
+.btn-secondary:hover { border-color: var(--gray-dim); color: var(--white); }
+.summary-edit { text-align: center; margin-top: 20px; }
+.summary-edit a { color: var(--gray-dim); font-size: 14px; font-weight: 700; cursor: pointer; text-decoration: underline; text-underline-offset: 4px; }
+.summary-edit a:hover { color: var(--gray); }
+
+/* NAVIGATION BUTTONS */
+.step-nav { display: flex; justify-content: space-between; align-items: center; margin-top: 48px; padding-top: 32px; border-top: 1px solid var(--dark-3); }
+.btn-next { display: inline-flex; align-items: center; gap: 8px; background: var(--accent); color: var(--black); padding: 14px 28px; border-radius: 12px; font-family: 'Morena', sans-serif; font-size: 16px; font-weight: 700; border: none; cursor: pointer; transition: all .2s; }
+.btn-next:hover { box-shadow: 0 0 30px var(--accent-glow); transform: translateY(-2px); }
+.btn-next:disabled { opacity: .3; cursor: default; transform: none; box-shadow: none; }
+.btn-prev { display: inline-flex; align-items: center; gap: 8px; background: transparent; color: var(--gray); padding: 14px 28px; border-radius: 12px; font-family: 'Morena', sans-serif; font-size: 16px; font-weight: 700; border: 1px solid var(--dark-3); cursor: pointer; transition: all .2s; }
+.btn-prev:hover { border-color: var(--gray-dim); color: var(--white); }
+
+/* STICKY PRICE BAR */
+.price-bar { position: fixed; bottom: 0; left: 0; right: 0; background: rgba(17,17,19,0.95); backdrop-filter: blur(12px); border-top: 1px solid var(--dark-3); padding: 14px 24px; z-index: 30; transform: translateY(100%); transition: transform .4s cubic-bezier(0.16,1,0.3,1); }
+.price-bar.visible { transform: translateY(0); }
+.price-bar-inner { max-width: 1160px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; gap: 16px; }
+.price-bar .pb-total { font-size: 14px; color: var(--gray); font-weight: 700; }
+.price-bar .pb-amount { font-size: 28px; font-weight: 700; color: var(--accent); letter-spacing: -0.5px; }
+.price-bar .pb-detail { font-size: 13px; color: var(--gray-dim); font-weight: 700; }
+
+/* FOOTER */
+.footer { background: var(--black); border-top: 1px solid var(--dark-3); color: var(--gray); text-align: center; padding: 32px 24px; font-size: 15px; font-weight: 700; }
+.footer a { color: var(--gray); text-decoration: none; }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+}
+
+@media (max-width: 1024px) {
+  .base-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 768px) {
+  .base-grid { grid-template-columns: 1fr; max-width: 400px; margin-left: auto; margin-right: auto; }
+  .maint-grid { grid-template-columns: 1fr; max-width: 400px; margin-left: auto; margin-right: auto; }
+  .step-bar-item .step-label { display: none; }
+  .cat-body-inner { grid-template-columns: 1fr; }
+  .summary-card { padding: 28px 20px; }
+  .summary-actions { flex-direction: column; }
+  .price-bar .pb-amount { font-size: 22px; }
+}
+
+@media print {
+  body { background: #fff; color: #000; }
+  .top-nav, .step-bar, .price-bar, .est-hero, .footer, .step-nav, .summary-actions, .summary-edit { display: none !important; }
+  .est-step { display: none !important; }
+  .est-step[data-step="4"] { display: block !important; }
+  .summary-card { background: #fff; border: 1px solid #ccc; color: #000; }
+  .summary-row { color: #333; border-color: #ddd; }
+  .summary-total .st-price { color: #000; text-shadow: none; }
+  .summary-section-title { color: #666; }
+}
+</style>
+</head>
+<body>
+<nav class="top-nav" aria-label="Navigation">
+  <div class="top-nav-inner">
+    <a href="./tarifs.html" style="display:inline-flex;align-items:center;gap:8px;">← Voir tous les tarifs</a>
+    <a class="cta" href="./index.html#contact">Demander un devis</a>
+  </div>
+</nav>
+
+<section class="est-hero">
+  <h1>Estimez votre projet<br><span class="green">en 3 minutes</span></h1>
+  <p>Sélectionnez vos besoins, obtenez une estimation instantanée.<br>Sans engagement, 100% transparent.</p>
+</section>
+
+<div class="step-bar" role="tablist">
+  <div class="step-bar-item active" data-step="1" role="tab"><span class="step-num">1</span><span class="step-label">Forfait</span></div>
+  <div class="step-bar-item" data-step="2" role="tab"><span class="step-num">2</span><span class="step-label">Modules</span></div>
+  <div class="step-bar-item" data-step="3" role="tab"><span class="step-num">3</span><span class="step-label">Support</span></div>
+  <div class="step-bar-item" data-step="4" role="tab"><span class="step-num">4</span><span class="step-label">Récap</span></div>
+</div>
+
+<main class="est-main">
+  <!-- STEP 1 -->
+  <section class="est-step active" data-step="1">
+    <div class="step-title">Choisissez votre <span class="accent">forfait de base</span></div>
+    <div class="step-subtitle">Chaque « page » est une section fonctionnelle complète : landing, catalogue, dashboard, CRM…</div>
+    <div class="base-grid" id="baseGrid"></div>
+  </section>
+
+  <!-- STEP 2 -->
+  <section class="est-step" data-step="2">
+    <div class="step-title">Ajoutez des <span class="accent">modules</span></div>
+    <div class="step-subtitle">Sélectionnez les fonctionnalités dont vous avez besoin. Tout est optionnel.</div>
+    <input type="text" class="modules-search" id="moduleSearch" placeholder="Rechercher un module…" autocomplete="off">
+    <div id="modulesContainer"></div>
+    <div class="step-nav">
+      <button class="btn-prev" onclick="goToStep(1)">← Forfait</button>
+      <div>
+        <span class="skip-link" onclick="goToStep(3)">Passer cette étape →</span>
+      </div>
+      <button class="btn-next" onclick="goToStep(3)">Maintenance →</button>
+    </div>
+  </section>
+
+  <!-- STEP 3 -->
+  <section class="est-step" data-step="3">
+    <div class="step-title">Choisissez votre <span class="accent">maintenance</span></div>
+    <div class="step-subtitle">Gardez votre plateforme performante et sécurisée après le lancement.</div>
+    <div class="maint-grid" id="maintGrid"></div>
+    <div class="maint-option">
+      <span class="skip-link" id="noMaintBtn" onclick="selectMaintenance(null)">Pas de maintenance pour le moment</span>
+    </div>
+    <div class="step-nav">
+      <button class="btn-prev" onclick="goToStep(2)">← Modules</button>
+      <button class="btn-next" onclick="goToStep(4)">Voir le récapitulatif →</button>
+    </div>
+  </section>
+
+  <!-- STEP 4 -->
+  <section class="est-step" data-step="4">
+    <div class="step-title">Votre <span class="accent">estimation</span></div>
+    <div class="step-subtitle">Voici le détail de votre projet sur-mesure.</div>
+    <div class="summary-card" id="summaryCard"></div>
+  </section>
+</main>
+
+<div class="price-bar" id="priceBar">
+  <div class="price-bar-inner">
+    <div>
+      <div class="pb-total">Estimation</div>
+      <div class="pb-amount" id="pbAmount">0€</div>
+      <div class="pb-detail" id="pbDetail"></div>
+    </div>
+    <button class="btn-next" id="pbNext" onclick="goToNextStep()">Suivant →</button>
+  </div>
+</div>
+
+<footer class="footer">CC Développement · Cyril Canon · SIRET : 444 114 011 · 27 Rue Basse, 34300 Agde<br>© 2026 — Tous droits réservés · <a href="./rgpd-confidentialite.html">Politique de confidentialité</a></footer>
+
+<script>
+/* ============ DATA ============ */
+const PRICING = {
+  bases: [
+    { id:'startup', name:'Startup', pages:'5 pages', price:4500, desc:"L'essentiel pour démarrer", features:['Landing page + Présentation','Catalogue / Services','Contact / Formulaire','Blog ou Documentation','Page admin basique'] },
+    { id:'pme', name:'PME Standard', pages:'10 pages', price:7500, desc:'Le plus demandé', featured:true, features:['Landing page premium','Catalogue multi-catégories','Panier / Commandes','Blog / News avec SEO','Dashboard utilisateur','Admin panel avancé','FAQ / Documentation','Intégrations 3e parties','Analytics page','Page custom spécifique'] },
+    { id:'pme-plus', name:'PME+', pages:'15 pages', price:10500, desc:'Croissance & scale', features:['Tout le forfait PME Standard','Marketplace features','Multi-utilisateurs / Rôles','API publique','Synchronisations externes','Performance optimization','Sécurité avancée'] },
+    { id:'entreprise', name:'Entreprise', pages:'20+ pages', price:14500, desc:'Plateforme complète', features:['Plateforme complète','White-label possible','Multi-locales','Infrastructure custom','Onboarding entreprise'] }
+  ],
+  modules: [
+    { cat:'Commerce & Transactions', icon:'💰', items:[
+      { id:'ecommerce-full', name:'E-commerce Full', desc:'Panier, checkout, paiements Stripe/PayPal', price:1800 },
+      { id:'gestion-stocks', name:'Gestion Stocks', desc:'Inventory tracking, alertes, sync multi-canaux', price:1000 },
+      { id:'invoicing', name:'Invoicing Automatisé', desc:'Factures auto, PDF, archivage légal', price:800 },
+      { id:'payment-plans', name:'Payment Plans', desc:'Paiement échelonné, abonnements', price:1000 },
+      { id:'promo-engine', name:'Promo & Discount Engine', desc:'Codes promo, cashback, loyalty points', price:700 },
+      { id:'taxes', name:'Taxes & Compliance', desc:'Calcul TVA multi-pays, conformité RGPD', price:900 }
+    ]},
+    { cat:'Contenu & Personnalisation', icon:'✏️', items:[
+      { id:'multi-langue', name:'Multi-Langue', desc:'FR/EN/IT/ES/DE — i18n complet', price:1200 },
+      { id:'blog-pro', name:'Blog Professionnel', desc:'SEO-friendly, planification, newsletters', price:600 },
+      { id:'ai-content', name:'AI Content Generator', desc:'IA pour descriptions, titres, alt-text', price:1500 },
+      { id:'dynamic-content', name:'Dynamic Content', desc:'Templates, variations A/B, personnalisation', price:800 },
+      { id:'cms-headless', name:'CMS Headless', desc:'Gestion de contenu flexible + API', price:2000 },
+      { id:'media-library', name:'Media Library Pro', desc:'Upload illimité, compression, CDN images', price:600 }
+    ]},
+    { cat:'Analytics & Intelligence', icon:'📊', items:[
+      { id:'dashboard-analytics', name:'Dashboard Analytics Avancé', desc:'Segments, funnels, heatmaps', price:1200 },
+      { id:'bi', name:'Business Intelligence', desc:'Rapports custom, export, visualisations', price:1500 },
+      { id:'conversion-tracking', name:'Conversion Tracking', desc:'Pixel tracking, attribution, ROI', price:800 },
+      { id:'ab-testing', name:'A/B Testing Framework', desc:'Expérimentations statistiques', price:1200 },
+      { id:'predictions-ml', name:'Prédictions & Recommandations', desc:'ML pour recommandations produits', price:2500 }
+    ]},
+    { cat:'Marketing & Engagement', icon:'📣', items:[
+      { id:'email-marketing', name:'Email Marketing Pro', desc:'Campagnes, segmentation, automation', price:1000 },
+      { id:'sms-push', name:'SMS & Push Notifications', desc:'Alertes, rappels, promotions', price:800 },
+      { id:'live-chat', name:'Live Chat & Support', desc:'Chat temps réel, chatbot IA, ticketing', price:1500 },
+      { id:'loyalty', name:'Loyalty Program', desc:'Cartes fidélité digitales, rewards', price:1200 },
+      { id:'referral', name:'Referral System', desc:'Système de parrainage avec tracking', price:1000 },
+      { id:'social-media', name:'Social Media Integration', desc:'Cross-posting, calendrier éditorial', price:600 }
+    ]},
+    { cat:'Intégrations Externes', icon:'🔗', items:[
+      { id:'google-ads', name:'Google Ads & Analytics', desc:'Sync produits, conversion tracking', price:600 },
+      { id:'meta-ads', name:'Meta Ads Integration', desc:'Pixel, dynamic ads, catalogue sync', price:600 },
+      { id:'booking-sync', name:'Booking / Airbnb / Tripadvisor', desc:'Sync calendrier, avis, réservations', price:1000 },
+      { id:'delivery', name:'Delivery Platforms', desc:'Glovo, Uber Eats, Just Eat sync', price:1200 },
+      { id:'erp-crm', name:'ERP/CRM Sync', desc:'Sage, Salesforce, HubSpot, Pipedrive', price:2000 },
+      { id:'api-custom', name:'API Custom', desc:'Intégration système propriétaire', price:2500 },
+      { id:'marketplace-seller', name:'Marketplace Seller', desc:'Vendre sur Amazon, eBay, Etsy, etc.', price:1200 }
+    ]},
+    { cat:'Performance & Infrastructure', icon:'⚡', items:[
+      { id:'cdn-caching', name:'CDN Avancé & Caching', desc:'Distribution mondiale, optimisation cache', price:600 },
+      { id:'db-optim', name:'Database Optimization', desc:'Indexation, query optimization, scaling', price:1000 },
+      { id:'load-balancing', name:'Load Balancing & Redundancy', desc:'Haute disponibilité, failover auto', price:1500 },
+      { id:'security-hardening', name:'Security Hardening', desc:'Firewall, DDoS protection, pentesting', price:2000 },
+      { id:'monitoring', name:'Monitoring & Alerts', desc:'Uptime tracking, alertes incidents', price:800 },
+      { id:'backup', name:'Backup & Disaster Recovery', desc:'Sauvegarde quotidienne, restore', price:600 }
+    ]},
+    { cat:'Collaboration & Team', icon:'👥', items:[
+      { id:'multi-user', name:'Multi-User Management', desc:'Rôles, permissions, audit trail', price:800 },
+      { id:'workflow', name:'Workflow Automation', desc:'N8N intégré, triggers, actions', price:1200 },
+      { id:'api-docs', name:'API Documentation Generator', desc:'Docs auto, postman, sandbox', price:600 },
+      { id:'version-control', name:'Version Control & Rollback', desc:'Git-like versioning, undo/redo', price:500 },
+      { id:'audit-log', name:'Audit Log & Compliance', desc:'Traçabilité complète, export, conformité', price:1000 }
+    ]},
+    { cat:'Mobile & Cross-Platform', icon:'📱', items:[
+      { id:'pwa', name:'Progressive Web App (PWA)', desc:'App web installable, offline mode', price:1500 },
+      { id:'native-app', name:'Native Mobile App Wrapper', desc:'Convertir web en iOS/Android app', price:3500 },
+      { id:'mobile-features', name:'Mobile-Specific Features', desc:'Géolocalisation, caméra, notifications', price:1000 }
+    ]}
+  ],
+  maintenance: [
+    { id:'standard', name:'Standard', price:125, annual:1200, desc:'Pour les sites vitrines', features:['Maintenance Vercel (hosting)','Supabase (base de données)','Support email (48h)'] },
+    { id:'premium', name:'Premium', price:250, annual:2500, desc:'Pour les projets avec backoffice', featured:true, features:['Maintenance + monitoring','Support prioritaire (24h)','Mises à jour régulières','Bug fixes illimités'] },
+    { id:'enterprise', name:'Enterprise', price:650, annual:6500, desc:'Pour les plateformes ambitieuses', features:['Tout le forfait Premium','Dédication 8h/mois','Performance optimization','Scaling assistance'] }
+  ]
+};
+
+/* ============ STATE ============ */
+const state = {
+  step: 1,
+  base: null,
+  modules: new Set(),
+  maintenance: null
+};
+
+// Restore from sessionStorage
+try {
+  const saved = JSON.parse(sessionStorage.getItem('est_state'));
+  if (saved) {
+    state.base = saved.base ? PRICING.bases.find(b => b.id === saved.base) : null;
+    (saved.modules || []).forEach(m => state.modules.add(m));
+    state.maintenance = saved.maintenance ? PRICING.maintenance.find(m => m.id === saved.maintenance) : null;
+    state.step = saved.step || 1;
+  }
+} catch(e) {}
+
+function saveState() {
+  sessionStorage.setItem('est_state', JSON.stringify({
+    step: state.step,
+    base: state.base?.id || null,
+    modules: [...state.modules],
+    maintenance: state.maintenance?.id || null
+  }));
+}
+
+/* ============ HELPERS ============ */
+function fmt(n) {
+  return n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, '\u00a0');
+}
+
+function getAllModules() {
+  const all = [];
+  PRICING.modules.forEach(cat => cat.items.forEach(item => all.push(item)));
+  return all;
+}
+
+function getSelectedModules() {
+  return getAllModules().filter(m => state.modules.has(m.id));
+}
+
+function calculate() {
+  const basePrice = state.base ? state.base.price : 0;
+  const modulesTotal = getSelectedModules().reduce((s, m) => s + m.price, 0);
+  const totalHT = basePrice + modulesTotal;
+  const totalTTC = Math.round(totalHT * 1.2);
+  const maintMonthly = state.maintenance ? state.maintenance.price : 0;
+  const maintAnnual = state.maintenance ? state.maintenance.annual : 0;
+  return { basePrice, modulesTotal, totalHT, totalTTC, maintMonthly, maintAnnual };
+}
+
+/* ============ RENDER ============ */
+function renderBaseGrid() {
+  const grid = document.getElementById('baseGrid');
+  grid.innerHTML = PRICING.bases.map(b => `
+    <div class="base-card${b.featured ? ' featured' : ''}${state.base?.id === b.id ? ' selected' : ''}" onclick="selectBase('${b.id}')">
+      <div class="b-name">${b.name}</div>
+      <div class="b-desc">${b.desc}</div>
+      <div class="b-price">${fmt(b.price)}€ <span>HT</span></div>
+      <div class="b-pages">${b.pages} fonctionnelles</div>
+      <ul class="b-features">${b.features.map(f => '<li>' + f + '</li>').join('')}</ul>
+      <div class="select-indicator">${state.base?.id === b.id ? '✓ Sélectionné' : 'Cliquez pour choisir'}</div>
+    </div>
+  `).join('');
+}
+
+function renderModules() {
+  const container = document.getElementById('modulesContainer');
+  container.innerHTML = PRICING.modules.map((cat, ci) => {
+    const count = cat.items.filter(it => state.modules.has(it.id)).length;
+    return `
+    <div class="cat-section" data-cat="${ci}">
+      <div class="cat-header" aria-expanded="false" onclick="toggleCat(this)">
+        <div class="cat-header-left">
+          <span class="cat-icon">${cat.icon}</span>
+          <span class="cat-name">${cat.cat}</span>
+          <span class="cat-count${count ? ' visible' : ''}">${count}</span>
+        </div>
+        <span class="cat-toggle">▾</span>
+      </div>
+      <div class="cat-body">
+        <div class="cat-body-inner">
+          ${cat.items.map(m => `
+            <div class="mod-card${state.modules.has(m.id) ? ' selected' : ''}" data-id="${m.id}" data-name="${m.name.toLowerCase()}" onclick="toggleModule('${m.id}')">
+              <div class="mod-check">✓</div>
+              <div class="mod-info"><h4>${m.name}</h4><p>${m.desc}</p></div>
+              <div class="mod-price">+${fmt(m.price)}€</div>
+            </div>
+          `).join('')}
+        </div>
+      </div>
+    </div>`;
+  }).join('');
+}
+
+function renderMaintGrid() {
+  const grid = document.getElementById('maintGrid');
+  grid.innerHTML = PRICING.maintenance.map(m => `
+    <div class="m-card${m.featured ? ' featured' : ''}${state.maintenance?.id === m.id ? ' selected' : ''}" onclick="selectMaintenance('${m.id}')">
+      <div class="m-name">${m.name}</div>
+      <div class="m-desc">${m.desc}</div>
+      <div class="m-price">${m.price}€ <span>HT/mois</span></div>
+      <div class="m-annual">soit ${fmt(m.annual)}€/an (2 mois offerts)</div>
+      <ul class="m-features">${m.features.map(f => '<li>' + f + '</li>').join('')}</ul>
+    </div>
+  `).join('');
+}
+
+function renderSummary() {
+  const card = document.getElementById('summaryCard');
+  const t = calculate();
+  const selectedMods = getSelectedModules();
+
+  let html = '';
+
+  // Base
+  if (state.base) {
+    html += `<div class="summary-section">
+      <div class="summary-section-title">Forfait de base</div>
+      <div class="summary-row"><span>${state.base.name} — ${state.base.pages}</span><span class="sr-price">${fmt(state.base.price)}€</span></div>
+    </div>`;
+  }
+
+  // Modules
+  if (selectedMods.length) {
+    html += `<div class="summary-section">
+      <div class="summary-section-title">Modules sélectionnés (${selectedMods.length})</div>
+      ${selectedMods.map(m => `<div class="summary-row"><span>${m.name}</span><span class="sr-price">+${fmt(m.price)}€</span></div>`).join('')}
+    </div>`;
+  }
+
+  // Total
+  html += `<div class="summary-divider"></div>
+    <div class="summary-total"><span class="st-label">Total HT</span><span class="st-price">${fmt(t.totalHT)}€</span></div>
+    <div class="summary-ttc">soit ${fmt(t.totalTTC)}€ TTC</div>`;
+
+  // Maintenance
+  if (state.maintenance) {
+    html += `<div class="summary-divider"></div>
+      <div class="summary-section">
+        <div class="summary-section-title">Maintenance récurrente</div>
+        <div class="summary-maint"><span>${state.maintenance.name}</span><span class="sm-price">${state.maintenance.price}€ HT/mois · ${fmt(state.maintenance.annual)}€/an</span></div>
+      </div>`;
+  }
+
+  // Actions
+  html += `<div class="summary-actions">
+    <a class="btn-primary" href="${buildMailto()}">✉ Demander un devis</a>
+    <button class="btn-secondary" onclick="window.print()">⎙ Imprimer</button>
+  </div>
+  <div class="summary-edit"><a onclick="goToStep(1)">← Modifier ma sélection</a></div>`;
+
+  card.innerHTML = html;
+}
+
+function renderPriceBar() {
+  const bar = document.getElementById('priceBar');
+  const t = calculate();
+  if (state.base) {
+    bar.classList.add('visible');
+    document.getElementById('pbAmount').textContent = fmt(t.totalHT) + '€ HT';
+    const parts = [];
+    if (t.modulesTotal) parts.push(getSelectedModules().length + ' module' + (getSelectedModules().length > 1 ? 's' : ''));
+    if (state.maintenance) parts.push('+ ' + state.maintenance.price + '€/mois');
+    document.getElementById('pbDetail').textContent = parts.join(' · ');
+  } else {
+    bar.classList.remove('visible');
+  }
+
+  const btn = document.getElementById('pbNext');
+  if (state.step === 4) {
+    btn.textContent = '✉ Demander un devis';
+    btn.onclick = function() { window.location.href = buildMailto(); };
+  } else {
+    btn.textContent = 'Suivant →';
+    btn.onclick = goToNextStep;
+  }
+}
+
+function renderStepBar() {
+  document.querySelectorAll('.step-bar-item').forEach(item => {
+    const s = parseInt(item.dataset.step);
+    item.classList.remove('active', 'completed');
+    if (s === state.step) item.classList.add('active');
+    else if (s < state.step) item.classList.add('completed');
+  });
+}
+
+function render() {
+  renderStepBar();
+  renderPriceBar();
+  if (state.step === 4) renderSummary();
+}
+
+/* ============ ACTIONS ============ */
+function selectBase(id) {
+  state.base = PRICING.bases.find(b => b.id === id);
+  renderBaseGrid();
+  saveState();
+  render();
+  setTimeout(() => goToStep(2), 350);
+}
+
+function toggleModule(id) {
+  if (state.modules.has(id)) state.modules.delete(id);
+  else state.modules.add(id);
+
+  // Update just the card and count
+  const card = document.querySelector(`.mod-card[data-id="${id}"]`);
+  if (card) card.classList.toggle('selected');
+
+  // Update category count
+  PRICING.modules.forEach((cat, ci) => {
+    const count = cat.items.filter(it => state.modules.has(it.id)).length;
+    const badge = document.querySelector(`.cat-section[data-cat="${ci}"] .cat-count`);
+    if (badge) {
+      badge.textContent = count;
+      badge.classList.toggle('visible', count > 0);
+    }
+  });
+
+  saveState();
+  render();
+}
+
+function selectMaintenance(id) {
+  if (id === null) {
+    state.maintenance = null;
+  } else {
+    state.maintenance = PRICING.maintenance.find(m => m.id === id);
+  }
+  renderMaintGrid();
+  saveState();
+  render();
+  if (id !== null) setTimeout(() => goToStep(4), 350);
+}
+
+function toggleCat(header) {
+  const expanded = header.getAttribute('aria-expanded') === 'true';
+  header.setAttribute('aria-expanded', !expanded);
+  const body = header.nextElementSibling;
+  body.classList.toggle('open', !expanded);
+}
+
+function goToStep(n) {
+  if (n > 1 && !state.base) return;
+  state.step = n;
+  document.querySelectorAll('.est-step').forEach(s => s.classList.remove('active'));
+  const target = document.querySelector(`.est-step[data-step="${n}"]`);
+  if (target) target.classList.add('active');
+  saveState();
+  render();
+  window.scrollTo({ top: document.querySelector('.step-bar').offsetTop - 60, behavior: 'smooth' });
+}
+
+function goToNextStep() {
+  if (state.step < 4) goToStep(state.step + 1);
+}
+
+function buildMailto() {
+  const t = calculate();
+  const mods = getSelectedModules();
+  let body = 'Bonjour,\n\nJe souhaite un devis pour le projet suivant :\n\n';
+  body += '━━ FORFAIT ━━\n';
+  body += state.base ? `${state.base.name} (${state.base.pages}) : ${fmt(state.base.price)}€ HT\n` : 'Non sélectionné\n';
+  if (mods.length) {
+    body += '\n━━ MODULES ━━\n';
+    mods.forEach(m => body += `• ${m.name} : +${fmt(m.price)}€\n`);
+  }
+  if (state.maintenance) {
+    body += `\n━━ MAINTENANCE ━━\n${state.maintenance.name} : ${state.maintenance.price}€ HT/mois\n`;
+  }
+  body += `\n━━ TOTAL ━━\n${fmt(t.totalHT)}€ HT (${fmt(t.totalTTC)}€ TTC)\n`;
+  body += '\nMerci de me recontacter pour finaliser le devis.\n\nCordialement';
+  return `mailto:canon@ccdeveloppement.eu?subject=${encodeURIComponent('Demande de devis — Estimateur CC Développement')}&body=${encodeURIComponent(body)}`;
+}
+
+/* ============ SEARCH ============ */
+document.getElementById('moduleSearch').addEventListener('input', function() {
+  const q = this.value.toLowerCase().trim();
+  document.querySelectorAll('.mod-card').forEach(card => {
+    const name = card.dataset.name || '';
+    card.classList.toggle('hidden', q && !name.includes(q));
+  });
+  // Auto-expand categories with matches
+  if (q) {
+    document.querySelectorAll('.cat-section').forEach(sec => {
+      const hasVisible = sec.querySelector('.mod-card:not(.hidden)');
+      const header = sec.querySelector('.cat-header');
+      const body = sec.querySelector('.cat-body');
+      if (hasVisible) {
+        header.setAttribute('aria-expanded', 'true');
+        body.classList.add('open');
+      } else {
+        header.setAttribute('aria-expanded', 'false');
+        body.classList.remove('open');
+      }
+    });
+  }
+});
+
+/* ============ STEP BAR CLICK ============ */
+document.querySelectorAll('.step-bar-item').forEach(item => {
+  item.addEventListener('click', () => {
+    const s = parseInt(item.dataset.step);
+    if (item.classList.contains('completed') || s === state.step) goToStep(s);
+  });
+});
+
+/* ============ INIT ============ */
+renderBaseGrid();
+renderModules();
+renderMaintGrid();
+// Restore step
+if (state.base && state.step > 1) {
+  goToStep(state.step);
+} else {
+  render();
+}
+</script>
+</body>
+</html>
