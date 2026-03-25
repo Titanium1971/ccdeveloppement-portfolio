@@ -82,6 +82,7 @@ body { font-family: 'Morena', sans-serif; font-weight: 700; background: var(--bl
 .top-nav a { color: var(--gray-light); text-decoration: none; font-size: 16px; font-weight: 700; }
 .top-nav a:hover { color: var(--white); }
 .top-nav .cta { background: var(--accent); color: var(--black); padding: 12px 18px; border-radius: 10px; font-size: 16px; font-weight: 700; }
+.top-nav-sub { display: none; }
 .section-label { display: inline-flex; align-items: center; gap: 10px; font-size: 15px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: var(--accent); margin-bottom: 20px; }
 .section-label::before { content: ''; width: 24px; height: 1px; background: var(--accent); }
 .section-title { font-size: clamp(32px, 5vw, 52px); font-weight: 700; line-height: 1.15; margin-bottom: 16px; letter-spacing: -0.5px; }
@@ -241,6 +242,9 @@ body { font-family: 'Morena', sans-serif; font-weight: 700; background: var(--bl
   .top-nav a { font-size: 14px; }
   .top-nav .cta { padding: 8px 14px; font-size: 14px; }
   .top-nav-inner > a:not(.cta):not(:first-child) { display: none; }
+  .top-nav-sub { display: flex; justify-content: center; gap: 24px; padding: 6px 16px 10px; border-top: 1px solid rgba(255,255,255,0.06); }
+  .top-nav-sub a { color: var(--gray-light); text-decoration: none; font-size: 13px; font-weight: 700; }
+  .top-nav-sub a:hover { color: var(--white); }
   .section { padding: 80px 0; }
   .hero-metrics { gap: 24px; }
   .hero-divider { display: none; }
@@ -265,6 +269,10 @@ body { font-family: 'Morena', sans-serif; font-weight: 700; background: var(--bl
     <a href="./guide-tarifs.html" style="color:var(--gray-light);text-decoration:none;font-size:16px;font-weight:700;">Guide des modules</a>
     <a href="./estimateur.html" style="color:var(--accent);text-decoration:none;font-size:16px;font-weight:700;">Estimateur de prix</a>
     <a class="cta" href="./index.html#contact">Demander un devis</a>
+  </div>
+  <div class="top-nav-sub">
+    <a href="./guide-tarifs.html">Guide des modules</a>
+    <a href="./estimateur.html" style="color:var(--accent);">Estimateur de prix</a>
   </div>
 </nav>
 
