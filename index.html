@@ -144,7 +144,6 @@
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
 html { scroll-behavior: smooth; scroll-padding-top: 165px; }
-section[id] { scroll-margin-top: 165px; }
 body {
   font-family: 'Morena', sans-serif;
   font-weight: 700;
@@ -617,7 +616,6 @@ footer a:hover { color: var(--accent); }
 
 @media (max-width: 768px) {
   html { scroll-padding-top: 80px; }
-  section[id] { scroll-margin-top: 80px; }
   .hero-stats { gap: 24px; flex-wrap: wrap; }
   .section { padding: 80px 20px; }
   .cta-box { padding: 48px 24px; }
@@ -1006,7 +1004,7 @@ footer a:hover { color: var(--accent); }
           WhatsApp (réponse rapide)
         </a>
         <a href="tel:+33620262153" class="btn-phone">📞 06 20 26 21 53</a>
-        <a href="mailto:canon@ccdeveloppement.eu" class="btn-primary" style="margin:0;">✉️ Recevoir mon devis</a>
+        <a href="./devis.html" class="btn-primary" style="margin:0;">✉️ Recevoir mon devis</a>
       </div>
       <div class="cta-contacts">
         <a href="https://www.linkedin.com/in/cyril-canon-kotylak-4bab9637a" target="_blank" rel="noopener noreferrer" class="cta-contact-item">💼 LinkedIn</a>
@@ -1030,7 +1028,7 @@ footer a:hover { color: var(--accent); }
 </main>
 
 <footer>
-  <p>© 2026 CC Développement · Cyril Canon · SIRET : 444 114 011 · 27 Rue Basse, 34300 Agde · <a href="./rgpd-confidentialite.html">Politique de confidentialité</a></p>
+  <p>© 2026 CC Développement · Cyril Canon · SIRET : 444 114 011 · 27 Rue Basse, 34300 Agde · <a href="./mentions-legales.html">Mentions légales</a> · <a href="./rgpd-confidentialite.html">Politique de confidentialité</a></p>
 </footer>
 
 <script>
@@ -1054,6 +1052,8 @@ const observer = new IntersectionObserver((entries) => {
 
 document.querySelectorAll('.reveal').forEach((el) => observer.observe(el));
 
+const mainNav = document.querySelector('nav');
+
 document.querySelectorAll('a[href^="#"]').forEach((a) => {
   a.addEventListener('click', (e) => {
     const href = a.getAttribute('href');
@@ -1062,10 +1062,9 @@ document.querySelectorAll('a[href^="#"]').forEach((a) => {
     if (!target) return;
 
     e.preventDefault();
-    target.scrollIntoView({
-      behavior: prefersReducedMotion ? 'auto' : 'smooth',
-      block: 'start'
-    });
+    const navHeight = mainNav ? mainNav.offsetHeight : 0;
+    const top = target.getBoundingClientRect().top + window.scrollY - navHeight;
+    window.scrollTo({ top, behavior: prefersReducedMotion ? 'auto' : 'smooth' });
 
     if (navLinks) navLinks.classList.remove('open');
     if (navToggle) navToggle.setAttribute('aria-expanded', 'false');
