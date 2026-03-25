@@ -230,6 +230,15 @@ body { font-family: 'Morena', sans-serif; font-weight: 700; background: var(--bl
   .summary-card { padding: 28px 20px; }
   .summary-actions { flex-direction: column; }
   .price-bar .pb-amount { font-size: 22px; }
+  /* Fix prix modules : réduit la taille et supprime le nowrap sur la description */
+  .mod-price { font-size: 16px; }
+  .mod-info p { white-space: normal; }
+}
+
+@media (max-width: 420px) {
+  .mod-card { padding: 12px 14px; gap: 8px; }
+  .mod-price { font-size: 14px; }
+  .mod-info h4 { font-size: 15px; }
 }
 
 @media print {
