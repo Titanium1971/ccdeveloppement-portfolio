@@ -96,6 +96,10 @@ a:hover{opacity:.8;}
 .footer{background:var(--black);border-top:1px solid var(--dark-3);color:var(--gray-dim);text-align:center;padding:32px 24px;font-size:15px;}
 
 @media(max-width:768px){
+  .top-nav-inner{padding:10px 16px;gap:8px;}
+  .top-nav a{font-size:14px;}
+  .top-nav .cta{padding:8px 14px;font-size:14px;}
+  .top-nav-inner > a:not(.cta):not(:first-child){display:none;}
   .hero h1{font-size:28px;}
   .forfait-head{flex-direction:column;}
   .forfait-includes{grid-template-columns:1fr;}

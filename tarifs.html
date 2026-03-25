@@ -237,6 +237,10 @@ body { font-family: 'Morena', sans-serif; font-weight: 700; background: var(--bl
 }
 
 @media (max-width: 768px) {
+  .top-nav-inner { padding: 10px 16px; gap: 8px; }
+  .top-nav a { font-size: 14px; }
+  .top-nav .cta { padding: 8px 14px; font-size: 14px; }
+  .top-nav-inner > a:not(.cta):not(:first-child) { display: none; }
   .section { padding: 80px 0; }
   .hero-metrics { gap: 24px; }
   .hero-divider { display: none; }
