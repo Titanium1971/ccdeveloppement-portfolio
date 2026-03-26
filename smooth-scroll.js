@@ -36,7 +36,9 @@
       var target = document.querySelector(this.getAttribute('href'));
       if (target) {
         e.preventDefault();
-        lenis.scrollTo(target, { duration: 1.5 });
+        var nav = document.querySelector('nav');
+        var offset = nav ? -(nav.offsetHeight + 20) : 0;
+        lenis.scrollTo(target, { duration: 1.5, offset: offset });
       }
     });
   });
