@@ -37,7 +37,7 @@
       if (target) {
         e.preventDefault();
         var nav = document.querySelector('nav');
-        var offset = nav ? -(nav.offsetHeight + 40) : 0;
+        var offset = nav ? -nav.offsetHeight : 0;
         lenis.scrollTo(target, { duration: 1.5, offset: offset });
       }
     });
