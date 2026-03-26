@@ -1,15 +1,31 @@
-// Smooth scroll with Lenis — duration 1.5s, synced with requestAnimationFrame
+// Smooth scroll — Lenis on desktop, native CSS scroll-behavior on mobile
 (function () {
   if (typeof window === 'undefined') return;
 
-  // Wait for Lenis to be available (loaded via CDN before this script)
+  function isMobile() {
+    return window.matchMedia('(max-width: 767px)').matches ||
+           ('ontouchstart' in window && !window.matchMedia('(pointer: fine)').matches);
+  }
+
+  function initMobileScroll() {
+    // Inject scroll-behavior: smooth for pages that don't already have it
+    var style = document.createElement('style');
+    style.textContent = 'html { scroll-behavior: smooth !important; }';
+    document.head.appendChild(style);
+  }
+
   function initLenis() {
     if (typeof Lenis === 'undefined') {
-      console.warn('Lenis not loaded yet, retrying...');
+      console.warn('Lenis not loaded');
       return;
     }
 
-    const lenis = new Lenis({
+    // Lenis requires scroll-behavior: auto on html to avoid conflicts
+    var style = document.createElement('style');
+    style.textContent = 'html { scroll-behavior: auto !important; }';
+    document.head.appendChild(style);
+
+    var lenis = new Lenis({
       duration: 1.5,
       easing: function (t) { return Math.min(1, 1.001 - Math.pow(2, -10 * t)); },
       orientation: 'vertical',
@@ -25,7 +41,7 @@
     }
     requestAnimationFrame(raf);
 
-    // Handle anchor links (smooth scroll to sections)
+    // Handle anchor links
     document.querySelectorAll('a[href^="#"]').forEach(function (anchor) {
       anchor.addEventListener('click', function (e) {
         var target = document.querySelector(this.getAttribute('href'));
@@ -37,9 +53,17 @@
     });
   }
 
+  function init() {
+    if (isMobile()) {
+      initMobileScroll();
+    } else {
+      initLenis();
+    }
+  }
+
   if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', initLenis);
+    document.addEventListener('DOMContentLoaded', init);
   } else {
-    initLenis();
+    init();
   }
 })();
