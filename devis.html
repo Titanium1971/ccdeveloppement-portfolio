@@ -124,6 +124,57 @@ body { font-family: 'Morena', sans-serif; font-weight: 700; background: var(--bl
 .aside-card a { color: var(--accent); }
 .aside-card a:hover { text-decoration: underline; }
 
+/* BTN CAL.COM */
+.btn-cal {
+  display: inline-flex; align-items: center; gap: 10px;
+  background: var(--accent); color: var(--black);
+  padding: 16px 32px; border-radius: 12px;
+  text-decoration: none; font-weight: 700; font-size: 17px;
+  transition: all 0.3s; border: none; cursor: pointer;
+  font-family: 'Morena', sans-serif;
+  position: relative; overflow: hidden;
+}
+.btn-cal:hover {
+  box-shadow: 0 12px 40px var(--accent-glow), 0 0 60px var(--accent-glow);
+  transform: translateY(-2px);
+}
+.btn-cal::before {
+  content: ''; position: absolute; top: 0; left: -140%; width: 120%; height: 100%;
+  background: linear-gradient(110deg, transparent 15%, rgba(255,255,255,0.28) 50%, transparent 85%);
+  transform: skewX(-18deg); transition: left 0.75s ease; pointer-events: none;
+}
+.btn-cal:hover::before { left: 130%; }
+.btn-cal--outline {
+  display: inline-flex; align-items: center; gap: 10px;
+  background: transparent; color: var(--accent);
+  padding: 14px 28px; border-radius: 12px;
+  text-decoration: none; font-weight: 700; font-size: 15px;
+  border: 1px solid rgba(57,255,20,0.3); cursor: pointer;
+  font-family: 'Morena', sans-serif; transition: all 0.3s;
+}
+.btn-cal--outline:hover {
+  background: var(--accent-dim); border-color: var(--accent);
+}
+.footer-cal { text-align: center; padding: 20px 24px 0; }
+.footer-cal .btn-cal--outline { font-size: 14px; padding: 12px 24px; }
+.cal-alternative { margin-top: 40px; text-align: center; padding: 32px 24px; background: var(--dark); border: 1px solid rgba(57,255,20,0.12); border-radius: var(--radius); }
+.cal-alternative p { font-size: 17px; color: var(--gray); font-weight: 700; margin-bottom: 20px; line-height: 1.6; }
+
+/* MOBILE STICKY CAL BAR */
+.sticky-cal { display: none; }
+@media (max-width: 768px) {
+  .sticky-cal {
+    display: flex; position: fixed; bottom: 0; left: 0; right: 0; z-index: 9998;
+    background: rgba(9,9,11,0.96); border-top: 1px solid rgba(57,255,20,0.2);
+    backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
+    padding: 12px 16px; justify-content: center; align-items: center;
+  }
+  .sticky-cal .btn-cal {
+    width: 100%; justify-content: center; font-size: 15px; padding: 14px 24px;
+  }
+  .footer { padding-bottom: 80px !important; }
+}
+
 /* FOOTER */
 .footer { background: var(--black); border-top: 1px solid var(--dark-3); color: var(--gray-dim); text-align: center; padding: 32px 24px; font-size: 14px; font-weight: 700; }
 .footer a { color: var(--gray-dim); text-decoration: none; }
@@ -139,6 +190,7 @@ body { font-family: 'Morena', sans-serif; font-weight: 700; background: var(--bl
   .promises { gap: 12px; }
 }
 </style>
+<script src="assets/js/analytics.js" defer></script>
 </head>
 <body>
 
@@ -149,6 +201,7 @@ body { font-family: 'Morena', sans-serif; font-weight: 700; background: var(--bl
       ← Retour au site
     </a>
     <a href="./tarifs.html" style="color:var(--gray-light);">Tarifs</a>
+    <a href="./blog/" style="color:var(--gray-light);">Blog</a>
     <a href="./estimateur.html" style="color:var(--accent);">Estimateur</a>
   </div>
 </nav>
@@ -169,7 +222,11 @@ body { font-family: 'Morena', sans-serif; font-weight: 700; background: var(--bl
 
     <div class="form-card" id="formCard">
 
-      <form id="devisForm" novalidate>
+      <form id="devisForm" action="https://formspree.io/f/xaqanree" method="POST" novalidate>
+        <!-- Honeypot anti-spam — invisible pour les humains -->
+        <input type="text" name="_gotcha" style="display:none !important" tabindex="-1" autocomplete="off">
+        <input type="hidden" name="_subject" value="Nouvelle demande de devis — CC Développement">
+        <input type="hidden" name="_next" value="https://ccdeveloppement.eu/merci.html">
         <div class="form-grid">
 
           <div class="form-group" id="field-nom">
@@ -230,6 +287,11 @@ body { font-family: 'Morena', sans-serif; font-weight: 700; background: var(--bl
             </select>
           </div>
 
+          <div class="form-group" id="field-pages">
+            <label class="form-label" for="pages">Volume de pages</label>
+            <input class="form-input" type="number" id="pages" name="pages" placeholder="Ex : 5" min="1" max="200">
+          </div>
+
           <div class="form-group full" id="field-message">
             <label class="form-label" for="message">Décrivez votre projet<span class="required">*</span></label>
             <textarea class="form-textarea" id="message" name="message" placeholder="Ex : Je suis restaurateur à Agde, je cherche un site vitrine avec menu en ligne, formulaire de réservation et intégration Google Maps. J'ai besoin d'être visible sur Google localement…" required></textarea>
@@ -258,7 +320,17 @@ body { font-family: 'Morena', sans-serif; font-weight: 700; background: var(--bl
 
     </div>
 
+    <div class="cal-alternative">
+      <p>Tu préfères en parler de vive voix ?<br>Réserve un créneau de 30 min — c'est gratuit et sans engagement.</p>
+      <a href="#" class="btn-cal" data-cal-link="cc-developpement/audit-30min" data-cal-config='{"layout":"modal"}'>📅 Réserve ton audit gratuit — 30 min</a>
+    </div>
+
     <div class="page-aside">
+      <div class="aside-card">
+        <h4>Guides utiles</h4>
+        <a href="./blog/combien-coute-site-vitrine-tpe-2026.html" style="display:block;margin-bottom:6px;">Combien coûte un site vitrine ? →</a>
+        <a href="./blog/creation-site-internet-agde-guide-complet-2026.html" style="display:block;">Guide création de site à Agde →</a>
+      </div>
       <div class="aside-card">
         <h4>Préférez le téléphone ?</h4>
         <a href="tel:0620262153">06 20 26 21 53</a>
@@ -275,17 +347,28 @@ body { font-family: 'Morena', sans-serif; font-weight: 700; background: var(--bl
 </main>
 
 <footer class="footer">
+  <div class="footer-cal">
+    <a href="#" class="btn-cal--outline" data-cal-link="cc-developpement/audit-30min" data-cal-config='{"layout":"modal"}'>📅 Réserve ton audit gratuit — 30 min</a>
+  </div>
   CC Développement · Cyril Canon · SIRET : 444 114 011 · 27 Rue Basse, 34300 Agde<br>
   © 2026 — Tous droits réservés ·
   <a href="./mentions-legales.html">Mentions légales</a> ·
   <a href="./rgpd-confidentialite.html">Politique de confidentialité</a>
 </footer>
 
+<!-- MOBILE STICKY CAL.COM BAR -->
+<div class="sticky-cal">
+  <a href="#" class="btn-cal" data-cal-link="cc-developpement/audit-30min" data-cal-config='{"layout":"modal"}'>📅 Réserve ton audit gratuit</a>
+</div>
+
 <script>
 (function () {
   const form = document.getElementById('devisForm');
   const successState = document.getElementById('successState');
   const submitBtn = document.getElementById('submitBtn');
+
+  // Rate limiting simple — 1 soumission par minute
+  let lastSubmit = 0;
 
   function validateField(id, validFn) {
     const field = document.getElementById('field-' + id);
@@ -301,55 +384,62 @@ body { font-family: 'Morena', sans-serif; font-weight: 700; background: var(--bl
 
   form.addEventListener('submit', function (e) {
     e.preventDefault();
-    const v1 = validateField('nom', v => v.length > 0);
-    const v2 = validateField('email', isEmail);
-    const v3 = validateField('type', v => v.length > 0);
-    const v4 = validateField('message', v => v.length > 10);
+
+    // Rate limit côté client
+    var now = Date.now();
+    if (now - lastSubmit < 60000) {
+      alert('Veuillez patienter avant de soumettre à nouveau.');
+      return;
+    }
+
+    var v1 = validateField('nom', function(v) { return v.length > 0; });
+    var v2 = validateField('email', isEmail);
+    var v3 = validateField('type', function(v) { return v.length > 0; });
+    var v4 = validateField('message', function(v) { return v.length > 10; });
     if (!v1 || !v2 || !v3 || !v4) return;
 
     submitBtn.disabled = true;
     submitBtn.textContent = 'Envoi en cours…';
 
-    const nom = document.getElementById('nom').value.trim();
-    const email = document.getElementById('email').value.trim();
-    const telephone = document.getElementById('telephone').value.trim();
-    const type = document.getElementById('type').value;
-    const budget = document.getElementById('budget').value;
-    const delai = document.getElementById('delai').value;
-    const message = document.getElementById('message').value.trim();
+    var data = new FormData(form);
 
-    let body = 'Nouvelle demande de devis via ccdeveloppement.eu\n\n';
-    body += '--- CONTACT ---\n';
-    body += 'Nom : ' + nom + '\n';
-    body += 'Email : ' + email + '\n';
-    if (telephone) body += 'Téléphone : ' + telephone + '\n';
-    body += '\n--- PROJET ---\n';
-    body += 'Type : ' + type + '\n';
-    if (budget) body += 'Budget : ' + budget + '\n';
-    if (delai) body += 'Délai : ' + delai + '\n';
-    body += '\nDescription :\n' + message;
-
-    const mailto = 'mailto:canon@ccdeveloppement.eu'
-      + '?subject=' + encodeURIComponent('Demande de devis — ' + nom)
-      + '&body=' + encodeURIComponent(body);
-
-    window.location.href = mailto;
-
-    setTimeout(function () {
-      form.style.display = 'none';
-      successState.style.display = 'block';
-    }, 800);
+    fetch(form.action, {
+      method: 'POST',
+      body: data,
+      headers: { 'Accept': 'application/json' }
+    }).then(function (res) {
+      if (res.ok) {
+        lastSubmit = Date.now();
+        window.location.href = './merci.html';
+      } else {
+        return res.json().then(function (json) {
+          var msg = (json.errors && json.errors.map(function(e) { return e.message; }).join(', ')) || 'Erreur inconnue';
+          throw new Error(msg);
+        });
+      }
+    }).catch(function (err) {
+      submitBtn.disabled = false;
+      submitBtn.textContent = 'Envoyer ma demande de devis';
+      alert('Erreur lors de l\'envoi : ' + err.message + '\nVous pouvez réessayer ou nous contacter par téléphone.');
+    });
   });
 
   ['nom', 'email', 'type', 'message'].forEach(function (id) {
-    const el = document.getElementById(id);
+    var el = document.getElementById(id);
     if (el) el.addEventListener('input', function () {
-      const field = document.getElementById('field-' + id);
+      var field = document.getElementById('field-' + id);
       if (field) field.classList.remove('field-error');
       el.classList.remove('error');
     });
   });
 })();
+</script>
+
+<!-- Cal.com Embed -->
+<script type="text/javascript">
+(function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if (typeof namespace === "string") { cal.ns[namespace] = cal.ns[namespace] || api; p(cal.ns[namespace], ar); p(cal, ["initNamespace", namespace]); } else p(cal, ar); return; } p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
+Cal("init", {origin:"https://app.cal.com"});
+Cal("ui", {"theme":"dark","styles":{"branding":{"brandColor":"#39FF14"}},"hideEventTypeDetails":false,"layout":"modal"});
 </script>
 
 <script src="https://unpkg.com/lenis@1.1.18/dist/lenis.min.js"></script>

@@ -28,6 +28,7 @@ html { scroll-behavior: smooth; scroll-padding-top: 180px; }
   table { page-break-inside:avoid; }
 }
 </style>
+<script src="assets/js/analytics.js" defer></script>
 </head>
 <body style="font-family:'Morena',system-ui,sans-serif;font-weight:700;background:#fff;color:#000;-webkit-font-smoothing:antialiased;line-height:1.6;margin:0;">
 
@@ -524,6 +525,7 @@ html { scroll-behavior: smooth; scroll-padding-top: 180px; }
 
 <!-- FOOTER -->
 <div style="text-align:center;margin-top:48px;padding-top:24px;border-top:1px solid #e5e7eb;font-size:13px;color:#333;">
+  <div style="text-align:center;padding:0 0 20px;"><a href="#" data-cal-link="cc-developpement/audit-30min" data-cal-config='{"layout":"modal"}' style="display:inline-flex;align-items:center;gap:10px;background:transparent;color:#1a8a0a;padding:12px 24px;border-radius:12px;text-decoration:none;font-weight:700;font-size:14px;border:1px solid rgba(26,138,10,0.3);transition:all 0.3s;">📅 Réserve ton audit gratuit — 30 min</a></div>
   CC Développement · Cyril Canon · SIRET 444 114 011<br>
   06 20 26 21 53 · canon@ccdeveloppement.eu · ccdeveloppement.eu<br><br>
   <em style="color:#555;">Sources : Baromètre Malt 2024, Codeur.fr, SortList, France Num, Journal du Net, BlogDuModérateur.<br>
@@ -531,6 +533,12 @@ html { scroll-behavior: smooth; scroll-padding-top: 180px; }
 </div>
 
 </div>
+<!-- Cal.com Embed -->
+<script type="text/javascript">
+(function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if (typeof namespace === "string") { cal.ns[namespace] = cal.ns[namespace] || api; p(cal.ns[namespace], ar); p(cal, ["initNamespace", namespace]); } else p(cal, ar); return; } p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
+Cal("init", {origin:"https://app.cal.com"});
+Cal("ui", {"theme":"dark","styles":{"branding":{"brandColor":"#39FF14"}},"hideEventTypeDetails":false,"layout":"modal"});
+</script>
 <script src="https://unpkg.com/lenis@1.1.18/dist/lenis.min.js"></script>
 <script src="./smooth-scroll.js"></script>
 </body>

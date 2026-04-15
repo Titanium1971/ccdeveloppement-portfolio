@@ -96,6 +96,10 @@ a:hover{opacity:.8;}
 .cta-section::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 50% 50%,var(--accent-dim) 0%,transparent 60%);pointer-events:none;}
 .cta-box{display:inline-flex;flex-direction:column;align-items:center;gap:8px;background:rgba(57,255,20,0.04);border:1px solid rgba(57,255,20,0.15);border-radius:20px;padding:36px 56px;position:relative;}
 
+.btn-cal--outline{display:inline-flex;align-items:center;gap:10px;background:transparent;color:var(--accent);padding:14px 28px;border-radius:12px;text-decoration:none;font-weight:700;font-size:15px;border:1px solid rgba(57,255,20,0.3);cursor:pointer;font-family:'Morena',sans-serif;transition:all 0.3s;}
+.btn-cal--outline:hover{background:rgba(57,255,20,0.10);border-color:var(--accent);}
+.footer-cal{text-align:center;padding:20px 24px 0;}
+.footer-cal .btn-cal--outline{font-size:14px;padding:12px 24px;}
 .footer{background:var(--black);border-top:1px solid var(--dark-3);color:var(--gray-dim);text-align:center;padding:32px 24px;font-size:15px;}
 
 @media(max-width:768px){
@@ -109,6 +113,7 @@ a:hover{opacity:.8;}
   .cta-box{padding:28px 24px;}
 }
 </style>
+<script src="assets/js/analytics.js" defer></script>
 </head>
 <body>
 
@@ -116,6 +121,7 @@ a:hover{opacity:.8;}
   <div class="top-nav-inner">
     <a href="./tarifs.html">← Tarifs</a>
     <a href="./estimateur.html" style="color:var(--accent);">Estimateur de prix</a>
+    <a href="./blog/">Blog</a>
     <a class="cta" href="./devis.html">Demander un devis</a>
   </div>
 </nav>
@@ -683,7 +689,17 @@ a:hover{opacity:.8;}
   </div>
 </section>
 
-<footer class="footer">CC Développement · Cyril Canon · SIRET : 444 114 011 · 27 Rue Basse, 34300 Agde<br>© 2026 — Tous droits réservés · <a href="./mentions-legales.html" style="color:var(--gray-dim);text-decoration:none;">Mentions légales</a> · <a href="./rgpd-confidentialite.html" style="color:var(--gray-dim);text-decoration:none;">Politique de confidentialité</a></footer>
+<footer class="footer">
+  <div class="footer-cal"><a href="#" class="btn-cal--outline" data-cal-link="cc-developpement/audit-30min" data-cal-config='{"layout":"modal"}'>📅 Réserve ton audit gratuit — 30 min</a></div>
+  CC Développement · Cyril Canon · SIRET : 444 114 011 · 27 Rue Basse, 34300 Agde<br>© 2026 — Tous droits réservés · <a href="./mentions-legales.html" style="color:var(--gray-dim);text-decoration:none;">Mentions légales</a> · <a href="./rgpd-confidentialite.html" style="color:var(--gray-dim);text-decoration:none;">Politique de confidentialité</a>
+</footer>
+
+<!-- Cal.com Embed -->
+<script type="text/javascript">
+(function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if (typeof namespace === "string") { cal.ns[namespace] = cal.ns[namespace] || api; p(cal.ns[namespace], ar); p(cal, ["initNamespace", namespace]); } else p(cal, ar); return; } p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
+Cal("init", {origin:"https://app.cal.com"});
+Cal("ui", {"theme":"dark","styles":{"branding":{"brandColor":"#39FF14"}},"hideEventTypeDetails":false,"layout":"modal"});
+</script>
 
 <script src="https://unpkg.com/lenis@1.1.18/dist/lenis.min.js"></script>
 <script src="./smooth-scroll.js"></script>

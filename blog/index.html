@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="format-detection" content="telephone=no">
+<title>Blog — CC Développement | Conseils Web et SEO Local</title>
+<meta name="description" content="Articles et guides pratiques sur la création de sites web, le SEO local et le développement digital pour TPE et indépendants dans l'Hérault.">
+<meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
+<link rel="canonical" href="https://ccdeveloppement.eu/blog/">
+<meta name="theme-color" content="#09090B">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="icon" href="../favicon.ico" sizes="any">
+<link rel="shortcut icon" href="../favicon.ico">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<link rel="manifest" href="../site.webmanifest">
+<link rel="preload" href="../fonts/Morena-Embedded.otf" as="font" type="font/otf" crossorigin>
+<meta property="og:locale" content="fr_FR">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Blog — CC Développement | Conseils Web et SEO Local">
+<meta property="og:description" content="Articles et guides pratiques sur la création de sites web, le SEO local et le digital pour TPE.">
+<meta property="og:url" content="https://ccdeveloppement.eu/blog/">
+<meta property="og:site_name" content="CC Developpement">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Blog — CC Développement">
+<meta name="twitter:description" content="Guides pratiques sur le web et le SEO local pour TPE dans l'Hérault.">
+<meta name="geo.region" content="FR-34">
+<meta name="geo.placename" content="Agde">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Blog",
+  "name": "Blog CC Développement",
+  "description": "Articles et guides pratiques sur la création de sites web et le SEO local pour TPE dans l'Hérault.",
+  "url": "https://ccdeveloppement.eu/blog/",
+  "publisher": {
+    "@type": "Organization",
+    "name": "CC Developpement",
+    "url": "https://ccdeveloppement.eu/"
+  }
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://ccdeveloppement.eu/"},
+    {"@type": "ListItem", "position": 2, "name": "Blog"}
+  ]
+}
+</script>
+
+<style>
+html { scroll-behavior: smooth; }
+@font-face { font-family: Morena; src: url('../fonts/Morena-Embedded.otf') format('opentype'); font-weight: 400; font-style: normal; font-display: swap; }
+@font-face { font-family: Morena; src: url('../fonts/Morena-W300-Embedded-1.otf') format('opentype'); font-weight: 300; font-style: normal; font-display: swap; }
+@font-face { font-family: Morena; src: url('../fonts/Morena-Bold-Embedded.otf') format('opentype'); font-weight: 700; font-style: normal; font-display: swap; }
+
+:root {
+  --black: #09090B;
+  --dark: #111113;
+  --dark-2: #18181B;
+  --dark-3: #27272A;
+  --white: #FFFFFF;
+  --gray: #D4D4D8;
+  --gray-light: #B6B6C0;
+  --accent: #39FF14;
+  --accent-dim: rgba(57,255,20,0.10);
+  --accent-glow: rgba(57,255,20,0.28);
+  --radius: 16px;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: Morena, sans-serif; background: var(--black); color: var(--white); line-height: 1.7; -webkit-font-smoothing: antialiased; }
+::selection { background: var(--accent); color: var(--black); }
+
+.top-nav { position: sticky; top: 0; z-index: 100; background: var(--black); border-bottom: 1px solid rgba(255,255,255,0.04); padding: 16px 24px; }
+.top-nav-inner { max-width: 980px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; gap: 16px; flex-wrap: wrap; }
+.top-nav a { color: var(--gray); text-decoration: none; font-weight: 700; font-size: 15px; transition: color 0.3s; }
+.top-nav a:hover { color: var(--accent); }
+.top-nav .cta { background: var(--accent); color: var(--black); padding: 10px 20px; border-radius: 10px; font-weight: 700; }
+.top-nav .cta:hover { opacity: 0.85; }
+
+.blog-header { max-width: 980px; margin: 0 auto; padding: 60px 20px 32px; }
+.blog-header h1 { font-size: clamp(36px, 6vw, 56px); line-height: 1.1; margin-bottom: 12px; letter-spacing: -1px; }
+.blog-header p { font-size: 20px; color: var(--gray); font-weight: 400; max-width: 640px; }
+
+.blog-grid { max-width: 980px; margin: 0 auto; padding: 0 20px 60px; display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 24px; }
+
+.blog-card { background: var(--dark); border: 1px solid var(--dark-3); border-radius: var(--radius); overflow: hidden; transition: all 0.3s; text-decoration: none; display: flex; flex-direction: column; }
+.blog-card:hover { border-color: var(--accent); transform: translateY(-4px); box-shadow: 0 12px 40px rgba(0,0,0,0.4); }
+
+.blog-card-thumb { width: 100%; height: 180px; display: flex; align-items: center; justify-content: center; font-size: 48px; }
+.blog-card-thumb.thumb-web { background: linear-gradient(135deg, #111113, #1a2a1a); }
+.blog-card-thumb.thumb-seo { background: linear-gradient(135deg, #111113, #1a1a2a); }
+.blog-card-thumb.thumb-prix { background: linear-gradient(135deg, #111113, #2a1a1a); }
+
+.blog-card-body { padding: 24px; flex: 1; display: flex; flex-direction: column; }
+.blog-card-tag { display: inline-block; font-size: 12px; font-weight: 700; color: var(--accent); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 12px; }
+.blog-card-body h2 { font-size: 22px; color: var(--white); margin-bottom: 12px; line-height: 1.3; }
+.blog-card-body p { font-size: 16px; color: var(--gray); font-weight: 400; line-height: 1.6; flex: 1; }
+.blog-card-meta { padding: 16px 24px; border-top: 1px solid var(--dark-3); font-size: 13px; color: var(--gray-light); display: flex; justify-content: space-between; }
+
+footer { text-align: center; padding: 32px 16px; color: #71717A; font-size: 14px; border-top: 1px solid var(--dark-3); margin-top: 48px; }
+footer a { color: #71717A; text-decoration: none; }
+footer a:hover { color: var(--accent); }
+.footer-cal { text-align: center; padding: 0 0 20px; }
+.footer-cal a { display: inline-flex; align-items: center; gap: 10px; background: transparent; color: var(--accent); padding: 12px 24px; border-radius: 12px; text-decoration: none; font-weight: 700; font-size: 14px; border: 1px solid rgba(57,255,20,0.3); transition: all 0.3s; }
+.footer-cal a:hover { background: var(--accent-dim); }
+
+@media (max-width: 768px) {
+  .blog-header { padding: 40px 16px 24px; }
+  .blog-grid { padding: 0 16px 48px; grid-template-columns: 1fr; }
+}
+</style>
+<script src="../assets/js/analytics.js" defer></script>
+</head>
+<body>
+
+<div class="top-nav">
+  <div class="top-nav-inner">
+    <a href="../index.html"><img src="../Images/cc-developpement-logo-horizontal.svg" alt="CC Développement" height="40" style="vertical-align:middle;"></a>
+    <div style="display:flex;gap:20px;align-items:center;flex-wrap:wrap;">
+      <a href="../index.html#services">Services</a>
+      <a href="../tarifs.html">Tarifs</a>
+      <a href="../devis.html">Devis</a>
+      <a class="cta" href="../index.html#contact">Réserver un audit</a>
+    </div>
+  </div>
+</div>
+
+<header class="blog-header">
+  <h1>Blog <span style="color:var(--accent);">CC Développement</span></h1>
+  <p>Guides pratiques et conseils concrets sur la création de sites web, le SEO local et le développement digital pour les TPE et indépendants de l'Hérault.</p>
+</header>
+
+<main class="blog-grid">
+
+  <a href="./creation-site-internet-agde-guide-complet-2026.html" class="blog-card">
+    <div class="blog-card-thumb thumb-web">
+      <span>🌐</span>
+    </div>
+    <div class="blog-card-body">
+      <span class="blog-card-tag">Création web</span>
+      <h2>Création de site internet à Agde : le guide complet 2026</h2>
+      <p>Chaque étape expliquée, du cahier des charges à la mise en ligne. Tarifs, délais, SEO local et conseils pour les TPE de l'Hérault.</p>
+    </div>
+    <div class="blog-card-meta">
+      <span>15 avril 2026</span>
+      <span>12 min de lecture</span>
+    </div>
+  </a>
+
+  <a href="./seo-local-herault-restaurants-artisans.html" class="blog-card">
+    <div class="blog-card-thumb thumb-seo">
+      <span>📍</span>
+    </div>
+    <div class="blog-card-body">
+      <span class="blog-card-tag">SEO local</span>
+      <h2>SEO local dans l'Hérault : le guide pour restaurants et artisans</h2>
+      <p>Google Business Profile, avis clients, contenu géolocalisé : toutes les stratégies pour être trouvé à Agde, Béziers et Sète.</p>
+    </div>
+    <div class="blog-card-meta">
+      <span>15 avril 2026</span>
+      <span>14 min de lecture</span>
+    </div>
+  </a>
+
+  <a href="./combien-coute-site-vitrine-tpe-2026.html" class="blog-card">
+    <div class="blog-card-thumb thumb-prix">
+      <span>💰</span>
+    </div>
+    <div class="blog-card-body">
+      <span class="blog-card-tag">Tarifs</span>
+      <h2>Combien coûte un site vitrine pour TPE en 2026 ?</h2>
+      <p>Comparatif honnête freelance vs agence vs DIY. Détail des postes de coût et calcul du vrai budget sur 3 ans.</p>
+    </div>
+    <div class="blog-card-meta">
+      <span>15 avril 2026</span>
+      <span>13 min de lecture</span>
+    </div>
+  </a>
+
+</main>
+
+<footer>
+  <div class="footer-cal">
+    <a href="#" data-cal-link="cc-developpement/audit-30min" data-cal-config='{"layout":"modal"}'>📅 Réserve ton audit gratuit — 30 min</a>
+  </div>
+  <p>CC Développement · Cyril Canon · SIRET : 444 114 011 · 27 Rue Basse, 34300 Agde<br>© 2026 — Tous droits réservés · <a href="../mentions-legales.html">Mentions légales</a> · <a href="../rgpd-confidentialite.html">Politique de confidentialité</a></p>
+</footer>
+
+<!-- Cal.com Embed -->
+<script type="text/javascript">
+(function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if (typeof namespace === "string") { cal.ns[namespace] = cal.ns[namespace] || api; p(cal.ns[namespace], ar); p(cal, ["initNamespace", namespace]); } else p(cal, ar); return; } p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
+Cal("init", {origin:"https://app.cal.com"});
+Cal("ui", {"theme":"dark","styles":{"branding":{"brandColor":"#39FF14"}},"hideEventTypeDetails":false,"layout":"modal"});
+</script>
+</body>
+</html>

@@ -21,6 +21,26 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://ccdeveloppement.eu/blog/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ccdeveloppement.eu/blog/creation-site-internet-agde-guide-complet-2026.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://ccdeveloppement.eu/blog/seo-local-herault-restaurants-artisans.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://ccdeveloppement.eu/blog/combien-coute-site-vitrine-tpe-2026.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://ccdeveloppement.eu/rgpd-confidentialite.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.4</priority>

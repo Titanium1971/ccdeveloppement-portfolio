@@ -30,6 +30,7 @@ a:hover { text-decoration: underline; }
 .intro { color: #D4D4D8; font-size: 17px; margin-bottom: 8px; }
 .todo { background: rgba(245,158,11,0.12); border: 1px solid rgba(245,158,11,0.3); border-radius: 8px; padding: 10px 14px; color: #F59E0B; font-size: 15px; display: inline-block; }
 </style>
+<script src="assets/js/analytics.js" defer></script>
 </head>
 <body>
 <main>
@@ -77,11 +78,18 @@ a:hover { text-decoration: underline; }
 </main>
 
 <footer style="text-align:center;padding:32px 16px;color:#71717A;font-size:14px;border-top:1px solid #27272A;margin-top:48px;">
+  <div style="text-align:center;padding:0 0 20px;"><a href="#" data-cal-link="cc-developpement/audit-30min" data-cal-config='{"layout":"modal"}' style="display:inline-flex;align-items:center;gap:10px;background:transparent;color:#39FF14;padding:12px 24px;border-radius:12px;text-decoration:none;font-weight:700;font-size:14px;border:1px solid rgba(57,255,20,0.3);transition:all 0.3s;">📅 Réserve ton audit gratuit — 30 min</a></div>
   CC Développement · Cyril Canon · SIRET : 444 114 011 · 27 Rue Basse, 34300 Agde<br>
   © 2026 — Tous droits réservés ·
   <a href="./mentions-legales.html" style="color:#71717A;text-decoration:none;">Mentions légales</a> ·
   <a href="./rgpd-confidentialite.html" style="color:#71717A;text-decoration:none;">Politique de confidentialité</a>
 </footer>
+<!-- Cal.com Embed -->
+<script type="text/javascript">
+(function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if (typeof namespace === "string") { cal.ns[namespace] = cal.ns[namespace] || api; p(cal.ns[namespace], ar); p(cal, ["initNamespace", namespace]); } else p(cal, ar); return; } p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
+Cal("init", {origin:"https://app.cal.com"});
+Cal("ui", {"theme":"dark","styles":{"branding":{"brandColor":"#39FF14"}},"hideEventTypeDetails":false,"layout":"modal"});
+</script>
 <script src="https://unpkg.com/lenis@1.1.18/dist/lenis.min.js"></script>
 <script src="./smooth-scroll.js"></script>
 </body>
