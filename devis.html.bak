@@ -155,7 +155,7 @@ body { font-family: 'Morena', sans-serif; font-weight: 700; background: var(--bl
 .btn-cal--outline:hover {
   background: var(--accent-dim); border-color: var(--accent);
 }
-.footer-cal { text-align: center; padding: 40px 24px 32px; }
+.footer-cal { text-align: center; padding: 20px 24px 0; }
 .footer-cal .btn-cal--outline { font-size: 14px; padding: 12px 24px; }
 .cal-alternative { margin-top: 40px; text-align: center; padding: 32px 24px; background: var(--dark); border: 1px solid rgba(57,255,20,0.12); border-radius: var(--radius); }
 .cal-alternative p { font-size: 17px; color: var(--gray); font-weight: 700; margin-bottom: 20px; line-height: 1.6; }

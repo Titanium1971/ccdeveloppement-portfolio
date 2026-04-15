@@ -229,7 +229,7 @@ body { font-family: 'Morena', sans-serif; font-weight: 700; background: var(--bl
 /* FOOTER */
 .btn-cal--outline { display:inline-flex;align-items:center;gap:10px;background:transparent;color:var(--accent);padding:14px 28px;border-radius:12px;text-decoration:none;font-weight:700;font-size:15px;border:1px solid rgba(57,255,20,0.3);cursor:pointer;font-family:'Morena',sans-serif;transition:all 0.3s; }
 .btn-cal--outline:hover { background:rgba(57,255,20,0.10);border-color:var(--accent); }
-.footer-cal { text-align:center;padding:40px 24px 32px; }
+.footer-cal { text-align:center;padding:20px 24px 0; }
 .footer-cal .btn-cal--outline { font-size:14px;padding:12px 24px; }
 .footer { background: var(--black); border-top: 1px solid var(--dark-3); color: var(--gray); text-align: center; padding: 32px 24px; font-size: 15px; font-weight: 700; }
 
