@@ -655,8 +655,29 @@ main#main-content { padding-top: 0; }
 .btn-cal--outline:hover {
   background: var(--accent-dim); border-color: var(--accent);
 }
-.footer-cal { text-align: center; padding: 20px 24px 0; }
+.footer-cal { text-align: center; padding: 40px 24px 32px; }
 .footer-cal .btn-cal--outline { font-size: 14px; padding: 12px 24px; }
+
+/* LEAD MAGNET SECTION */
+.lead-magnet-section { padding: 80px 0; }
+.lead-magnet { display: grid; grid-template-columns: 1.2fr 1fr; gap: 60px; align-items: center; background: linear-gradient(135deg, var(--dark-2) 0%, var(--black) 100%); border: 1px solid rgba(57,255,20,0.15); border-radius: 24px; padding: 60px 48px; position: relative; overflow: hidden; }
+.lead-magnet::before { content: ''; position: absolute; top: -100px; right: -100px; width: 400px; height: 400px; background: radial-gradient(circle, rgba(57,255,20,0.08) 0%, transparent 70%); pointer-events: none; }
+.lead-magnet-text { position: relative; z-index: 1; }
+.lead-magnet-visual { display: flex; justify-content: center; position: relative; z-index: 1; }
+.pdf-preview { background: #fff; color: #09090B; padding: 36px 32px; border-radius: 8px; max-width: 280px; width: 100%; box-shadow: 0 30px 80px rgba(0,0,0,0.5), 0 0 0 1px rgba(255,255,255,0.08); transform: rotate(-3deg); transition: transform 0.4s; }
+.pdf-preview:hover { transform: rotate(0deg) scale(1.03); }
+.pdf-preview-title { font-size: 20px; line-height: 1.3; margin-bottom: 14px; font-weight: 700; }
+.pdf-preview-sub { color: #16a34a; font-size: 14px; margin-bottom: 20px; }
+.pdf-preview-lines { display: flex; flex-direction: column; gap: 8px; margin-bottom: 20px; }
+.pdf-preview-lines span { height: 8px; background: #e5e7eb; border-radius: 4px; display: block; }
+.pdf-preview-lines span:nth-child(2) { width: 85%; }
+.pdf-preview-lines span:nth-child(3) { width: 65%; }
+.pdf-preview-footer { font-size: 11px; color: #6b7280; text-align: center; margin-top: 16px; }
+@media (max-width: 860px) {
+  .lead-magnet { grid-template-columns: 1fr; gap: 40px; padding: 40px 28px; text-align: center; }
+  .lead-magnet-text .section-tag { margin: 0 auto; }
+  .pdf-preview { max-width: 220px; }
+}
 
 /* MOBILE STICKY CAL BAR */
 .sticky-cal { display: none; }
@@ -737,6 +758,7 @@ footer a:hover { color: var(--accent); }
     <li><a href="./tarifs.html">Tarifs</a></li>
     <li><a href="#stack">Stack</a></li>
     <li><a href="./blog/">Blog</a></li>
+    <li><a href="./guide-seo-local.html">Guide gratuit</a></li>
     <li><a href="#assistant">Assistant IA</a></li>
     <li><a href="#contact" class="nav-cta">Réserver un audit</a></li>
   </ul>
@@ -1025,6 +1047,30 @@ footer a:hover { color: var(--accent); }
         <div class="service-title">Ghostwriting LinkedIn</div>
         <div class="service-desc">Création de contenu LinkedIn personnalisé et automatisé via ContentLab. Développez votre personal branding sans effort.</div>
         <div class="service-price">À partir de 400€ HT/mois</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LEAD MAGNET -->
+<section class="section lead-magnet-section" id="guide">
+  <div class="section-container">
+    <div class="lead-magnet">
+      <div class="lead-magnet-text">
+        <div class="section-tag reveal" style="background:rgba(57,255,20,0.1);color:var(--accent);">Ressource offerte</div>
+        <h2 class="section-heading reveal" style="font-size:clamp(28px,4vw,40px);">Les 7 erreurs SEO local<br><span class="accent">qui coulent les TPE</span></h2>
+        <p class="reveal" style="color:var(--gray);font-size:17px;line-height:1.7;margin:20px 0 28px;">Guide PDF gratuit de 15 pages. Des exemples concrets de TPE de l'Hérault, des plans d'action en 5 étapes et une checklist récap. Reçois-le par email en 30 secondes.</p>
+        <a href="./guide-seo-local.html" class="btn-cal reveal" style="display:inline-flex;align-items:center;gap:8px;">📥 Télécharger le guide gratuit</a>
+      </div>
+      <div class="lead-magnet-visual reveal">
+        <div class="pdf-preview">
+          <div class="pdf-preview-title">Les 7 Erreurs SEO Local qui Coulent les TPE</div>
+          <div class="pdf-preview-sub">Guide 2026 — CC Développement</div>
+          <div class="pdf-preview-lines">
+            <span></span><span></span><span></span>
+          </div>
+          <div class="pdf-preview-footer">ccdeveloppement.eu</div>
+        </div>
       </div>
     </div>
   </div>
