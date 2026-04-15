@@ -55,7 +55,7 @@
 
 <style>
 html { scroll-behavior: smooth; }
-@font-face { font-family: Morena; src: url('../fonts/Morena-Embedded.otf') format('opentype'); font-weight: 400; font-style: normal; font-display: swap; }
+@font-face { font-family: Morena; src: url('../fonts/Morena-Embedded.otf') format('opentype'); font-weight: 700; font-style: normal; font-display: swap; }
 @font-face { font-family: Morena; src: url('../fonts/Morena-W300-Embedded-1.otf') format('opentype'); font-weight: 300; font-style: normal; font-display: swap; }
 @font-face { font-family: Morena; src: url('../fonts/Morena-Bold-Embedded.otf') format('opentype'); font-weight: 700; font-style: normal; font-display: swap; }
 
@@ -65,8 +65,8 @@ html { scroll-behavior: smooth; }
   --dark-2: #18181B;
   --dark-3: #27272A;
   --white: #FFFFFF;
-  --gray: #D4D4D8;
-  --gray-light: #B6B6C0;
+  --gray: #F0F0F2;
+  --gray-light: #D0D0D8;
   --accent: #39FF14;
   --accent-dim: rgba(57,255,20,0.10);
   --accent-glow: rgba(57,255,20,0.28);
@@ -74,7 +74,7 @@ html { scroll-behavior: smooth; }
 }
 
 * { box-sizing: border-box; margin: 0; padding: 0; }
-body { font-family: Morena, sans-serif; background: var(--black); color: var(--white); line-height: 1.7; -webkit-font-smoothing: antialiased; }
+body { font-family: 'Morena', sans-serif; font-weight: 700; background: var(--black); color: var(--white); line-height: 1.7; -webkit-font-smoothing: antialiased; }
 ::selection { background: var(--accent); color: var(--black); }
 
 .top-nav { position: sticky; top: 0; z-index: 100; background: var(--black); border-bottom: 1px solid rgba(255,255,255,0.04); padding: 16px 24px; }
@@ -86,7 +86,7 @@ body { font-family: Morena, sans-serif; background: var(--black); color: var(--w
 
 .blog-header { max-width: 980px; margin: 0 auto; padding: 60px 20px 32px; }
 .blog-header h1 { font-size: clamp(36px, 6vw, 56px); line-height: 1.1; margin-bottom: 12px; letter-spacing: -1px; }
-.blog-header p { font-size: 20px; color: #E5E7EB; font-weight: 400; max-width: 640px; }
+.blog-header p { font-size: 20px; color: var(--gray); font-weight: 700; max-width: 640px; }
 
 .blog-grid { max-width: 980px; margin: 0 auto; padding: 0 20px 60px; display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 24px; }
 
@@ -101,7 +101,7 @@ body { font-family: Morena, sans-serif; background: var(--black); color: var(--w
 .blog-card-body { padding: 24px; flex: 1; display: flex; flex-direction: column; }
 .blog-card-tag { display: inline-block; font-size: 12px; font-weight: 700; color: var(--accent); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 12px; }
 .blog-card-body h2 { font-size: 22px; color: var(--white); margin-bottom: 12px; line-height: 1.3; }
-.blog-card-body p { font-size: 16px; color: #E5E7EB; font-weight: 400; line-height: 1.6; flex: 1; }
+.blog-card-body p { font-size: 16px; color: var(--gray); font-weight: 700; line-height: 1.6; flex: 1; }
 .blog-card-meta { padding: 16px 24px; border-top: 1px solid var(--dark-3); font-size: 13px; color: var(--gray-light); display: flex; justify-content: space-between; }
 
 footer { text-align: center; padding: 32px 16px; color: #71717A; font-size: 14px; border-top: 1px solid var(--dark-3); margin-top: 48px; }
