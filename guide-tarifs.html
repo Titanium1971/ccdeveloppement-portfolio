@@ -126,6 +126,70 @@ a:hover{opacity:.8;}
   .section-title{font-size:26px;}
   .cta-box{padding:28px 24px;}
 }
+@media print {
+  /* Hide non-print elements */
+  nav, .top-nav, .sticky-cal, #exitPopup, [class*="cookie"], [id*="cookie"],
+  .cky-consent-container, .btn-cal--outline, .footer-cal { display: none !important; }
+
+  /* Reset backgrounds for dark theme printing */
+  body, html {
+    background: #09090B !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+    color-adjust: exact !important;
+  }
+
+  /* Prevent page breaks inside cards and sections */
+  .forfait-detail, .module-detail, .maint-detail, .service-detail,
+  .compare-card, .compare-grid, .callout, .cta-box,
+  table, thead, tbody tr,
+  section, .section, h2, h3, h4 {
+    page-break-inside: avoid !important;
+    break-inside: avoid !important;
+  }
+
+  /* Force page breaks before major sections */
+  .section + .section { page-break-before: auto; }
+
+  /* Keep headings with their content */
+  h2, h3, h4 {
+    page-break-after: avoid !important;
+    break-after: avoid !important;
+  }
+
+  /* Grid items should not break */
+  .forfait-includes > *, .module-benefits > * {
+    page-break-inside: avoid !important;
+    break-inside: avoid !important;
+  }
+
+  /* Remove shadows and glows that render badly in PDF */
+  * {
+    text-shadow: none !important;
+    box-shadow: none !important;
+  }
+
+  /* Keep accent colors visible */
+  .accent, [style*="color:var(--accent)"] { color: #39FF14 !important; }
+
+  /* Footer should be on last page */
+  footer { page-break-before: auto; }
+
+  /* Ensure tables don't break mid-row */
+  table { page-break-inside: avoid !important; }
+  tr { page-break-inside: avoid !important; break-inside: avoid !important; }
+
+  /* Remove fixed positioning */
+  * { position: static !important; }
+  /* But keep relative for layout */
+  .container, [class*="grid"], [class*="card"], [class*="detail"] { position: relative !important; }
+
+  /* Remove animations */
+  * { animation: none !important; transition: none !important; }
+
+  /* Ensure proper margins */
+  @page { margin: 12mm 10mm; }
+}
 </style>
 <script src="assets/js/analytics.js" defer></script>
 </head>
@@ -655,6 +719,37 @@ a:hover{opacity:.8;}
     <div class="module-detail">
       <div class="module-head"><h4>Pen-testing &amp; Security Audit</h4><div class="price">2 500€+</div></div>
       <div class="module-desc">Test d'intrusion professionnel de 2-3 jours : nous testons votre site comme le ferait un hacker. Rapport détaillé des vulnérabilités trouvées avec recommandations de correction. Essentiel si vous manipulez des données sensibles.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================ -->
+<!-- GESTION GOOGLE ADS -->
+<!-- ============================================ -->
+<section class="section section-even">
+  <div class="container">
+    <div class="section-label">Service récurrent</div>
+    <div class="section-title">Gestion <span>Google Ads</span></div>
+    <div class="section-desc">Confiez vos campagnes publicitaires Google à un expert. Génération de leads rapide, visibilité locale immédiate, retour sur investissement mesurable chaque mois.</div>
+
+    <div class="module-detail" style="border:2px solid var(--accent);">
+      <div class="module-head"><h4>Gestion Google Ads — Campagnes publicitaires</h4><div class="price">25% du budget pub</div></div>
+      <div class="module-desc">Création, gestion et optimisation complète de vos campagnes Google Ads. Je m'occupe de tout : recherche de mots-clés pertinents, rédaction des annonces, ciblage géographique précis (Agde, Hérault, Occitanie ou plus large), configuration du suivi des conversions, et optimisation continue pour maximiser votre ROI. Vous recevez un reporting mensuel détaillé avec les résultats concrets (clics, conversions, coût par lead).</div>
+      <div class="module-benefits"><span class="tag">Mots-clés</span><span class="tag">Annonces</span><span class="tag">Ciblage géo</span><span class="tag">Conversions</span><span class="tag">Optimisation</span><span class="tag">Reporting</span></div>
+      <div class="module-usecases"><strong>Tarification :</strong> 25% du budget publicitaire investi, avec un minimum de 250€/mois de frais de gestion. Setup initial : 450€ HT (one-shot). Engagement minimum : 3 mois.</div>
+    </div>
+
+    <div class="module-detail">
+      <div class="module-head"><h4>Setup initial Google Ads</h4><div class="price">450€ HT</div></div>
+      <div class="module-desc">Création ou audit de votre compte Google Ads, structuration des campagnes (Search, Display, Local), recherche approfondie de mots-clés, configuration du ciblage géographique, installation du suivi des conversions (Google Tag Manager), création des premières annonces. Ce setup pose les fondations d'une campagne rentable dès le premier mois.</div>
+      <div class="module-benefits"><span class="tag">Compte Ads</span><span class="tag">Campagnes structurées</span><span class="tag">GTM</span><span class="tag">Annonces initiales</span></div>
+      <div class="module-usecases"><strong>Idéal pour :</strong> tout business local qui veut des clients rapidement — restaurants, artisans, commerces, professions libérales, locations saisonnières.</div>
+    </div>
+
+    <div class="module-detail">
+      <div class="module-head"><h4>Ce qui est inclus chaque mois</h4></div>
+      <div class="module-desc">Chaque mois, votre campagne Google Ads bénéficie d'une attention continue : ajustement des enchères, ajout et exclusion de mots-clés, création de nouvelles annonces, tests A/B des textes, optimisation du Quality Score, analyse des termes de recherche, et un rapport complet envoyé par email avec les KPIs clés (impressions, clics, CTR, conversions, CPA).</div>
+      <div class="module-benefits"><span class="tag">Enchères</span><span class="tag">Mots-clés</span><span class="tag">A/B testing</span><span class="tag">Quality Score</span><span class="tag">Rapport mensuel</span></div>
     </div>
   </div>
 </section>

@@ -748,6 +748,360 @@ footer a:hover { color: var(--accent); }
     transition: none !important;
   }
 }
+
+/* ===== V2 HERO DASHBOARD ===== */
+.hero-dashboard {
+  width: 420px;
+  background: var(--dark-2);
+  border: 1px solid var(--dark-3);
+  border-radius: 20px;
+  padding: 28px;
+  box-shadow: 0 24px 80px rgba(0,0,0,0.5), 0 0 60px rgba(57,255,20,0.06);
+  position: relative;
+  overflow: hidden;
+}
+.hero-dashboard::before {
+  content: '';
+  position: absolute;
+  top: -60px;
+  right: -60px;
+  width: 200px;
+  height: 200px;
+  background: radial-gradient(circle, rgba(57,255,20,0.08) 0%, transparent 70%);
+  pointer-events: none;
+}
+.dashboard-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 24px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+.dashboard-title {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--gray-light);
+  letter-spacing: -0.3px;
+}
+.dashboard-live {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--accent);
+  background: var(--accent-dim);
+  padding: 4px 12px;
+  border-radius: 100px;
+  border: 1px solid rgba(57,255,20,0.2);
+}
+.dashboard-live::before {
+  content: '';
+  width: 6px;
+  height: 6px;
+  background: var(--accent);
+  border-radius: 50%;
+  animation: livePulse 2s ease-in-out infinite;
+}
+@keyframes livePulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.3; }
+}
+.dashboard-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin-bottom: 24px;
+}
+.dashboard-stat {
+  background: var(--dark-3);
+  border-radius: 12px;
+  padding: 16px 14px;
+  text-align: center;
+}
+.dashboard-stat-value {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--white);
+  line-height: 1;
+  margin-bottom: 4px;
+}
+.dashboard-stat-value .accent { color: var(--accent); }
+.dashboard-stat-label {
+  font-size: 11px;
+  color: var(--gray-light);
+  font-weight: 600;
+}
+.dashboard-feed {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.dashboard-notif {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 13px;
+  color: var(--gray);
+  font-weight: 600;
+  padding: 10px 14px;
+  background: rgba(255,255,255,0.02);
+  border-radius: 10px;
+  border: 1px solid rgba(255,255,255,0.04);
+  opacity: 0;
+  animation: notifFadeIn 0.6s ease forwards;
+}
+.dashboard-notif:nth-child(1) { animation-delay: 0.8s; }
+.dashboard-notif:nth-child(2) { animation-delay: 2s; }
+.dashboard-notif:nth-child(3) { animation-delay: 3.2s; }
+.dashboard-notif-time {
+  font-size: 11px;
+  color: var(--gray-light);
+  margin-left: auto;
+  white-space: nowrap;
+}
+@keyframes notifFadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@media (max-width: 900px) {
+  .hero-dashboard { width: 100%; max-width: 420px; justify-self: center; }
+}
+
+/* ===== V2 WHATSAPP DEMO SECTION ===== */
+.wa-demo-section {
+  background: var(--black);
+  position: relative;
+  overflow: hidden;
+}
+.wa-demo-section::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 800px;
+  height: 800px;
+  background: radial-gradient(circle, rgba(37,211,102,0.06) 0%, transparent 70%);
+  pointer-events: none;
+}
+.wa-demo-section .section-container {
+  position: relative;
+  z-index: 1;
+}
+.wa-demo-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 56px;
+  margin-top: 56px;
+  align-items: start;
+}
+@media (max-width: 900px) {
+  .wa-demo-grid { grid-template-columns: 1fr; gap: 40px; }
+}
+
+/* WhatsApp Chat Mockup */
+.wa-chat {
+  background: #0B141A;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 24px 80px rgba(0,0,0,0.5);
+  max-width: 440px;
+}
+.wa-chat-header {
+  background: #1F2C34;
+  padding: 14px 20px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+.wa-chat-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  font-weight: 700;
+  color: white;
+}
+.wa-chat-name {
+  font-size: 16px;
+  font-weight: 700;
+  color: #E9EDEF;
+}
+.wa-chat-status {
+  font-size: 12px;
+  color: #8696A0;
+  font-weight: 400;
+}
+.wa-chat-body {
+  padding: 20px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-height: 340px;
+  background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.015'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+.wa-msg {
+  max-width: 85%;
+  padding: 10px 14px;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.55;
+  opacity: 0;
+  transform: translateY(16px) scale(0.95);
+  position: relative;
+  transition: none;
+}
+.wa-msg.visible {
+  animation: waMsgPop 0.4s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+}
+.wa-msg-in {
+  background: #1F2C34;
+  color: #E9EDEF;
+  align-self: flex-start;
+  border-top-left-radius: 4px;
+}
+.wa-msg-out {
+  background: #005C4B;
+  color: #E9EDEF;
+  align-self: flex-end;
+  border-top-right-radius: 4px;
+}
+.wa-msg-time {
+  font-size: 10px;
+  color: rgba(255,255,255,0.45);
+  text-align: right;
+  margin-top: 4px;
+}
+.wa-msg-time .wa-check {
+  color: #53BDEB;
+  margin-left: 2px;
+}
+/* Typing indicator */
+.wa-typing {
+  align-self: flex-end;
+  background: #005C4B;
+  padding: 12px 18px;
+  border-radius: 10px;
+  border-top-right-radius: 4px;
+  display: none;
+  gap: 4px;
+  align-items: center;
+  max-width: 80px;
+}
+.wa-typing.visible {
+  display: flex;
+}
+.wa-typing-dot {
+  width: 7px;
+  height: 7px;
+  background: rgba(255,255,255,0.5);
+  border-radius: 50%;
+  animation: waTypingBounce 1.4s infinite;
+}
+.wa-typing-dot:nth-child(2) { animation-delay: 0.2s; }
+.wa-typing-dot:nth-child(3) { animation-delay: 0.4s; }
+@keyframes waTypingBounce {
+  0%, 60%, 100% { transform: translateY(0); opacity: 0.4; }
+  30% { transform: translateY(-6px); opacity: 1; }
+}
+@keyframes waMsgPop {
+  from { opacity: 0; transform: translateY(16px) scale(0.95); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+/* Replay button */
+.wa-replay {
+  display: none;
+  align-self: center;
+  margin-top: 12px;
+  background: none;
+  border: 1px solid rgba(255,255,255,0.15);
+  color: rgba(255,255,255,0.6);
+  padding: 8px 20px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+  font-family: 'Morena', sans-serif;
+}
+.wa-replay:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+.wa-replay.visible {
+  display: inline-flex;
+  animation: waMsgPop 0.3s ease forwards;
+}
+
+/* WhatsApp Demo Feature Cards */
+.wa-demo-features {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.wa-demo-card {
+  background: var(--dark);
+  border: 1px solid rgba(255,255,255,0.06);
+  border-radius: 16px;
+  padding: 28px 24px;
+  transition: all 0.4s;
+}
+.wa-demo-card:hover {
+  background: var(--dark-2);
+  border-color: rgba(37,211,102,0.3);
+  transform: translateY(-4px);
+}
+.wa-demo-card-icon {
+  font-size: 28px;
+  margin-bottom: 14px;
+}
+.wa-demo-card-title {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: var(--white);
+}
+.wa-demo-card-desc {
+  font-size: 15px;
+  color: var(--gray);
+  line-height: 1.7;
+  font-weight: 400;
+}
+
+/* WhatsApp Demo CTA */
+.wa-demo-cta {
+  text-align: center;
+  margin-top: 56px;
+}
+.btn-wa-demo {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: #25D366;
+  color: white;
+  padding: 18px 40px;
+  border-radius: 14px;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 18px;
+  transition: all 0.3s;
+  font-family: 'Morena', sans-serif;
+  border: none;
+  cursor: pointer;
+}
+.btn-wa-demo:hover {
+  background: #1DA851;
+  transform: translateY(-2px);
+  box-shadow: 0 12px 40px rgba(37,211,102,0.25);
+}
 </style>
 <script src="assets/js/analytics.js" defer></script>
 </head>
@@ -775,40 +1129,140 @@ footer a:hover { color: var(--accent); }
 <section class="hero">
   <div class="hero-container">
     <div class="hero-left">
-      <div class="hero-badge">Agde / Hérault · Audit 30 min offert</div>
+      <div class="hero-badge">Agde / Hérault · Audit gratuit 30 min</div>
       <h1 class="hero-title">
-        Cyril Canon<br>
-        <span class="line2">Développeur Web</span><br>
-        <span class="accent">&</span> <span class="line2">Automatisation</span>
+        Des sites web et de l'automatisation<br>
+        <span class="line2">qui </span><span class="accent">génèrent des clients</span>
       </h1>
-      <p class="hero-desc">J'aide les indépendants, TPE et PME locales à générer plus d'appels, de demandes et de devis grâce à des sites ultra-rapides, un SEO local optimisé et des automatisations concrètes.</p>
+      <p class="hero-desc">CC Développement accompagne les commerces locaux avec des sites performants, du SEO local et un assistant WhatsApp IA unique en son genre.</p>
       <div class="hero-actions">
-        <a href="#" class="btn-cal" data-cal-link="cc-developpement/audit-gratuit" data-cal-config='{"layout":"modal"}'>📅 Réserve ton audit gratuit — 30 min</a>
-        <a href="#projets" class="btn-secondary">Voir des cas réels</a>
+        <a href="#" class="btn-primary" data-cal-link="cc-developpement/audit-gratuit" data-cal-config='{"layout":"modal"}'>Obtenir un audit gratuit</a>
+        <a href="#projets" class="btn-secondary">Voir nos réalisations</a>
       </div>
     </div>
-    <div class="hero-photo">
-      <div class="hero-photo-frame">
-        <picture><source srcset="./Images/Cyril-Canon-portrait-240.webp 240w, ./Images/Cyril-Canon-portrait-640.webp 480w" sizes="(max-width: 900px) 220px, 320px" type="image/webp"><img src="./Images/Cyril-Canon-portrait-640.jpg" srcset="./Images/Cyril-Canon-portrait-320.jpg 240w, ./Images/Cyril-Canon-portrait-640.jpg 480w" sizes="(max-width: 900px) 220px, 320px" alt="Cyril Canon - CC Développement" width="480" height="640" loading="eager" decoding="async" fetchpriority="high"></picture>
+    <div class="hero-dashboard" aria-label="Dashboard CC Développement en temps réel">
+      <div class="dashboard-header">
+        <span class="dashboard-title">CC Développement Dashboard</span>
+        <span class="dashboard-live">Live</span>
+      </div>
+      <div class="dashboard-stats">
+        <div class="dashboard-stat">
+          <div class="dashboard-stat-value">12<span class="accent">+</span></div>
+          <div class="dashboard-stat-label">Sites créés</div>
+        </div>
+        <div class="dashboard-stat">
+          <div class="dashboard-stat-value">98<span class="accent">%</span></div>
+          <div class="dashboard-stat-label">Satisfaction</div>
+        </div>
+        <div class="dashboard-stat">
+          <div class="dashboard-stat-value">4.6<span class="accent">/5</span></div>
+          <div class="dashboard-stat-label">Avis clients</div>
+        </div>
+      </div>
+      <div class="dashboard-feed">
+        <div class="dashboard-notif">
+          <span>Nouveau prospect reçu</span>
+          <span class="dashboard-notif-time">il y a 3 min</span>
+        </div>
+        <div class="dashboard-notif">
+          <span>RDV confirmé automatiquement</span>
+          <span class="dashboard-notif-time">il y a 8 min</span>
+        </div>
+        <div class="dashboard-notif">
+          <span>Site Le Divino mis en ligne</span>
+          <span class="dashboard-notif-time">hier</span>
+        </div>
       </div>
     </div>
     <div class="hero-stats">
+      <div>
+        <div class="hero-stat-value">12<span class="unit">+</span></div>
+        <div class="hero-stat-label">Sites créés</div>
+      </div>
+      <div>
+        <div class="hero-stat-value">2000<span class="unit">+</span></div>
+        <div class="hero-stat-label">Workflows</div>
+      </div>
       <div>
         <div class="hero-stat-value">95<span class="unit">+</span></div>
         <div class="hero-stat-label">Score Lighthouse</div>
       </div>
       <div>
-        <div class="hero-stat-value">2000<span class="unit">+</span></div>
-        <div class="hero-stat-label">Workflows automatisés</div>
-      </div>
-      <div>
-        <div class="hero-stat-value">15<span class="unit">+</span></div>
-        <div class="hero-stat-label">Clients récurrents</div>
-      </div>
-      <div>
         <div class="hero-stat-value">0<span class="unit">€</span></div>
-        <div class="hero-stat-label">Abonnement logiciel caché</div>
+        <div class="hero-stat-label">Abonnement caché</div>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHATSAPP DEMO -->
+<section class="section wa-demo-section" id="wa-demo">
+  <div class="section-container">
+    <div class="section-tag reveal">Assistant WhatsApp IA</div>
+    <h2 class="section-heading reveal">Votre restaurant a son assistant<br><span class="muted">intelligent.</span></h2>
+    <p class="section-desc reveal">Imaginez : un client envoie un message WhatsApp à votre restaurant. L'assistant répond instantanément, prend la réservation et vous envoie un résumé. 24h/24, 7j/7.</p>
+    <div class="wa-demo-grid">
+      <div class="wa-chat reveal">
+        <div class="wa-chat-header">
+          <div class="wa-chat-avatar">D</div>
+          <div>
+            <div class="wa-chat-name">Le Divino - Assistant</div>
+            <div class="wa-chat-status">en ligne</div>
+          </div>
+        </div>
+        <div class="wa-chat-body" id="waChatBody">
+          <div class="wa-msg wa-msg-in" data-delay="400">
+            Bonjour, je voudrais réserver une table pour 4 personnes samedi soir 🍽️
+            <div class="wa-msg-time">10:32</div>
+          </div>
+          <div class="wa-typing" id="waTyping1">
+            <div class="wa-typing-dot"></div>
+            <div class="wa-typing-dot"></div>
+            <div class="wa-typing-dot"></div>
+          </div>
+          <div class="wa-msg wa-msg-out" data-delay="2200">
+            Bonjour ! Avec plaisir 😊 Pour samedi soir, je peux vous proposer <strong>19h30</strong> ou <strong>21h</strong>. Quelle heure vous conviendrait ?
+            <div class="wa-msg-time">10:32 <span class="wa-check">✓✓</span></div>
+          </div>
+          <div class="wa-msg wa-msg-in" data-delay="4500">
+            19h30 ce sera parfait, au nom de Martin
+            <div class="wa-msg-time">10:33</div>
+          </div>
+          <div class="wa-typing" id="waTyping2">
+            <div class="wa-typing-dot"></div>
+            <div class="wa-typing-dot"></div>
+            <div class="wa-typing-dot"></div>
+          </div>
+          <div class="wa-msg wa-msg-out" data-delay="6800">
+            Parfait ! Votre réservation est confirmée ✅<br><br>📅 Samedi 19h30<br>👥 4 personnes<br>👤 M. Martin<br>📍 Le Divino, 5 Pl. Jean Jaurès, Agde<br><br>Vous recevrez un rappel la veille. À samedi ! 🎉
+            <div class="wa-msg-time">10:33 <span class="wa-check">✓✓</span></div>
+          </div>
+          <button class="wa-replay" id="waReplay">↻ Rejouer la démo</button>
+        </div>
+      </div>
+      <div class="wa-demo-features reveal">
+        <div class="wa-demo-card">
+          <div class="wa-demo-card-icon">🤖</div>
+          <div class="wa-demo-card-title">Réponse instantanée</div>
+          <div class="wa-demo-card-desc">Votre assistant répond en moins de 3 secondes, même à 3h du matin.</div>
+        </div>
+        <div class="wa-demo-card">
+          <div class="wa-demo-card-icon">📅</div>
+          <div class="wa-demo-card-title">Réservation automatique</div>
+          <div class="wa-demo-card-desc">Prise de RDV, confirmation et rappels sans intervention humaine.</div>
+        </div>
+        <div class="wa-demo-card">
+          <div class="wa-demo-card-icon">📊</div>
+          <div class="wa-demo-card-title">Tableau de bord</div>
+          <div class="wa-demo-card-desc">Résumé matinal, alertes leads chauds, bilan hebdomadaire sur WhatsApp.</div>
+        </div>
+      </div>
+    </div>
+    <div class="wa-demo-cta reveal">
+      <a href="https://wa.me/33939245043" class="btn-wa-demo" target="_blank" rel="noopener noreferrer">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        Testez l'assistant maintenant
+      </a>
     </div>
   </div>
 </section>
@@ -1052,6 +1506,12 @@ footer a:hover { color: var(--accent); }
         <div class="service-title">Ghostwriting LinkedIn</div>
         <div class="service-desc">Création de contenu LinkedIn personnalisé et automatisé via ContentLab. Développez votre personal branding sans effort.</div>
         <div class="service-price">À partir de 400€ HT/mois</div>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">📈</div>
+        <div class="service-title">Google Ads — Campagnes publicitaires</div>
+        <div class="service-desc">Campagnes Google Ads rentables pour générer des leads rapidement. Création, gestion et optimisation de vos annonces Google.</div>
+        <div class="service-price">25% du budget pub (min. 250€/mois)</div>
       </div>
     </div>
   </div>
@@ -1367,6 +1827,101 @@ Cal("ui", {"theme":"dark","styles":{"branding":{"brandColor":"#39FF14"}},"hideEv
   document.getElementById('exitPopup').addEventListener('click', function(e){
     if(e.target === this) window.closeExitPopup();
   });
+})();
+</script>
+
+<script>
+// WhatsApp Demo Animation
+(function() {
+  const chatBody = document.getElementById('waChatBody');
+  if (!chatBody) return;
+
+  const messages = chatBody.querySelectorAll('.wa-msg');
+  const typing1 = document.getElementById('waTyping1');
+  const typing2 = document.getElementById('waTyping2');
+  const replayBtn = document.getElementById('waReplay');
+  let animated = false;
+  let animationTimeout = [];
+
+  function resetChat() {
+    animationTimeout.forEach(t => clearTimeout(t));
+    animationTimeout = [];
+    messages.forEach(m => { m.classList.remove('visible'); m.style.display = 'none'; });
+    if (typing1) { typing1.classList.remove('visible'); typing1.style.display = 'none'; }
+    if (typing2) { typing2.classList.remove('visible'); typing2.style.display = 'none'; }
+    if (replayBtn) { replayBtn.classList.remove('visible'); }
+    animated = false;
+  }
+
+  function playChat() {
+    resetChat();
+    animated = true;
+
+    // Message 1: Client asks (0.4s)
+    animationTimeout.push(setTimeout(() => {
+      messages[0].style.display = 'block';
+      requestAnimationFrame(() => messages[0].classList.add('visible'));
+    }, 400));
+
+    // Typing indicator 1 (1.2s)
+    animationTimeout.push(setTimeout(() => {
+      if (typing1) { typing1.style.display = 'flex'; typing1.classList.add('visible'); }
+      chatBody.scrollTop = chatBody.scrollHeight;
+    }, 1200));
+
+    // Hide typing, show response (2.8s)
+    animationTimeout.push(setTimeout(() => {
+      if (typing1) { typing1.classList.remove('visible'); typing1.style.display = 'none'; }
+      messages[1].style.display = 'block';
+      requestAnimationFrame(() => messages[1].classList.add('visible'));
+      chatBody.scrollTop = chatBody.scrollHeight;
+    }, 2800));
+
+    // Message 3: Client confirms (4.8s)
+    animationTimeout.push(setTimeout(() => {
+      messages[2].style.display = 'block';
+      requestAnimationFrame(() => messages[2].classList.add('visible'));
+      chatBody.scrollTop = chatBody.scrollHeight;
+    }, 4800));
+
+    // Typing indicator 2 (5.6s)
+    animationTimeout.push(setTimeout(() => {
+      if (typing2) { typing2.style.display = 'flex'; typing2.classList.add('visible'); }
+      chatBody.scrollTop = chatBody.scrollHeight;
+    }, 5600));
+
+    // Message 4: Confirmation with recap (7.2s)
+    animationTimeout.push(setTimeout(() => {
+      if (typing2) { typing2.classList.remove('visible'); typing2.style.display = 'none'; }
+      messages[3].style.display = 'block';
+      requestAnimationFrame(() => messages[3].classList.add('visible'));
+      chatBody.scrollTop = chatBody.scrollHeight;
+    }, 7200));
+
+    // Show replay button (8.5s)
+    animationTimeout.push(setTimeout(() => {
+      if (replayBtn) { replayBtn.classList.add('visible'); }
+      chatBody.scrollTop = chatBody.scrollHeight;
+    }, 8500));
+  }
+
+  // Trigger on scroll into view
+  const chatObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting && !animated) {
+        playChat();
+      }
+    });
+  }, { threshold: 0.3 });
+
+  chatObserver.observe(chatBody);
+
+  // Replay button
+  if (replayBtn) {
+    replayBtn.addEventListener('click', () => {
+      playChat();
+    });
+  }
 })();
 </script>
 

@@ -269,6 +269,72 @@ body { font-family: 'Morena', sans-serif; font-weight: 700; background: var(--bl
   .cta-box { padding: 28px 32px; }
 }
 @media print {
+  /* Hide non-print elements */
+  nav, .top-nav, .sticky-cal, #exitPopup, [class*="cookie"], [id*="cookie"],
+  .cky-consent-container, .btn-cal--outline, .footer-cal { display: none !important; }
+
+  /* Reset backgrounds for dark theme printing */
+  body, html {
+    background: #09090B !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+    color-adjust: exact !important;
+  }
+
+  /* Prevent page breaks inside cards and sections */
+  .forfait-card, .module-card, .package-card, .maint-card, .service-card,
+  .compare-card, .compare-grid, .callout, .wa-demo-card, .module-detail,
+  .ads-card, .cta-box, .totaux, table, thead, tbody tr,
+  section, .section, h2, h3, h4 {
+    page-break-inside: avoid !important;
+    break-inside: avoid !important;
+  }
+
+  /* Force page breaks before major sections */
+  .section + .section { page-break-before: auto; }
+
+  /* Keep headings with their content */
+  h2, h3, h4 {
+    page-break-after: avoid !important;
+    break-after: avoid !important;
+  }
+
+  /* Grid items should not break */
+  .forfaits-grid > *, .modules-grid > *, .packages-grid > *,
+  .services-grid > *, .maint-grid > *, .compare-grid > *,
+  .inclus-grid > *, .why-grid > *, .process-grid > * {
+    page-break-inside: avoid !important;
+    break-inside: avoid !important;
+  }
+
+  /* Remove shadows and glows that render badly in PDF */
+  * {
+    text-shadow: none !important;
+    box-shadow: none !important;
+  }
+
+  /* Keep accent colors visible */
+  .accent, [style*="color:var(--accent)"] { color: #39FF14 !important; }
+
+  /* Footer should be on last page */
+  footer { page-break-before: auto; }
+
+  /* Ensure tables don't break mid-row */
+  table { page-break-inside: avoid !important; }
+  tr { page-break-inside: avoid !important; break-inside: avoid !important; }
+
+  /* Remove fixed positioning */
+  * { position: static !important; }
+  /* But keep relative for layout */
+  .container, .section-container, [class*="grid"], [class*="card"] { position: relative !important; }
+
+  /* Remove animations */
+  * { animation: none !important; transition: none !important; }
+
+  /* Ensure proper margins */
+  @page { margin: 12mm 10mm; }
+
+  /* Reduce hero for print */
   .hero { min-height: auto; padding: 40px 24px; }
   .section { padding: 40px 0; }
 }
@@ -668,6 +734,46 @@ body { font-family: 'Morena', sans-serif; font-weight: 700; background: var(--bl
       <div class="service-card"><div class="service-info"><h4>Content creation SEO</h4><p>Par page</p></div><div class="service-price"><div class="amount">500€</div></div></div>
       <div class="service-card"><div class="service-info"><h4>Brand strategy & identity</h4><p>20 heures</p></div><div class="service-price"><div class="amount">3 500€</div></div></div>
       <div class="service-card"><div class="service-info"><h4>Pen-testing & Security audit</h4><p>2-3 jours</p></div><div class="service-price"><div class="amount">2 500€+</div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES RÉCURRENTS -->
+<section class="section" style="background:var(--black);">
+  <div class="container">
+    <div class="section-label">Services récurrents</div>
+    <div class="section-title">Gestion <span class="accent">Google Ads</span></div>
+    <p class="section-subtitle">Confiez vos campagnes publicitaires Google à un expert. Génération de leads, visibilité locale, retour sur investissement mesurable.</p>
+    <div class="services-grid" style="margin-top:56px;">
+      <div class="service-card">
+        <div class="service-info">
+          <h4>Setup initial</h4>
+          <p>Création du compte, recherche de mots-clés, structuration des campagnes, ciblage géographique, suivi des conversions</p>
+        </div>
+        <div class="service-price">
+          <div class="amount">450€ HT</div>
+          <div class="detail">one-shot</div>
+        </div>
+      </div>
+      <div class="service-card">
+        <div class="service-info">
+          <h4>Gestion mensuelle</h4>
+          <p>Optimisation continue, création d'annonces, ajustement des enchères, reporting mensuel détaillé</p>
+        </div>
+        <div class="service-price">
+          <div class="amount">25% du budget</div>
+          <div class="detail">min. 250€/mois · engagement 3 mois</div>
+        </div>
+      </div>
+      <div class="service-card">
+        <div class="service-info">
+          <h4>Inclus dans la gestion</h4>
+          <p>Recherche de mots-clés, création d'annonces, ciblage géographique, suivi des conversions, optimisation continue, reporting mensuel</p>
+        </div>
+        <div class="service-price">
+          <div class="amount">Tout compris</div>
+        </div>
+      </div>
     </div>
   </div>
 </section>
