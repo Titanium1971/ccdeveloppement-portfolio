@@ -98,10 +98,9 @@ body { font-family: 'Morena', sans-serif; font-weight: 700; background: var(--bl
 .blog-card { background: var(--dark); border: 1px solid var(--dark-3); border-radius: var(--radius); overflow: hidden; transition: all 0.3s; text-decoration: none; display: flex; flex-direction: column; }
 .blog-card:hover { border-color: var(--accent); transform: translateY(-4px); box-shadow: 0 12px 40px rgba(0,0,0,0.4); }
 
-.blog-card-thumb { width: 100%; height: 180px; display: flex; align-items: center; justify-content: center; font-size: 48px; }
-.blog-card-thumb.thumb-web { background: linear-gradient(135deg, #111113, #1a2a1a); }
-.blog-card-thumb.thumb-seo { background: linear-gradient(135deg, #111113, #1a1a2a); }
-.blog-card-thumb.thumb-prix { background: linear-gradient(135deg, #111113, #2a1a1a); }
+.blog-card-thumb { width: 100%; height: 180px; overflow: hidden; }
+.blog-card-thumb img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.3s; }
+.blog-card:hover .blog-card-thumb img { transform: scale(1.05); }
 
 .blog-card-body { padding: 24px; flex: 1; display: flex; flex-direction: column; }
 .blog-card-tag { display: inline-block; font-size: 12px; font-weight: 700; color: var(--accent); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 12px; }
@@ -145,8 +144,8 @@ footer a:hover { color: var(--accent); }
 <main class="blog-grid">
 
   <a href="./creation-site-internet-agde-guide-complet-2026.html" class="blog-card">
-    <div class="blog-card-thumb thumb-web">
-      <span>🌐</span>
+    <div class="blog-card-thumb">
+      <img src="../Images/blog-creation-site.jpg" alt="Création site internet à Agde" loading="lazy">
     </div>
     <div class="blog-card-body">
       <span class="blog-card-tag">Création web</span>
@@ -160,8 +159,8 @@ footer a:hover { color: var(--accent); }
   </a>
 
   <a href="./seo-local-herault-restaurants-artisans.html" class="blog-card">
-    <div class="blog-card-thumb thumb-seo">
-      <span>📍</span>
+    <div class="blog-card-thumb">
+      <img src="../Images/blog-seo-local.jpg" alt="SEO local dans l'Hérault" loading="lazy">
     </div>
     <div class="blog-card-body">
       <span class="blog-card-tag">SEO local</span>
@@ -175,8 +174,8 @@ footer a:hover { color: var(--accent); }
   </a>
 
   <a href="./combien-coute-site-vitrine-tpe-2026.html" class="blog-card">
-    <div class="blog-card-thumb thumb-prix">
-      <span>💰</span>
+    <div class="blog-card-thumb">
+      <img src="../Images/blog-tarifs-site.jpg" alt="Combien coûte un site vitrine TPE" loading="lazy">
     </div>
     <div class="blog-card-body">
       <span class="blog-card-tag">Tarifs</span>

@@ -503,11 +503,12 @@ main#main-content { padding-top: 0; }
 .project-link:hover { gap: 10px; }
 
 /* SERVICES */
-.services-section { background: var(--dark); }
+.services-section { background: var(--black); }
 .services-grid {
-  display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px;
-  margin-top: 64px; background: var(--dark-3); border-radius: var(--radius); overflow: hidden;
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px;
+  margin-top: 64px;
 }
+.service-card { border-radius: var(--radius); }
 @media (max-width: 768px) { .services-grid { grid-template-columns: 1fr; } }
 .service-card { background: var(--dark); padding: 44px 32px; transition: all 0.4s; }
 .service-card:hover { background: var(--dark-2); transform: translateY(-4px); }
@@ -739,8 +740,10 @@ footer a:hover { color: var(--accent); }
 
 /* BLOG SECTION */
 .blog-preview-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-top: 32px; }
-.blog-preview-card { background: var(--dark); border: 1px solid var(--dark-3); border-radius: var(--radius); padding: 28px 24px; text-decoration: none; transition: all 0.3s; display: flex; flex-direction: column; }
+.blog-preview-card { background: var(--dark); border: 1px solid var(--dark-3); border-radius: var(--radius); padding: 0; text-decoration: none; transition: all 0.3s; display: flex; flex-direction: column; overflow: hidden; }
 .blog-preview-card:hover { border-color: var(--accent); transform: translateY(-4px); }
+.blog-preview-img { width: 100%; height: 180px; object-fit: cover; display: block; }
+.blog-preview-content { padding: 24px 22px; display: flex; flex-direction: column; flex: 1; }
 .blog-preview-tag { font-size: 12px; font-weight: 700; color: var(--accent); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 12px; }
 .blog-preview-card h3 { font-size: 19px; color: var(--white); margin-bottom: 10px; line-height: 1.3; }
 .blog-preview-card p { font-size: 15px; color: var(--gray); font-weight: 400; line-height: 1.6; flex: 1; }
@@ -1569,22 +1572,31 @@ footer a:hover { color: var(--accent); }
     <h2 class="section-heading reveal">Derniers articles<br><span class="muted">du blog.</span></h2>
     <div class="blog-preview-grid reveal">
       <a href="./blog/creation-site-internet-agde-guide-complet-2026.html" class="blog-preview-card">
-        <span class="blog-preview-tag">Création web</span>
-        <h3>Création de site internet à Agde : le guide complet 2026</h3>
-        <p>Étapes, tarifs, SEO local et conseils d'un développeur web basé dans l'Hérault.</p>
-        <span class="blog-preview-more">Lire l'article →</span>
+        <img src="./Images/blog-creation-site.jpg" alt="Création de site internet à Agde" class="blog-preview-img" loading="lazy">
+        <div class="blog-preview-content">
+          <span class="blog-preview-tag">Création web</span>
+          <h3>Création de site internet à Agde : le guide complet 2026</h3>
+          <p>Étapes, tarifs, SEO local et conseils d'un développeur web basé dans l'Hérault.</p>
+          <span class="blog-preview-more">Lire l'article →</span>
+        </div>
       </a>
       <a href="./blog/seo-local-herault-restaurants-artisans.html" class="blog-preview-card">
-        <span class="blog-preview-tag">SEO local</span>
-        <h3>SEO local dans l'Hérault : le guide pour restaurants et artisans</h3>
-        <p>Google Business Profile, avis clients, contenu géolocalisé pour Agde, Béziers et Sète.</p>
-        <span class="blog-preview-more">Lire l'article →</span>
+        <img src="./Images/blog-seo-local.jpg" alt="SEO local Hérault restaurants artisans" class="blog-preview-img" loading="lazy">
+        <div class="blog-preview-content">
+          <span class="blog-preview-tag">SEO local</span>
+          <h3>SEO local dans l'Hérault : le guide pour restaurants et artisans</h3>
+          <p>Google Business Profile, avis clients, contenu géolocalisé pour Agde, Béziers et Sète.</p>
+          <span class="blog-preview-more">Lire l'article →</span>
+        </div>
       </a>
       <a href="./blog/combien-coute-site-vitrine-tpe-2026.html" class="blog-preview-card">
-        <span class="blog-preview-tag">Tarifs</span>
-        <h3>Combien coûte un site vitrine pour TPE en 2026 ?</h3>
-        <p>Comparatif freelance vs agence vs DIY. Le vrai budget sur 3 ans.</p>
-        <span class="blog-preview-more">Lire l'article →</span>
+        <img src="./Images/blog-tarifs-site.jpg" alt="Tarifs site vitrine TPE 2026" class="blog-preview-img" loading="lazy">
+        <div class="blog-preview-content">
+          <span class="blog-preview-tag">Tarifs</span>
+          <h3>Combien coûte un site vitrine pour TPE en 2026 ?</h3>
+          <p>Comparatif freelance vs agence vs DIY. Le vrai budget sur 3 ans.</p>
+          <span class="blog-preview-more">Lire l'article →</span>
+        </div>
       </a>
     </div>
   </div>
