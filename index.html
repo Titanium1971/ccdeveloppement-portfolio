@@ -337,6 +337,20 @@ nav {
   font-family: 'Morena', sans-serif;
 }
 .btn-secondary:hover { border-color: var(--accent); color: var(--accent); }
+.hero-right-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 74px;
+}
+.hero-right-col .hero-photo-frame {
+  width: 280px;
+  height: 280px;
+}
+@media (max-width: 900px) {
+  .hero-right-col { gap: 16px; }
+  .hero-right-col .hero-photo-frame { width: 200px; height: 200px; }
+}
 .hero-photo { animation: none; }
 .hero-photo-frame {
   width: 320px; height: 320px; border-radius: 50%; overflow: hidden;
@@ -1140,6 +1154,12 @@ footer a:hover { color: var(--accent); }
         <a href="#projets" class="btn-secondary">Voir nos réalisations</a>
       </div>
     </div>
+    <div class="hero-right-col">
+    <div class="hero-photo">
+      <div class="hero-photo-frame">
+        <picture><source srcset="./Images/Cyril-Canon-portrait-240.webp 240w, ./Images/Cyril-Canon-portrait-640.webp 480w" sizes="(max-width: 900px) 120px, 160px" type="image/webp"><img src="./Images/Cyril-Canon-portrait-640.jpg" srcset="./Images/Cyril-Canon-portrait-320.jpg 240w, ./Images/Cyril-Canon-portrait-640.jpg 480w" sizes="(max-width: 900px) 120px, 160px" alt="Cyril Canon - CC Développement" width="480" height="640" loading="eager" decoding="async" fetchpriority="high"></picture>
+      </div>
+    </div>
     <div class="hero-dashboard" aria-label="Dashboard CC Développement en temps réel">
       <div class="dashboard-header">
         <span class="dashboard-title">CC Développement Dashboard</span>
@@ -1147,15 +1167,15 @@ footer a:hover { color: var(--accent); }
       </div>
       <div class="dashboard-stats">
         <div class="dashboard-stat">
-          <div class="dashboard-stat-value">12<span class="accent">+</span></div>
+          <div class="dashboard-stat-value">8<span class="accent">+</span></div>
           <div class="dashboard-stat-label">Sites créés</div>
         </div>
         <div class="dashboard-stat">
-          <div class="dashboard-stat-value">98<span class="accent">%</span></div>
+          <div class="dashboard-stat-value">100<span class="accent">%</span></div>
           <div class="dashboard-stat-label">Satisfaction</div>
         </div>
         <div class="dashboard-stat">
-          <div class="dashboard-stat-value">4.6<span class="accent">/5</span></div>
+          <div class="dashboard-stat-value">5<span class="accent">/5</span></div>
           <div class="dashboard-stat-label">Avis clients</div>
         </div>
       </div>
@@ -1174,9 +1194,10 @@ footer a:hover { color: var(--accent); }
         </div>
       </div>
     </div>
+    </div><!-- /hero-right-col -->
     <div class="hero-stats">
       <div>
-        <div class="hero-stat-value">12<span class="unit">+</span></div>
+        <div class="hero-stat-value">8<span class="unit">+</span></div>
         <div class="hero-stat-label">Sites créés</div>
       </div>
       <div>
