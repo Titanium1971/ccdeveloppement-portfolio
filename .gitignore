@@ -1,2 +1,10 @@
 .DS_Store
-Thumbs.db
+*.swp
+.env
+.env.local
+
+# Backup files (automatiquement ignores)
+*-backup.html
+*-old.html
+*.html.bak
+*.bak
