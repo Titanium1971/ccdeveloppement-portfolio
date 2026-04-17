@@ -1,15 +1,15 @@
-<svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-  <rect fill="#09090B" x="0" y="0" width="200" height="200" rx="20"/>
-  <!-- C gauche compact -->
-  <rect fill="#FFFFFF" x="28" y="48" width="50" height="10" rx="1.5"/>
-  <rect fill="#FFFFFF" x="28" y="48" width="10" height="104" rx="1.5"/>
-  <rect fill="#FFFFFF" x="28" y="142" width="50" height="10" rx="1.5"/>
-  <!-- C droite compact -->
-  <rect fill="#FFFFFF" x="112" y="48" width="50" height="10" rx="1.5"/>
-  <rect fill="#FFFFFF" x="152" y="48" width="10" height="104" rx="1.5"/>
-  <rect fill="#FFFFFF" x="112" y="142" width="50" height="10" rx="1.5"/>
-  <!-- Ligne accent -->
-  <line x1="18" y1="148" x2="182" y2="52" stroke="#39FF14" stroke-width="2" stroke-linecap="round"/>
-  <!-- Point -->
-  <rect fill="#39FF14" x="170" y="152" width="6" height="6" rx="1"/>
+<svg width="512" height="512" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+  <rect fill="#09090B" x="0" y="0" width="512" height="512"/>
+  <!-- C gauche epais -->
+  <rect fill="#FFFFFF" x="70" y="120" width="140" height="36"/>
+  <rect fill="#FFFFFF" x="70" y="120" width="36" height="272"/>
+  <rect fill="#FFFFFF" x="70" y="356" width="140" height="36"/>
+  <!-- C droite epais -->
+  <rect fill="#FFFFFF" x="300" y="120" width="140" height="36"/>
+  <rect fill="#FFFFFF" x="404" y="120" width="36" height="272"/>
+  <rect fill="#FFFFFF" x="300" y="356" width="140" height="36"/>
+  <!-- Ligne accent verte diagonale -->
+  <line x1="40" y1="410" x2="472" y2="140" stroke="#39FF14" stroke-width="14" stroke-linecap="round"/>
+  <!-- Point accent -->
+  <rect fill="#39FF14" x="456" y="394" width="24" height="24" rx="3"/>
 </svg>
