@@ -37,18 +37,68 @@
 <meta name="geo.placename" content="Agde">
 <meta name="geo.position" content="43.3107;3.4731">
 <meta name="ICBM" content="43.3107, 3.4731">
+<!-- Google Search Console : remplacer VOTRE_TOKEN par le code fourni par search.google.com/search-console -->
+<meta name="google-site-verification" content="VOTRE_TOKEN">
+<!-- Bing Webmaster Tools : idem via bing.com/webmasters -->
+<!-- <meta name="msvalidate.01" content="VOTRE_TOKEN_BING"> -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": "LocalBusiness",
+      "@type": "Organization",
+      "@id": "https://ccdeveloppement.eu/#organization",
+      "name": "CC Développement",
+      "alternateName": "CC Developpement",
+      "legalName": "CC Développement — Cyril Canon",
+      "url": "https://ccdeveloppement.eu/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://ccdeveloppement.eu/Images/cc-developpement-logo-horizontal.svg",
+        "width": 512,
+        "height": 256
+      },
+      "image": "https://ccdeveloppement.eu/og-image.jpg",
+      "email": "canon@ccdeveloppement.eu",
+      "telephone": "+33620262153",
+      "taxID": "444114011",
+      "founder": {
+        "@type": "Person",
+        "name": "Cyril Canon",
+        "jobTitle": "Développeur web freelance & entrepreneur",
+        "sameAs": "https://www.linkedin.com/in/cyril-canon-kotylak-4bab9637a"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "27 Rue Basse",
+        "postalCode": "34300",
+        "addressLocality": "Agde",
+        "addressRegion": "Occitanie",
+        "addressCountry": "FR"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+33620262153",
+        "email": "canon@ccdeveloppement.eu",
+        "contactType": "customer service",
+        "areaServed": "FR",
+        "availableLanguage": ["French", "English"]
+      },
+      "sameAs": [
+        "https://www.linkedin.com/in/cyril-canon-kotylak-4bab9637a",
+        "https://github.com/Titanium1971"
+      ],
+      "description": "CC Développement crée des sites web performants, optimisés pour le SEO local, pour artisans, restaurants et TPE dans l'Hérault et en France."
+    },
+    {
+      "@type": "ProfessionalService",
       "@id": "https://ccdeveloppement.eu/#localbusiness",
-      "name": "CC Developpement",
+      "name": "CC Développement",
       "image": "https://ccdeveloppement.eu/og-image.jpg",
       "url": "https://ccdeveloppement.eu/",
       "telephone": "+33620262153",
       "email": "canon@ccdeveloppement.eu",
+      "parentOrganization": { "@id": "https://ccdeveloppement.eu/#organization" },
       "address": {
         "@type": "PostalAddress",
         "streetAddress": "27 Rue Basse",
@@ -63,30 +113,69 @@
         "longitude": 3.4731
       },
       "areaServed": [
-        "Agde",
-        "Herault",
-        "Occitanie",
-        "France"
+        { "@type": "City", "name": "Agde" },
+        { "@type": "City", "name": "Cap d'Agde" },
+        { "@type": "City", "name": "Béziers" },
+        { "@type": "City", "name": "Sète" },
+        { "@type": "City", "name": "Marseillan" },
+        { "@type": "AdministrativeArea", "name": "Hérault" },
+        { "@type": "AdministrativeArea", "name": "Occitanie" },
+        { "@type": "Country", "name": "France" }
       ],
-      "sameAs": [
-        "https://www.linkedin.com/in/cyril-canon-kotylak-4bab9637a"
-      ],
-      "priceRange": "EUR",
-      "description": "Developpement web, automatisation, SEO local et solutions IA pour professionnels.",
+      "priceRange": "€€",
+      "currenciesAccepted": "EUR",
+      "paymentAccepted": "Virement bancaire, Carte bancaire",
+      "openingHoursSpecification": [{
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+        "opens": "09:00",
+        "closes": "18:00"
+      }],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Services CC Développement",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": { "@type": "Service", "name": "Création de site web", "description": "Sites vitrines et e-commerce pour TPE, artisans, restaurants." }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": { "@type": "Service", "name": "SEO local", "description": "Référencement Google local, fiche Google Business Profile, contenus géolocalisés." }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": { "@type": "Service", "name": "Automatisation & IA", "description": "Automatisation de processus métier, intégrations Make/Zapier, solutions IA." }
+          }
+        ]
+      },
+      "description": "Développement web, automatisation, SEO local et solutions IA pour professionnels.",
       "knowsAbout": [
-        "Developpement web",
+        "Développement web",
         "SEO local",
         "Automatisation",
         "Intelligence artificielle",
-        "Google Business Profile"
+        "Google Business Profile",
+        "Next.js",
+        "Astro",
+        "WordPress"
       ]
     },
     {
       "@type": "WebSite",
       "@id": "https://ccdeveloppement.eu/#website",
       "url": "https://ccdeveloppement.eu/",
-      "name": "CC Developpement",
-      "inLanguage": "fr-FR"
+      "name": "CC Développement",
+      "inLanguage": "fr-FR",
+      "publisher": { "@id": "https://ccdeveloppement.eu/#organization" },
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": {
+          "@type": "EntryPoint",
+          "urlTemplate": "https://ccdeveloppement.eu/?q={search_term_string}"
+        },
+        "query-input": "required name=search_term_string"
+      }
     }
   ]
 }
@@ -1130,10 +1219,10 @@ footer a:hover { color: var(--accent); }
     <li><a href="#parcours">Parcours</a></li>
     <li><a href="#projets">Projets</a></li>
     <li><a href="#services">Services</a></li>
-    <li><a href="./tarifs.html">Tarifs</a></li>
+    <li><a href="/tarifs">Tarifs</a></li>
     <li><a href="#stack">Stack</a></li>
     <li><a href="./blog/">Blog</a></li>
-    <li><a href="./guide-seo-local.html">Guide gratuit</a></li>
+    <li><a href="/guide-seo-local">Guide gratuit</a></li>
     <li><a href="#assistant">Assistant IA</a></li>
     <li><a href="#contact" class="nav-cta">Réserver un audit</a></li>
   </ul>
@@ -1548,7 +1637,7 @@ footer a:hover { color: var(--accent); }
         <div class="section-tag reveal">Ressource offerte</div>
         <h2 class="section-heading reveal" style="font-size:clamp(28px,4vw,40px);">Les 7 erreurs SEO local<br><span class="accent">qui coulent les TPE</span></h2>
         <p class="reveal" style="color:var(--gray);font-size:17px;line-height:1.7;margin:20px 0 28px;">Guide PDF gratuit de 15 pages. Des exemples concrets de TPE de l'Hérault, des plans d'action en 5 étapes et une checklist récap. Reçois-le par email en 30 secondes.</p>
-        <a href="./guide-seo-local.html" class="btn-cal reveal" style="display:inline-flex;align-items:center;gap:8px;">📥 Télécharger le guide gratuit</a>
+        <a href="/guide-seo-local" class="btn-cal reveal" style="display:inline-flex;align-items:center;gap:8px;">📥 Télécharger le guide gratuit</a>
       </div>
       <div class="lead-magnet-visual reveal">
         <div class="pdf-preview">
@@ -1570,7 +1659,7 @@ footer a:hover { color: var(--accent); }
     <div class="section-tag reveal">Ressources</div>
     <h2 class="section-heading reveal">Derniers articles<br><span class="muted">du blog.</span></h2>
     <div class="blog-preview-grid reveal">
-      <a href="./blog/creation-site-internet-agde-guide-complet-2026.html" class="blog-preview-card">
+      <a href="/blog/creation-site-internet-agde-guide-complet-2026" class="blog-preview-card">
         <img src="./Images/blog-creation-site.jpg" alt="Création de site internet à Agde" class="blog-preview-img" loading="lazy">
         <div class="blog-preview-content">
           <span class="blog-preview-tag">Création web</span>
@@ -1579,7 +1668,7 @@ footer a:hover { color: var(--accent); }
           <span class="blog-preview-more">Lire l'article →</span>
         </div>
       </a>
-      <a href="./blog/seo-local-herault-restaurants-artisans.html" class="blog-preview-card">
+      <a href="/blog/seo-local-herault-restaurants-artisans" class="blog-preview-card">
         <img src="./Images/blog-seo-local.jpg" alt="SEO local Hérault restaurants artisans" class="blog-preview-img" loading="lazy">
         <div class="blog-preview-content">
           <span class="blog-preview-tag">SEO local</span>
@@ -1588,7 +1677,7 @@ footer a:hover { color: var(--accent); }
           <span class="blog-preview-more">Lire l'article →</span>
         </div>
       </a>
-      <a href="./blog/combien-coute-site-vitrine-tpe-2026.html" class="blog-preview-card">
+      <a href="/blog/combien-coute-site-vitrine-tpe-2026" class="blog-preview-card">
         <img src="./Images/blog-tarifs-site.jpg" alt="Tarifs site vitrine TPE 2026" class="blog-preview-img" loading="lazy">
         <div class="blog-preview-content">
           <span class="blog-preview-tag">Tarifs</span>
@@ -1645,13 +1734,13 @@ footer a:hover { color: var(--accent); }
         <div class="proof-kpi">Agde</div>
         <h3 class="proof-title">Page locale dédiée</h3>
         <p class="proof-desc">Contenu ciblé création de site web pour capter la demande locale.</p>
-        <a class="proof-link" href="./creation-site-web-agde.html">Voir la page locale Agde</a>
+        <a class="proof-link" href="/creation-site-web-agde">Voir la page locale Agde</a>
       </article>
       <article class="proof-card">
         <div class="proof-kpi">Hérault</div>
         <h3 class="proof-title">SEO local actionnable</h3>
         <p class="proof-desc">Méthode de référencement local appliquée aux TPE/PME du département.</p>
-        <a class="proof-link" href="./seo-local-herault.html">Voir la page SEO Hérault</a>
+        <a class="proof-link" href="/seo-local-herault">Voir la page SEO Hérault</a>
       </article>
     </div>
   </div>
@@ -1719,13 +1808,13 @@ footer a:hover { color: var(--accent); }
           WhatsApp (réponse rapide)
         </a>
         <a href="tel:+33620262153" class="btn-phone">📞 06 20 26 21 53</a>
-        <a href="./devis.html" class="btn-primary" style="margin:0;">✉️ Recevoir mon devis</a>
+        <a href="/devis" class="btn-primary" style="margin:0;">✉️ Recevoir mon devis</a>
       </div>
       <div class="cta-contacts">
         <a href="https://www.linkedin.com/in/cyril-canon-kotylak-4bab9637a" target="_blank" rel="noopener noreferrer" class="cta-contact-item">💼 LinkedIn</a>
-        <a href="./tarifs.html" class="cta-contact-item">💶 Voir les tarifs</a>
-        <a href="./creation-site-web-agde.html" class="cta-contact-item">📍 Site web à Agde</a>
-        <a href="./seo-local-herault.html" class="cta-contact-item">🔎 SEO local Hérault</a>
+        <a href="/tarifs" class="cta-contact-item">💶 Voir les tarifs</a>
+        <a href="/creation-site-web-agde" class="cta-contact-item">📍 Site web à Agde</a>
+        <a href="/seo-local-herault" class="cta-contact-item">🔎 SEO local Hérault</a>
         <a href="https://ccdeveloppement.eu" target="_blank" rel="noopener noreferrer" class="cta-contact-item">🌐 ccdeveloppement.eu</a>
         <span class="cta-contact-item">📍 27 Rue Basse, 34300 Agde</span>
       </div>
@@ -1746,7 +1835,7 @@ footer a:hover { color: var(--accent); }
   <div class="footer-cal">
     <a href="#" class="btn-cal--outline" data-cal-link="cc-developpement/audit-gratuit" data-cal-config='{"layout":"modal"}'>📅 Réserve ton audit gratuit — 30 min</a>
   </div>
-  <p>© 2026 CC Développement · Cyril Canon · SIRET : 444 114 011 · 27 Rue Basse, 34300 Agde · <a href="./mentions-legales.html">Mentions légales</a> · <a href="./rgpd-confidentialite.html">Politique de confidentialité</a></p>
+  <p>© 2026 CC Développement · Cyril Canon · SIRET : 444 114 011 · 27 Rue Basse, 34300 Agde · <a href="/mentions-legales">Mentions légales</a> · <a href="/rgpd-confidentialite">Politique de confidentialité</a></p>
 </footer>
 
 <!-- MOBILE STICKY CAL.COM BAR -->
@@ -1832,7 +1921,7 @@ Cal("ui", {"theme":"dark","styles":{"branding":{"brandColor":"#39FF14"}},"hideEv
     <div style="font-size:14px;color:#39FF14;margin-bottom:12px;">GUIDE GRATUIT — 15 PAGES</div>
     <h3 style="font-family:'Morena',sans-serif;font-size:24px;color:#fff;margin-bottom:12px;line-height:1.2;">Les 7 erreurs SEO local<br>qui coulent les TPE en 2026</h3>
     <p style="font-size:15px;color:#D0D0D8;margin-bottom:24px;line-height:1.6;">Exemples concrets dans l'Hérault + solutions actionnables. Reçois-le par email en 30 secondes.</p>
-    <a href="./guide-seo-local.html" style="display:inline-block;background:#39FF14;color:#09090B;padding:14px 32px;border-radius:10px;font-weight:700;font-size:16px;text-decoration:none;font-family:'Morena',sans-serif;transition:all 0.3s;">Télécharger le guide gratuit</a>
+    <a href="/guide-seo-local" style="display:inline-block;background:#39FF14;color:#09090B;padding:14px 32px;border-radius:10px;font-weight:700;font-size:16px;text-decoration:none;font-family:'Morena',sans-serif;transition:all 0.3s;">Télécharger le guide gratuit</a>
     <p style="font-size:12px;color:#B0B0B8;margin-top:12px;">Pas de spam. Désinscription en 1 clic.</p>
   </div>
 </div>
