@@ -13,7 +13,7 @@ const PAGES = [
   { file: "devis.html",                                            url: "/devis",                                                       priority: 0.9,  changefreq: "monthly" },
   { file: "creation-site-web-agde.html",                           url: "/creation-site-web-agde",                                      priority: 0.9,  changefreq: "monthly" },
   { file: "seo-local-herault.html",                                url: "/seo-local-herault",                                           priority: 0.9,  changefreq: "monthly" },
-  { file: "blog/index.html",                                       url: "/blog",                                                        priority: 0.85, changefreq: "weekly"  },
+  { file: "blog/index.html",                                       url: "/blog/",                                                       priority: 0.85, changefreq: "weekly"  },
   { file: "guide-seo-local.html",                                  url: "/guide-seo-local",                                             priority: 0.8,  changefreq: "monthly" },
   { file: "estimateur.html",                                       url: "/estimateur",                                                  priority: 0.8,  changefreq: "monthly" },
   { file: "blog/creation-site-internet-agde-guide-complet-2026.html", url: "/blog/creation-site-internet-agde-guide-complet-2026",      priority: 0.75, changefreq: "monthly" },
