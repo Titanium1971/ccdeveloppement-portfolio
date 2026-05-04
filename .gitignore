@@ -8,3 +8,7 @@
 *-old.html
 *.html.bak
 *.bak
+
+# Claude Code runtime locks
+.claude/scheduled_tasks.lock
+.claude/*.lock
