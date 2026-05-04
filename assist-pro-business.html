@@ -16,8 +16,8 @@
 <link rel="apple-touch-icon" href="./apple-touch-icon.png?v=4">
 <link rel="manifest" href="./site.webmanifest">
 
-<!-- Preload Inter Variable (police locale, glyphes accentués FR complets) -->
-<link rel="preload" as="font" href="/fonts/Inter-roman.var.woff2" type="font/woff2" crossorigin>
+<!-- Preload Morena Bold (police titres, cohérent index.html) -->
+<link rel="preload" as="font" href="./fonts/Morena-Bold-Embedded.otf" type="font/otf" crossorigin>
 <link rel="preload" href="./Images/AssistPro-1200.webp" as="image" type="image/webp">
 
 <!-- Open Graph (product) -->
@@ -143,16 +143,43 @@
 
 <style>
 /* ============================================================
-   POLICE INTER VARIABLE — locale, glyphes accentués FR complets
-   Source : https://rsms.me/inter/font-files/InterVariable.woff2 (v4.1)
-   Licence : SIL Open Font License (libre commercial + redistribution)
+   POLICES — identiques à index.html (cohérence visuelle site)
+   Morena : titres + corps principal — Brandon : variantes
    ============================================================ */
 @font-face {
-  font-family: 'Inter';
-  src: url('/fonts/Inter-roman.var.woff2') format('woff2-variations'),
-       url('/fonts/Inter-roman.var.woff2') format('woff2');
-  font-weight: 100 900;
-  font-style: normal;
+  font-family: 'Morena';
+  src: url('./fonts/Morena-Embedded.otf') format('opentype');
+  font-weight: 200; font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Morena';
+  src: url('./fonts/Morena-W300-Embedded-1.otf') format('opentype');
+  font-weight: 300; font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Morena';
+  src: url('./fonts/Morena-W400-Embedded-2.otf') format('opentype');
+  font-weight: 400; font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Morena';
+  src: url('./fonts/Morena-SemiBold-Embedded.otf') format('opentype');
+  font-weight: 600; font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Morena';
+  src: url('./fonts/Morena-Bold-Embedded.otf') format('opentype');
+  font-weight: 700; font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Brandon';
+  src: url('./fonts/Brandon_reg.otf') format('opentype');
+  font-weight: 400; font-style: normal;
   font-display: swap;
 }
 
@@ -177,18 +204,80 @@
   --radius: 16px;
 }
 
+/* BANDEAU PRÉ-LANCEMENT */
+.prelaunch-banner {
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  background: linear-gradient(90deg, var(--accent-dim), rgba(57,255,20,0.18), var(--accent-dim));
+  border-bottom: 1px solid rgba(57,255,20,0.35);
+  color: var(--white);
+  font-weight: 400;
+  font-size: 14px;
+  padding: 10px 16px;
+  backdrop-filter: saturate(140%) blur(6px);
+}
+.prelaunch-banner.is-hidden { display: none; }
+.prelaunch-banner__inner {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+.prelaunch-banner__text {
+  font-family: 'Brandon', 'Morena', sans-serif;
+  letter-spacing: 0.01em;
+  line-height: 1.45;
+  color: var(--gray);
+}
+.prelaunch-banner__text strong { color: var(--accent); font-weight: 700; }
+.prelaunch-banner__cta {
+  font-family: 'Brandon', sans-serif;
+  font-weight: 700;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--accent);
+  text-decoration: none;
+  border: 1px solid rgba(57,255,20,0.5);
+  padding: 6px 14px;
+  border-radius: 999px;
+  transition: background .15s ease, border-color .15s ease;
+  white-space: nowrap;
+}
+.prelaunch-banner__cta:hover { background: rgba(57,255,20,0.1); border-color: var(--accent); }
+.prelaunch-banner__close {
+  background: transparent;
+  border: 0;
+  color: var(--gray-light);
+  font-size: 22px;
+  line-height: 1;
+  cursor: pointer;
+  padding: 4px 10px;
+  border-radius: 6px;
+  transition: background .15s ease, color .15s ease;
+}
+.prelaunch-banner__close:hover { background: rgba(255,255,255,0.08); color: var(--white); }
+@media (max-width: 640px) {
+  .prelaunch-banner { font-size: 13px; padding: 8px 12px; }
+  .prelaunch-banner__inner { gap: 8px; }
+  .prelaunch-banner__cta { padding: 4px 10px; font-size: 12px; }
+}
+
 /* RESET */
 * { margin: 0; padding: 0; box-sizing: border-box; }
 html { scroll-behavior: smooth; scroll-padding-top: 100px; }
 body {
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
-  font-weight: 400;
+  font-family: 'Morena', sans-serif;
+  font-weight: 700;
   background: var(--black);
   color: var(--white);
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  font-feature-settings: 'cv11', 'ss01', 'ss03';
   line-height: 1.6;
 }
 img { max-width: 100%; display: block; }
@@ -871,6 +960,17 @@ footer a:hover { color: var(--accent); }
 <body>
 <a href="#main-content" class="skip-link">Aller au contenu</a>
 
+<!-- Bandeau pré-lancement (peut être fermé par l'utilisateur) -->
+<div class="prelaunch-banner" id="prelaunchBanner" role="status" aria-live="polite">
+  <div class="prelaunch-banner__inner">
+    <span class="prelaunch-banner__text">
+      <strong>AssistPro Business est en pré-lancement</strong> — sortie courant 2026. Réservez dès maintenant vos conditions de lancement (setup offert + 2 mois offerts).
+    </span>
+    <a href="#tarifs" class="prelaunch-banner__cta">Voir les conditions</a>
+    <button type="button" class="prelaunch-banner__close" id="prelaunchBannerClose" aria-label="Fermer le bandeau de pré-lancement">×</button>
+  </div>
+</div>
+
 <nav aria-label="Navigation principale">
   <a href="/" class="nav-logo"><img src="./Images/cc-developpement-logo-horizontal.svg" alt="CC Développement" width="260" height="40"></a>
   <ul class="nav-links" id="navLinks">
@@ -892,9 +992,9 @@ footer a:hover { color: var(--accent); }
 <section class="hero-assist" id="hero">
   <div class="section-container">
     <div class="hero-text">
-      <div class="section-tag">Nouveau · AssistPro Business</div>
+      <div class="section-tag">Bientôt disponible · AssistPro Business</div>
       <h1>Votre assistant <span class="muted">WhatsApp IA,</span><br>prêt en 7 jours.</h1>
-      <p class="hero-baseline">[À RÉDIGER LOT 2 — baseline 2 lignes : promesse claire (assistant 24/7 sur le canal n°1 des Français) + bénéfice business principal (libérer du temps, ne plus rater de client). Ton commercial mais authentique.]</p>
+      <p class="hero-baseline">Un assistant WhatsApp pour répondre à vos clients 24h/24, gérer vos réservations, modérer vos avis Google et publier sur Instagram.<br><strong>Sans engagement, dès 139&nbsp;€/mois HT.</strong></p>
       <div class="hero-ctas">
         <a href="https://cal.com/cc-developpement/audit-gratuit" data-cal-link="cc-developpement/audit-gratuit" data-cal-config='{"layout":"modal"}' class="btn-primary">Audit gratuit 30 min</a>
         <a href="#tarifs" class="btn-secondary">Voir les tarifs</a>
@@ -914,25 +1014,25 @@ footer a:hover { color: var(--accent); }
   <div class="section-container">
     <div class="section-tag">Le constat</div>
     <h2 class="section-heading">Le quotidien d'un commerce local <span class="muted">aujourd'hui.</span></h2>
-    <p class="section-desc">[À RÉDIGER LOT 2 — phrase d'intro 1-2 lignes posant les 3 douleurs récurrentes que vit chaque restaurateur, commerçant ou PME locale.]</p>
+    <p class="section-desc">Trois frictions récurrentes pour les restaurateurs, commerçants et PME locales. Aucune n'exige d'embaucher pour être résolue.</p>
 
     <div class="problem-grid">
       <article class="problem-card">
         <div class="problem-icon" aria-hidden="true">📞</div>
-        <h3>Vos clients vous appellent pendant le coup de feu</h3>
-        <p>[À RÉDIGER LOT 2 — décrire la friction : appels qui sonnent en cuisine, réservations manquées, clients raccrochent et vont à la concurrence.]</p>
+        <h3>Vos clients vous appellent au pire moment</h3>
+        <p>Le téléphone sonne pendant que vous êtes avec un client, en livraison ou en intervention. Vous ne pouvez pas répondre. Vous venez de perdre un rendez-vous, une commande, ou un nouveau prospect.</p>
       </article>
 
       <article class="problem-card">
         <div class="problem-icon" aria-hidden="true">⭐</div>
         <h3>Les avis Google restent sans réponse</h3>
-        <p>[À RÉDIGER LOT 2 — décrire la friction : 30 jours moyens avant réponse, impact SEO local négatif, clients déçus qui ne reviennent pas.]</p>
+        <p>Un client laisse un avis 3 étoiles le mardi. Vous le voyez le vendredi. Pendant 3 jours, votre fiche Google a affiché un avis ignoré — Google et vos prospects l'ont remarqué.</p>
       </article>
 
       <article class="problem-card">
         <div class="problem-icon" aria-hidden="true">⏱️</div>
         <h3>Le community management vous prend 5 h/semaine</h3>
-        <p>[À RÉDIGER LOT 2 — décrire la friction : posts Instagram à écrire le dimanche soir, idées qui manquent, fréquentation qui plafonne sans posts réguliers.]</p>
+        <p>Trouver l'idée, rédiger, choisir les hashtags, créer le visuel, publier au bon moment. Cinq fois par semaine, sans garantie que le post sorte vraiment. Plusieurs heures que vous pourriez consacrer à votre métier.</p>
       </article>
     </div>
   </div>
@@ -943,25 +1043,25 @@ footer a:hover { color: var(--accent); }
   <div class="section-container">
     <div class="section-tag">La promesse</div>
     <h2 class="section-heading">Un assistant WhatsApp IA, <span class="muted">à votre service 24/7.</span></h2>
-    <p class="section-desc">[À RÉDIGER LOT 2 — phrase d'intro qui annonce les 3 piliers : numéro dédié, 50 fonctions, setup 7 jours.]</p>
+    <p class="section-desc">Trois piliers techniques qui permettent à AssistPro de tenir la promesse, sans intermédiaire ni dépendance externe.</p>
 
     <div class="promise-grid">
       <article class="pillar-card">
         <div class="pillar-icon" aria-hidden="true">📱</div>
         <h3>Numéro WhatsApp Business dédié</h3>
-        <p>[À RÉDIGER LOT 2 — Twilio BSP, votre logo, votre nom d'affichage, votre site web vérifié sur le profil. Vos clients voient votre marque.]</p>
+        <p>Un numéro dédié à votre activité, votre logo, votre nom d'affichage et votre site web vérifiés. Vos clients voient votre marque, pas un service intermédiaire.</p>
       </article>
 
       <article class="pillar-card">
         <div class="pillar-icon" aria-hidden="true">🤖</div>
         <h3>50 fonctions IA prêtes à l'emploi</h3>
-        <p>[À RÉDIGER LOT 2 — réservations, posts, gestion avis, briefing matinal, support client, relances : tout est déjà branché et configurable selon votre activité.]</p>
+        <p>Réservations, posts, gestion d'avis, briefing matinal, support client, relances. Tout est branché et configurable selon votre secteur dès le premier jour.</p>
       </article>
 
       <article class="pillar-card">
         <div class="pillar-icon" aria-hidden="true">⚡</div>
         <h3>Setup en 7 jours</h3>
-        <p>[À RÉDIGER LOT 2 — vous fournissez vos infos métier (carte, horaires, ton), on s'occupe du paramétrage Twilio + Meta + n8n. Vous testez J+7.]</p>
+        <p>Vous fournissez vos informations métier (carte, horaires, ton de communication). Nous nous occupons du paramétrage Twilio, Meta et automatisations. Vous testez à J+7.</p>
       </article>
     </div>
   </div>
@@ -972,72 +1072,72 @@ footer a:hover { color: var(--accent); }
   <div class="section-container">
     <div class="section-tag">Fonctionnalités</div>
     <h2 class="section-heading">6 super-pouvoirs <span class="muted">au bout du doigt.</span></h2>
-    <p class="section-desc">[À RÉDIGER LOT 2 — phrase d'intro qui présente les 6 capacités principales et insiste sur le fait qu'elles sont déjà packagées.]</p>
+    <p class="section-desc">6 fonctions opérationnelles dès le premier jour. Activez celles dont vous avez besoin, ajustez les autres au fil du temps.</p>
 
     <div class="features-grid">
       <article class="feature-card">
         <div class="feature-emoji" aria-hidden="true">📅</div>
         <h3>Réservations automatiques</h3>
-        <p>[À RÉDIGER LOT 2 — pitch 1-2 lignes : prendre une réservation par WhatsApp, confirmation immédiate, synchro agenda.]</p>
+        <p>Vos clients réservent en envoyant un message. L'assistant propose les créneaux, confirme, et synchronise votre agenda.</p>
         <ul>
-          <li>[À RÉDIGER LOT 2 — micro-bénéfice 1]</li>
-          <li>[À RÉDIGER LOT 2 — micro-bénéfice 2]</li>
-          <li>[À RÉDIGER LOT 2 — micro-bénéfice 3]</li>
+          <li>Disponible 24h/24, y compris dimanche</li>
+          <li>Confirmation immédiate par WhatsApp</li>
+          <li>Synchronisation Google Calendar / iCal</li>
         </ul>
       </article>
 
       <article class="feature-card">
         <div class="feature-emoji" aria-hidden="true">📱</div>
         <h3>Posts réseaux sociaux IA</h3>
-        <p>[À RÉDIGER LOT 2 — pitch 1-2 lignes : génération de posts Instagram/Facebook adaptés à votre ton, calendrier éditorial automatique.]</p>
+        <p>L'assistant rédige, illustre et publie vos posts Instagram et Facebook à votre voix, selon votre calendrier éditorial.</p>
         <ul>
-          <li>[À RÉDIGER LOT 2 — micro-bénéfice 1]</li>
-          <li>[À RÉDIGER LOT 2 — micro-bénéfice 2]</li>
-          <li>[À RÉDIGER LOT 2 — micro-bénéfice 3]</li>
+          <li>12 à 30 posts par mois selon le plan</li>
+          <li>Validation finale en un clic via WhatsApp</li>
+          <li>Hashtags et timing optimisés</li>
         </ul>
       </article>
 
       <article class="feature-card">
         <div class="feature-emoji" aria-hidden="true">⭐</div>
         <h3>Gestion avis Google</h3>
-        <p>[À RÉDIGER LOT 2 — pitch 1-2 lignes : réponses automatiques contextualisées avec validation humaine, suivi des notes en temps réel.]</p>
+        <p>L'assistant rédige une réponse adaptée à chaque avis (positif, neutre, négatif). Vous validez, il publie.</p>
         <ul>
-          <li>[À RÉDIGER LOT 2 — micro-bénéfice 1]</li>
-          <li>[À RÉDIGER LOT 2 — micro-bénéfice 2]</li>
-          <li>[À RÉDIGER LOT 2 — micro-bénéfice 3]</li>
+          <li>Réponse sous 24 heures, week-ends inclus</li>
+          <li>Ton ajusté à votre identité</li>
+          <li>Impact direct sur votre référencement local</li>
         </ul>
       </article>
 
       <article class="feature-card">
         <div class="feature-emoji" aria-hidden="true">☀️</div>
         <h3>Briefing matinal personnalisé</h3>
-        <p>[À RÉDIGER LOT 2 — pitch 1-2 lignes : chaque matin, résumé WhatsApp des réservations du jour, avis reçus, posts publiés, tâches à valider.]</p>
+        <p>Chaque matin, un message WhatsApp résume ce qui compte : réservations du jour, avis reçus, posts à valider, météo, événements locaux.</p>
         <ul>
-          <li>[À RÉDIGER LOT 2 — micro-bénéfice 1]</li>
-          <li>[À RÉDIGER LOT 2 — micro-bénéfice 2]</li>
-          <li>[À RÉDIGER LOT 2 — micro-bénéfice 3]</li>
+          <li>Reçu à l'heure de votre choix</li>
+          <li>Exportable en PDF pour vos équipes</li>
+          <li>Personnalisable selon votre activité</li>
         </ul>
       </article>
 
       <article class="feature-card">
         <div class="feature-emoji" aria-hidden="true">💬</div>
         <h3>Réponses clients 24/7</h3>
-        <p>[À RÉDIGER LOT 2 — pitch 1-2 lignes : horaires, allergènes, parking, accès, demandes spéciales — l'IA répond en français naturel sur votre numéro.]</p>
+        <p>L'assistant répond aux questions fréquentes (horaires, prestations, accès, tarifs) en dehors de vos heures d'ouverture. Les demandes complexes vous remontent en priorité.</p>
         <ul>
-          <li>[À RÉDIGER LOT 2 — micro-bénéfice 1]</li>
-          <li>[À RÉDIGER LOT 2 — micro-bénéfice 2]</li>
-          <li>[À RÉDIGER LOT 2 — micro-bénéfice 3]</li>
+          <li>Plus aucun message ignoré</li>
+          <li>Filtrage automatique des demandes</li>
+          <li>Escalade humaine sur les cas sensibles</li>
         </ul>
       </article>
 
       <article class="feature-card">
         <div class="feature-emoji" aria-hidden="true">📊</div>
         <h3>Tableau de bord analytics</h3>
-        <p>[À RÉDIGER LOT 2 — pitch 1-2 lignes : suivi des conversations, taux de conversion, temps de réponse moyen, top questions clients.]</p>
+        <p>Une vue claire de vos conversations, réservations, posts et avis. Mise à jour en temps réel, accessible depuis WhatsApp ou un lien web privé.</p>
         <ul>
-          <li>[À RÉDIGER LOT 2 — micro-bénéfice 1]</li>
-          <li>[À RÉDIGER LOT 2 — micro-bénéfice 2]</li>
-          <li>[À RÉDIGER LOT 2 — micro-bénéfice 3]</li>
+          <li>Suivi des KPI hebdomadaires</li>
+          <li>Comparaison mois sur mois</li>
+          <li>Export CSV pour votre comptable</li>
         </ul>
       </article>
     </div>
@@ -1063,7 +1163,7 @@ footer a:hover { color: var(--accent); }
     <p class="section-desc">Numéro WhatsApp Business dédié inclus dans tous les plans. Tarifs hors taxes (TVA 20% applicable).</p>
 
     <div class="pricing-banner" role="note">
-      <strong>Sans engagement,</strong> résiliable à tout moment. <strong>Setup offert + 2 mois offerts</strong> si paiement annuel.
+      <strong>Lancement courant 2026</strong> — rejoignez la liste d'attente pour bénéficier des conditions de pré-lancement (<strong>setup offert + 2 mois offerts</strong>). Sans engagement, résiliable à tout moment.
     </div>
 
     <div class="pricing-grid">
@@ -1083,7 +1183,7 @@ footer a:hover { color: var(--accent); }
           <li>Historique conversations 30 j</li>
           <li>Support email</li>
         </ul>
-        <a href="https://cal.com/cc-developpement/audit-gratuit" data-cal-link="cc-developpement/audit-gratuit" data-cal-config='{"layout":"modal"}' class="btn-plan">Commencer</a>
+        <a href="https://cal.com/cc-developpement/audit-gratuit" data-cal-link="cc-developpement/audit-gratuit" data-cal-config='{"layout":"modal"}' class="btn-plan">Rejoindre la liste d'attente</a>
       </article>
 
       <!-- PRO (FEATURED) -->
@@ -1103,7 +1203,7 @@ footer a:hover { color: var(--accent); }
           <li>Personnalisation ton sur mesure</li>
           <li>Support email + WhatsApp</li>
         </ul>
-        <a href="https://cal.com/cc-developpement/audit-gratuit" data-cal-link="cc-developpement/audit-gratuit" data-cal-config='{"layout":"modal"}' class="btn-plan">Commencer</a>
+        <a href="https://cal.com/cc-developpement/audit-gratuit" data-cal-link="cc-developpement/audit-gratuit" data-cal-config='{"layout":"modal"}' class="btn-plan">Rejoindre la liste d'attente</a>
       </article>
 
       <!-- PREMIUM -->
@@ -1122,7 +1222,7 @@ footer a:hover { color: var(--accent); }
           <li>Avis Google automatiques (avec validation)</li>
           <li>Support prioritaire + appel mensuel</li>
         </ul>
-        <a href="https://cal.com/cc-developpement/audit-gratuit" data-cal-link="cc-developpement/audit-gratuit" data-cal-config='{"layout":"modal"}' class="btn-plan">Commencer</a>
+        <a href="https://cal.com/cc-developpement/audit-gratuit" data-cal-link="cc-developpement/audit-gratuit" data-cal-config='{"layout":"modal"}' class="btn-plan">Rejoindre la liste d'attente</a>
       </article>
 
       <!-- CUSTOM -->
@@ -1141,7 +1241,7 @@ footer a:hover { color: var(--accent); }
           <li>Personnalisation 100% sur mesure</li>
           <li>Accompagnement dédié</li>
         </ul>
-        <a href="https://cal.com/cc-developpement/audit-gratuit" data-cal-link="cc-developpement/audit-gratuit" data-cal-config='{"layout":"modal"}' class="btn-plan">Commencer</a>
+        <a href="https://cal.com/cc-developpement/audit-gratuit" data-cal-link="cc-developpement/audit-gratuit" data-cal-config='{"layout":"modal"}' class="btn-plan">Rejoindre la liste d'attente</a>
       </article>
     </div>
 
@@ -1272,35 +1372,47 @@ footer a:hover { color: var(--accent); }
       <details class="faq-item">
         <summary>Combien ça coûte vraiment, tout compris ?</summary>
         <div class="faq-answer">
-          <p>[À RÉDIGER LOT 2 — répondre clairement : abonnement HT + setup HT (offert si annuel) + 0€ de frais cachés. Donner un exemple chiffré sur 12 mois pour le plan Pro mensuel vs annuel.]</p>
+          <p>Aucun frais caché. Vous payez l'abonnement mensuel HT + le setup HT (offert si annuel). Exemple sur 12 mois pour le plan Pro :</p>
+          <ul>
+            <li><strong>Mensuel sans engagement</strong> : 239&nbsp;€/mois HT × 12 + 399&nbsp;€ setup = <strong>3&nbsp;267&nbsp;€ HT/an</strong></li>
+            <li><strong>Annuel (10 mois payés)</strong> : 2&nbsp;390&nbsp;€ HT/an, setup offert + 2 mois offerts = <strong>économie de 877&nbsp;€ HT</strong></li>
+          </ul>
+          <p>Aucune commission sur les réservations, aucun frais par message entrant. Les seuls coûts variables sont les options à la carte que vous activez vous-même.</p>
         </div>
       </details>
 
       <details class="faq-item">
         <summary>Est-ce que ça remplace mon staff ?</summary>
         <div class="faq-answer">
-          <p>[À RÉDIGER LOT 2 — répondre : non, l'assistant absorbe les tâches répétitives à faible valeur (FAQ, réservations standard, posts récurrents). Votre équipe se concentre sur l'accueil en salle, la cuisine, le conseil — la valeur ajoutée humaine.]</p>
+          <p>Non. AssistPro absorbe les tâches répétitives à faible valeur (questions fréquentes, réservations standard, posts récurrents, réponses aux avis). Votre équipe se concentre sur ce qui ne s'automatise pas : l'accueil, la prestation elle-même, le conseil, la relation humaine — où votre marge se construit réellement.</p>
         </div>
       </details>
 
       <details class="faq-item">
         <summary>Quelle assistance fournie ?</summary>
         <div class="faq-answer">
-          <p>[À RÉDIGER LOT 2 — répondre selon plan : Essentiel = email (48 h ouvrées), Pro = email + WhatsApp (24 h ouvrées), Premium = prioritaire + 1 appel mensuel de pilotage, Custom = accompagnement dédié.]</p>
+          <p>Le niveau d'assistance dépend de votre plan :</p>
+          <ul>
+            <li><strong>Essentiel</strong> : support email (réponse sous 48&nbsp;h ouvrées)</li>
+            <li><strong>Pro</strong> : support email + WhatsApp (réponse sous 24&nbsp;h ouvrées)</li>
+            <li><strong>Premium</strong> : support prioritaire + un appel mensuel de pilotage</li>
+            <li><strong>Custom</strong> : accompagnement dédié, point hebdomadaire si nécessaire</li>
+          </ul>
+          <p>Toutes les mises à jour produit sont incluses, sans surcoût.</p>
         </div>
       </details>
 
       <details class="faq-item">
         <summary>Mes données sont-elles sécurisées ?</summary>
         <div class="faq-answer">
-          <p>[À RÉDIGER LOT 2 — répondre : hébergement européen (Railway EU + Supabase EU), chiffrement TLS, accès restreint, journalisation des accès, backups quotidiens. DPA signé. Pas de partage à des tiers tiers.]</p>
+          <p>Hébergement européen (Railway EU pour les workflows, Supabase EU pour la base de données). Chiffrement TLS pour tous les échanges, accès restreint et journalisé, sauvegardes quotidiennes. Aucun partage à des tiers en dehors des sous-traitants techniques nécessaires (Twilio, Meta, OpenAI), tous listés dans le DPA. Conformité RGPD intégrée, DPA-type signé avec votre contrat de service.</p>
         </div>
       </details>
 
       <details class="faq-item">
         <summary>Puis-je essayer avant de payer ?</summary>
         <div class="faq-answer">
-          <p>[À RÉDIGER LOT 2 — répondre : audit gratuit 30 min pour cadrer le besoin + démo personnalisée sur votre activité. Pas de période d'essai gratuite payante (le numéro WhatsApp Business dédié implique un coût d'activation Meta non récupérable), mais le mensuel sans engagement permet d'arrêter au bout d'1 mois.]</p>
+          <p>Pas de période d'essai gratuite — l'activation d'un numéro WhatsApp Business dédié implique un coût Meta non récupérable. En revanche, l'<strong>audit gratuit de 30 minutes</strong> permet de cadrer votre besoin et de voir une démonstration sur votre activité avant de signer. Le mensuel sans engagement reste l'option la plus souple : vous arrêtez quand vous voulez.</p>
         </div>
       </details>
     </div>
@@ -1341,6 +1453,29 @@ footer a:hover { color: var(--accent); }
 
 <script>
 document.documentElement.classList.add('js');
+
+/* Bandeau pré-lancement : fermeture mémorisée 30 jours */
+(function () {
+  var banner = document.getElementById('prelaunchBanner');
+  var closeBtn = document.getElementById('prelaunchBannerClose');
+  if (!banner || !closeBtn) return;
+  var KEY = 'ccdev_prelaunch_banner_dismissed_v1';
+  var TTL_MS = 30 * 24 * 60 * 60 * 1000;
+  try {
+    var raw = localStorage.getItem(KEY);
+    if (raw) {
+      var ts = parseInt(raw, 10);
+      if (!isNaN(ts) && Date.now() - ts < TTL_MS) {
+        banner.classList.add('is-hidden');
+      }
+    }
+  } catch (_) {}
+  closeBtn.addEventListener('click', function () {
+    banner.classList.add('is-hidden');
+    try { localStorage.setItem(KEY, String(Date.now())); } catch (_) {}
+  });
+})();
+
 const navLinks = document.getElementById('navLinks');
 const navToggle = document.getElementById('navToggle');
 const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
