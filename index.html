@@ -175,6 +175,79 @@
 }
 </script>
 
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Qui est CC Développement ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "CC Développement est un studio web indépendant basé à Agde dans l'Hérault, dirigé par Cyril Canon (SIRET 444 114 011). Il conçoit des sites web sur-mesure, optimise le SEO local et automatise les processus avec l'IA pour les TPE, indépendants et PME du Sud-Est de la France."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Quels services propose CC Développement ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Création de sites vitrines et e-commerce performants (Core Web Vitals > 90), référencement local Google Business Profile, automatisation IA avec AssistPro Business, audits SEO et accompagnement stratégique. Tous les projets sont chiffrés en amont avec un devis transparent sous 48h."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Combien coûte un site web avec CC Développement ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Les offres démarrent à 1 490 € pour un site vitrine Starter, 3 490 € pour un Restaurant Premium, 5 990 € pour un E-commerce Full, et sur-mesure pour les projets Enterprise. La grille tarifaire complète est disponible sur la page Tarifs et un estimateur en ligne donne une fourchette en moins de 2 minutes."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Quelle zone géographique CC Développement couvre-t-il ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "L'agence est basée à Agde et intervient en priorité dans tout l'Hérault (Agde, Béziers, Sète, Montpellier, Pézenas, Marseillan) et l'Occitanie. Les missions à distance sont également proposées partout en France, avec rendez-vous en visio."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Combien de temps prend la création d'un site web ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Un site vitrine Starter est livré en 2 à 4 semaines. Un site Restaurant Premium ou E-commerce Full prend en moyenne 4 à 8 semaines, selon la complexité et la réactivité du client. Chaque projet inclut un planning détaillé et des points hebdomadaires."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Le site web est-il optimisé pour le SEO et les moteurs IA ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Oui. Tous les sites créés intègrent les bonnes pratiques SEO classique (Core Web Vitals, Schema.org, contenu géolocalisé) et GEO 2026 (structures Q/R, FAQ Schema, robots.txt explicite pour bots IA, llms.txt) afin d'apparaître à la fois dans Google, ChatGPT, Perplexity et Google AI Overviews."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Comment réserver un audit gratuit avec Cyril Canon ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Un audit stratégique gratuit de 30 minutes est proposé via Cal.com (https://cal.com/cc-developpement/audit-gratuit). Le rendez-vous se déroule en visio et inclut une analyse de la présence en ligne actuelle, des recommandations concrètes et un devis sous 48h si suite à donner."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "CC Développement propose-t-il de l'automatisation IA ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Oui, via l'offre AssistPro Business : un assistant IA configuré sur-mesure pour automatiser les réponses clients, la qualification de leads et les workflows internes. Compatible WhatsApp, email et formulaires web, il est conçu spécifiquement pour les TPE et indépendants."
+      }
+    }
+  ]
+}
+</script>
+
 <style>
 @font-face {
   font-family: 'Morena';
@@ -665,6 +738,67 @@ main#main-content { padding-top: 0; }
   color: var(--accent); text-decoration: none;
 }
 .proof-link:hover { text-decoration: underline; }
+
+/* FAQ */
+.faq-section { background: var(--black); }
+.faq-section .section-heading { text-align: center; }
+.faq-list { max-width: 820px; margin: 48px auto 0; display: flex; flex-direction: column; gap: 12px; }
+.faq-item {
+  background: var(--dark);
+  border: 1px solid var(--dark-3);
+  border-radius: 14px;
+  padding: 0;
+  transition: border-color 0.25s, background 0.25s;
+}
+.faq-item[open] { border-color: rgba(57,255,20,0.35); background: var(--dark-2); }
+.faq-item summary {
+  list-style: none;
+  cursor: pointer;
+  padding: 22px 56px 22px 24px;
+  position: relative;
+  user-select: none;
+}
+.faq-item summary::-webkit-details-marker { display: none; }
+.faq-item summary::after {
+  content: '+';
+  position: absolute;
+  right: 24px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--accent);
+  font-family: 'Morena', sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 1;
+  transition: transform 0.25s;
+}
+.faq-item[open] summary::after { content: '−'; }
+.faq-item summary h3 {
+  font-family: 'Morena', sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 1.4;
+  color: var(--white);
+  margin: 0;
+  display: inline;
+}
+.faq-item p {
+  padding: 0 24px 22px;
+  margin: 0;
+  font-family: 'Morena', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.7;
+  color: var(--gray);
+}
+.faq-item p a { color: var(--accent); text-decoration: none; border-bottom: 1px solid rgba(57,255,20,0.35); }
+.faq-item p a:hover { border-bottom-color: var(--accent); }
+@media (max-width: 768px) {
+  .faq-item summary { padding: 18px 48px 18px 18px; }
+  .faq-item summary::after { right: 18px; font-size: 20px; }
+  .faq-item summary h3 { font-size: 16px; }
+  .faq-item p { padding: 0 18px 18px; font-size: 15px; }
+}
 
 /* CTA / CONTACT */
 .cta-section { background: var(--dark); text-align: center; }
@@ -1834,6 +1968,48 @@ footer a:hover { color: var(--accent); }
         <svg width="20" height="20" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
         Tester l'assistant WhatsApp
       </a>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="section faq-section" id="faq">
+  <div class="section-container">
+    <div class="section-tag reveal">Questions fréquentes</div>
+    <h2 class="section-heading reveal">Tout ce que vous voulez savoir<br><span class="muted">avant de démarrer.</span></h2>
+    <div class="faq-list reveal">
+      <details class="faq-item">
+        <summary><h3>Qui est CC Développement ?</h3></summary>
+        <p>CC Développement est un studio web indépendant basé à Agde dans l'Hérault, dirigé par Cyril Canon (SIRET 444 114 011). Il conçoit des sites web sur-mesure, optimise le SEO local et automatise les processus avec l'IA pour les TPE, indépendants et PME du Sud-Est de la France.</p>
+      </details>
+      <details class="faq-item">
+        <summary><h3>Quels services propose CC Développement ?</h3></summary>
+        <p>Création de sites vitrines et e-commerce performants (Core Web Vitals > 90), référencement local Google Business Profile, automatisation IA avec AssistPro Business, audits SEO et accompagnement stratégique. Tous les projets sont chiffrés en amont avec un devis transparent sous 48h.</p>
+      </details>
+      <details class="faq-item">
+        <summary><h3>Combien coûte un site web avec CC Développement ?</h3></summary>
+        <p>Les offres démarrent à 1 490 € pour un site vitrine Starter, 3 490 € pour un Restaurant Premium, 5 990 € pour un E-commerce Full, et sur-mesure pour les projets Enterprise. La <a href="/tarifs">grille tarifaire complète</a> est disponible et un <a href="/estimateur">estimateur en ligne</a> donne une fourchette en moins de 2 minutes.</p>
+      </details>
+      <details class="faq-item">
+        <summary><h3>Quelle zone géographique CC Développement couvre-t-il ?</h3></summary>
+        <p>L'agence est basée à Agde et intervient en priorité dans tout l'Hérault (Agde, Béziers, Sète, Montpellier, Pézenas, Marseillan) et l'Occitanie. Les missions à distance sont également proposées partout en France, avec rendez-vous en visio.</p>
+      </details>
+      <details class="faq-item">
+        <summary><h3>Combien de temps prend la création d'un site web ?</h3></summary>
+        <p>Un site vitrine Starter est livré en 2 à 4 semaines. Un site Restaurant Premium ou E-commerce Full prend en moyenne 4 à 8 semaines, selon la complexité et la réactivité du client. Chaque projet inclut un planning détaillé et des points hebdomadaires.</p>
+      </details>
+      <details class="faq-item">
+        <summary><h3>Le site est-il optimisé pour le SEO et les moteurs IA ?</h3></summary>
+        <p>Oui. Tous les sites créés intègrent les bonnes pratiques SEO classique (Core Web Vitals, Schema.org, contenu géolocalisé) et GEO 2026 (structures Q/R, FAQ Schema, robots.txt explicite pour bots IA, llms.txt). Voir notre <a href="/blog/seo-ia-chatgpt-perplexity-google-ai-2026">guide GEO 2026</a>.</p>
+      </details>
+      <details class="faq-item">
+        <summary><h3>Comment réserver un audit gratuit avec Cyril Canon ?</h3></summary>
+        <p>Un audit stratégique gratuit de 30 minutes est proposé via <a href="https://cal.com/cc-developpement/audit-gratuit" data-cal-link="cc-developpement/audit-gratuit" data-cal-config='{"layout":"modal"}'>Cal.com</a>. Le rendez-vous se déroule en visio et inclut une analyse de la présence en ligne actuelle, des recommandations concrètes et un devis sous 48h.</p>
+      </details>
+      <details class="faq-item">
+        <summary><h3>CC Développement propose-t-il de l'automatisation IA ?</h3></summary>
+        <p>Oui, via l'offre <a href="/assist-pro-business">AssistPro Business</a> : un assistant IA configuré sur-mesure pour automatiser les réponses clients, la qualification de leads et les workflows internes. Compatible WhatsApp, email et formulaires web, conçu spécifiquement pour les TPE et indépendants.</p>
+      </details>
     </div>
   </div>
 </section>
