@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="format-detection" content="telephone=no">
+<title>Page introuvable (404) | CC Développement</title>
+<meta name="description" content="La page demandée n'existe pas ou a été déplacée. Retournez à l'accueil de CC Développement (Cyril Canon, développeur web à Agde).">
+<meta name="robots" content="noindex,nofollow">
+<meta name="theme-color" content="#09090B">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Page introuvable (404) | CC Développement">
+<meta property="og:description" content="La page demandée n'existe pas ou a été déplacée.">
+<meta property="og:image" content="https://ccdeveloppement.eu/og-image.jpg">
+<meta property="og:site_name" content="CC Développement">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="./favicon.svg?v=4" type="image/svg+xml">
+<link rel="icon" href="./favicon.ico?v=4" sizes="any">
+<link rel="shortcut icon" href="./favicon.ico?v=4">
+<link rel="apple-touch-icon" href="./apple-touch-icon.png?v=4">
+<link rel="manifest" href="./site.webmanifest">
+<link rel="preload" href="./fonts/Morena-Embedded.otf" as="font" type="font/otf" crossorigin>
+<link rel="preload" href="./fonts/Morena-Bold-Embedded.otf" as="font" type="font/otf" crossorigin>
+<style>
+@font-face {
+  font-family: 'Morena';
+  src: url('./fonts/Morena-Embedded.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Morena';
+  src: url('./fonts/Morena-Bold-Embedded.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+:root {
+  --black: #09090B;
+  --dark: #111113;
+  --dark-2: #18181B;
+  --dark-3: #27272A;
+  --white: #FFFFFF;
+  --gray: #F0F0F2;
+  --gray-light: #D0D0D8;
+  --gray-dim: #B0B0B8;
+  --accent: #39FF14;
+  --accent-dim: rgba(57,255,20,0.10);
+  --accent-glow: rgba(57,255,20,0.28);
+  --radius: 16px;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { font-family: 'Morena', sans-serif; font-weight: 700; background: var(--black); color: var(--white); overflow-x: hidden; -webkit-font-smoothing: antialiased; }
+::selection { background: var(--accent); color: var(--black); }
+
+/* NAV */
+.top-nav { position: sticky; top: 0; z-index: 20; background: rgba(9,9,11,0.92); border-bottom: 1px solid rgba(255,255,255,0.06); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); }
+.top-nav-inner { max-width: 1160px; margin: 0 auto; padding: 12px 24px; display: flex; justify-content: space-between; align-items: center; gap: 12px; }
+.top-nav a { color: var(--gray-light); text-decoration: none; font-size: 16px; font-weight: 700; }
+.top-nav a:hover { color: var(--white); }
+
+/* PAGE */
+.page-wrap { max-width: 720px; margin: 0 auto; padding: 100px 24px 120px; text-align: center; }
+.error-code { font-size: clamp(72px, 14vw, 140px); font-weight: 700; line-height: 1; color: var(--accent); letter-spacing: -2px; margin-bottom: 16px; text-shadow: 0 0 60px var(--accent-glow); }
+.error-title { font-size: clamp(26px, 4vw, 40px); font-weight: 700; line-height: 1.15; letter-spacing: -0.5px; margin-bottom: 16px; }
+.error-desc { font-size: 18px; color: var(--gray); line-height: 1.7; font-weight: 700; max-width: 480px; margin: 0 auto 48px; }
+
+/* CTA */
+.cta-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; max-width: 560px; margin: 0 auto; }
+.cta-card { background: var(--dark-2); border: 1px solid var(--dark-3); border-radius: var(--radius); padding: 32px 24px; text-decoration: none; color: var(--white); transition: border-color 0.2s, transform 0.2s; }
+.cta-card:hover { border-color: rgba(57,255,20,0.3); transform: translateY(-2px); }
+.cta-card h3 { font-size: 17px; font-weight: 700; margin-bottom: 10px; }
+.cta-card p { font-size: 14px; color: var(--gray-dim); font-weight: 700; line-height: 1.6; }
+.cta-card .cta-arrow { display: inline-block; margin-top: 14px; color: var(--accent); font-size: 14px; font-weight: 700; }
+
+.btn-cal {
+  display: inline-flex; align-items: center; gap: 10px;
+  background: var(--accent); color: var(--black);
+  padding: 16px 32px; border-radius: 12px;
+  text-decoration: none; font-weight: 700; font-size: 17px;
+  transition: all 0.3s; border: none; cursor: pointer;
+  font-family: 'Morena', sans-serif;
+  margin-bottom: 48px;
+}
+.btn-cal:hover { box-shadow: 0 12px 40px var(--accent-glow); transform: translateY(-2px); }
+
+/* FOOTER */
+.footer { background: var(--black); border-top: 1px solid var(--dark-3); color: var(--gray-dim); text-align: center; padding: 32px 24px; font-size: 14px; font-weight: 700; }
+.footer a { color: var(--gray-dim); text-decoration: none; }
+.footer a:hover { color: var(--accent); }
+
+@media (max-width: 640px) {
+  .top-nav-inner { padding: 10px 16px; }
+  .top-nav a { font-size: 14px; }
+  .page-wrap { padding: 64px 20px 80px; }
+  .cta-grid { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+
+<nav class="top-nav" aria-label="Navigation principale">
+  <div class="top-nav-inner">
+    <a href="/" style="display:inline-flex;align-items:center;gap:8px;">
+      <img src="./Images/cc-developpement-logo-horizontal.svg" alt="CC Développement" width="160" height="24" style="vertical-align:middle;height:24px;">
+      ← Retour au site
+    </a>
+    <a href="/tarifs" style="color:var(--gray-light);">Tarifs</a>
+    <a href="./blog/" style="color:var(--gray-light);">Blog</a>
+    <a href="/estimateur" style="color:var(--accent);">Estimateur</a>
+  </div>
+</nav>
+
+<main>
+  <div class="page-wrap">
+
+    <div class="error-code">404</div>
+    <h1 class="error-title">Cette page n'existe pas.</h1>
+    <p class="error-desc">La page demandée a été déplacée, renommée, ou n'a jamais existé. Pas de panique — voici par où continuer.</p>
+
+    <a href="/" class="btn-cal">← Retour à l'accueil</a>
+
+    <div class="cta-grid">
+      <a class="cta-card" href="/blog/">
+        <h3>Le blog</h3>
+        <p>Guides SEO local, tarifs, création de site web pour TPE/PME de l'Hérault.</p>
+        <span class="cta-arrow">Lire les articles &rarr;</span>
+      </a>
+      <a class="cta-card" href="/devis">
+        <h3>Un projet ?</h3>
+        <p>Devis gratuit et transparent sous 48h. Discutons de votre site.</p>
+        <span class="cta-arrow">Demander un devis &rarr;</span>
+      </a>
+    </div>
+
+  </div>
+</main>
+
+<footer class="footer">
+  CC Développement · Cyril Canon · SIRET : 444 114 011 · 27 Rue Basse, 34300 Agde<br>
+  © 2026 — Tous droits réservés ·
+  <a href="/mentions-legales">Mentions légales</a> ·
+  <a href="/rgpd-confidentialite">Politique de confidentialité</a>
+</footer>
+
+</body>
+</html>
