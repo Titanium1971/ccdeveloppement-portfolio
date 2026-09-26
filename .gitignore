@@ -12,3 +12,4 @@
 # Claude Code runtime locks
 .claude/scheduled_tasks.lock
 .claude/*.lock
+.playwright-mcp/
