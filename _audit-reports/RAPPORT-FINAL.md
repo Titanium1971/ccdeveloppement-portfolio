@@ -267,7 +267,7 @@ Pages existantes non listees dans sitemap.xml :
 
 ### 1. Videos cas clients (juin-juillet 2026)
 
-**Quoi** : Filmer 2-3 temoignages video de clients satisfaits (Le Divino, Artimon Bike, etc.) — format court (60-90 secondes).
+**Quoi** : Filmer 2-3 temoignages video de clients satisfaits (Artimon Bike, etc.) — format court (60-90 secondes).
 
 **Pourquoi** : La preuve sociale video convertit 2-3x mieux que le texte. Les videos se reutilisent sur LinkedIn, le site, les emails, Google Business Profile.
 
