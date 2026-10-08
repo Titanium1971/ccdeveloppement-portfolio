@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="format-detection" content="telephone=no">
+<title>Case study Roz In Winter : refonte d'une galerie d'art | CC Développement</title>
+<meta name="description" content="Refonte complète de la galerie Roz In Winter (Versailles) : de Webador à Next.js 15, 250 œuvres en vente en ligne, 4 langues, chatbot IA. CTR Google de 4,9 %.">
+<meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
+<link rel="canonical" href="https://ccdeveloppement.eu/case-study-roz-in-winter">
+<meta name="author" content="Cyril Canon">
+<meta name="theme-color" content="#09090B">
+<link rel="icon" href="./favicon.svg?v=4" type="image/svg+xml">
+<link rel="icon" href="./favicon.ico?v=4" sizes="any">
+<link rel="shortcut icon" href="./favicon.ico?v=4">
+<link rel="apple-touch-icon" href="./apple-touch-icon.png?v=4">
+<link rel="manifest" href="./site.webmanifest">
+<link rel="preload" href="./fonts/Morena-Bold-Embedded.otf" as="font" type="font/otf" crossorigin>
+<link rel="preload" href="./fonts/Morena-W300-Embedded-1.otf" as="font" type="font/otf" crossorigin>
+<link rel="preconnect" href="https://app.cal.com">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Case study Roz In Winter : refonte d'une galerie d'art | CC Développement">
+<meta property="og:description" content="De Webador à Next.js 15 : 250 œuvres en vente en ligne, 4 langues, chatbot IA et un CTR Google de 4,9 %.">
+<meta property="og:url" content="https://ccdeveloppement.eu/case-study-roz-in-winter">
+<meta property="og:image" content="https://ccdeveloppement.eu/Images/Roz-In-Winter-2026-1200.webp">
+<meta property="og:site_name" content="CC Développement">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Case study Roz In Winter | CC Développement">
+<meta name="twitter:description" content="De Webador à Next.js 15 : 250 œuvres en vente en ligne, 4 langues, chatbot IA et un CTR Google de 4,9 %.">
+<meta name="twitter:image" content="https://ccdeveloppement.eu/Images/Roz-In-Winter-2026-1200.webp">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Case study Roz In Winter : refonte complète d'une galerie d'art contemporain",
+  "url": "https://ccdeveloppement.eu/case-study-roz-in-winter",
+  "inLanguage": "fr-FR",
+  "image": "https://ccdeveloppement.eu/Images/Roz-In-Winter-2026-1200.webp",
+  "datePublished": "2026-10-08",
+  "dateModified": "2026-10-08",
+  "author": {"@type": "Person", "name": "Cyril Canon", "url": "https://ccdeveloppement.eu/"},
+  "publisher": {"@type": "Organization", "name": "CC Développement", "url": "https://ccdeveloppement.eu/"},
+  "about": {"@type": "ArtGallery", "name": "Galerie Roz In Winter", "url": "https://www.galerierozinwinter.com", "address": {"@type": "PostalAddress", "addressLocality": "Versailles", "addressCountry": "FR"}},
+  "breadcrumb": {
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://ccdeveloppement.eu/"},
+      {"@type": "ListItem", "position": 2, "name": "Réalisations", "item": "https://ccdeveloppement.eu/#projets"},
+      {"@type": "ListItem", "position": 3, "name": "Roz In Winter", "item": "https://ccdeveloppement.eu/case-study-roz-in-winter"}
+    ]
+  }
+}
+</script>
+<style>
+@font-face { font-family: 'Morena'; src: url('./fonts/Morena-W300-Embedded-1.otf') format('opentype'); font-weight: 300; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Morena'; src: url('./fonts/Morena-W400-Embedded-2.otf') format('opentype'); font-weight: 400; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Morena'; src: url('./fonts/Morena-SemiBold-Embedded.otf') format('opentype'); font-weight: 600; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Morena'; src: url('./fonts/Morena-Bold-Embedded.otf') format('opentype'); font-weight: 700; font-style: normal; font-display: swap; }
+
+:root {
+  --black: #09090B;
+  --dark: #111113;
+  --dark-2: #18181B;
+  --dark-3: #27272A;
+  --white: #FFFFFF;
+  --gray: #D4D4D8;
+  --gray-light: #B6B6C0;
+  --accent: #39FF14;
+  --accent-dim: rgba(57,255,20,0.10);
+  --accent-glow: rgba(57,255,20,0.28);
+  --radius: 16px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: 180px; }
+body {
+  font-family: 'Morena', sans-serif; font-weight: 700;
+  background: var(--black); color: var(--white);
+  overflow-x: hidden; -webkit-font-smoothing: antialiased;
+}
+::selection { background: var(--accent); color: var(--black); }
+.skip-link { position: absolute; left: -9999px; top: 0; z-index: 2000; background: var(--accent); color: var(--black); padding: 12px 16px; border-radius: 10px; font-weight: 700; text-decoration: none; }
+.skip-link:focus { left: 16px; top: 16px; }
+a:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+
+/* NAV (identique à l'accueil) */
+nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  padding: 20px 32px; display: flex; justify-content: space-between; align-items: center;
+  background: var(--black); border-bottom: 1px solid rgba(255,255,255,0.04);
+}
+.nav-logo { display: inline-flex; align-items: center; gap: 10px; text-decoration: none; }
+.nav-logo img { height: 120px; width: auto; }
+.nav-links { display: flex; gap: 24px; list-style: none; align-items: center; }
+.nav-links li { display: flex; align-items: center; }
+.nav-links a {
+  color: var(--gray); text-decoration: none; font-size: 16px; font-weight: 700; letter-spacing: 0.2px;
+  transition: color 0.3s; position: relative; display: inline-flex; align-items: center; min-height: 46px; line-height: 1;
+}
+.nav-links a:hover { color: var(--white); }
+.nav-links a::after { content: ''; position: absolute; bottom: -4px; left: 0; width: 0; height: 2px; background: var(--accent); transition: width 0.3s; }
+.nav-links a:hover::after { width: 100%; }
+.nav-cta {
+  background: var(--accent) !important; color: var(--black) !important;
+  padding: 0 24px; border-radius: 10px; font-size: 16px; justify-content: center;
+  min-width: 128px; height: 46px; position: relative; overflow: hidden; transition: all 0.3s !important;
+}
+.nav-cta:hover { opacity: 0.85 !important; transform: translateY(-1px); }
+.nav-cta::after { display: none !important; }
+.mobile-toggle { display: none; background: none; border: none; color: var(--white); font-size: 24px; cursor: pointer; }
+@media (max-width: 768px) {
+  nav { padding: 10px 20px; }
+  .nav-logo img { height: 52px; }
+  .nav-links { display: none; }
+  .mobile-toggle { display: block; }
+  .nav-links.open {
+    display: flex; flex-direction: column; position: absolute; top: 100%; left: 0; right: 0;
+    background: var(--dark); padding: 20px 24px; gap: 16px; border-bottom: 1px solid var(--dark-3);
+  }
+}
+
+/* HERO */
+.hero { padding: 220px 32px 80px; position: relative; overflow: hidden; }
+.hero::before {
+  content: ''; position: absolute; top: -200px; right: -100px; width: 800px; height: 800px;
+  background: radial-gradient(circle, var(--accent-glow) 0%, transparent 70%); pointer-events: none;
+}
+.hero-container { max-width: 1200px; margin: 0 auto; position: relative; z-index: 1; display: grid; grid-template-columns: 1.1fr 1fr; gap: 56px; align-items: center; }
+@media (max-width: 900px) { .hero-container { grid-template-columns: 1fr; } }
+.breadcrumb { font-size: 15px; color: var(--gray-light); margin-bottom: 28px; }
+.breadcrumb a { color: var(--gray); text-decoration: none; }
+.breadcrumb a:hover { color: var(--accent); }
+.hero-badge {
+  display: inline-flex; align-items: center; gap: 8px; background: var(--accent-dim);
+  border: 1px solid rgba(57,255,20,0.2); padding: 0 22px; border-radius: 100px;
+  font-size: 16px; color: var(--accent); min-height: 52px; margin-bottom: 32px;
+}
+.hero-badge::before { content: ''; width: 10px; height: 10px; flex: 0 0 10px; background: var(--accent); border-radius: 50%; }
+.hero-title { font-size: clamp(40px, 7vw, 72px); line-height: 1.0; letter-spacing: -2px; margin-bottom: 28px; }
+.hero-title .line2 { color: var(--gray); font-weight: 300; }
+.hero-title .accent { color: var(--accent); text-shadow: 0 0 30px var(--accent-glow); }
+.hero-desc { font-size: 20px; color: var(--gray); line-height: 1.8; margin-bottom: 32px; }
+.hero-meta { display: flex; flex-wrap: wrap; gap: 10px 28px; font-size: 16px; color: var(--gray-light); }
+.hero-meta strong { color: var(--white); }
+.hero-visual {
+  border-radius: var(--radius); overflow: hidden; border: 1px solid rgba(57,255,20,0.24);
+  box-shadow: 0 24px 80px rgba(0,0,0,0.5), 0 0 40px rgba(57,255,20,0.12); aspect-ratio: 16/10;
+}
+.hero-visual img { width: 100%; height: 100%; object-fit: cover; display: block; }
+
+/* SECTIONS */
+.section { padding: 100px 32px; position: relative; }
+.section.alt { background: var(--dark); }
+.section-container { max-width: 1200px; margin: 0 auto; }
+.section-tag { font-size: 17px; font-weight: 500; color: var(--accent); letter-spacing: 1.6px; text-transform: uppercase; margin-bottom: 16px; }
+.section-heading { font-size: clamp(32px, 5vw, 52px); letter-spacing: -2px; line-height: 1.1; margin-bottom: 20px; }
+.section-heading .muted { color: var(--gray-light); font-weight: 300; }
+.section-desc { font-size: 20px; color: var(--gray); max-width: 760px; line-height: 1.7; }
+.prose { max-width: 820px; }
+.prose p { font-size: 19px; color: var(--gray); line-height: 1.8; margin-top: 18px; }
+.prose ul { list-style: none; margin-top: 24px; display: flex; flex-direction: column; gap: 14px; }
+.prose li { font-size: 18px; color: var(--gray); line-height: 1.7; padding-left: 28px; position: relative; }
+.prose li::before { content: ''; position: absolute; left: 0; top: 11px; width: 10px; height: 10px; border-radius: 50%; background: var(--accent); }
+.prose li strong { color: var(--white); }
+
+/* KPIs */
+.kpi-section { padding: 0 32px 40px; }
+.kpi-grid { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+@media (max-width: 900px) { .kpi-grid { grid-template-columns: repeat(2, 1fr); } }
+.kpi-card {
+  background: var(--dark); border: 1px solid rgba(255,255,255,0.07); border-radius: 14px; padding: 28px 24px;
+  transition: border-color 0.25s ease, transform 0.25s ease;
+}
+.kpi-card:hover { border-color: rgba(57,255,20,0.3); transform: translateY(-3px); }
+.kpi-value { font-size: clamp(28px, 4vw, 40px); color: var(--accent); line-height: 1.1; margin-bottom: 10px; letter-spacing: -1px; }
+.kpi-label { font-size: 16px; color: var(--gray); line-height: 1.5; }
+
+/* SOLUTION */
+.arch-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 48px; }
+@media (max-width: 900px) { .arch-grid { grid-template-columns: 1fr; } }
+.arch-card { background: var(--black); border: 1px solid rgba(255,255,255,0.06); border-radius: var(--radius); padding: 32px 28px; }
+.arch-layer { font-size: 12px; color: var(--accent); letter-spacing: 1.5px; text-transform: uppercase; margin-bottom: 12px; font-weight: 600; }
+.arch-title { font-size: 20px; margin-bottom: 10px; }
+.arch-desc { font-size: 17px; color: var(--gray); line-height: 1.8; }
+
+/* FONCTIONNALITÉS */
+.features-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 56px; }
+@media (max-width: 900px) { .features-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 600px) { .features-grid { grid-template-columns: 1fr; } }
+.feature-card { background: var(--dark); border-radius: var(--radius); padding: 36px 28px; transition: all 0.4s; border: 1px solid rgba(255,255,255,0.04); }
+.feature-card:hover { background: var(--dark-2); transform: translateY(-4px); }
+.feature-card.wide { grid-column: 1 / -1; }
+.feature-icon { width: 48px; height: 48px; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 24px; margin-bottom: 20px; background: var(--accent-dim); }
+.feature-title { font-size: 18px; margin-bottom: 10px; }
+.feature-desc { font-size: 17px; color: var(--gray); line-height: 1.8; }
+
+/* RÉSULTATS SEO */
+.seo-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 2px; margin-top: 56px; background: var(--dark-3); border-radius: var(--radius); overflow: hidden; }
+@media (max-width: 900px) { .seo-grid { grid-template-columns: repeat(2, 1fr); } }
+.seo-cell { background: var(--black); padding: 36px 24px; }
+.seo-value { font-size: clamp(30px, 3.6vw, 42px); letter-spacing: -1px; line-height: 1.1; margin-bottom: 8px; }
+.seo-value.hl { color: var(--accent); text-shadow: 0 0 30px var(--accent-glow); }
+.seo-label { font-size: 16px; color: var(--gray); line-height: 1.5; }
+.seo-note { font-size: 15px; color: var(--gray-light); margin-top: 20px; font-weight: 400; }
+
+/* STACK */
+.stack-grid { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 40px; }
+.stack-item {
+  display: flex; align-items: center; gap: 10px; background: var(--dark); border: 1px solid rgba(255,255,255,0.06);
+  padding: 14px 20px; border-radius: 12px; font-size: 17px; transition: all 0.3s;
+}
+.stack-item:hover { border-color: rgba(57,255,20,0.2); background: var(--dark-2); transform: translateY(-2px); }
+.stack-item-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--accent); }
+
+/* TÉMOIGNAGE */
+.quote-card {
+  max-width: 860px; margin: 48px auto 0; background: var(--black); border: 1px solid rgba(57,255,20,0.14);
+  border-radius: 24px; padding: 56px 48px; position: relative; text-align: center;
+}
+.quote-mark { font-size: 96px; line-height: 0.6; color: var(--accent); opacity: 0.35; margin-bottom: 24px; }
+.quote-text { font-size: 22px; color: var(--gray-light); line-height: 1.7; font-weight: 300; font-style: italic; }
+.quote-author { margin-top: 28px; font-size: 18px; }
+.quote-role { font-size: 15px; color: var(--gray-light); margin-top: 4px; }
+@media (max-width: 768px) { .quote-card { padding: 40px 24px; } .quote-text { font-size: 19px; } }
+
+/* CTA */
+.cta-section { text-align: center; }
+.cta-box {
+  background: linear-gradient(135deg, var(--dark-2) 0%, var(--dark) 100%); border: 1px solid rgba(57,255,20,0.12);
+  border-radius: 24px; padding: 80px 48px; position: relative; overflow: hidden; max-width: 1200px; margin: 0 auto;
+}
+.cta-box::before {
+  content: ''; position: absolute; top: -100px; left: 50%; transform: translateX(-50%); width: 600px; height: 300px;
+  background: radial-gradient(circle, var(--accent-glow) 0%, transparent 70%); pointer-events: none; opacity: 0.3;
+}
+.cta-heading { font-size: clamp(32px, 5vw, 48px); letter-spacing: -2px; margin-bottom: 16px; position: relative; }
+.cta-desc { font-size: 20px; color: var(--gray); margin-bottom: 40px; position: relative; }
+.cta-buttons { display: flex; justify-content: center; gap: 16px; flex-wrap: wrap; position: relative; }
+.btn-primary {
+  display: inline-flex; align-items: center; gap: 8px; background: var(--accent); color: var(--black);
+  padding: 16px 32px; border-radius: 12px; text-decoration: none; font-size: 17px; transition: all 0.3s; position: relative; overflow: hidden;
+}
+.btn-primary:hover { box-shadow: 0 12px 40px var(--accent-glow), 0 0 60px var(--accent-glow); transform: translateY(-2px); }
+.btn-secondary {
+  display: inline-flex; align-items: center; gap: 8px; background: transparent; color: var(--white);
+  padding: 16px 32px; border-radius: 12px; text-decoration: none; font-size: 17px; border: 1px solid var(--dark-3); transition: all 0.3s;
+}
+.btn-secondary:hover { border-color: var(--accent); color: var(--accent); }
+
+/* FOOTER (identique à l'accueil) */
+footer { padding: 32px; text-align: center; font-size: 16px; color: var(--gray); border-top: 1px solid rgba(255,255,255,0.04); }
+footer a { color: var(--gray); text-decoration: none; }
+footer a:hover { color: var(--accent); }
+.footer-cal { text-align: center; padding: 40px 24px 32px; }
+.btn-cal--outline {
+  display: inline-flex; align-items: center; gap: 10px; background: transparent; color: var(--accent);
+  padding: 12px 24px; border-radius: 12px; text-decoration: none; font-size: 14px;
+  border: 1px solid rgba(57,255,20,0.3); transition: all 0.3s;
+}
+.btn-cal--outline:hover { background: var(--accent-dim); border-color: var(--accent); }
+
+/* ANIMATIONS */
+.reveal { opacity: 1; transform: none; }
+.js .reveal { opacity: 0; transform: translateY(24px); transition: opacity 0.45s ease, transform 0.45s ease; }
+.reveal.visible { opacity: 1; transform: translateY(0); }
+
+@media (max-width: 768px) {
+  html { scroll-padding-top: 80px; }
+  .hero { padding: 120px 20px 56px; }
+  .section { padding: 72px 20px; }
+  .kpi-section { padding: 0 20px 24px; }
+  .cta-box { padding: 48px 24px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+}
+</style>
+<script src="assets/js/analytics.js" defer></script>
+</head>
+<body>
+<a href="#main-content" class="skip-link">Aller au contenu</a>
+
+<nav aria-label="Navigation principale">
+  <a href="/" class="nav-logo"><img src="./Images/cc-developpement-logo-horizontal.svg" alt="CC Développement" width="260" height="40"></a>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="/#parcours">Parcours</a></li>
+    <li><a href="/#projets">Projets</a></li>
+    <li><a href="/#services">Services</a></li>
+    <li><a href="/tarifs">Tarifs</a></li>
+    <li><a href="/#stack">Stack</a></li>
+    <li><a href="./blog/">Blog</a></li>
+    <li><a href="/guide-seo-local">Guide gratuit</a></li>
+    <li><a href="/#assistant">Assistant IA</a></li>
+    <li><a href="/#contact" class="nav-cta">Réserver un audit</a></li>
+  </ul>
+  <button class="mobile-toggle" id="navToggle" aria-controls="navLinks" aria-expanded="false" aria-label="Ouvrir le menu">☰</button>
+</nav>
+
+<main id="main-content">
+
+<!-- 1. HERO -->
+<section class="hero">
+  <div class="hero-container">
+    <div>
+      <div class="breadcrumb"><a href="/">Accueil</a> / <a href="/#projets">Réalisations</a> / Roz In Winter</div>
+      <div class="hero-badge">Case study · Galerie d'art</div>
+      <h1 class="hero-title">Roz In Winter<br><span class="line2">une galerie d'art</span> <span class="accent">en ligne.</span></h1>
+      <p class="hero-desc">Refonte complète du site de la galerie Roz In Winter, galerie d'art contemporain premium à Versailles. D'un site Webador à une plateforme Next.js qui vend 250 oeuvres, parle 4 langues et se positionne sur Google.</p>
+      <div class="hero-meta">
+        <span>Client : <strong>Lila Roz, directrice</strong></span>
+        <span>Lieu : <strong>Versailles</strong></span>
+        <span>Livraison : <strong>2,5 mois</strong></span>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <img src="./Images/Roz-In-Winter-2026-1200.webp" srcset="./Images/Roz-In-Winter-2026-640.webp 640w, ./Images/Roz-In-Winter-2026-1200.webp 1200w" sizes="(max-width: 900px) 100vw, 50vw" alt="Page d'accueil du site de la galerie Roz In Winter" width="1200" height="750" fetchpriority="high" decoding="async">
+    </div>
+  </div>
+</section>
+
+<!-- 2. KPIs -->
+<section class="kpi-section" aria-label="Chiffres clés du projet">
+  <div class="kpi-grid">
+    <div class="kpi-card reveal"><div class="kpi-value">2,5 mois</div><div class="kpi-label">De la refonte à la mise en ligne</div></div>
+    <div class="kpi-card reveal"><div class="kpi-value">250 oeuvres</div><div class="kpi-label">En vente en ligne, 21 artistes représentés</div></div>
+    <div class="kpi-card reveal"><div class="kpi-value">CTR 4,9 %</div><div class="kpi-label">Taux de clic Google, contre 2 à 3 % en moyenne</div></div>
+    <div class="kpi-card reveal"><div class="kpi-value">268 mots-clés</div><div class="kpi-label">Sur lesquels le site apparaît dans Google</div></div>
+  </div>
+</section>
+
+<!-- 3. LE DÉFI -->
+<section class="section">
+  <div class="section-container prose">
+    <div class="section-tag reveal">Le défi</div>
+    <h2 class="section-heading reveal">Une galerie premium<br><span class="muted">sur un outil trop limité.</span></h2>
+    <p class="reveal">La galerie représente 21 artistes et monte une exposition chaque mois. Son site tournait sur Webador, un constructeur pensé pour des vitrines simples. Il suffisait pour présenter la galerie, mais pas pour faire vivre un catalogue qui change à chaque accrochage, ni pour vendre en ligne.</p>
+    <ul class="reveal">
+      <li><strong>Pas de vente en ligne intégrée.</strong> Un collectionneur intéressé devait écrire ou appeler pour acheter.</li>
+      <li><strong>Un catalogue sans base de données.</strong> Pas de filtres, et chaque nouvelle oeuvre demandait une mise à jour à la main.</li>
+      <li><strong>Une seule langue</strong> pour une galerie qui s'adresse aussi aux collectionneurs étrangers.</li>
+      <li><strong>Un SEO peu maîtrisable.</strong> Contrôle limité sur les données structurées, le sitemap et les versions par langue.</li>
+      <li><strong>Pas d'espace pour les artistes</strong>, ni d'automatisation pour les vernissages et la newsletter.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- 4. LA SOLUTION -->
+<section class="section alt">
+  <div class="section-container">
+    <div class="section-tag reveal">La solution</div>
+    <h2 class="section-heading reveal">Une architecture sur mesure,<br><span class="muted">pensée pour durer.</span></h2>
+    <p class="section-desc reveal">Plutôt qu'un thème e-commerce générique, une application Next.js 15 construite autour du métier de la galerie : des oeuvres uniques, des artistes, des expositions et des collectionneurs dans plusieurs pays.</p>
+    <div class="arch-grid">
+      <div class="arch-card reveal">
+        <div class="arch-layer">Front</div>
+        <div class="arch-title">Next.js 15 + Tailwind CSS</div>
+        <div class="arch-desc">Pages rendues côté serveur pour la vitesse et le référencement. Routage multilingue avec next-intl, hébergement sur Vercel.</div>
+      </div>
+      <div class="arch-card reveal">
+        <div class="arch-layer">Données</div>
+        <div class="arch-title">Supabase</div>
+        <div class="arch-desc">Base PostgreSQL pour les oeuvres, les artistes et les commandes. Authentification sécurisée de l'espace artiste.</div>
+      </div>
+      <div class="arch-card reveal">
+        <div class="arch-layer">Business</div>
+        <div class="arch-title">Stripe, Brevo, crons</div>
+        <div class="arch-desc">Paiement et webhooks Stripe, newsletter via Brevo, tâches planifiées Vercel pour les relances automatiques.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 5. FONCTIONNALITÉS -->
+<section class="section">
+  <div class="section-container">
+    <div class="section-tag reveal">Fonctionnalités livrées</div>
+    <h2 class="section-heading reveal">Tout ce qu'une galerie<br><span class="muted">attend de son site.</span></h2>
+    <div class="features-grid">
+      <div class="feature-card reveal"><div class="feature-icon">🖼️</div><div class="feature-title">Catalogue dynamique</div><div class="feature-desc">250 oeuvres avec filtres. Chaque fiche est générée depuis la base de données, sans manipulation manuelle.</div></div>
+      <div class="feature-card reveal"><div class="feature-icon">💳</div><div class="feature-title">Boutique Stripe</div><div class="feature-desc">Paiement sécurisé, webhooks pour confirmer chaque vente et gestion des commandes.</div></div>
+      <div class="feature-card reveal"><div class="feature-icon">🎨</div><div class="feature-title">Espace artiste</div><div class="feature-desc">Un espace privé et authentifié pour chaque artiste, via Supabase Auth.</div></div>
+      <div class="feature-card reveal"><div class="feature-icon">🤖</div><div class="feature-title">Chatbot IA</div><div class="feature-desc">Assistant de galerie propulsé par Claude Haiku, avec recherche sémantique dans le catalogue pour guider les visiteurs.</div></div>
+      <div class="feature-card reveal"><div class="feature-icon">🌍</div><div class="feature-title">4 langues</div><div class="feature-desc">Français, anglais, allemand et néerlandais avec next-intl, pour toucher les collectionneurs européens.</div></div>
+      <div class="feature-card reveal"><div class="feature-icon">⚙️</div><div class="feature-title">Automatisations</div><div class="feature-desc">Rappels de vernissage, newsletter Brevo et tâches planifiées Vercel. La galerie communique sans y penser.</div></div>
+      <div class="feature-card wide reveal"><div class="feature-icon">🔎</div><div class="feature-title">SEO complet</div><div class="feature-desc">Redirections 301 depuis l'ancien site, Schema.org JSON-LD, sitemap dynamique et balises hreflang par langue.</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- 6. RÉSULTATS SEO -->
+<section class="section alt">
+  <div class="section-container">
+    <div class="section-tag reveal">Résultats SEO</div>
+    <h2 class="section-heading reveal">Google suit,<br><span class="muted">les visiteurs cliquent.</span></h2>
+    <p class="section-desc reveal">Les redirections 301 ont préservé les liens de l'ancien site pendant la migration. Le site apparaît aujourd'hui sur 268 requêtes, avec un taux de clic nettement au-dessus de la moyenne.</p>
+    <div class="seo-grid reveal">
+      <div class="seo-cell"><div class="seo-value">253</div><div class="seo-label">Clics depuis Google</div></div>
+      <div class="seo-cell"><div class="seo-value">5 160</div><div class="seo-label">Impressions dans les résultats</div></div>
+      <div class="seo-cell"><div class="seo-value hl">4,9 %</div><div class="seo-label">CTR, contre 2 à 3 % en moyenne</div></div>
+      <div class="seo-cell"><div class="seo-value">6,6</div><div class="seo-label">Position moyenne</div></div>
+      <div class="seo-cell"><div class="seo-value">268</div><div class="seo-label">Mots-clés indexés</div></div>
+    </div>
+    <p class="seo-note reveal">Source : Google Search Console, 28 derniers jours.</p>
+  </div>
+</section>
+
+<!-- 7. STACK -->
+<section class="section">
+  <div class="section-container">
+    <div class="section-tag reveal">Stack technique</div>
+    <h2 class="section-heading reveal">Les outils<br><span class="muted">derrière le projet.</span></h2>
+    <div class="stack-grid reveal">
+      <div class="stack-item"><span class="stack-item-dot"></span>Next.js 15</div>
+      <div class="stack-item"><span class="stack-item-dot"></span>Supabase</div>
+      <div class="stack-item"><span class="stack-item-dot"></span>Stripe</div>
+      <div class="stack-item"><span class="stack-item-dot"></span>Tailwind CSS</div>
+      <div class="stack-item"><span class="stack-item-dot"></span>Vercel</div>
+      <div class="stack-item"><span class="stack-item-dot"></span>Brevo</div>
+      <div class="stack-item"><span class="stack-item-dot"></span>next-intl</div>
+      <div class="stack-item"><span class="stack-item-dot"></span>Claude Haiku</div>
+    </div>
+  </div>
+</section>
+
+<!-- 8. TÉMOIGNAGE (placeholder : remplacer par la citation validée de Lila Roz) -->
+<section class="section alt">
+  <div class="section-container">
+    <div class="section-tag reveal">Témoignage</div>
+    <h2 class="section-heading reveal">La parole<br><span class="muted">à la galerie.</span></h2>
+    <figure class="quote-card reveal">
+      <div class="quote-mark" aria-hidden="true">“</div>
+      <blockquote class="quote-text">Le témoignage de Lila Roz sera publié ici très prochainement.</blockquote>
+      <figcaption>
+        <div class="quote-author">Lila Roz</div>
+        <div class="quote-role">Directrice, Galerie Roz In Winter · Versailles</div>
+      </figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- 9. CTA -->
+<section class="section cta-section">
+  <div class="cta-box reveal">
+    <h2 class="cta-heading">Un projet du même calibre ?</h2>
+    <p class="cta-desc">Galerie, boutique, marque premium : parlons de votre site. Devis détaillé sous 48h.</p>
+    <div class="cta-buttons">
+      <a href="/devis" class="btn-primary">Demander un devis →</a>
+      <a href="https://www.galerierozinwinter.com" target="_blank" rel="noopener noreferrer" class="btn-secondary">Voir le site en ligne</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="footer-cal">
+    <a href="https://cal.com/cc-developpement/audit-gratuit" class="btn-cal--outline" data-cal-link="cc-developpement/audit-gratuit" data-cal-config='{"layout":"modal"}'>📅 Réserve ton audit gratuit · 30 min</a>
+  </div>
+  <p>© 2026 CC Développement · Cyril Canon · SIRET : 444 114 011 · 27 Rue Basse, 34300 Agde · <a href="/mentions-legales">Mentions légales</a> · <a href="/rgpd-confidentialite">Politique de confidentialité</a> · <a href="#" data-cookie-preferences class="footer-cookie-link">Gérer mes préférences cookies</a></p>
+</footer>
+
+<script>
+document.documentElement.classList.add('js');
+const navLinks = document.getElementById('navLinks');
+const navToggle = document.getElementById('navToggle');
+if (navToggle && navLinks) {
+  navToggle.addEventListener('click', () => {
+    const isOpen = navLinks.classList.toggle('open');
+    navToggle.setAttribute('aria-expanded', String(isOpen));
+  });
+}
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => { if (entry.isIntersecting) entry.target.classList.add('visible'); });
+}, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+document.querySelectorAll('.reveal').forEach((el) => observer.observe(el));
+</script>
+
+<!-- Cal.com Embed -->
+<script type="text/javascript">
+(function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if (typeof namespace === "string") { cal.ns[namespace] = cal.ns[namespace] || api; p(cal.ns[namespace], ar); p(cal, ["initNamespace", namespace]); } else p(cal, ar); return; } p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
+Cal("init", {origin:"https://app.cal.com"});
+Cal("ui", {"theme":"dark","styles":{"branding":{"brandColor":"#39FF14"}},"hideEventTypeDetails":false,"layout":"modal"});
+</script>
+<script src="/assets/js/lenis.min.js"></script>
+<script src="./smooth-scroll.js"></script>
+</body>
+</html>
