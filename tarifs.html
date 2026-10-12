@@ -1060,16 +1060,12 @@ body { font-family: 'Morena', sans-serif; font-weight: 700; background: var(--bl
 </footer>
 
 <!-- Cal.com Embed -->
-<script type="text/javascript">
-(function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if (typeof namespace === "string") { cal.ns[namespace] = cal.ns[namespace] || api; p(cal.ns[namespace], ar); p(cal, ["initNamespace", namespace]); } else p(cal, ar); return; } p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
-Cal("init", {origin:"https://app.cal.com"});
-Cal("ui", {"theme":"dark","styles":{"branding":{"brandColor":"#39FF14"}},"hideEventTypeDetails":false,"layout":"modal"});
-</script>
+<script src="/assets/js/cal-init.js"></script>
 
 <!-- EXIT-INTENT POPUP — Lead Magnet SEO Local -->
 <div id="exitPopup" style="display:none;position:fixed;inset:0;z-index:9999;background:rgba(0,0,0,0.75);backdrop-filter:blur(6px);align-items:center;justify-content:center;">
   <div style="background:#111113;border:2px solid #39FF14;border-radius:16px;padding:40px 32px;max-width:440px;width:90%;position:relative;text-align:center;box-shadow:0 24px 80px rgba(0,0,0,0.6);">
-    <button onclick="closeExitPopup()" style="position:absolute;top:12px;right:16px;background:none;border:none;color:#B0B0B8;font-size:24px;cursor:pointer;" aria-label="Fermer">&times;</button>
+    <button data-exit-close style="position:absolute;top:12px;right:16px;background:none;border:none;color:#B0B0B8;font-size:24px;cursor:pointer;" aria-label="Fermer">&times;</button>
     <div style="font-size:14px;color:#39FF14;margin-bottom:12px;">GUIDE GRATUIT — 15 PAGES</div>
     <h3 style="font-family:'Morena',sans-serif;font-size:24px;color:#fff;margin-bottom:12px;line-height:1.2;">Les 7 erreurs SEO local<br>qui coulent les TPE en 2026</h3>
     <p style="font-size:15px;color:#D0D0D8;margin-bottom:24px;line-height:1.6;">Exemples concrets dans l'Hérault + solutions actionnables. Reçois-le par email en 30 secondes.</p>
@@ -1077,29 +1073,7 @@ Cal("ui", {"theme":"dark","styles":{"branding":{"brandColor":"#39FF14"}},"hideEv
     <p style="font-size:12px;color:#B0B0B8;margin-top:12px;">Pas de spam. Désinscription en 1 clic.</p>
   </div>
 </div>
-<script>
-(function(){
-  var shown = false;
-  function showExitPopup(){
-    if(shown || sessionStorage.getItem('exitPopupDismissed')) return;
-    shown = true;
-    document.getElementById('exitPopup').style.display = 'flex';
-  }
-  window.closeExitPopup = function(){
-    document.getElementById('exitPopup').style.display = 'none';
-    sessionStorage.setItem('exitPopupDismissed','1');
-  };
-  document.addEventListener('mouseout', function(e){
-    if(e.clientY < 5 && e.relatedTarget == null) showExitPopup();
-  });
-  if('ontouchstart' in window){
-    setTimeout(function(){ showExitPopup(); }, 45000);
-  }
-  document.getElementById('exitPopup').addEventListener('click', function(e){
-    if(e.target === this) window.closeExitPopup();
-  });
-})();
-</script>
+<script src="/assets/js/tarifs-exit-popup.js"></script>
 
 <script src="/assets/js/lenis.min.js"></script>
 <script src="./smooth-scroll.js"></script>
