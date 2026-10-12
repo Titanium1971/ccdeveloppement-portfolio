@@ -13,3 +13,14 @@
 .claude/scheduled_tasks.lock
 .claude/*.lock
 .playwright-mcp/
+
+# Fichiers internes (non publiés)
+/AUDIT-*.md
+/DEMARRAGE.md
+/discussion-*.md
+/_audit-reports/
+/run-audit-conversion.sh
+/scripts/run-*.sh
+/PageSpeed Insights*.pdf
+/.claude/settings.local.json
+/strix_runs/
