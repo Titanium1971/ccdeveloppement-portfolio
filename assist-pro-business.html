@@ -1453,75 +1453,10 @@ footer a:hover { color: var(--accent); }
   <a href="https://cal.com/cc-developpement/audit-gratuit" class="btn-cal" data-cal-link="cc-developpement/audit-gratuit" data-cal-config='{"layout":"modal"}'>📅 Réserve ton audit gratuit</a>
 </div>
 
-<script>
-document.documentElement.classList.add('js');
-
-/* Bandeau pré-lancement : fermeture mémorisée 30 jours */
-(function () {
-  var banner = document.getElementById('prelaunchBanner');
-  var closeBtn = document.getElementById('prelaunchBannerClose');
-  if (!banner || !closeBtn) return;
-  var KEY = 'ccdev_prelaunch_banner_dismissed_v1';
-  var TTL_MS = 30 * 24 * 60 * 60 * 1000;
-  try {
-    var raw = localStorage.getItem(KEY);
-    if (raw) {
-      var ts = parseInt(raw, 10);
-      if (!isNaN(ts) && Date.now() - ts < TTL_MS) {
-        banner.classList.add('is-hidden');
-      }
-    }
-  } catch (_) {}
-  closeBtn.addEventListener('click', function () {
-    banner.classList.add('is-hidden');
-    try { localStorage.setItem(KEY, String(Date.now())); } catch (_) {}
-  });
-})();
-
-const navLinks = document.getElementById('navLinks');
-const navToggle = document.getElementById('navToggle');
-const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-
-if (navToggle && navLinks) {
-  navToggle.addEventListener('click', () => {
-    const isOpen = navLinks.classList.toggle('open');
-    navToggle.setAttribute('aria-expanded', String(isOpen));
-  });
-}
-
-const mainNav = document.querySelector('nav');
-
-document.querySelectorAll('a[href^="#"]').forEach((a) => {
-  a.addEventListener('click', (e) => {
-    const href = a.getAttribute('href');
-    if (!href || href === '#') return;
-    const target = document.querySelector(href);
-    if (!target) return;
-
-    e.preventDefault();
-    const navHeight = mainNav ? mainNav.offsetHeight : 0;
-    const top = target.getBoundingClientRect().top + window.scrollY - navHeight - 20;
-    window.scrollTo({ top, behavior: prefersReducedMotion ? 'auto' : 'smooth' });
-
-    if (navLinks) navLinks.classList.remove('open');
-    if (navToggle) navToggle.setAttribute('aria-expanded', 'false');
-  });
-});
-
-// Empêche le clic sur le DPA placeholder (LOT 4 le branchera)
-document.querySelectorAll('[data-dpa-disabled]').forEach((el) => {
-  el.addEventListener('click', (e) => {
-    e.preventDefault();
-  });
-});
-</script>
+<script src="/assets/js/assist-pro-business.js"></script>
 
 <!-- Cal.com Embed -->
-<script type="text/javascript">
-(function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if (typeof namespace === "string") { cal.ns[namespace] = cal.ns[namespace] || api; p(cal.ns[namespace], ar); p(cal, ["initNamespace", namespace]); } else p(cal, ar); return; } p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
-Cal("init", {origin:"https://app.cal.com"});
-Cal("ui", {"theme":"dark","styles":{"branding":{"brandColor":"#39FF14"}},"hideEventTypeDetails":false,"layout":"modal"});
-</script>
+<script src="/assets/js/cal-init.js"></script>
 
 <script src="/assets/js/lenis.min.js"></script>
 <script src="./smooth-scroll.js"></script>

@@ -331,55 +331,9 @@ a:hover{opacity:.8;}
 </footer>
 
 <!-- FORM LOGIC — Soumission au formulaire Brevo (pas d'API key côté client) -->
-<script>
-(function() {
-  const form = document.getElementById('leadForm');
-  const successMsg = document.getElementById('formSuccess');
-  const errorMsg = document.getElementById('formError');
-  if (!form) return;
-
-  form.addEventListener('submit', async (e) => {
-    e.preventDefault();
-    const btn = form.querySelector('.btn-submit');
-    const original = btn.textContent;
-    btn.textContent = 'Envoi en cours…';
-    btn.disabled = true;
-
-    try {
-      const formData = new FormData(form);
-      // Brevo accepte x-www-form-urlencoded sur le endpoint sibforms
-      const body = new URLSearchParams();
-      formData.forEach((v, k) => body.append(k, v));
-
-      await fetch(form.action, {
-        method: 'POST',
-        mode: 'no-cors', // Brevo ne renvoie pas CORS mais enregistre bien le contact
-        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        body: body.toString()
-      });
-
-      // no-cors ne permet pas de lire le statut — on considère OK après envoi
-      form.style.display = 'none';
-      successMsg.style.display = 'block';
-
-      // Tracking Plausible (si présent)
-      if (window.plausible) {
-        window.plausible('Lead Guide SEO', { props: { source: 'guide-seo-local' } });
-      }
-    } catch (err) {
-      btn.textContent = original;
-      btn.disabled = false;
-      errorMsg.style.display = 'block';
-    }
-  });
-})();
-</script>
+<script src="/assets/js/guide-seo-local.js"></script>
 
 <!-- Cal.com Embed -->
-<script type="text/javascript">
-(function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if (typeof namespace === "string") { cal.ns[namespace] = cal.ns[namespace] || api; p(cal.ns[namespace], ar); p(cal, ["initNamespace", namespace]); } else p(cal, ar); return; } p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
-Cal("init", {origin:"https://app.cal.com"});
-Cal("ui", {"theme":"dark","styles":{"branding":{"brandColor":"#39FF14"}},"hideEventTypeDetails":false,"layout":"modal"});
-</script>
+<script src="/assets/js/cal-init.js"></script>
 </body>
 </html>

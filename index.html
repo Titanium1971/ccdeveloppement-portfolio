@@ -2088,81 +2088,15 @@ footer a:hover { color: var(--accent); }
   <a href="https://cal.com/cc-developpement/audit-gratuit" class="btn-cal" data-cal-link="cc-developpement/audit-gratuit" data-cal-config='{"layout":"modal"}'>📅 Réserve ton audit gratuit</a>
 </div>
 
-<script>
-document.documentElement.classList.add('js');
-const navLinks = document.getElementById('navLinks');
-const navToggle = document.getElementById('navToggle');
-const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-
-if (navToggle && navLinks) {
-  navToggle.addEventListener('click', () => {
-    const isOpen = navLinks.classList.toggle('open');
-    navToggle.setAttribute('aria-expanded', String(isOpen));
-  });
-}
-
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach((entry) => {
-    if (entry.isIntersecting) entry.target.classList.add('visible');
-  });
-}, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
-
-document.querySelectorAll('.reveal').forEach((el) => observer.observe(el));
-
-const mainNav = document.querySelector('nav');
-
-document.querySelectorAll('a[href^="#"]').forEach((a) => {
-  a.addEventListener('click', (e) => {
-    const href = a.getAttribute('href');
-    if (!href || href === '#') return;
-    const target = document.querySelector(href);
-    if (!target) return;
-
-    e.preventDefault();
-    const navHeight = mainNav ? mainNav.offsetHeight : 0;
-    const top = target.getBoundingClientRect().top + window.scrollY - navHeight - 20;
-    window.scrollTo({ top, behavior: prefersReducedMotion ? 'auto' : 'smooth' });
-
-    if (navLinks) navLinks.classList.remove('open');
-    if (navToggle) navToggle.setAttribute('aria-expanded', 'false');
-  });
-});
-
-const mapIframe = document.querySelector('.map-container iframe[data-src]');
-if (mapIframe) {
-  const loadMap = () => {
-    if (!mapIframe.getAttribute('src')) {
-      mapIframe.setAttribute('src', mapIframe.dataset.src);
-    }
-  };
-
-  if ('IntersectionObserver' in window) {
-    const mapObserver = new IntersectionObserver((entries, obs) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          loadMap();
-          obs.disconnect();
-        }
-      });
-    }, { rootMargin: '300px 0px' });
-    mapObserver.observe(mapIframe);
-  } else {
-    loadMap();
-  }
-}
-</script>
+<script src="/assets/js/index-main.js"></script>
 
 <!-- Cal.com Embed -->
-<script type="text/javascript">
-(function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if (typeof namespace === "string") { cal.ns[namespace] = cal.ns[namespace] || api; p(cal.ns[namespace], ar); p(cal, ["initNamespace", namespace]); } else p(cal, ar); return; } p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
-Cal("init", {origin:"https://app.cal.com"});
-Cal("ui", {"theme":"dark","styles":{"branding":{"brandColor":"#39FF14"}},"hideEventTypeDetails":false,"layout":"modal"});
-</script>
+<script src="/assets/js/cal-init.js"></script>
 
 <!-- EXIT-INTENT POPUP — Lead Magnet SEO Local -->
 <div id="exitPopup" style="display:none;position:fixed;inset:0;z-index:9999;background:rgba(0,0,0,0.75);backdrop-filter:blur(6px);align-items:center;justify-content:center;">
   <div style="background:#111113;border:2px solid #39FF14;border-radius:16px;padding:40px 32px;max-width:440px;width:90%;position:relative;text-align:center;box-shadow:0 24px 80px rgba(0,0,0,0.6);">
-    <button onclick="closeExitPopup()" style="position:absolute;top:12px;right:16px;background:none;border:none;color:#B0B0B8;font-size:24px;cursor:pointer;" aria-label="Fermer">&times;</button>
+    <button data-exit-close style="position:absolute;top:12px;right:16px;background:none;border:none;color:#B0B0B8;font-size:24px;cursor:pointer;" aria-label="Fermer">&times;</button>
     <div style="font-size:14px;color:#39FF14;margin-bottom:12px;">GUIDE GRATUIT — 15 PAGES</div>
     <h3 style="font-family:'Morena',sans-serif;font-size:24px;color:#fff;margin-bottom:12px;line-height:1.2;">Les 7 erreurs SEO local<br>qui coulent les TPE en 2026</h3>
     <p style="font-size:15px;color:#D0D0D8;margin-bottom:24px;line-height:1.6;">Exemples concrets dans l'Hérault + solutions actionnables. Reçois-le par email en 30 secondes.</p>
@@ -2170,126 +2104,9 @@ Cal("ui", {"theme":"dark","styles":{"branding":{"brandColor":"#39FF14"}},"hideEv
     <p style="font-size:12px;color:#B0B0B8;margin-top:12px;">Pas de spam. Désinscription en 1 clic.</p>
   </div>
 </div>
-<script>
-(function(){
-  var shown = false;
-  function showExitPopup(){
-    if(shown || sessionStorage.getItem('exitPopupDismissed')) return;
-    shown = true;
-    document.getElementById('exitPopup').style.display = 'flex';
-  }
-  window.closeExitPopup = function(){
-    document.getElementById('exitPopup').style.display = 'none';
-    sessionStorage.setItem('exitPopupDismissed','1');
-  };
-  document.addEventListener('mouseout', function(e){
-    if(e.clientY < 5 && e.relatedTarget == null) showExitPopup();
-  });
-  // Mobile: show after 45s of engagement
-  if('ontouchstart' in window){
-    setTimeout(function(){ showExitPopup(); }, 45000);
-  }
-  // Click outside to close
-  document.getElementById('exitPopup').addEventListener('click', function(e){
-    if(e.target === this) window.closeExitPopup();
-  });
-})();
-</script>
+<script src="/assets/js/index-exit-popup.js"></script>
 
-<script>
-// WhatsApp Demo Animation
-(function() {
-  const chatBody = document.getElementById('waChatBody');
-  if (!chatBody) return;
-
-  const messages = chatBody.querySelectorAll('.wa-msg');
-  const typing1 = document.getElementById('waTyping1');
-  const typing2 = document.getElementById('waTyping2');
-  const replayBtn = document.getElementById('waReplay');
-  let animated = false;
-  let animationTimeout = [];
-
-  function resetChat() {
-    animationTimeout.forEach(t => clearTimeout(t));
-    animationTimeout = [];
-    messages.forEach(m => { m.classList.remove('visible'); m.style.display = 'none'; });
-    if (typing1) { typing1.classList.remove('visible'); typing1.style.display = 'none'; }
-    if (typing2) { typing2.classList.remove('visible'); typing2.style.display = 'none'; }
-    if (replayBtn) { replayBtn.classList.remove('visible'); }
-    animated = false;
-  }
-
-  function playChat() {
-    resetChat();
-    animated = true;
-
-    // Message 1: Client asks (0.4s)
-    animationTimeout.push(setTimeout(() => {
-      messages[0].style.display = 'block';
-      requestAnimationFrame(() => messages[0].classList.add('visible'));
-    }, 400));
-
-    // Typing indicator 1 (1.2s)
-    animationTimeout.push(setTimeout(() => {
-      if (typing1) { typing1.style.display = 'flex'; typing1.classList.add('visible'); }
-      chatBody.scrollTop = chatBody.scrollHeight;
-    }, 1200));
-
-    // Hide typing, show response (2.8s)
-    animationTimeout.push(setTimeout(() => {
-      if (typing1) { typing1.classList.remove('visible'); typing1.style.display = 'none'; }
-      messages[1].style.display = 'block';
-      requestAnimationFrame(() => messages[1].classList.add('visible'));
-      chatBody.scrollTop = chatBody.scrollHeight;
-    }, 2800));
-
-    // Message 3: Client confirms (4.8s)
-    animationTimeout.push(setTimeout(() => {
-      messages[2].style.display = 'block';
-      requestAnimationFrame(() => messages[2].classList.add('visible'));
-      chatBody.scrollTop = chatBody.scrollHeight;
-    }, 4800));
-
-    // Typing indicator 2 (5.6s)
-    animationTimeout.push(setTimeout(() => {
-      if (typing2) { typing2.style.display = 'flex'; typing2.classList.add('visible'); }
-      chatBody.scrollTop = chatBody.scrollHeight;
-    }, 5600));
-
-    // Message 4: Confirmation with recap (7.2s)
-    animationTimeout.push(setTimeout(() => {
-      if (typing2) { typing2.classList.remove('visible'); typing2.style.display = 'none'; }
-      messages[3].style.display = 'block';
-      requestAnimationFrame(() => messages[3].classList.add('visible'));
-      chatBody.scrollTop = chatBody.scrollHeight;
-    }, 7200));
-
-    // Show replay button (8.5s)
-    animationTimeout.push(setTimeout(() => {
-      if (replayBtn) { replayBtn.classList.add('visible'); }
-      chatBody.scrollTop = chatBody.scrollHeight;
-    }, 8500));
-  }
-
-  // Trigger on scroll into view
-  const chatObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting && !animated) {
-        playChat();
-      }
-    });
-  }, { threshold: 0.3 });
-
-  chatObserver.observe(chatBody);
-
-  // Replay button
-  if (replayBtn) {
-    replayBtn.addEventListener('click', () => {
-      playChat();
-    });
-  }
-})();
-</script>
+<script src="/assets/js/index-chat.js"></script>
 
 <script src="/assets/js/lenis.min.js"></script>
 <script src="./smooth-scroll.js"></script>
