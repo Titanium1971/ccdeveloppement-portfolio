@@ -1,5 +1,5 @@
 /**
- * CC Developpement — Tracking & Analytics (RGPD Option B)
+ * CC Developpement : Tracking & Analytics (RGPD Option B)
  * ============================================================
  * Version : 2.0.0
  * Date    : 2026-05-03
@@ -19,8 +19,8 @@
  *   - Aucune lecture/ecriture de cookie ou pixel avant choix utilisateur.
  *
  * Services controles :
- *   - Google Analytics 4 (G-NZ2MQMB67H) — mesure d'audience
- *   - Microsoft Clarity (wbyffo03d6) — heatmaps + session recording
+ *   - Google Analytics 4 (G-NZ2MQMB67H) : mesure d'audience
+ *   - Microsoft Clarity (wbyffo03d6) : heatmaps + session recording
  *
  * Vanilla JS pur, sans dependance externe.
  */
@@ -78,7 +78,7 @@
     if (stylesInjected) return;
     stylesInjected = true;
     var css = [
-      /* Reset minimal — charte CC Développement (dark + vert néon #39FF14) */
+      /* Reset minimal : charte CC Développement (dark + vert néon #39FF14) */
       '.ccdev-cookie-banner *,.ccdev-cookie-modal *{box-sizing:border-box;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;-webkit-font-smoothing:antialiased}',
 
       /* Bandeau */

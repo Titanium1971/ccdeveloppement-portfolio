@@ -17,7 +17,7 @@ const PRICING = {
       { id:'taxes', name:'Taxes & Compliance', desc:'Calcul TVA multi-pays, conformité RGPD', price:900 }
     ]},
     { cat:'Contenu & Personnalisation', icon:'✏️', items:[
-      { id:'multi-langue', name:'Multi-Langue', desc:'FR/EN/IT/ES/DE — i18n complet', price:1200 },
+      { id:'multi-langue', name:'Multi-Langue', desc:'FR/EN/IT/ES/DE, i18n complet', price:1200 },
       { id:'blog-pro', name:'Blog Professionnel', desc:'SEO-friendly, planification, newsletters', price:600 },
       { id:'ai-content', name:'AI Content Generator', desc:'IA pour descriptions, titres, alt-text', price:1500 },
       { id:'dynamic-content', name:'Dynamic Content', desc:'Templates, variations A/B, personnalisation', price:800 },
@@ -197,7 +197,7 @@ function renderSummary() {
   if (state.base) {
     html += `<div class="summary-section">
       <div class="summary-section-title">Forfait de base</div>
-      <div class="summary-row"><span>${state.base.name} — ${state.base.pages}</span><span class="sr-price">${fmt(state.base.price)}€</span></div>
+      <div class="summary-row"><span>${state.base.name} · ${state.base.pages}</span><span class="sr-price">${fmt(state.base.price)}€</span></div>
     </div>`;
   }
 
@@ -352,7 +352,7 @@ function buildMailto() {
   }
   body += `\n━━ TOTAL ━━\n${fmt(t.totalHT)}€ HT (${fmt(t.totalTTC)}€ TTC)\n`;
   body += '\nMerci de me recontacter pour finaliser le devis.\n\nCordialement';
-  return `mailto:canon@ccdeveloppement.eu?subject=${encodeURIComponent('Demande de devis — Estimateur CC Développement')}&body=${encodeURIComponent(body)}`;
+  return `mailto:canon@ccdeveloppement.eu?subject=${encodeURIComponent('Demande de devis : Estimateur CC Développement')}&body=${encodeURIComponent(body)}`;
 }
 
 /* ============ SEARCH ============ */

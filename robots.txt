@@ -1,4 +1,4 @@
-# robots.txt — CC Développement
+# robots.txt : CC Développement
 # https://ccdeveloppement.eu/
 
 User-agent: *

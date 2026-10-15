@@ -1,6 +1,6 @@
 # Les 7 Erreurs SEO Local qui Coulent les TPE en 2026
 
-**Guide pratique par Cyril Canon — CC Développement**
+**Guide pratique par Cyril Canon, CC Développement**
 *Développeur web & expert SEO local · Agde, Hérault*
 
 ---
@@ -9,17 +9,17 @@
 
 Tu es restaurateur à Agde, artisan à Sète ou commerçant à Béziers. Tu as un site web, peut-être même une fiche Google… mais les appels ne viennent pas. Les concurrents apparaissent avant toi dans les résultats de recherche.
 
-Ce n'est pas une fatalité. Dans 80 % des cas, le problème vient de quelques erreurs SEO local que presque toutes les TPE commettent — souvent sans le savoir.
+Ce n'est pas une fatalité. Dans 80 % des cas, le problème vient de quelques erreurs SEO local que presque toutes les TPE commettent, souvent sans le savoir.
 
 Dans ce guide, je décortique **les 7 erreurs les plus fréquentes** que je rencontre en auditant des sites de professionnels dans l'Hérault. Pour chacune, je te donne un **exemple concret** et une **solution actionnable** que tu peux appliquer dès aujourd'hui.
 
 **Cyril Canon**
-Développeur web freelance — CC Développement
+Développeur web freelance, CC Développement
 📍 Agde, Hérault | 🌐 ccdeveloppement.eu
 
 ---
 
-## Erreur #1 — Ta fiche Google Business Profile est incomplète
+## Erreur #1 : Ta fiche Google Business Profile est incomplète
 
 ### Le problème
 
@@ -36,14 +36,14 @@ Un restaurant de fruits de mer au Cap d'Agde avait sa fiche GBP avec uniquement 
 1. **Complète chaque champ** : nom exact, adresse, téléphone, site web, horaires (y compris jours fériés)
 2. **Ajoute 2-3 catégories secondaires** pertinentes (ex : « Restaurant de poisson », « Bar à tapas »)
 3. **Rédige une description de 750 caractères** incluant ta ville + ton activité
-4. **Publie 5 à 10 photos** de qualité (façade, intérieur, plats, équipe) — Google favorise les fiches avec des photos récentes
+4. **Publie 5 à 10 photos** de qualité (façade, intérieur, plats, équipe) : Google favorise les fiches avec des photos récentes
 5. **Active les messages** et la section « Questions/Réponses »
 
 > 💡 **Règle d'or** : une fiche GBP complète à 100 % a 7× plus de chances d'apparaître dans le pack local (source : Whitespark 2025).
 
 ---
 
-## Erreur #2 — Ton site n'est pas optimisé pour le mobile
+## Erreur #2 : Ton site n'est pas optimisé pour le mobile
 
 ### Le problème
 
@@ -55,7 +55,7 @@ Un salon de coiffure à Agde centre avait un site WordPress avec un thème lourd
 
 ### Solution actionnable
 
-1. **Teste ton site** sur Google PageSpeed Insights (pagespeed.web.dev) — vise un score mobile > 80
+1. **Teste ton site** sur Google PageSpeed Insights (pagespeed.web.dev), vise un score mobile > 80
 2. **Compresse tes images** : utilise le format WebP, limite-les à 200 Ko maximum
 3. **Vérifie la lisibilité** : texte > 16px, boutons > 44px de large, pas de zoom nécessaire
 4. **Place ton numéro de téléphone cliquable** dans les 3 premières secondes de scroll
@@ -65,7 +65,7 @@ Un salon de coiffure à Agde centre avait un site WordPress avec un thème lourd
 
 ---
 
-## Erreur #3 — Tu n'as pas de pages locales ciblées
+## Erreur #3 : Tu n'as pas de pages locales ciblées
 
 ### Le problème
 
@@ -85,15 +85,15 @@ Un électricien basé à Pézenas couvrait tout l'Hérault mais n'avait qu'une p
 4. **Intègre une carte Google Maps** centrée sur la ville en question
 5. **Optimise les balises** : title, H1, meta description avec le couple [service + ville]
 
-> 💡 **Astuce** : mentionne des noms de quartiers ou de lieux connus (« à deux pas de la Promenade », « quartier du Grau d'Agde ») — ça renforce le signal local.
+> 💡 **Astuce** : mentionne des noms de quartiers ou de lieux connus (« à deux pas de la Promenade », « quartier du Grau d'Agde »), ça renforce le signal local.
 
 ---
 
-## Erreur #4 — Tes avis Google sont négligés
+## Erreur #4 : Tes avis Google sont négligés
 
 ### Le problème
 
-Les avis Google influencent directement ton classement local ET ta crédibilité. Mais beaucoup de TPE ont soit très peu d'avis (< 10), soit des avis sans réponse. **Ne pas répondre aux avis — positifs comme négatifs — envoie un signal d'abandon à Google.**
+Les avis Google influencent directement ton classement local ET ta crédibilité. Mais beaucoup de TPE ont soit très peu d'avis (< 10), soit des avis sans réponse. **Ne pas répondre aux avis, positifs comme négatifs, envoie un signal d'abandon à Google.**
 
 ### Exemple local
 
@@ -105,13 +105,13 @@ Deux pizzerias à Marseillan, même quartier. L'une avait 87 avis (note 4.4) ave
 2. **Pour les avis positifs** : remercie, mentionne un détail spécifique (« Ravi que notre risotto vous ait plu ! »)
 3. **Pour les avis négatifs** : reste professionnel, propose une solution, invite à revenir
 4. **Mets en place un système de collecte** : QR code sur la table, SMS après visite, lien dans l'email de confirmation
-5. **Vise 5 nouveaux avis par mois** minimum — la régularité compte plus que le volume ponctuel
+5. **Vise 5 nouveaux avis par mois** minimum : la régularité compte plus que le volume ponctuel
 
 > 💡 **À savoir** : les avis contenant des mots-clés (« super restaurant fruits de mer Agde ») boostent ton classement pour ces termes. N'hésite pas à demander des avis détaillés.
 
 ---
 
-## Erreur #5 — Tes informations NAP sont incohérentes
+## Erreur #5 : Tes informations NAP sont incohérentes
 
 ### Le problème
 
@@ -134,13 +134,13 @@ Résultat : Google ne savait pas quelle information était fiable. Le garage n'a
 2. **Mets à jour toutes les sources** : site web, GBP, réseaux sociaux, annuaires
 3. **Priorise ces plateformes** : Google Business, Pages Jaunes, Facebook, TripAdvisor, Yelp
 4. **Ajoute un balisage Schema.org LocalBusiness** sur ton site avec les infos NAP exactes
-5. **Fais un audit NAP tous les 6 mois** — les annuaires modifient parfois les données sans prévenir
+5. **Fais un audit NAP tous les 6 mois** : les annuaires modifient parfois les données sans prévenir
 
 > 💡 **Outil gratuit** : cherche ton entreprise sur Google et vérifie les 10 premiers résultats. Si l'adresse ou le téléphone diffère quelque part, corrige-le immédiatement.
 
 ---
 
-## Erreur #6 — Ton site n'a aucun contenu local
+## Erreur #6 : Ton site n'a aucun contenu local
 
 ### Le problème
 
@@ -161,11 +161,11 @@ Un traiteur du Cap d'Agde n'avait que 3 pages sur son site. Zéro blog, zéro ac
 4. **Ajoute des liens internes** vers tes pages de services
 5. **Partage chaque article** sur tes réseaux sociaux et ta fiche GBP (posts Google)
 
-> 💡 **Stratégie express** : pas le temps d'écrire ? Publie un « post Google » sur ta fiche GBP chaque semaine (offre, événement, actualité) — ça prend 5 minutes et c'est très efficace.
+> 💡 **Stratégie express** : pas le temps d'écrire ? Publie un « post Google » sur ta fiche GBP chaque semaine (offre, événement, actualité), ça prend 5 minutes et c'est très efficace.
 
 ---
 
-## Erreur #7 — Tu ne suis pas tes performances
+## Erreur #7 : Tu ne suis pas tes performances
 
 ### Le problème
 
@@ -181,7 +181,7 @@ Un coach sportif à Sète investissait 200 €/mois en Google Ads sans avoir ins
 
 ### Solution actionnable
 
-1. **Installe Google Analytics 4** (GA4) — c'est gratuit et ça prend 10 minutes
+1. **Installe Google Analytics 4** (GA4), c'est gratuit et ça prend 10 minutes
 2. **Connecte Google Search Console** pour voir tes mots-clés et positions
 3. **Vérifie les insights GBP** : nombre de vues, clics, appels, itinéraires
 4. **Configure des objectifs** : appels, soumissions de formulaire, clics sur l'email
@@ -211,10 +211,10 @@ Je m'appelle **Cyril Canon**, je suis développeur web freelance basé à **Agde
 
 ### Ce que je peux faire pour toi :
 
-- **Audit SEO local gratuit (30 min)** — je passe ton site et ta fiche Google au crible et je te donne un plan d'action concret
-- **Création de site optimisé SEO** — sites ultra-rapides, pensés pour convertir sur mobile
-- **Optimisation Google Business Profile** — pour apparaître dans le pack local
-- **Rédaction de contenu local** — articles de blog et pages ciblées pour ta zone
+- **Audit SEO local gratuit (30 min)** : je passe ton site et ta fiche Google au crible et je te donne un plan d'action concret
+- **Création de site optimisé SEO** : sites ultra-rapides, pensés pour convertir sur mobile
+- **Optimisation Google Business Profile** : pour apparaître dans le pack local
+- **Rédaction de contenu local** : articles de blog et pages ciblées pour ta zone
 
 ### Prends rendez-vous :
 
@@ -224,5 +224,5 @@ Je m'appelle **Cyril Canon**, je suis développeur web freelance basé à **Agde
 
 ---
 
-*© 2026 CC Développement — Cyril Canon · SIRET : 444 114 011*
+*© 2026 CC Développement (Cyril Canon) · SIRET : 444 114 011*
 *Ce guide est offert et ne peut être revendu. Partage-le librement !*

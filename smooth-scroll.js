@@ -1,4 +1,4 @@
-// Smooth scroll — Lenis on desktop only, native scroll on mobile
+// Smooth scroll : Lenis on desktop only, native scroll on mobile
 (function () {
   if (typeof window === 'undefined') return;
 

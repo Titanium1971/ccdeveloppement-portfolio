@@ -25,7 +25,7 @@
         body: body.toString()
       });
 
-      // no-cors ne permet pas de lire le statut — on considère OK après envoi
+      // no-cors ne permet pas de lire le statut : on considère OK après envoi
       form.style.display = 'none';
       successMsg.style.display = 'block';
 

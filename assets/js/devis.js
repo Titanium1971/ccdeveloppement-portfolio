@@ -4,7 +4,7 @@
   const successState = document.getElementById('successState');
   const submitBtn = document.getElementById('submitBtn');
 
-  // Rate limiting simple — 1 soumission par minute
+  // Rate limiting simple : 1 soumission par minute
   let lastSubmit = 0;
 
   function validateField(id, validFn) {
