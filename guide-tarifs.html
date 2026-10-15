@@ -258,7 +258,7 @@ a:hover{opacity:.8;}
       "name": "Comment payer son site web : en une fois ou en plusieurs fois ?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Le paiement classique se fait en 3 fois : 30 % à la commande, 40 % à la validation de la maquette, 30 % à la mise en ligne. Un paiement en 6 ou 12 fois est possible pour les projets supérieurs à 3 000 € (sans frais)."
+        "text": "Le paiement se fait en 3 fois sans frais : 40 % à la commande, 30 % à la livraison en préproduction, 30 % à la mise en ligne."
       }
     },
     {
@@ -266,7 +266,7 @@ a:hover{opacity:.8;}
       "name": "Existe-t-il des frais récurrents après la livraison ?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Hébergement et maintenance technique sont gratuits la première année. Ensuite, à partir de 19 €/mois pour le pack maintenance simple ou 49 €/mois pour le pack avec mises à jour de contenu et suivi SEO."
+        "text": "L'hébergement est offert la première année. La maintenance est en option : 200 €/mois (Essentiel), 500 €/mois (Premium) ou 650 €/mois (Entreprise)."
       }
     }
   ]
@@ -300,26 +300,88 @@ a:hover{opacity:.8;}
   <div class="container">
     <div class="section-label">Les Forfaits</div>
     <div class="section-title">Votre base de départ : <span>le nombre de pages</span></div>
-    <div class="section-desc">Chaque forfait définit le nombre de « pages fonctionnelles » de votre plateforme. Une page n'est pas une simple page HTML — c'est une section complète avec sa logique, son design et ses interactions (landing page, catalogue, dashboard, formulaire complexe, etc.).</div>
+    <div class="section-desc">Deux familles : les forfaits clés en main (prix et délai fixes), puis les plateformes sur-mesure. Pour ces dernières, chaque forfait définit le nombre de « pages fonctionnelles » de votre plateforme. Une page n'est pas une simple page HTML : c'est une section complète avec sa logique, son design et ses interactions (landing page, catalogue, dashboard, formulaire complexe, etc.).</div>
 
-    <!-- Startup -->
+    <!-- Forfaits clés en main -->
     <div class="forfait-detail">
       <div class="forfait-head">
-        <div><h2>Startup</h2><div class="pages">5 pages fonctionnelles</div></div>
-        <div class="price">4 500€ <span>HT</span></div>
+        <div><h2>Landing page</h2><div class="pages">1 page · 2 semaines</div></div>
+        <div class="price">1 800€ <span>HT</span></div>
       </div>
-      <div class="forfait-text">Le forfait idéal pour les entrepreneurs qui démarrent, les freelances et les petites structures qui veulent une présence en ligne professionnelle et performante. Vous obtenez un site complet, rapide et optimisé SEO — pas un template WordPress, mais une vraie plateforme Next.js sur-mesure.</div>
-      <div class="forfait-text"><strong>Pour qui ?</strong> Freelances, startups early-stage, artisans, professions libérales, restaurants avec un menu simple.</div>
+      <div class="forfait-text">Une page unique, rapide et optimisée pour présenter votre activité et recevoir des demandes de contact.</div>
+      <div class="forfait-text"><strong>Pour qui ?</strong> Indépendants, artisans, lancement d'une offre ou d'un événement.</div>
       <ul class="forfait-includes">
-        <li>Landing page avec hero, sections et CTA</li>
-        <li>Page de présentation / À propos</li>
-        <li>Catalogue de services ou produits</li>
-        <li>Formulaire de contact intelligent</li>
-        <li>Blog ou page documentation</li>
-        <li>Page admin basique pour modifier le contenu</li>
+        <li>Maquette et univers visuel</li>
+        <li>Page responsive (téléphone, tablette, ordinateur)</li>
+        <li>Formulaire de contact, bouton d'appel et itinéraire</li>
+        <li>Référencement local et liaison avec la fiche Google</li>
+        <li>Pages légales et mise en ligne en HTTPS</li>
       </ul>
     </div>
 
+    <div class="forfait-detail">
+      <div class="forfait-head">
+        <div><h2>Site vitrine avec réservation</h2><div class="pages">5 pages · 3 semaines</div></div>
+        <div class="price">2 800€ <span>HT</span></div>
+      </div>
+      <div class="forfait-text">Le site complet d'un établissement qui reçoit des clients : présentation, prestations et réservation en ligne.</div>
+      <div class="forfait-text"><strong>Pour qui ?</strong> Restaurants, instituts, coachs, locations, professions libérales.</div>
+      <ul class="forfait-includes">
+        <li>Accueil, présentation, prestations, contact</li>
+        <li>Réservation en ligne</li>
+        <li>Référencement local</li>
+        <li>Pages légales et mise en ligne</li>
+      </ul>
+    </div>
+
+    <div class="forfait-detail">
+      <div class="forfait-head">
+        <div><h2>Refonte de site existant</h2><div class="pages">3 semaines</div></div>
+        <div class="price">3 500€ <span>HT</span></div>
+      </div>
+      <div class="forfait-text">Votre site actuel modernisé sans perdre le référencement acquis.</div>
+      <div class="forfait-text"><strong>Pour qui ?</strong> Entreprises dont le site est daté, lent ou difficile à modifier.</div>
+      <ul class="forfait-includes">
+        <li>Audit de l'existant</li>
+        <li>Nouvelle conception</li>
+        <li>Reprise des pages</li>
+        <li>Redirections des anciennes adresses et SEO conservé</li>
+      </ul>
+    </div>
+
+    <div class="forfait-detail">
+      <div class="forfait-head">
+        <div><h2>E-commerce</h2><div class="pages">Jusqu'à 30 produits · 4 à 6 semaines</div></div>
+        <div class="price">4 500€ <span>HT</span></div>
+      </div>
+      <div class="forfait-text">Une boutique en ligne prête à vendre, avec paiement sécurisé et gestion des commandes.</div>
+      <div class="forfait-text"><strong>Pour qui ?</strong> Commerces, artisans et producteurs qui vendent un catalogue court.</div>
+      <ul class="forfait-includes">
+        <li>Catalogue, catégories et panier</li>
+        <li>Paiement par carte (Stripe) et facture par e-mail</li>
+        <li>Gestion des produits, stocks et commandes</li>
+        <li>Référencement produits</li>
+        <li>CGV, pages légales et mise en ligne</li>
+      </ul>
+    </div>
+
+    <div class="forfait-detail">
+      <div class="forfait-head">
+        <div><h2>SaaS MVP</h2><div class="pages">Première version · 6 à 8 semaines</div></div>
+        <div class="price">8 000€ <span>HT</span></div>
+      </div>
+      <div class="forfait-text">La première version d'une application pour professionnels, avec comptes utilisateurs et abonnements.</div>
+      <div class="forfait-text"><strong>Pour qui ?</strong> Porteurs de projet SaaS qui veulent tester leur marché.</div>
+      <ul class="forfait-includes">
+        <li>Cadrage et maquettes des écrans principaux</li>
+        <li>Comptes utilisateurs, rôles et sécurité</li>
+        <li>Fonctionnalités principales</li>
+        <li>Abonnements et paiement (Stripe)</li>
+        <li>Tableau de bord d'administration</li>
+      </ul>
+    </div>
+
+    <!-- Plateformes sur-mesure -->
     <!-- PME Standard -->
     <div class="forfait-detail featured">
       <div class="forfait-head">
@@ -846,19 +908,19 @@ a:hover{opacity:.8;}
     <div class="section-desc">Un site web n'est pas un projet « one-shot ». Il doit être maintenu, mis à jour et surveillé. Nos forfaits de maintenance vous garantissent la tranquillité d'esprit.</div>
 
     <div class="module-detail">
-      <div class="module-head"><h3>Standard — 125€ HT/mois</h3><div class="price">1 200€/an</div></div>
-      <div class="module-desc">L'essentiel pour garder votre site en ligne et fonctionnel. Hébergement Vercel maintenu, base de données Supabase surveillée, support par email avec réponse sous 48h. Idéal pour les sites vitrines sans besoin de mises à jour fréquentes.</div>
+      <div class="module-head"><h3>Essentiel : 200€ HT/mois</h3><div class="price">2 000€/an</div></div>
+      <div class="module-desc">L'essentiel pour garder votre site en ligne et fonctionnel. Hébergement, SSL et sauvegardes, surveillance et mises à jour, petites modifications jusqu'à 1 h par mois, support par email avec réponse sous 48h. Idéal pour les sites vitrines sans besoin de mises à jour fréquentes.</div>
       <div class="module-benefits"><span class="tag">Hosting</span><span class="tag">BDD</span><span class="tag">Support email 48h</span><span class="tag">2 mois offerts/an</span></div>
     </div>
 
     <div class="module-detail" style="border:2px solid var(--accent);">
-      <div class="module-head"><h3>Premium — 250€ HT/mois <span style="font-size:13px;color:var(--accent);background:var(--accent-dim);padding:3px 10px;border-radius:100px;margin-left:8px;">RECOMMANDÉ</span></h3><div class="price">2 500€/an</div></div>
-      <div class="module-desc">Le forfait idéal pour les projets actifs. En plus de tout le Standard, vous bénéficiez de : support prioritaire (réponse sous 24h), monitoring continu, mises à jour régulières du code, et bug fixes illimités. Votre site reste toujours à jour et performant.</div>
-      <div class="module-benefits"><span class="tag">Tout Standard</span><span class="tag">Support 24h</span><span class="tag">Monitoring</span><span class="tag">MAJ régulières</span><span class="tag">Bug fixes illimités</span><span class="tag">2 mois offerts/an</span></div>
+      <div class="module-head"><h3>Premium : 500€ HT/mois <span style="font-size:13px;color:var(--accent);background:var(--accent-dim);padding:3px 10px;border-radius:100px;margin-left:8px;">RECOMMANDÉ</span></h3><div class="price">5 000€/an</div></div>
+      <div class="module-desc">Le forfait idéal pour les projets actifs. En plus de tout l'Essentiel, vous bénéficiez de : support prioritaire (réponse sous 24h), monitoring continu, mises à jour régulières du code, et bug fixes illimités. Votre site reste toujours à jour et performant.</div>
+      <div class="module-benefits"><span class="tag">Tout Essentiel</span><span class="tag">Support 24h</span><span class="tag">Monitoring</span><span class="tag">MAJ régulières</span><span class="tag">Bug fixes illimités</span><span class="tag">2 mois offerts/an</span></div>
     </div>
 
     <div class="module-detail">
-      <div class="module-head"><h3>Enterprise — 650€ HT/mois</h3><div class="price">6 500€/an</div></div>
+      <div class="module-head"><h3>Entreprise : 650€ HT/mois</h3><div class="price">6 500€/an</div></div>
       <div class="module-desc">Pour les plateformes ambitieuses qui ont besoin d'un accompagnement continu. Tout le Premium, plus : 8 heures de développement par mois (nouvelles fonctionnalités, optimisations), assistance au scaling, optimisation continue des performances.</div>
       <div class="module-benefits"><span class="tag">Tout Premium</span><span class="tag">8h dev/mois</span><span class="tag">Scaling</span><span class="tag">Optimisation perf</span><span class="tag">Négociable</span></div>
     </div>
@@ -876,7 +938,7 @@ a:hover{opacity:.8;}
       <div style="font-size:15px;color:var(--gray-light);letter-spacing:2px;text-transform:uppercase;">CC Développement</div>
       <div style="font-size:18px;color:var(--gray-light);margin-top:12px;"><a href="tel:0620262153">06 20 26 21 53</a><br><a href="mailto:canon@ccdeveloppement.eu">canon@ccdeveloppement.eu</a></div>
     </div>
-    <div style="margin-top:40px;font-size:15px;color:var(--gray-light);">Devis gratuit · Sans engagement · 50% d'acompte au démarrage · Paiement en 2 ou 3 fois possible</div>
+    <div style="margin-top:40px;font-size:15px;color:var(--gray-light);">Devis gratuit · Sans engagement · Paiement en 3 fois sans frais (40 / 30 / 30)</div>
   </div>
 </section>
 

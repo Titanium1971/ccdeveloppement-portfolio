@@ -2,7 +2,7 @@
 /* ============ DATA ============ */
 const PRICING = {
   bases: [
-    { id:'startup', name:'Startup', pages:'5 pages', price:4500, desc:"L'essentiel pour démarrer", features:['Landing page + Présentation','Catalogue / Services','Contact / Formulaire','Blog ou Documentation','Page admin basique'] },
+    { id:'vitrine', name:'Site vitrine', pages:'5 pages', price:2800, desc:'Avec réservation en ligne', features:['Accueil, présentation, prestations, contact','Réservation en ligne','Référencement local','Pages légales et mise en ligne'] },
     { id:'pme', name:'PME Standard', pages:'10 pages', price:7500, desc:'Le plus demandé', featured:true, features:['Landing page premium','Catalogue multi-catégories','Panier / Commandes','Blog / News avec SEO','Dashboard utilisateur','Admin panel avancé','FAQ / Documentation','Intégrations 3e parties','Analytics page','Page custom spécifique'] },
     { id:'pme-plus', name:'PME+', pages:'15 pages', price:10500, desc:'Croissance & scale', features:['Tout le forfait PME Standard','Marketplace features','Multi-utilisateurs / Rôles','API publique','Synchronisations externes','Performance optimization','Sécurité avancée'] },
     { id:'entreprise', name:'Entreprise', pages:'20+ pages', price:14500, desc:'Plateforme complète', features:['Plateforme complète','White-label possible','Multi-locales','Infrastructure custom','Onboarding entreprise'] }
@@ -70,9 +70,9 @@ const PRICING = {
     ]}
   ],
   maintenance: [
-    { id:'standard', name:'Standard', price:125, annual:1200, desc:'Pour les sites vitrines', features:['Maintenance Vercel (hosting)','Supabase (base de données)','Support email (48h)'] },
-    { id:'premium', name:'Premium', price:250, annual:2500, desc:'Pour les projets avec backoffice', featured:true, features:['Maintenance + monitoring','Support prioritaire (24h)','Mises à jour régulières','Bug fixes illimités'] },
-    { id:'enterprise', name:'Enterprise', price:650, annual:6500, desc:'Pour les plateformes ambitieuses', features:['Tout le forfait Premium','Dédication 8h/mois','Performance optimization','Scaling assistance'] }
+    { id:'standard', name:'Essentiel', price:200, annual:2000, desc:'Pour les sites vitrines', features:['Hébergement, SSL et sauvegardes','Surveillance et mises à jour','Petites modifications (1 h/mois)','Support email (48h)'] },
+    { id:'premium', name:'Premium', price:500, annual:5000, desc:'Pour les projets avec backoffice', featured:true, features:['Tout le forfait Essentiel','Maintenance + monitoring','Support prioritaire (24h)','Mises à jour régulières','Bug fixes illimités'] },
+    { id:'enterprise', name:'Entreprise', price:650, annual:6500, desc:'Pour les plateformes ambitieuses', features:['Tout le forfait Premium','Dédication 8h/mois','Performance optimization','Scaling assistance'] }
   ]
 };
 

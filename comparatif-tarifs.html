@@ -94,6 +94,7 @@ a:hover { opacity:.8; }
 .data-table tbody td.cc-val { color:var(--accent); background:rgba(57,255,20,0.04); }
 .data-table tbody td.eco-val { color:var(--accent); }
 .data-table tbody tr:hover td { background:rgba(255,255,255,0.02); }
+#methodologie .data-table td:last-child { min-width:240px; }
 .data-table tbody tr:hover td.cc-val { background:rgba(57,255,20,0.07); }
 
 /* CALLOUT BOXES */
@@ -170,7 +171,7 @@ a:hover { opacity:.8; }
   .top-nav-inner > a:not(.cta):not(:first-child) { display:none; }
   .hero h1 { font-size:26px; }
   .compare-grid { grid-template-columns:1fr; }
-  .data-table { font-size:13px; }
+  .data-table { font-size:13px; display:block; overflow-x:auto; -webkit-overflow-scrolling:touch; }
   .data-table thead th, .data-table tbody td { padding:10px 8px; }
   .section-title { font-size:24px; }
   .verdict h3 { font-size:22px; }
@@ -299,7 +300,7 @@ a:hover { opacity:.8; }
       "name": "Pourquoi CC Développement est-il moins cher qu'une agence web traditionnelle ?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "CC Développement est un studio indépendant à Agde, sans coûts d'agence (commerciaux, locaux prestigieux, hiérarchie). Cyril Canon réalise les projets directement, avec des outils modernes (Next.js, Cloudflare, no-code) qui réduisent le temps de production. Résultat : 40 à 60 % moins cher qu'une agence pour une qualité équivalente."
+        "text": "CC Développement est un studio indépendant à Agde, sans coûts d'agence (commerciaux, locaux prestigieux, hiérarchie). Cyril Canon réalise les projets directement, avec des outils modernes (Next.js, Cloudflare, no-code) qui réduisent le temps de production. Résultat : en moyenne 30 à 50 % moins cher qu'une agence sur la création de site (comparaison au milieu des fourchettes agence publiées, sources listées sur cette page)."
       }
     },
     {
@@ -315,7 +316,7 @@ a:hover { opacity:.8; }
       "name": "Quels sont les délais de livraison comparés ?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Site vitrine : 2 à 4 semaines chez CC Développement vs 6 à 12 semaines en agence. E-commerce : 4 à 8 semaines vs 12 à 20 semaines en agence. La différence vient de l'absence de validation hiérarchique et de l'utilisation d'outils modernes."
+        "text": "Chez CC Développement : landing page 2 semaines, site vitrine avec réservation 3 semaines, e-commerce 4 à 6 semaines, SaaS MVP 6 à 8 semaines, plateformes sur-mesure 5 à 12 semaines. Aucune étude publique ne chiffre l'écart de délai entre agence et indépendant, nous ne revendiquons donc pas de ratio."
       }
     },
     {
@@ -356,7 +357,7 @@ a:hover { opacity:.8; }
 
 <div class="container">
 
-<p class="intro-text">Ce document compare les tarifs de CC D&eacute;veloppement avec les prix moyens pratiqu&eacute;s par les agences web en France (petites, moyennes et grandes agences). Sources : barom&egrave;tre Malt 2024, Codeur.fr, SortList, France Num, Journal du Net.</p>
+<p class="intro-text">Ce document compare les tarifs de CC D&eacute;veloppement avec les prix moyens pratiqu&eacute;s par les agences web en France (petites, moyennes et grandes agences). Fourchettes agence relev&eacute;es le 14 octobre 2026 dans des sources publiques dat&eacute;es, d&eacute;taill&eacute;es dans la <a href="#methodologie" style="color:var(--accent);">m&eacute;thodologie</a>.</p>
 
 <!-- 1. FORFAITS DE BASE -->
 <section class="section">
@@ -367,47 +368,54 @@ a:hover { opacity:.8; }
     <thead>
       <tr>
         <th>Type de projet</th>
-        <th>Agence classique</th>
-        <th>Agence premium (Paris)</th>
-        <th class="col-cc">CC D&eacute;veloppement</th>
-        <th>&Eacute;conomie</th>
+        <th>Fourchettes agence publi&eacute;es</th>
+        <th class="col-cc">CC D&eacute;veloppement (HT)</th>
+        <th>&Eacute;cart vs milieu de fourchette</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td>Site vitrine 5 pages</td>
-        <td>4 000 &mdash; 8 000&euro;</td>
-        <td>6 000 &mdash; 15 000&euro;</td>
+        <td>Landing page</td>
+        <td>1 000 &agrave; 2 000&euro; (Wise) ; 800 &agrave; 6 000&euro; (Gemeos)</td>
+        <td class="cc-val">1 800&euro;</td>
+        <td class="eco-val">+20% &agrave; -47%</td>
+      </tr>
+      <tr>
+        <td>Site vitrine 5 pages + r&eacute;servation</td>
+        <td>2 000 &agrave; 5 000&euro; (Wise) ; 3 000 &agrave; 6 000&euro; (iPaoo) ; 3 000 &agrave; 8 000&euro; (SeedWeb) ; 2 000 &agrave; 10 000&euro; (Codeur)</td>
+        <td class="cc-val">2 800&euro;</td>
+        <td class="eco-val">-20% &agrave; -53%</td>
+      </tr>
+      <tr>
+        <td>Refonte de site existant</td>
+        <td>d&egrave;s 4 500&euro; (Mondevis) ; 4 000 &agrave; 15 000&euro; (Gemeos) ; 4 000 &agrave; 40 000&euro; (Ideagency)</td>
+        <td class="cc-val">3 500&euro;</td>
+        <td class="eco-val">-22% &agrave; -84%</td>
+      </tr>
+      <tr>
+        <td>E-commerce (jusqu'&agrave; 30 produits)</td>
+        <td>3 000 &agrave; 7 000&euro; (Gemeos) ; 5 000 &agrave; 15 000&euro; (Wise) ; 5 000 &agrave; 20 000&euro; (Shopify)</td>
         <td class="cc-val">4 500&euro;</td>
-        <td class="eco-val">-25% &agrave; -70%</td>
+        <td class="eco-val">-10% &agrave; -64%</td>
       </tr>
       <tr>
-        <td>Site pro 10 pages (CMS + admin)</td>
-        <td>8 000 &mdash; 15 000&euro;</td>
-        <td>12 000 &mdash; 25 000&euro;</td>
-        <td class="cc-val">7 500&euro;</td>
-        <td class="eco-val">-6% &agrave; -70%</td>
+        <td>Application SaaS, premi&egrave;re version (MVP)</td>
+        <td>5 000 &agrave; 15 000&euro; (Wivo) ; 10 000 &agrave; 25 000&euro; (Digital Unicorn) ; 15 000 &agrave; 30 000&euro; (Scroll)</td>
+        <td class="cc-val">8 000&euro;</td>
+        <td class="eco-val">-20% &agrave; -64%</td>
       </tr>
       <tr>
-        <td>Plateforme 15 pages (marketplace)</td>
-        <td>15 000 &mdash; 30 000&euro;</td>
-        <td>25 000 &mdash; 60 000&euro;</td>
-        <td class="cc-val">10 500&euro;</td>
-        <td class="eco-val">-30% &agrave; -82%</td>
-      </tr>
-      <tr>
-        <td>Plateforme entreprise 20+ pages</td>
-        <td>25 000 &mdash; 60 000&euro;</td>
-        <td>50 000 &mdash; 150 000&euro;</td>
-        <td class="cc-val">14 500&euro;</td>
-        <td class="eco-val">-42% &agrave; -90%</td>
+        <td>Plateforme sur-mesure 10 &agrave; 20+ pages</td>
+        <td>5 000 &agrave; 15 000&euro; site avanc&eacute; (Gemeos) ; d&egrave;s 13 500&euro; pour 5 pages sur-mesure (AmphiBee)</td>
+        <td class="cc-val">7 500 &agrave; 14 500&euro;</td>
+        <td class="eco-val">-44% &agrave; +45%</td>
       </tr>
     </tbody>
   </table>
 
   <div class="callout callout-green">
-    <h2>&Eacute;conomie moyenne : 35% &agrave; 60% par rapport aux agences</h2>
-    <p>CC D&eacute;veloppement livre des plateformes Next.js/TypeScript avec Supabase au prix que les agences facturent pour un WordPress customis&eacute;. La diff&eacute;rence ? Pas de bureaux parisiens, pas d'interm&eacute;diaires, pas de marge d'agence (40-60% chez les agences classiques).</p>
+    <h2>&Eacute;cart moyen sur la cr&eacute;ation de site : 30% &agrave; 50% par rapport aux agences</h2>
+    <p>L'&eacute;cart est le plus fort sur l'e-commerce, les applications et les refontes. Il est faible face &agrave; une petite agence d'entr&eacute;e de gamme, et il dispara&icirc;t, voire s'inverse, sur les tr&egrave;s grosses plateformes (20+ pages). Les agences qui publient un ratio global annoncent elles aussi 30 &agrave; 50% (iPaoo, SeedWeb). Calcul et sources : voir la <a href="#methodologie" style="color:var(--accent);">m&eacute;thodologie</a>.</p>
   </div>
 </section>
 
@@ -685,37 +693,34 @@ a:hover { opacity:.8; }
   <table class="data-table">
     <thead>
       <tr>
-        <th>Tier</th>
-        <th>Agence classique</th>
-        <th>Agence premium</th>
-        <th class="col-cc">CC D&eacute;veloppement</th>
-        <th>&Eacute;conomie</th>
+        <th>Formule</th>
+        <th>Fourchette agence publi&eacute;e (Gemeos)</th>
+        <th class="col-cc">CC D&eacute;veloppement (HT)</th>
+        <th>Position</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td>Standard</td>
-        <td>200 &mdash; 400&euro;/mois</td>
-        <td>300 &mdash; 600&euro;/mois</td>
-        <td class="cc-val">125&euro;/mois</td>
-        <td class="eco-val">-38% &agrave; -79%</td>
+        <td>Essentiel (site vitrine)</td>
+        <td>150 &agrave; 500&euro;/mois</td>
+        <td class="cc-val">200&euro;/mois</td>
+        <td>Dans la fourchette basse</td>
       </tr>
       <tr>
-        <td>Premium</td>
-        <td>400 &mdash; 800&euro;/mois</td>
-        <td>600 &mdash; 1 500&euro;/mois</td>
-        <td class="cc-val">250&euro;/mois</td>
-        <td class="eco-val">-38% &agrave; -83%</td>
+        <td>Premium (backoffice, e-commerce)</td>
+        <td>300 &agrave; 800&euro;/mois</td>
+        <td class="cc-val">500&euro;/mois</td>
+        <td>Dans la fourchette</td>
       </tr>
       <tr>
-        <td>Enterprise</td>
-        <td>1 000 &mdash; 3 000&euro;/mois</td>
-        <td>1 500 &mdash; 5 000&euro;/mois</td>
+        <td>Entreprise (8 h de d&eacute;veloppement/mois)</td>
+        <td>Pas de fourchette publi&eacute;e comparable</td>
         <td class="cc-val">650&euro;/mois</td>
-        <td class="eco-val">-35% &agrave; -87%</td>
+        <td>Non compar&eacute;</td>
       </tr>
     </tbody>
   </table>
+  <p class="intro-text" style="font-size:15px;">La maintenance est au prix du march&eacute; agence, pas en dessous. Nous ne revendiquons aucune &eacute;conomie sur ce poste.</p>
 </section>
 
 <!-- 5. DÉLAIS -->
@@ -727,38 +732,45 @@ a:hover { opacity:.8; }
     <thead>
       <tr>
         <th>Type de projet</th>
-        <th>Agence classique</th>
-        <th class="col-cc">CC D&eacute;veloppement</th>
-        <th>Gain de temps</th>
+        <th class="col-cc">D&eacute;lai CC D&eacute;veloppement</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td>Site vitrine 5 pages</td>
-        <td>3 &mdash; 6 semaines</td>
-        <td class="cc-val">2 &mdash; 3 semaines</td>
-        <td class="eco-val">~50% plus rapide</td>
+        <td>Landing page</td>
+        <td class="cc-val">2 semaines</td>
       </tr>
       <tr>
-        <td>Site pro 10 pages</td>
-        <td>6 &mdash; 10 semaines</td>
-        <td class="cc-val">4 &mdash; 6 semaines</td>
-        <td class="eco-val">~40% plus rapide</td>
+        <td>Site vitrine avec r&eacute;servation</td>
+        <td class="cc-val">3 semaines</td>
       </tr>
       <tr>
-        <td>E-commerce complet</td>
-        <td>10 &mdash; 16 semaines</td>
-        <td class="cc-val">6 &mdash; 10 semaines</td>
-        <td class="eco-val">~40% plus rapide</td>
+        <td>Refonte</td>
+        <td class="cc-val">3 semaines</td>
       </tr>
       <tr>
-        <td>Plateforme 15+ pages</td>
-        <td>12 &mdash; 20 semaines</td>
-        <td class="cc-val">8 &mdash; 14 semaines</td>
-        <td class="eco-val">~35% plus rapide</td>
+        <td>E-commerce (jusqu'&agrave; 30 produits)</td>
+        <td class="cc-val">4 &agrave; 6 semaines</td>
+      </tr>
+      <tr>
+        <td>SaaS MVP</td>
+        <td class="cc-val">6 &agrave; 8 semaines</td>
+      </tr>
+      <tr>
+        <td>PME Standard (10 pages)</td>
+        <td class="cc-val">5 &agrave; 7 semaines</td>
+      </tr>
+      <tr>
+        <td>PME+ (15 pages)</td>
+        <td class="cc-val">7 &agrave; 10 semaines</td>
+      </tr>
+      <tr>
+        <td>Entreprise (20+ pages)</td>
+        <td class="cc-val">10 &agrave; 12 semaines</td>
       </tr>
     </tbody>
   </table>
+  <p class="intro-text" style="font-size:15px;">Aucune &eacute;tude publique ne chiffre l'&eacute;cart de d&eacute;lai entre agence et ind&eacute;pendant (les sources consult&eacute;es se contredisent). Nous publions nos d&eacute;lais fermes, sans ratio comparatif.</p>
 </section>
 
 <!-- 6. TECHNOLOGIE -->
@@ -844,24 +856,24 @@ a:hover { opacity:.8; }
     </thead>
     <tbody>
       <tr>
-        <td>Prix moyen site 10 pages</td>
-        <td>12 000&euro;</td>
-        <td class="cc-val">7 500&euro; (-38%)</td>
+        <td>Site avanc&eacute; 10 pages</td>
+        <td>10 000&euro; (milieu Gemeos)</td>
+        <td class="cc-val">7 500&euro; (-25%)</td>
       </tr>
       <tr>
-        <td>Prix moyen package e-commerce</td>
-        <td>35 000&euro;</td>
-        <td class="cc-val">16 900&euro; (-52%)</td>
+        <td>E-commerce jusqu'&agrave; 30 produits</td>
+        <td>10 000 &agrave; 12 500&euro; (milieu Wise, Shopify)</td>
+        <td class="cc-val">4 500&euro; (-55% &agrave; -64%)</td>
       </tr>
       <tr>
-        <td>Maintenance annuelle (premium)</td>
-        <td>7 200&euro;/an</td>
-        <td class="cc-val">2 500&euro;/an (-65%)</td>
+        <td>Maintenance mensuelle</td>
+        <td>150 &agrave; 800&euro;/mois (Gemeos)</td>
+        <td class="cc-val">200 &agrave; 650&euro;/mois (prix march&eacute;)</td>
       </tr>
       <tr>
-        <td>D&eacute;lai moyen</td>
-        <td>8-12 semaines</td>
-        <td class="cc-val">4-8 semaines</td>
+        <td>D&eacute;lai</td>
+        <td>Non compar&eacute; (pas de source fiable)</td>
+        <td class="cc-val">2 &agrave; 12 semaines selon forfait</td>
       </tr>
       <tr>
         <td>Stack</td>
@@ -887,11 +899,108 @@ a:hover { opacity:.8; }
   </table>
 </section>
 
+<!-- 8. METHODOLOGIE -->
+<section class="section" id="methodologie">
+  <div class="section-label">08</div>
+  <div class="section-title">M&eacute;thodologie <span class="accent">et sources</span></div>
+  <p class="intro-text" style="font-size:15px;">Relev&eacute; du 14 octobre 2026. Pour chaque type de projet, nous prenons le milieu de chaque fourchette agence publi&eacute;e, puis calculons l'&eacute;cart : (prix CC - milieu agence) / milieu agence. Sur les 17 &eacute;carts calcul&eacute;s, la m&eacute;diane est de -47% et la moiti&eacute; centrale va de -20% &agrave; -59%. Une fourchette publi&eacute;e n'est pas une m&eacute;diane statistique ; aucune source ne publie de vraie m&eacute;diane. Les sources pr&eacute;cisent rarement HT ou TTC. Beaucoup sont des agences : leurs chiffres peuvent &ecirc;tre orient&eacute;s. D'o&ugrave; le chiffre retenu, prudent : 30 &agrave; 50% sur la cr&eacute;ation de site. Il ne s'applique ni &agrave; la maintenance ni aux plateformes de 20 pages et plus. Les exemples de packages (section 03) et les modules (section 02) sont indicatifs et ne servent pas au calcul.</p>
+  <table class="data-table">
+    <thead>
+      <tr>
+        <th>Source</th>
+        <th>Type</th>
+        <th>Mise &agrave; jour</th>
+        <th>Chiffres utilis&eacute;s (agence)</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a href="https://wise.com/fr/blog/combien-coute-la-creation-dun-site-internet" rel="nofollow noopener" target="_blank" style="color:var(--accent);">Wise</a></td>
+        <td>Neutre (fintech)</td>
+        <td>27/06/2025</td>
+        <td>Landing 1 000 &agrave; 2 000&euro; ; vitrine PME 2 000 &agrave; 5 000&euro; ; e-commerce simple 5 000 &agrave; 15 000&euro;</td>
+      </tr>
+      <tr>
+        <td><a href="https://www.francenum.gouv.fr/guides-et-conseils/developpement-commercial/site-web/combien-payer-pour-un-site-web-ou-un-site-e" rel="nofollow noopener" target="_blank" style="color:var(--accent);">France Num (DGE)</a></td>
+        <td>Neutre (minist&egrave;re)</td>
+        <td>20/06/2025</td>
+        <td>Site basique 900 &agrave; 5 000&euro; ; e-commerce 3 000 &agrave; 10 000&euro; (agence et ind&eacute;pendant confondus)</td>
+      </tr>
+      <tr>
+        <td><a href="https://www.codeur.com/pages/prix-site-internet" rel="nofollow noopener" target="_blank" style="color:var(--accent);">Codeur.com</a></td>
+        <td>Plateforme freelance</td>
+        <td>2025</td>
+        <td>Vitrine agence 2 000 &agrave; 10 000&euro; ; e-commerce agence 5 000 &agrave; 50 000&euro;</td>
+      </tr>
+      <tr>
+        <td><a href="https://www.gemeosagency.com/fr/blog/quel-est-le-prix-dun-site-internet" rel="nofollow noopener" target="_blank" style="color:var(--accent);">Gemeos Agency</a></td>
+        <td>Agence</td>
+        <td>14/10/2026</td>
+        <td>Landing 800 &agrave; 6 000&euro; ; e-commerce simple 3 000 &agrave; 7 000&euro; ; refonte compl&egrave;te 4 000 &agrave; 15 000&euro; ; maintenance 150 &agrave; 800&euro;/mois</td>
+      </tr>
+      <tr>
+        <td><a href="https://www.ipaoo.fr/creer-un-site-vitrine/prix/" rel="nofollow noopener" target="_blank" style="color:var(--accent);">iPaoo</a></td>
+        <td>Solution cl&eacute; en main</td>
+        <td>05/2026</td>
+        <td>Vitrine professionnel 3 000 &agrave; 6 000&euro;</td>
+      </tr>
+      <tr>
+        <td><a href="https://seedweb.fr/prix-site-internet/" rel="nofollow noopener" target="_blank" style="color:var(--accent);">SeedWeb</a></td>
+        <td>Agence</td>
+        <td>07/04/2026</td>
+        <td>Vitrine 3 000 &agrave; 8 000&euro; ; e-commerce g&eacute;n&eacute;raliste 8 000 &agrave; 25 000&euro;</td>
+      </tr>
+      <tr>
+        <td><a href="https://amphibee.fr/blog/combien-coute-la-creation-dun-site-vitrine" rel="nofollow noopener" target="_blank" style="color:var(--accent);">AmphiBee</a></td>
+        <td>Agence</td>
+        <td>04/06/2026</td>
+        <td>Vitrine 5 pages sur-mesure d&egrave;s 13 500&euro;</td>
+      </tr>
+      <tr>
+        <td><a href="https://mondevis.com/blog/cout-refonte-site-web/" rel="nofollow noopener" target="_blank" style="color:var(--accent);">Mondevis</a></td>
+        <td>Mise en relation</td>
+        <td>25/07/2025</td>
+        <td>Refonte simple d&egrave;s 4 500&euro;</td>
+      </tr>
+      <tr>
+        <td><a href="https://www.ideagency.fr/blog/prix-refonte-site-internet" rel="nofollow noopener" target="_blank" style="color:var(--accent);">Ideagency</a></td>
+        <td>Agence</td>
+        <td>05/03/2026</td>
+        <td>Refonte 4 000 &agrave; 40 000&euro;</td>
+      </tr>
+      <tr>
+        <td><a href="https://www.shopify.com/fr/blog/prix-site-e-commerce" rel="nofollow noopener" target="_blank" style="color:var(--accent);">Shopify France</a></td>
+        <td>&Eacute;diteur e-commerce</td>
+        <td>13/09/2026</td>
+        <td>Agences Shopify 5 000 &agrave; 20 000&euro;</td>
+      </tr>
+      <tr>
+        <td><a href="https://www.wivoagency.com/cout-developpement-application-web/" rel="nofollow noopener" target="_blank" style="color:var(--accent);">WivoAgency</a></td>
+        <td>Agence</td>
+        <td>2025</td>
+        <td>MVP 5 000 &agrave; 15 000&euro;</td>
+      </tr>
+      <tr>
+        <td><a href="https://digitalunicorn.fr/agence-developpement-de-mvp-minimum-viable-product/" rel="nofollow noopener" target="_blank" style="color:var(--accent);">Digital Unicorn</a></td>
+        <td>Agence</td>
+        <td>non dat&eacute;</td>
+        <td>MVP simple 10 000 &agrave; 25 000&euro;</td>
+      </tr>
+      <tr>
+        <td><a href="https://agence-scroll.com/blog/combien-coute-developpement-saas" rel="nofollow noopener" target="_blank" style="color:var(--accent);">Agence Scroll</a></td>
+        <td>Agence</td>
+        <td>20/04/2026</td>
+        <td>SaaS le plus souvent 15 000 &agrave; 30 000&euro;</td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+
 <!-- VERDICT -->
 <section class="section">
   <div class="verdict">
-    <h3>En moyenne, CC D&eacute;veloppement est 40 &agrave; 60% moins cher qu'une agence classique</h3>
-    <p>Pour une technologie plus moderne, des performances sup&eacute;rieures, et une livraison plus rapide.<br>Sans co&ucirc;ts cach&eacute;s, sans d&eacute;pendance, sans abonnement logiciel.</p>
+    <h3>En moyenne, CC D&eacute;veloppement est 30 &agrave; 50% moins cher qu'une agence sur la cr&eacute;ation de site</h3>
+    <p>Avec une technologie moderne, des performances mesur&eacute;es et des d&eacute;lais fermes publi&eacute;s.<br>Sans co&ucirc;ts cach&eacute;s, sans d&eacute;pendance, sans abonnement logiciel.</p>
   </div>
 
   <div class="callout callout-green">
@@ -921,14 +1030,14 @@ a:hover { opacity:.8; }
       <div style="font-size:15px;color:var(--gray-light);letter-spacing:2px;text-transform:uppercase;">CC D&eacute;veloppement</div>
       <div style="font-size:18px;color:var(--gray-light);margin-top:12px;"><a href="tel:0620262153">06 20 26 21 53</a><br><a href="mailto:canon@ccdeveloppement.eu">canon@ccdeveloppement.eu</a></div>
     </div>
-    <div style="margin-top:40px;font-size:15px;color:var(--gray-light);">Devis gratuit &middot; Sans engagement &middot; 50% d'acompte au d&eacute;marrage &middot; Paiement en 2 ou 3 fois possible</div>
+    <div style="margin-top:40px;font-size:15px;color:var(--gray-light);">Devis gratuit &middot; Sans engagement &middot; Paiement en 3 fois sans frais (40 / 30 / 30)</div>
   </div>
 </section>
 
 <footer class="footer">
   <div class="footer-cal"><a href="https://cal.com/cc-developpement/audit-gratuit" class="btn-cal--outline" data-cal-link="cc-developpement/audit-gratuit" data-cal-config='{"layout":"modal"}'>&#128197; R&eacute;serve ton audit gratuit &mdash; 30 min</a></div>
   CC D&eacute;veloppement &middot; Cyril Canon &middot; SIRET : 444 114 011 &middot; 27 Rue Basse, 34300 Agde<br>&copy; 2026 &mdash; Tous droits r&eacute;serv&eacute;s &middot; <a href="/mentions-legales" style="color:var(--gray-dim);text-decoration:none;">Mentions l&eacute;gales</a> &middot; <a href="/rgpd-confidentialite" style="color:var(--gray-dim);text-decoration:none;">Politique de confidentialit&eacute;</a> &middot; <a href="#" data-cookie-preferences class="footer-cookie-link" style="color:var(--gray-dim);text-decoration:none;">G&eacute;rer mes pr&eacute;f&eacute;rences cookies</a>
-  <div style="margin-top:16px;font-size:13px;color:var(--gray-dim);font-style:italic;">Sources : Barom&egrave;tre Malt 2024, Codeur.fr, SortList, France Num, Journal du Net, BlogDuMod&eacute;rateur.<br>Les fourchettes agences repr&eacute;sentent la m&eacute;diane du march&eacute; fran&ccedil;ais hors &Icirc;le-de-France.</div>
+  <div style="margin-top:16px;font-size:13px;color:var(--gray-dim);font-style:italic;">Sources : Wise, France Num, Codeur.com, Gemeos, iPaoo, SeedWeb, AmphiBee, Mondevis, Ideagency, Shopify, WivoAgency, Digital Unicorn, Agence Scroll (relev&eacute; du 14/10/2026, d&eacute;tail dans la <a href="#methodologie" style="color:var(--gray-dim);">m&eacute;thodologie</a>).</div>
 </footer>
 
 <!-- Cal.com Embed -->
