@@ -16,6 +16,13 @@ CC Développement (SIRET 444 114 011) propose des sites vitrines, e-commerce et 
 
 - [Création de site web à Agde](https://ccdeveloppement.eu/creation-site-web-agde) : sites vitrines et e-commerce optimisés pour les TPE de l'Hérault
 - [Automatisation à Agde et dans l'Hérault](https://ccdeveloppement.eu/automatisation-agde) : automatisation des tâches et des processus pour TPE et PME (n8n, Make, Airtable, IA), dès 500 € HT
+- [Développeur web à Sète](https://ccdeveloppement.eu/developpeur-web-sete) : sites vitrines, réservation, SEO local et automatisation
+- [Développeur web à Marseillan](https://ccdeveloppement.eu/developpeur-web-marseillan) : sites vitrines, réservation, SEO local et automatisation
+- [Développeur web à Mèze](https://ccdeveloppement.eu/developpeur-web-meze) : sites vitrines, réservation, SEO local et automatisation
+- [Développeur web à Pézenas](https://ccdeveloppement.eu/developpeur-web-pezenas) : sites vitrines, réservation, SEO local et automatisation
+- [Développeur web à Vias](https://ccdeveloppement.eu/developpeur-web-vias) : sites vitrines, réservation, SEO local et automatisation
+- [Développeur web à Béziers](https://ccdeveloppement.eu/developpeur-web-beziers) : sites vitrines, réservation, SEO local et automatisation
+- [Développeur web à Montpellier](https://ccdeveloppement.eu/developpeur-web-montpellier) : sites vitrines, réservation, SEO local et automatisation
 - [SEO local Hérault](https://ccdeveloppement.eu/seo-local-herault) : référencement Google Business Profile et positionnement local
 - [Tarifs](https://ccdeveloppement.eu/tarifs) : grille tarifaire transparente : landing page 1 800 € HT, site vitrine avec réservation 2 800 €, refonte 3 500 €, e-commerce 4 500 €, SaaS MVP 8 000 €, plateformes sur-mesure 7 500 à 14 500 €, maintenance 200 à 650 €/mois
 - [AssistPro Business](https://ccdeveloppement.eu/assist-pro-business) : assistant IA pour TPE et indépendants
