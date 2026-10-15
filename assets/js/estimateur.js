@@ -71,7 +71,7 @@ const PRICING = {
   ],
   maintenance: [
     { id:'standard', name:'Essentiel', price:200, annual:2000, desc:'Pour les sites vitrines', features:['Hébergement, SSL et sauvegardes','Surveillance et mises à jour','Petites modifications (1 h/mois)','Support email (48h)'] },
-    { id:'premium', name:'Premium', price:500, annual:5000, desc:'Pour les projets avec backoffice', featured:true, features:['Tout le forfait Essentiel','Maintenance + monitoring','Support prioritaire (24h)','Mises à jour régulières','Bug fixes illimités'] },
+    { id:'premium', name:'Premium', price:350, annual:3500, desc:'Pour les projets avec backoffice', featured:true, features:['Tout le forfait Essentiel','Maintenance + monitoring','Support prioritaire (24h)','Mises à jour régulières','Bug fixes illimités'] },
     { id:'enterprise', name:'Entreprise', price:650, annual:6500, desc:'Pour les plateformes ambitieuses', features:['Tout le forfait Premium','Dédication 8h/mois','Performance optimization','Scaling assistance'] }
   ]
 };
