@@ -246,6 +246,14 @@ a:hover { opacity:.8; }
   .container { max-width: 100%; padding: 20px; }
   body { font-size: 12px; }
 }
+
+/* FAQ visible : texte identique au JSON-LD FAQPage (audit GEO, 27/11/2026) */
+.faq-visible { max-width: 820px; margin: 56px auto 0; }
+.faq-visible h2 { font-size: 28px; font-weight: 700; margin-bottom: 16px; color: var(--white, #fff); }
+.faq-visible details { background: var(--dark-2); border: 1px solid var(--dark-3); border-radius: 12px; padding: 16px 20px; margin-bottom: 10px; }
+.faq-visible summary { cursor: pointer; font-size: 17px; font-weight: 700; color: var(--white, #fff); line-height: 1.5; }
+.faq-visible summary:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; }
+.faq-visible details p { margin-top: 10px; font-size: 16px; line-height: 1.7; color: var(--gray-light); font-weight: 700; }
 </style>
 
 <script type="application/ld+json">
@@ -300,7 +308,7 @@ a:hover { opacity:.8; }
       "name": "Pourquoi CC Développement est-il moins cher qu'une agence web traditionnelle ?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "CC Développement est un studio indépendant à Agde, sans coûts d'agence (commerciaux, locaux prestigieux, hiérarchie). Cyril Canon réalise les projets directement, avec des outils modernes (Next.js, Cloudflare, no-code) qui réduisent le temps de production. Résultat : en moyenne 30 à 50 % moins cher qu'une agence sur la création de site (comparaison au milieu des fourchettes agence publiées, sources listées sur cette page)."
+        "text": "CC Développement est un studio indépendant basé à Agde, sans les coûts d'une agence (commerciaux, locaux, hiérarchie). Cyril Canon réalise lui-même chaque projet avec des outils modernes qui réduisent le temps de production. Résultat : 30 à 50 % moins cher en moyenne sur la création de site, au milieu des fourchettes publiées par les agences."
       }
     },
     {
@@ -308,7 +316,7 @@ a:hover { opacity:.8; }
       "name": "La qualité est-elle équivalente à celle d'une agence ?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Oui, voire supérieure sur les Core Web Vitals (objectif Lighthouse 90+), le SEO local et l'optimisation GEO 2026. Les agences sous-traitent souvent à des juniors ; ici un seul interlocuteur expert pilote et exécute tout le projet."
+        "text": "Sur les points mesurables, oui : chaque site vise un score Lighthouse de 90 ou plus, avec une base de référencement local et des données structurées. La différence tient surtout à l'organisation : un seul interlocuteur conçoit, développe et suit votre projet, sans sous-traitance. Le code source vous est transféré à la livraison, sans dépendance."
       }
     },
     {
@@ -316,7 +324,7 @@ a:hover { opacity:.8; }
       "name": "Quels sont les délais de livraison comparés ?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Chez CC Développement : landing page 2 semaines, site vitrine avec réservation 3 semaines, e-commerce 4 à 6 semaines, SaaS MVP 6 à 8 semaines, plateformes sur-mesure 5 à 12 semaines. Aucune étude publique ne chiffre l'écart de délai entre agence et indépendant, nous ne revendiquons donc pas de ratio."
+        "text": "Chez CC Développement : landing page en 2 semaines, site vitrine avec réservation en 3 semaines, refonte en 3 semaines, e-commerce en 4 à 6 semaines, SaaS MVP en 6 à 8 semaines et plateformes sur-mesure en 5 à 12 semaines. Aucune étude publique ne chiffre l'écart de délai entre agence et indépendant : nous ne revendiquons donc aucun ratio."
       }
     },
     {
@@ -324,7 +332,7 @@ a:hover { opacity:.8; }
       "name": "Y a-t-il des coûts cachés ?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Non. Le devis est forfaitaire et transparent : tout est listé en amont (hébergement, nom de domaine, SEO, maintenance). Aucune surfacturation pour modifications mineures ou demandes courantes."
+        "text": "Non. Le devis est forfaitaire et liste tout en amont : pages, modules, mise en ligne, hébergement offert la première année, maintenance en option. Le nom de domaine reste à votre charge, et c'est écrit. Les petites modifications courantes ne sont pas surfacturées. Une demande nouvelle fait l'objet d'un avenant que vous validez avant tout travail."
       }
     }
   ]
@@ -940,6 +948,16 @@ a:hover { opacity:.8; }
       <li>Un seul interlocuteur de A &agrave; Z, pas de sous-traitance</li>
       <li>Bas&eacute; &agrave; Agde, rencontre en personne possible</li>
     </ul>
+  </div>
+</section>
+
+<section class="section">
+  <div class="faq-visible">
+    <h2>Questions fréquentes</h2>
+    <details><summary>Pourquoi CC Développement est-il moins cher qu'une agence web traditionnelle ?</summary><p>CC Développement est un studio indépendant basé à Agde, sans les coûts d'une agence (commerciaux, locaux, hiérarchie). Cyril Canon réalise lui-même chaque projet avec des outils modernes qui réduisent le temps de production. Résultat : 30 à 50 % moins cher en moyenne sur la création de site, au milieu des fourchettes publiées par les agences.</p></details>
+    <details><summary>La qualité est-elle équivalente à celle d'une agence ?</summary><p>Sur les points mesurables, oui : chaque site vise un score Lighthouse de 90 ou plus, avec une base de référencement local et des données structurées. La différence tient surtout à l'organisation : un seul interlocuteur conçoit, développe et suit votre projet, sans sous-traitance. Le code source vous est transféré à la livraison, sans dépendance.</p></details>
+    <details><summary>Quels sont les délais de livraison comparés ?</summary><p>Chez CC Développement : landing page en 2 semaines, site vitrine avec réservation en 3 semaines, refonte en 3 semaines, e-commerce en 4 à 6 semaines, SaaS MVP en 6 à 8 semaines et plateformes sur-mesure en 5 à 12 semaines. Aucune étude publique ne chiffre l'écart de délai entre agence et indépendant : nous ne revendiquons donc aucun ratio.</p></details>
+    <details><summary>Y a-t-il des coûts cachés ?</summary><p>Non. Le devis est forfaitaire et liste tout en amont : pages, modules, mise en ligne, hébergement offert la première année, maintenance en option. Le nom de domaine reste à votre charge, et c'est écrit. Les petites modifications courantes ne sont pas surfacturées. Une demande nouvelle fait l'objet d'un avenant que vous validez avant tout travail.</p></details>
   </div>
 </section>
 

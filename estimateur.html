@@ -36,7 +36,7 @@
   "url": "https://ccdeveloppement.eu/estimateur",
   "inLanguage": "fr-FR",
   "datePublished": "2026-04-15",
-  "dateModified": "2026-05-17",
+  "dateModified": "2026-11-27",
   "about": {
     "@type": "ProfessionalService",
     "name": "CC Développement",
@@ -265,6 +265,14 @@ body { font-family: 'Morena', sans-serif; font-weight: 700; background: var(--bl
   .summary-total .st-price { color: #000; text-shadow: none; }
   .summary-section-title { color: #666; }
 }
+
+/* FAQ visible : texte identique au JSON-LD FAQPage (audit GEO, 27/11/2026) */
+.faq-visible { max-width: 820px; margin: 56px auto 0; }
+.faq-visible h2 { font-size: 28px; font-weight: 700; margin-bottom: 16px; color: var(--white, #fff); }
+.faq-visible details { background: var(--dark-2); border: 1px solid var(--dark-3); border-radius: 12px; padding: 16px 20px; margin-bottom: 10px; }
+.faq-visible summary { cursor: pointer; font-size: 17px; font-weight: 700; color: var(--white, #fff); line-height: 1.5; }
+.faq-visible summary:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; }
+.faq-visible details p { margin-top: 10px; font-size: 16px; line-height: 1.7; color: var(--gray-light); font-weight: 700; }
 </style>
 
 <script type="application/ld+json">
@@ -277,7 +285,7 @@ body { font-family: 'Morena', sans-serif; font-weight: 700; background: var(--bl
       "name": "Comment fonctionne l'estimateur de projet CC Développement ?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "L'estimateur en ligne pose 5 à 7 questions sur votre projet (type de site, fonctionnalités, design, contenu, délai) et calcule en moins de 2 minutes une fourchette tarifaire précise basée sur la grille tarifaire de CC Développement. Aucune donnée personnelle n'est requise pour obtenir la fourchette."
+        "text": "L'estimateur se remplit en 4 étapes : vous choisissez un forfait de base, ajoutez les modules utiles, puis une formule de maintenance si besoin. Le récapitulatif affiche aussitôt le total HT et TTC, calculé avec la grille tarifaire publique de CC Développement. Aucune donnée personnelle n'est demandée pour voir l'estimation."
       }
     },
     {
@@ -285,7 +293,7 @@ body { font-family: 'Morena', sans-serif; font-weight: 700; background: var(--bl
       "name": "L'estimation tarifaire est-elle fiable ?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Oui, la fourchette correspond à 90 % des projets équivalents déjà réalisés. Pour obtenir un devis ferme et personnalisé, il suffit de transmettre les coordonnées : un devis détaillé est envoyé sous 48h."
+        "text": "Elle reprend les prix publics de la grille tarifaire : c'est un ordre de grandeur sérieux, pas un devis. Le prix ferme dépend de vos contenus, de vos outils et des détails du projet. Depuis le récapitulatif, un bouton prépare un e-mail de demande de devis avec votre sélection, et le devis détaillé arrive sous 48h."
       }
     },
     {
@@ -293,7 +301,7 @@ body { font-family: 'Morena', sans-serif; font-weight: 700; background: var(--bl
       "name": "Quels types de projets l'estimateur couvre-t-il ?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Sites vitrines, sites e-commerce, plateformes sur-mesure, refonte de sites existants, modules d'automatisation IA et SEO local. Pour les projets très spécifiques (SaaS, application mobile, ERP), un échange direct avec Cyril Canon est recommandé."
+        "text": "Le site vitrine de 5 pages et les plateformes sur-mesure PME Standard, PME+ et Entreprise, avec 44 modules en option : e-commerce, multilingue, blog, automatisations n8n, application installable, etc. Pour une landing page, une refonte, une boutique de 30 produits au plus ou un SaaS, consultez la page tarifs ou demandez directement un devis."
       }
     },
     {
@@ -301,7 +309,7 @@ body { font-family: 'Morena', sans-serif; font-weight: 700; background: var(--bl
       "name": "L'utilisation de l'estimateur est-elle gratuite ?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Oui, totalement gratuite et sans inscription préalable. Aucune carte bancaire, aucun abonnement, aucune relance commerciale automatisée."
+        "text": "Oui, elle est gratuite et sans inscription : aucune carte bancaire, aucun compte à créer, aucun abonnement. Vous pouvez tester autant de combinaisons que vous voulez. Vous ne transmettez vos coordonnées que si vous décidez de demander un devis : le bouton ouvre alors un e-mail prérempli dans votre propre messagerie."
       }
     }
   ]
@@ -374,6 +382,13 @@ body { font-family: 'Morena', sans-serif; font-weight: 700; background: var(--bl
     <div class="step-subtitle">Voici le détail de votre projet sur-mesure.</div>
     <div class="summary-card" id="summaryCard"></div>
   </section>
+  <div class="faq-visible">
+    <h2>Questions fréquentes</h2>
+    <details><summary>Comment fonctionne l'estimateur de projet CC Développement ?</summary><p>L'estimateur se remplit en 4 étapes : vous choisissez un forfait de base, ajoutez les modules utiles, puis une formule de maintenance si besoin. Le récapitulatif affiche aussitôt le total HT et TTC, calculé avec la grille tarifaire publique de CC Développement. Aucune donnée personnelle n'est demandée pour voir l'estimation.</p></details>
+    <details><summary>L'estimation tarifaire est-elle fiable ?</summary><p>Elle reprend les prix publics de la grille tarifaire : c'est un ordre de grandeur sérieux, pas un devis. Le prix ferme dépend de vos contenus, de vos outils et des détails du projet. Depuis le récapitulatif, un bouton prépare un e-mail de demande de devis avec votre sélection, et le devis détaillé arrive sous 48h.</p></details>
+    <details><summary>Quels types de projets l'estimateur couvre-t-il ?</summary><p>Le site vitrine de 5 pages et les plateformes sur-mesure PME Standard, PME+ et Entreprise, avec 44 modules en option : e-commerce, multilingue, blog, automatisations n8n, application installable, etc. Pour une landing page, une refonte, une boutique de 30 produits au plus ou un SaaS, consultez la page tarifs ou demandez directement un devis.</p></details>
+    <details><summary>L'utilisation de l'estimateur est-elle gratuite ?</summary><p>Oui, elle est gratuite et sans inscription : aucune carte bancaire, aucun compte à créer, aucun abonnement. Vous pouvez tester autant de combinaisons que vous voulez. Vous ne transmettez vos coordonnées que si vous décidez de demander un devis : le bouton ouvre alors un e-mail prérempli dans votre propre messagerie.</p></details>
+  </div>
 </main>
 
 <div class="price-bar" id="priceBar">

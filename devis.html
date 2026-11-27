@@ -21,7 +21,7 @@
       "description": "Formulaire de demande de devis pour création de site web, SEO local ou automatisation. Réponse sous 48h.",
       "inLanguage": "fr-FR",
       "datePublished": "2026-04-15",
-      "dateModified": "2026-05-17",
+      "dateModified": "2026-11-27",
       "isPartOf": { "@id": "https://ccdeveloppement.eu/#website" },
       "about": { "@id": "https://ccdeveloppement.eu/#organization" },
       "mainEntity": {
@@ -249,6 +249,14 @@ body { font-family: 'Morena', sans-serif; font-weight: 700; background: var(--bl
   .page-aside { grid-template-columns: 1fr; }
   .promises { gap: 12px; }
 }
+
+/* FAQ visible : texte identique au JSON-LD FAQPage (audit GEO, 27/11/2026) */
+.faq-visible { max-width: 820px; margin: 56px auto 0; }
+.faq-visible h2 { font-size: 28px; font-weight: 700; margin-bottom: 16px; color: var(--white, #fff); }
+.faq-visible details { background: var(--dark-2); border: 1px solid var(--dark-3); border-radius: 12px; padding: 16px 20px; margin-bottom: 10px; }
+.faq-visible summary { cursor: pointer; font-size: 17px; font-weight: 700; color: var(--white, #fff); line-height: 1.5; }
+.faq-visible summary:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; }
+.faq-visible details p { margin-top: 10px; font-size: 16px; line-height: 1.7; color: var(--gray-light); font-weight: 700; }
 </style>
 
 <script type="application/ld+json">
@@ -261,7 +269,7 @@ body { font-family: 'Morena', sans-serif; font-weight: 700; background: var(--bl
       "name": "Comment obtenir un devis chez CC Développement ?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Remplissez le formulaire de devis en ligne (5 minutes) en précisant votre projet, vos objectifs et votre budget. Cyril Canon vous recontacte sous 48h ouvrées avec un devis détaillé, transparent et chiffré poste par poste. Vous pouvez aussi réserver un audit gratuit de 30 min en visio sur Cal.com."
+        "text": "Remplissez le formulaire de cette page en 5 minutes : votre projet, vos objectifs et votre budget. Cyril Canon vous recontacte sous 48h ouvrées avec un devis détaillé, chiffré poste par poste. Vous pouvez aussi appeler le 06 20 26 21 53, écrire sur WhatsApp ou réserver un audit gratuit de 30 minutes en visio."
       }
     },
     {
@@ -269,7 +277,7 @@ body { font-family: 'Morena', sans-serif; font-weight: 700; background: var(--bl
       "name": "Le devis est-il gratuit et sans engagement ?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Oui. Le devis est entièrement gratuit, sans aucune obligation d'achat. Vous recevez un PDF détaillé avec le périmètre, les délais, les livrables et le prix forfaitaire. Aucune relance commerciale agressive."
+        "text": "Oui. Le devis est gratuit et ne vous oblige à rien. Vous recevez un PDF qui précise le périmètre, les délais, les éléments à fournir et le prix forfaitaire HT, valable 30 jours. Si vous ne donnez pas suite, vous ne recevez aucune relance commerciale insistante : la décision vous appartient."
       }
     },
     {
@@ -277,7 +285,7 @@ body { font-family: 'Morena', sans-serif; font-weight: 700; background: var(--bl
       "name": "En combien de temps reçoit-on le devis ?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Sous 48h ouvrées après réception de votre demande. Pour les projets complexes, un appel de 30 min de cadrage peut être proposé pour affiner les besoins avant chiffrage."
+        "text": "Sous 48h ouvrées après réception de votre demande. Pour une landing page ou un site vitrine, le formulaire suffit en général à chiffrer le projet. Pour un projet plus complexe, un appel de cadrage de 30 minutes peut être proposé d'abord, afin de préciser vos besoins et de chiffrer au plus juste."
       }
     },
     {
@@ -285,7 +293,7 @@ body { font-family: 'Morena', sans-serif; font-weight: 700; background: var(--bl
       "name": "Quelles informations préparer avant la demande de devis ?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Idéalement : votre activité, votre cible, votre concurrence, des sites web qui vous inspirent, votre budget approximatif et votre échéance souhaitée. Plus le brief est précis, plus le devis sera juste, mais des indications même approximatives suffisent."
+        "text": "Idéalement : votre activité, votre clientèle, vos concurrents, deux ou trois sites qui vous inspirent, votre budget approximatif et la date souhaitée de mise en ligne. Plus le brief est précis, plus le devis est juste. Des indications approximatives suffisent pour commencer : les détails se précisent pendant l'échange."
       }
     },
     {
@@ -293,7 +301,7 @@ body { font-family: 'Morena', sans-serif; font-weight: 700; background: var(--bl
       "name": "Le tarif annoncé sur le devis peut-il évoluer ensuite ?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Non, le devis est forfaitaire et engageant. Le tarif ne change pas, sauf si vous demandez des fonctionnalités supplémentaires non prévues initialement, dans ce cas, un avenant est proposé en transparence."
+        "text": "Non. Le devis est forfaitaire : une fois signé, son prix ne change pas. Seule une demande nouvelle, non prévue au départ, fait l'objet d'un avenant chiffré que vous acceptez ou refusez avant tout travail. Le paiement suit le calendrier annoncé : 40 % à la commande, 30 % en préproduction, 30 % à la mise en ligne."
       }
     }
   ]
@@ -436,6 +444,14 @@ body { font-family: 'Morena', sans-serif; font-weight: 700; background: var(--bl
       <a href="https://cal.com/cc-developpement/audit-gratuit" class="btn-cal" data-cal-link="cc-developpement/audit-gratuit" data-cal-config='{"layout":"modal"}'>📅 Réserve ton audit gratuit (30 min)</a>
     </div>
 
+  <div class="faq-visible">
+    <h2>Questions fréquentes</h2>
+    <details><summary>Comment obtenir un devis chez CC Développement ?</summary><p>Remplissez le formulaire de cette page en 5 minutes : votre projet, vos objectifs et votre budget. Cyril Canon vous recontacte sous 48h ouvrées avec un devis détaillé, chiffré poste par poste. Vous pouvez aussi appeler le 06 20 26 21 53, écrire sur WhatsApp ou réserver un audit gratuit de 30 minutes en visio.</p></details>
+    <details><summary>Le devis est-il gratuit et sans engagement ?</summary><p>Oui. Le devis est gratuit et ne vous oblige à rien. Vous recevez un PDF qui précise le périmètre, les délais, les éléments à fournir et le prix forfaitaire HT, valable 30 jours. Si vous ne donnez pas suite, vous ne recevez aucune relance commerciale insistante : la décision vous appartient.</p></details>
+    <details><summary>En combien de temps reçoit-on le devis ?</summary><p>Sous 48h ouvrées après réception de votre demande. Pour une landing page ou un site vitrine, le formulaire suffit en général à chiffrer le projet. Pour un projet plus complexe, un appel de cadrage de 30 minutes peut être proposé d'abord, afin de préciser vos besoins et de chiffrer au plus juste.</p></details>
+    <details><summary>Quelles informations préparer avant la demande de devis ?</summary><p>Idéalement : votre activité, votre clientèle, vos concurrents, deux ou trois sites qui vous inspirent, votre budget approximatif et la date souhaitée de mise en ligne. Plus le brief est précis, plus le devis est juste. Des indications approximatives suffisent pour commencer : les détails se précisent pendant l'échange.</p></details>
+    <details><summary>Le tarif annoncé sur le devis peut-il évoluer ensuite ?</summary><p>Non. Le devis est forfaitaire : une fois signé, son prix ne change pas. Seule une demande nouvelle, non prévue au départ, fait l'objet d'un avenant chiffré que vous acceptez ou refusez avant tout travail. Le paiement suit le calendrier annoncé : 40 % à la commande, 30 % en préproduction, 30 % à la mise en ligne.</p></details>
+  </div>
     <div class="page-aside">
       <div class="aside-card">
         <h2>Guides utiles</h2>
