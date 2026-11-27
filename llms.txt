@@ -2,15 +2,23 @@
 
 > Studio web indépendant à Agde (Hérault, France) dirigé par Cyril Canon. Spécialisé dans la création de sites web performants, le SEO local et l'automatisation IA pour les TPE, indépendants et PME de l'Hérault et d'Occitanie.
 
-CC Développement (SIREN 444 114 011) propose des sites vitrines, e-commerce et plateformes sur-mesure pour les entreprises de l'Hérault (Agde, Béziers, Sète, Montpellier) et au-delà. Le studio combine création de sites rapides (Core Web Vitals > 90), SEO local optimisé et intégration d'outils d'automatisation IA.
+CC Développement (SIREN 444 114 011) propose des sites vitrines, e-commerce et plateformes sur-mesure pour les entreprises de l'Hérault (Agde, Béziers, Sète, Montpellier) et au-delà. Le studio combine création de sites rapides (objectif Lighthouse 90+), SEO local et intégration d'outils d'automatisation IA.
 
 ## Informations clés
 
-- **Dirigeant** : Cyril Canon
+- **Dirigeant** : Cyril Canon, développeur web freelance ([à propos](https://ccdeveloppement.eu/a-propos))
 - **Localisation** : 27 Rue Basse, 34300 Agde, France
+- **Téléphone** : 06 20 26 21 53 (+33620262153)
+- **E-mail** : canon@ccdeveloppement.eu
+- **Horaires** : du lundi au vendredi, 9h-18h
 - **SIREN** : 444 114 011
 - **Zone d'intervention** : Hérault, Occitanie, France (et remote)
 - **Spécialités** : sites web TPE, SEO local Hérault, automatisation IA, no-code
+
+## À propos et réalisations
+
+- [À propos de Cyril Canon](https://ccdeveloppement.eu/a-propos) : parcours, méthode de travail, compétences et coordonnées
+- [Étude de cas Roz In Winter](https://ccdeveloppement.eu/case-study-roz-in-winter) : refonte du site d'une galerie d'art contemporain à Versailles (Next.js, Supabase, Stripe)
 
 ## Services
 
@@ -31,6 +39,7 @@ CC Développement (SIREN 444 114 011) propose des sites vitrines, e-commerce et 
 
 ## Articles de fond
 
+- [Blog CC Développement](https://ccdeveloppement.eu/blog/)
 - [GEO 2026 : être visible sur ChatGPT, Perplexity et Google AI Overviews](https://ccdeveloppement.eu/blog/seo-ia-chatgpt-perplexity-google-ai-2026)
 - [Création de site internet à Agde : le guide complet 2026](https://ccdeveloppement.eu/blog/creation-site-internet-agde-guide-complet-2026)
 - [SEO local Hérault : guide pour restaurants et artisans](https://ccdeveloppement.eu/blog/seo-local-herault-restaurants-artisans)
@@ -47,6 +56,11 @@ CC Développement (SIREN 444 114 011) propose des sites vitrines, e-commerce et 
 ## Contact
 
 - Site : https://ccdeveloppement.eu/
+- Téléphone : +33620262153
+- E-mail : canon@ccdeveloppement.eu
+- Adresse : 27 Rue Basse, 34300 Agde
+- LinkedIn de Cyril Canon : https://www.linkedin.com/in/cyril-canon-kotylak-4bab9637a
+- GitHub : https://github.com/Titanium1971
 - Devis : https://ccdeveloppement.eu/devis
 - Mentions légales : https://ccdeveloppement.eu/mentions-legales
 - RGPD : https://ccdeveloppement.eu/rgpd-confidentialite

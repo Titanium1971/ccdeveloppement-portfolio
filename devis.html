@@ -23,11 +23,8 @@
       "datePublished": "2026-04-15",
       "dateModified": "2026-11-27",
       "isPartOf": { "@id": "https://ccdeveloppement.eu/#website" },
-      "about": { "@id": "https://ccdeveloppement.eu/#organization" },
-      "mainEntity": {
-        "@type": "Organization",
-        "@id": "https://ccdeveloppement.eu/#organization"
-      }
+      "about": { "@type": "ProfessionalService", "@id": "https://ccdeveloppement.eu/#organization", "name": "CC Développement" },
+      "mainEntity": { "@type": "ProfessionalService", "@id": "https://ccdeveloppement.eu/#organization", "name": "CC Développement" }
     },
     {
       "@type": "BreadcrumbList",
@@ -39,7 +36,7 @@
     {
       "@type": "Service",
       "serviceType": "Création de site web sur mesure",
-      "provider": { "@id": "https://ccdeveloppement.eu/#organization" },
+      "provider": { "@type": "ProfessionalService", "@id": "https://ccdeveloppement.eu/#organization", "name": "CC Développement" },
       "areaServed": { "@type": "Country", "name": "France" },
       "description": "Création de sites vitrines, e-commerce et applications web pour artisans, restaurants et TPE. Devis gratuit sous 48h.",
       "offers": {
@@ -48,7 +45,8 @@
         "priceSpecification": {
           "@type": "PriceSpecification",
           "priceCurrency": "EUR",
-          "minPrice": "900"
+          "minPrice": "1800",
+            "valueAddedTaxIncluded": false
         },
         "availability": "https://schema.org/InStock",
         "validFrom": "2026-01-01"
@@ -113,7 +111,7 @@ body { font-family: 'Morena', sans-serif; font-weight: 700; background: var(--bl
 
 /* NAV */
 .top-nav { position: sticky; top: 0; z-index: 20; background: rgba(9,9,11,0.92); border-bottom: 1px solid rgba(255,255,255,0.06); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); }
-.top-nav-inner { max-width: 1160px; margin: 0 auto; padding: 12px 24px; display: flex; justify-content: space-between; align-items: center; gap: 12px; }
+.top-nav-inner { max-width: 1160px; margin: 0 auto; padding: 12px 24px; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 12px; }
 .top-nav a { color: var(--gray-light); text-decoration: none; font-size: 16px; font-weight: 700; }
 .top-nav a:hover { color: var(--white); }
 
@@ -460,13 +458,13 @@ body { font-family: 'Morena', sans-serif; font-weight: 700; background: var(--bl
       </div>
       <div class="aside-card">
         <h2>Préférez le téléphone ?</h2>
-        <a href="tel:0620262153">06 20 26 21 53</a>
-        <p style="margin-top:6px;font-size:13px;color:var(--gray-dim);">Disponible du lun. au ven. 9h-19h</p>
+        <a href="tel:+33620262153">06 20 26 21 53</a>
+        <p style="margin-top:6px;font-size:13px;color:var(--gray-dim);">Disponible du lun. au ven. 9h-18h</p>
       </div>
       <div class="aside-card">
         <h2>Ou par WhatsApp</h2>
         <a href="https://wa.me/33620262153?text=Bonjour%20Cyril%2C%20je%20souhaite%20un%20devis%20pour%20mon%20projet." target="_blank" rel="noopener noreferrer">Écrire sur WhatsApp →</a>
-        <p style="margin-top:6px;font-size:13px;color:var(--gray-dim);">Réponse rapide garantie</p>
+        <p style="margin-top:6px;font-size:13px;color:var(--gray-dim);">Message direct à Cyril Canon</p>
       </div>
     </div>
 
@@ -477,9 +475,9 @@ body { font-family: 'Morena', sans-serif; font-weight: 700; background: var(--bl
   <div class="footer-cal">
     <a href="https://cal.com/cc-developpement/audit-gratuit" class="btn-cal--outline" data-cal-link="cc-developpement/audit-gratuit" data-cal-config='{"layout":"modal"}'>📅 Réserve ton audit gratuit (30 min)</a>
   </div>
-  CC Développement · Cyril Canon · SIREN : 444 114 011 · 27 Rue Basse, 34300 Agde<br>
+  CC Développement · Cyril Canon · SIREN : 444 114 011 · 27 Rue Basse, 34300 Agde · <a href="tel:+33620262153">06 20 26 21 53</a><br>
   © 2026 · Tous droits réservés ·
-  <a href="/mentions-legales">Mentions légales</a> ·
+  <a href="/a-propos">À propos</a> · <a href="/mentions-legales">Mentions légales</a> ·
   <a href="/rgpd-confidentialite">Politique de confidentialité</a> ·
   <a href="#" data-cookie-preferences class="footer-cookie-link">Gérer mes préférences cookies</a>
 </footer>

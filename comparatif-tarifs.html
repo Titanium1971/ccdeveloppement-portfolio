@@ -262,20 +262,8 @@ a:hover { opacity:.8; }
   "@type": "Article",
   "headline": "Comparatif Tarifs : CC Développement vs Agences Web",
   "description": "Comparatif objectif des tarifs CC Développement vs agences web traditionnelles. Transparence totale sur les prix, délais et services inclus.",
-  "author": {
-    "@type": "Person",
-    "name": "Cyril Canon",
-    "url": "https://ccdeveloppement.eu/"
-  },
-  "publisher": {
-    "@type": "Organization",
-    "name": "CC Developpement",
-    "url": "https://ccdeveloppement.eu/",
-    "logo": {
-      "@type": "ImageObject",
-      "url": "https://ccdeveloppement.eu/Images/cc-developpement-logo-horizontal.svg"
-    }
-  },
+  "author": {"@type": "Person", "@id": "https://ccdeveloppement.eu/#cyril-canon", "name": "Cyril Canon", "url": "https://ccdeveloppement.eu/a-propos"},
+  "publisher": {"@type": "Organization", "@id": "https://ccdeveloppement.eu/#organization", "name": "CC Développement", "logo": {"@type": "ImageObject", "url": "https://ccdeveloppement.eu/android-chrome-512x512.png", "width": 512, "height": 512}},
   "datePublished": "2026-04-15",
   "dateModified": "2026-11-27",
   "mainEntityOfPage": {
@@ -365,12 +353,13 @@ a:hover { opacity:.8; }
 
 <div class="container">
 
-<p class="intro-text">Ce document compare les tarifs de CC D&eacute;veloppement avec les prix moyens pratiqu&eacute;s par les agences web en France (petites, moyennes et grandes agences). Fourchettes agence relev&eacute;es le 14 octobre 2026 dans des sources publiques dat&eacute;es, d&eacute;taill&eacute;es dans la <a href="#methodologie" style="color:var(--accent);">m&eacute;thodologie</a>.</p>
+<p class="intro-text">Ce document compare les tarifs de CC D&eacute;veloppement avec les fourchettes de prix publi&eacute;es pour les agences web en France (petites, moyennes et grandes agences). Fourchettes agence relev&eacute;es le 27 novembre 2026 dans des sources publiques dat&eacute;es, d&eacute;taill&eacute;es dans la <a href="#methodologie" style="color:var(--accent);">m&eacute;thodologie</a>.</p>
 
 <!-- 1. FORFAITS DE BASE -->
 <section class="section">
   <div class="section-label">01</div>
   <div class="section-title">Forfaits de base <span class="accent">(cr&eacute;ation de site)</span></div>
+  <p class="citable" style="max-width:820px;margin:0 0 24px;color:#B6B6C0;font-size:16px;line-height:1.75;text-align:left;font-weight:400;">CC Développement est le studio de Cyril Canon, développeur web freelance à Agde (Hérault). Pour la création de site, ses prix hors taxes se situent en moyenne 30 à 50 % sous le milieu des fourchettes publiées pour les agences françaises, relevées le 27 novembre 2026 (voir la méthodologie). Exemples : landing page à 1 800 € en 2 semaines, site vitrine de 5 pages avec réservation à 2 800 € en 3 semaines, refonte à 3 500 € en 3 semaines, boutique jusqu'à 30 produits à 4 500 € en 4 à 6 semaines et première version SaaS à 8 000 € en 6 à 8 semaines. L'écart n'est pas uniforme : il est faible face à une agence d'entrée de gamme et peut s'inverser sur les plateformes de 20 pages et plus. La maintenance, de 200 à 650 € HT par mois, n'entre pas dans ce chiffre.</p>
 
   <table class="data-table">
     <thead>
@@ -717,7 +706,7 @@ a:hover { opacity:.8; }
       <tr>
         <td>Performance</td>
         <td>Variable selon le th&egrave;me et les plugins</td>
-        <td class="cc-val">&lt; 2s de chargement, objectif Lighthouse 90+</td>
+        <td class="cc-val">Objectif Lighthouse 90+</td>
       </tr>
       <tr>
         <td>H&eacute;bergement</td>
@@ -732,7 +721,7 @@ a:hover { opacity:.8; }
       <tr>
         <td>Scalabilit&eacute;</td>
         <td>Limit&eacute; au serveur, migration co&ucirc;teuse</td>
-        <td class="cc-val">Serverless, auto-scale, 10 000+ users natif</td>
+        <td class="cc-val">Serverless, mont&eacute;e en charge automatique</td>
       </tr>
       <tr>
         <td>S&eacute;curit&eacute;</td>
@@ -742,7 +731,7 @@ a:hover { opacity:.8; }
       <tr>
         <td>SEO</td>
         <td>Plugins SEO (Yoast), structured data manuelle</td>
-        <td class="cc-val">SSR/SSG natif, structured data auto, Core Web Vitals optimaux</td>
+        <td class="cc-val">SSR/SSG natif, structured data auto, Core Web Vitals suivis</td>
       </tr>
       <tr>
         <td>Propri&eacute;t&eacute; du code</td>
@@ -758,8 +747,8 @@ a:hover { opacity:.8; }
   </table>
 
   <div class="callout callout-red">
-    <h4>Le vrai co&ucirc;t d'un site WordPress en agence</h4>
-    <p>Au-del&agrave; du prix initial, les agences WordPress ajoutent des co&ucirc;ts cach&eacute;s : licence th&egrave;me premium (50-200&euro;/an), plugins payants (SEO, s&eacute;curit&eacute;, cache : 200-500&euro;/an), h&eacute;bergement d&eacute;di&eacute; (15-50&euro;/mois), maintenance plugins/mises &agrave; jour (obligatoire sous peine de failles de s&eacute;curit&eacute;). Sur 3 ans, le co&ucirc;t total d'un site WordPress en agence est souvent 2x le prix initial.</p>
+    <h4>Les co&ucirc;ts r&eacute;currents d'un site WordPress</h4>
+    <p>Au-del&agrave; du prix initial, un site WordPress peut entra&icirc;ner des co&ucirc;ts r&eacute;currents : licence de th&egrave;me premium, extensions payantes (SEO, s&eacute;curit&eacute;, cache), h&eacute;bergement et mises &agrave; jour des extensions, n&eacute;cessaires pour &eacute;viter les failles de s&eacute;curit&eacute;. Demandez le d&eacute;tail de ces postes avant de signer.</p>
   </div>
 </section>
 
@@ -772,7 +761,7 @@ a:hover { opacity:.8; }
     <thead>
       <tr>
         <th>Indicateur</th>
-        <th>Agence classique (m&eacute;diane)</th>
+        <th>Agence (milieu de fourchette)</th>
         <th class="col-cc">CC D&eacute;veloppement</th>
       </tr>
     </thead>
@@ -815,7 +804,7 @@ a:hover { opacity:.8; }
       <tr>
         <td>Co&ucirc;ts r&eacute;currents cach&eacute;s</td>
         <td>Licences de plugins et th&egrave;mes, selon le site</td>
-        <td class="cc-val">0&euro; (open source)</td>
+        <td class="cc-val">Aucune licence de th&egrave;me ou de plugin ; domaine et maintenance annonc&eacute;s</td>
       </tr>
     </tbody>
   </table>
@@ -934,15 +923,15 @@ a:hover { opacity:.8; }
 <section class="section">
   <div class="verdict">
     <h3>En moyenne, CC D&eacute;veloppement est 30 &agrave; 50% moins cher qu'une agence sur la cr&eacute;ation de site</h3>
-    <p>Avec une technologie moderne, des performances mesur&eacute;es et des d&eacute;lais fermes publi&eacute;s.<br>Sans co&ucirc;ts cach&eacute;s, sans d&eacute;pendance, sans abonnement logiciel.</p>
+    <p>Avec une technologie moderne, des performances mesur&eacute;es et des d&eacute;lais fermes publi&eacute;s.<br>Sans co&ucirc;ts cach&eacute;s, sans d&eacute;pendance, sans licence de th&egrave;me ou de plugin.</p>
   </div>
 
   <div class="callout callout-green">
-    <h4>Ce que vous obtenez chez CC D&eacute;veloppement et pas en agence</h4>
+    <h4>Ce que vous obtenez chez CC D&eacute;veloppement</h4>
     <ul class="final-list">
       <li>Technologie Next.js/TypeScript (pas un WordPress customis&eacute;)</li>
       <li>Objectif Lighthouse 90+</li>
-      <li>Architecture scalable jusqu'&agrave; 10 000+ utilisateurs</li>
+      <li>Architecture serverless qui s'adapte &agrave; la charge</li>
       <li>Automatisations IA et N8N int&eacute;gr&eacute;es (pas de SaaS externe)</li>
       <li>Code source 100% transf&eacute;r&eacute;, aucune d&eacute;pendance</li>
       <li>Un seul interlocuteur de A &agrave; Z, pas de sous-traitance</li>
@@ -972,7 +961,7 @@ a:hover { opacity:.8; }
     <div class="cta-box">
       <div style="font-size:28px;color:var(--accent);">Cyril Canon</div>
       <div style="font-size:15px;color:var(--gray-light);letter-spacing:2px;text-transform:uppercase;">CC D&eacute;veloppement</div>
-      <div style="font-size:18px;color:var(--gray-light);margin-top:12px;"><a href="tel:0620262153">06 20 26 21 53</a><br><a href="mailto:canon@ccdeveloppement.eu">canon@ccdeveloppement.eu</a></div>
+      <div style="font-size:18px;color:var(--gray-light);margin-top:12px;"><a href="tel:+33620262153">06 20 26 21 53</a><br><a href="mailto:canon@ccdeveloppement.eu">canon@ccdeveloppement.eu</a></div>
     </div>
     <div style="margin-top:40px;font-size:15px;color:var(--gray-light);">Devis gratuit &middot; Sans engagement &middot; Paiement en 3 fois sans frais (40 / 30 / 30)</div>
   </div>
@@ -980,7 +969,7 @@ a:hover { opacity:.8; }
 
 <footer class="footer">
   <div class="footer-cal"><a href="https://cal.com/cc-developpement/audit-gratuit" class="btn-cal--outline" data-cal-link="cc-developpement/audit-gratuit" data-cal-config='{"layout":"modal"}'>&#128197; R&eacute;serve ton audit gratuit (30 min)</a></div>
-  CC D&eacute;veloppement &middot; Cyril Canon &middot; SIREN : 444 114 011 &middot; 27 Rue Basse, 34300 Agde<br>&copy; 2026 · Tous droits r&eacute;serv&eacute;s &middot; <a href="/mentions-legales" style="color:var(--gray-dim);text-decoration:none;">Mentions l&eacute;gales</a> &middot; <a href="/rgpd-confidentialite" style="color:var(--gray-dim);text-decoration:none;">Politique de confidentialit&eacute;</a> &middot; <a href="#" data-cookie-preferences class="footer-cookie-link" style="color:var(--gray-dim);text-decoration:none;">G&eacute;rer mes pr&eacute;f&eacute;rences cookies</a>
+  CC D&eacute;veloppement &middot; Cyril Canon &middot; SIREN : 444 114 011 &middot; 27 Rue Basse, 34300 Agde · <a href="tel:+33620262153" style="color:var(--gray-dim);text-decoration:none;">06 20 26 21 53</a><br>&copy; 2026 · Tous droits r&eacute;serv&eacute;s &middot; <a href="/a-propos" style="color:var(--gray-dim);text-decoration:none;">À propos</a> · <a href="/mentions-legales" style="color:var(--gray-dim);text-decoration:none;">Mentions l&eacute;gales</a> &middot; <a href="/rgpd-confidentialite" style="color:var(--gray-dim);text-decoration:none;">Politique de confidentialit&eacute;</a> &middot; <a href="#" data-cookie-preferences class="footer-cookie-link" style="color:var(--gray-dim);text-decoration:none;">G&eacute;rer mes pr&eacute;f&eacute;rences cookies</a>
   <div style="margin-top:16px;font-size:13px;color:var(--gray-dim);font-style:italic;">Sources : Wise, France Num, Codeur.com, Gemeos, iPaoo, SeedWeb, AmphiBee, Mondevis, Ideagency, Shopify, WivoAgency, Digital Unicorn, FlexiApps, Int&eacute;gral, L&eacute;o Marchal (relev&eacute; du 27/11/2026, d&eacute;tail dans la <a href="#methodologie" style="color:var(--gray-dim);">m&eacute;thodologie</a>).</div>
 </footer>
 

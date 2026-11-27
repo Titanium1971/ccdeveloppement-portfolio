@@ -4,8 +4,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="format-detection" content="telephone=no">
-<title>Cyril Canon | Développeur Web & Automatisation | CC Développement</title>
-<meta name="description" content="Ex-pilote automobile devenu développeur web & expert automatisation. Sites sur-mesure, SEO, IA et solutions digitales pour professionnels. Basé à Agde, Hérault.">
+<title>Développeur web à Agde : site, SEO, IA | CC Développement</title>
+<meta name="description" content="Cyril Canon, développeur web à Agde (Hérault) : sites sur-mesure, SEO local, automatisation et IA pour les TPE et PME. Audit gratuit de 30 minutes.">
 <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
 <link rel="canonical" href="https://ccdeveloppement.eu/">
 <meta name="author" content="Cyril Canon">
@@ -15,20 +15,20 @@
 <link rel="shortcut icon" href="./favicon.ico?v=4">
 <link rel="apple-touch-icon" href="./apple-touch-icon.png?v=4">
 <link rel="manifest" href="./site.webmanifest">
-<link rel="preload" href="./Images/Cyril-Canon-portrait-640.webp" as="image" type="image/webp">
+<link rel="preload" href="./Images/Cyril-Canon-portrait-640.webp" imagesrcset="./Images/Cyril-Canon-portrait-240.webp 240w, ./Images/Cyril-Canon-portrait-640.webp 480w" imagesizes="(max-width: 900px) 120px, 160px" as="image" type="image/webp">
 <link rel="preload" href="./fonts/Morena-Embedded.otf" as="font" type="font/otf" crossorigin>
 <link rel="preload" href="./fonts/Morena-SemiBold-Embedded.otf" as="font" type="font/otf" crossorigin>
 <link rel="preload" href="./fonts/Morena-Bold-Embedded.otf" as="font" type="font/otf" crossorigin>
 <meta property="og:locale" content="fr_FR">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Cyril Canon - Developpeur Web & Automatisation | CC Developpement">
-<meta property="og:description" content="Developpeur web et expert automatisation base a Agde. Creation de sites web, SEO local, IA et automatisations pour professionnels.">
+<meta property="og:title" content="Développeur web à Agde : site, SEO, IA | CC Développement">
+<meta property="og:description" content="Développeur web et expert automatisation basé à Agde. Création de sites web, SEO local, IA et automatisations pour les professionnels.">
 <meta property="og:url" content="https://ccdeveloppement.eu/">
 <meta property="og:image" content="https://ccdeveloppement.eu/og-image.jpg">
 <meta property="og:site_name" content="CC Développement">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Cyril Canon - Developpeur Web & Automatisation">
-<meta name="twitter:description" content="Sites web sur-mesure, automatisations, SEO local et IA pour professionnels a Agde et en Occitanie.">
+<meta name="twitter:title" content="Cyril Canon : développeur web et automatisation">
+<meta name="twitter:description" content="Sites web sur-mesure, automatisations, SEO local et IA pour les professionnels à Agde et en Occitanie.">
 <meta name="twitter:image" content="https://ccdeveloppement.eu/og-image.jpg">
 <link rel="preconnect" href="https://app.cal.com">
 <meta name="geo.region" content="FR-34">
@@ -40,7 +40,10 @@
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": "Organization",
+      "@type": [
+        "Organization",
+        "ProfessionalService"
+      ],
       "@id": "https://ccdeveloppement.eu/#organization",
       "name": "CC Développement",
       "alternateName": "CC Developpement",
@@ -48,51 +51,22 @@
       "url": "https://ccdeveloppement.eu/",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://ccdeveloppement.eu/Images/cc-developpement-logo-horizontal.svg",
+        "url": "https://ccdeveloppement.eu/android-chrome-512x512.png",
         "width": 512,
-        "height": 256
+        "height": 512
       },
       "image": "https://ccdeveloppement.eu/og-image.jpg",
+      "description": "CC Développement crée des sites web performants, optimisés pour le SEO local, et des automatisations avec l'IA pour les artisans, restaurants et TPE de l'Hérault et de France.",
       "email": "canon@ccdeveloppement.eu",
       "telephone": "+33620262153",
-      "taxID": "444114011",
+      "identifier": {
+        "@type": "PropertyValue",
+        "propertyID": "SIREN",
+        "value": "444114011"
+      },
       "founder": {
-        "@type": "Person",
-        "name": "Cyril Canon",
-        "jobTitle": "Développeur web freelance & entrepreneur",
-        "sameAs": "https://www.linkedin.com/in/cyril-canon-kotylak-4bab9637a"
+        "@id": "https://ccdeveloppement.eu/#cyril-canon"
       },
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "27 Rue Basse",
-        "postalCode": "34300",
-        "addressLocality": "Agde",
-        "addressRegion": "Occitanie",
-        "addressCountry": "FR"
-      },
-      "contactPoint": {
-        "@type": "ContactPoint",
-        "telephone": "+33620262153",
-        "email": "canon@ccdeveloppement.eu",
-        "contactType": "customer service",
-        "areaServed": "FR",
-        "availableLanguage": ["French", "English"]
-      },
-      "sameAs": [
-        "https://www.linkedin.com/in/cyril-canon-kotylak-4bab9637a",
-        "https://github.com/Titanium1971"
-      ],
-      "description": "CC Développement crée des sites web performants, optimisés pour le SEO local, pour artisans, restaurants et TPE dans l'Hérault et en France."
-    },
-    {
-      "@type": ["ProfessionalService", "LocalBusiness"],
-      "@id": "https://ccdeveloppement.eu/#localbusiness",
-      "name": "CC Développement",
-      "image": "https://ccdeveloppement.eu/og-image.jpg",
-      "url": "https://ccdeveloppement.eu/",
-      "telephone": "+33620262153",
-      "email": "canon@ccdeveloppement.eu",
-      "parentOrganization": { "@id": "https://ccdeveloppement.eu/#organization" },
       "address": {
         "@type": "PostalAddress",
         "streetAddress": "27 Rue Basse",
@@ -106,44 +80,114 @@
         "latitude": 43.3107,
         "longitude": 3.4731
       },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+33620262153",
+        "email": "canon@ccdeveloppement.eu",
+        "contactType": "customer service",
+        "areaServed": "FR",
+        "availableLanguage": [
+          "French",
+          "English"
+        ]
+      },
       "areaServed": [
-        { "@type": "City", "name": "Agde" },
-        { "@type": "City", "name": "Cap d'Agde" },
-        { "@type": "City", "name": "Béziers" },
-        { "@type": "City", "name": "Sète" },
-        { "@type": "City", "name": "Marseillan" },
-        { "@type": "AdministrativeArea", "name": "Hérault" },
-        { "@type": "AdministrativeArea", "name": "Occitanie" },
-        { "@type": "Country", "name": "France" }
+        {
+          "@type": "City",
+          "name": "Agde"
+        },
+        {
+          "@type": "City",
+          "name": "Cap d'Agde"
+        },
+        {
+          "@type": "City",
+          "name": "Vias"
+        },
+        {
+          "@type": "City",
+          "name": "Marseillan"
+        },
+        {
+          "@type": "City",
+          "name": "Mèze"
+        },
+        {
+          "@type": "City",
+          "name": "Pézenas"
+        },
+        {
+          "@type": "City",
+          "name": "Sète"
+        },
+        {
+          "@type": "City",
+          "name": "Béziers"
+        },
+        {
+          "@type": "City",
+          "name": "Montpellier"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Hérault"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Occitanie"
+        },
+        {
+          "@type": "Country",
+          "name": "France"
+        }
+      ],
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday"
+          ],
+          "opens": "09:00",
+          "closes": "18:00"
+        }
       ],
       "priceRange": "€€",
       "currenciesAccepted": "EUR",
       "paymentAccepted": "Virement bancaire, Carte bancaire",
-      "openingHoursSpecification": [{
-        "@type": "OpeningHoursSpecification",
-        "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
-        "opens": "09:00",
-        "closes": "18:00"
-      }],
       "hasOfferCatalog": {
         "@type": "OfferCatalog",
         "name": "Services CC Développement",
         "itemListElement": [
           {
             "@type": "Offer",
-            "itemOffered": { "@type": "Service", "name": "Création de site web", "description": "Sites vitrines et e-commerce pour TPE, artisans, restaurants." }
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Création de site web",
+              "description": "Sites vitrines et e-commerce pour TPE, artisans, restaurants."
+            }
           },
           {
             "@type": "Offer",
-            "itemOffered": { "@type": "Service", "name": "SEO local", "description": "Référencement Google local, fiche Google Business Profile, contenus géolocalisés." }
+            "itemOffered": {
+              "@type": "Service",
+              "name": "SEO local",
+              "description": "Référencement Google local, fiche Google Business Profile, contenus géolocalisés."
+            }
           },
           {
             "@type": "Offer",
-            "itemOffered": { "@type": "Service", "name": "Automatisation & IA", "description": "Automatisation de processus métier, intégrations Make/Zapier, solutions IA." }
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Automatisation et IA",
+              "description": "Automatisation de processus métier avec n8n et Make, solutions IA."
+            }
           }
         ]
       },
-      "description": "Développement web, automatisation, SEO local et solutions IA pour professionnels.",
       "knowsAbout": [
         "Développement web",
         "SEO local",
@@ -151,8 +195,37 @@
         "Intelligence artificielle",
         "Google Business Profile",
         "Next.js",
-        "Astro",
-        "WordPress"
+        "Astro"
+      ],
+      "sameAs": [
+        "https://github.com/Titanium1971"
+      ]
+    },
+    {
+      "@type": "Person",
+      "@id": "https://ccdeveloppement.eu/#cyril-canon",
+      "name": "Cyril Canon",
+      "url": "https://ccdeveloppement.eu/a-propos",
+      "image": "https://ccdeveloppement.eu/Images/Cyril-Canon-portrait-640.jpg",
+      "jobTitle": "Développeur web freelance",
+      "worksFor": {
+        "@id": "https://ccdeveloppement.eu/#organization"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/in/cyril-canon-kotylak-4bab9637a"
+      ],
+      "alumniOf": {
+        "@type": "EducationalOrganization",
+        "name": "École Cube"
+      },
+      "knowsAbout": [
+        "Développement web",
+        "SEO local",
+        "Automatisation",
+        "Intelligence artificielle",
+        "Next.js",
+        "n8n",
+        "Make"
       ]
     },
     {
@@ -161,7 +234,23 @@
       "url": "https://ccdeveloppement.eu/",
       "name": "CC Développement",
       "inLanguage": "fr-FR",
-      "publisher": { "@id": "https://ccdeveloppement.eu/#organization" }
+      "publisher": {
+        "@id": "https://ccdeveloppement.eu/#organization"
+      }
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://ccdeveloppement.eu/#webpage",
+      "url": "https://ccdeveloppement.eu/",
+      "name": "Cyril Canon | Développeur Web & Automatisation | CC Développement",
+      "isPartOf": {
+        "@id": "https://ccdeveloppement.eu/#website"
+      },
+      "about": {
+        "@id": "https://ccdeveloppement.eu/#organization"
+      },
+      "inLanguage": "fr-FR",
+      "dateModified": "2026-11-27"
     }
   ]
 }
@@ -177,7 +266,7 @@
       "name": "Qui est CC Développement ?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "CC Développement est un studio web indépendant basé à Agde dans l'Hérault, dirigé par Cyril Canon (SIREN 444 114 011). Il conçoit des sites web sur-mesure, optimise le SEO local et automatise les processus avec l'IA pour les TPE, indépendants et PME de l'Hérault et d'Occitanie."
+        "text": "CC Développement est un studio web indépendant basé à Agde dans l'Hérault, dirigé par Cyril Canon (SIREN 444 114 011), développeur web freelance. Il conçoit des sites web sur-mesure, travaille le SEO local et automatise les processus avec l'IA pour les TPE, indépendants et PME de l'Hérault et d'Occitanie."
       }
     },
     {
@@ -185,7 +274,7 @@
       "name": "Quels services propose CC Développement ?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Création de sites vitrines et e-commerce performants (Core Web Vitals > 90), référencement local Google Business Profile, automatisation IA avec AssistPro Business, audits SEO et accompagnement stratégique. Tous les projets sont chiffrés en amont avec un devis transparent sous 48h."
+        "text": "CC Développement crée des sites vitrines et e-commerce (objectif Lighthouse 90+), travaille le référencement local et la fiche Google Business Profile, met en place des automatisations et l'assistant WhatsApp AssistPro Business, et réalise des audits SEO. Chaque projet est chiffré en amont, avec un devis détaillé envoyé sous 48h."
       }
     },
     {
@@ -193,7 +282,7 @@
       "name": "Combien coûte un site web avec CC Développement ?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Les offres démarrent à 1 800 € HT pour une landing page, 2 800 € pour un site vitrine avec réservation, 3 500 € pour une refonte, 4 500 € pour un e-commerce jusqu'à 30 produits et 8 000 € pour une première version d'application SaaS. Les plateformes sur-mesure vont de 7 500 à 14 500 € HT et plus. La grille tarifaire complète est disponible sur la page Tarifs et un estimateur en ligne donne une fourchette en moins de 2 minutes."
+        "text": "Les prix publics démarrent à 1 800 € HT pour une landing page, 2 800 € pour un site vitrine avec réservation, 3 500 € pour une refonte, 4 500 € pour un e-commerce jusqu'à 30 produits et 8 000 € pour un SaaS MVP. L'estimateur en ligne affiche le total HT et TTC en 4 étapes."
       }
     },
     {
@@ -201,7 +290,7 @@
       "name": "Quelle zone géographique CC Développement couvre-t-il ?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "L'agence est basée à Agde et intervient en priorité dans tout l'Hérault (Agde, Béziers, Sète, Montpellier, Pézenas, Marseillan) et l'Occitanie. Les missions à distance sont également proposées partout en France, avec rendez-vous en visio."
+        "text": "CC Développement est basé au 27 Rue Basse à Agde et intervient en priorité dans l'Hérault : Agde, Cap d'Agde, Vias, Marseillan, Mèze, Pézenas, Sète, Béziers et Montpellier, puis dans toute l'Occitanie. Des missions à distance sont aussi proposées partout en France, avec des rendez-vous en visio."
       }
     },
     {
@@ -209,15 +298,15 @@
       "name": "Combien de temps prend la création d'un site web ?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Une landing page est livrée en 2 semaines, un site vitrine avec réservation ou une refonte en 3 semaines, un e-commerce en 4 à 6 semaines et une application SaaS en 6 à 8 semaines, selon la complexité et la réactivité du client. Chaque projet inclut un planning détaillé et des points hebdomadaires."
+        "text": "Une landing page est livrée en 2 semaines, un site vitrine avec réservation ou une refonte en 3 semaines, un e-commerce en 4 à 6 semaines et un SaaS MVP en 6 à 8 semaines. Les plateformes sur-mesure demandent 5 à 12 semaines. Le délai réel dépend aussi de la complexité et de la réactivité du client."
       }
     },
     {
       "@type": "Question",
-      "name": "Le site web est-il optimisé pour le SEO et les moteurs IA ?",
+      "name": "Le site est-il optimisé pour le SEO et les moteurs IA ?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Oui. Tous les sites créés intègrent les bonnes pratiques SEO classique (Core Web Vitals, Schema.org, contenu géolocalisé) et GEO 2026 (structures Q/R, FAQ Schema, robots.txt explicite pour bots IA, llms.txt) afin d'apparaître à la fois dans Google, ChatGPT, Perplexity et Google AI Overviews."
+        "text": "Oui. Les sites créés intègrent les bonnes pratiques SEO (Core Web Vitals, Schema.org, contenu géolocalisé) et GEO : questions et réponses, FAQ balisée, robots.txt ouvert aux robots IA et fichier llms.txt. Aucun classement ni aucune citation par un moteur ne peut être garanti. Voir notre guide GEO 2026."
       }
     },
     {
@@ -225,7 +314,7 @@
       "name": "Comment réserver un audit gratuit avec Cyril Canon ?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Un audit stratégique gratuit de 30 minutes est proposé via Cal.com (https://cal.com/cc-developpement/audit-gratuit). Le rendez-vous se déroule en visio et inclut une analyse de la présence en ligne actuelle, des recommandations concrètes et un devis sous 48h si suite à donner."
+        "text": "Un audit stratégique gratuit de 30 minutes se réserve en ligne via Cal.com. Le rendez-vous se déroule en visio et comprend une analyse de votre présence en ligne actuelle et des recommandations concrètes. Si vous souhaitez donner suite, un devis détaillé vous est envoyé sous 48h, sans engagement."
       }
     },
     {
@@ -233,7 +322,7 @@
       "name": "CC Développement propose-t-il de l'automatisation IA ?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Oui, via l'offre AssistPro Business : un assistant IA configuré sur-mesure pour automatiser les réponses clients, la qualification de leads et les workflows internes. Compatible WhatsApp, email et formulaires web, il est conçu spécifiquement pour les TPE et indépendants."
+        "text": "Oui. CC Développement met en place des automatisations avec n8n, Make et l'IA (relances, réservations, factures, avis Google, CRM), à partir de 500 € HT pour une automatisation simple. L'offre AssistPro Business ajoute un assistant IA sur WhatsApp pour répondre aux clients et gérer les réservations des TPE et indépendants."
       }
     }
   ]
@@ -932,6 +1021,11 @@ footer {
 footer a { color: var(--gray); text-decoration: none; }
 footer a:hover { color: var(--accent); }
 
+.citable { max-width: 820px; margin-top: 24px; font-size: 17px; line-height: 1.8; color: var(--gray); font-weight: 400; }
+.citable a, .wa-demo-note a { color: var(--accent); }
+.wa-demo-note { max-width: 560px; margin: 16px auto 0; font-size: 14px; line-height: 1.6; color: var(--gray-light); font-weight: 400; }
+.footer-links { margin-bottom: 16px; font-size: 15px; line-height: 2; }
+
 /* ANIMATIONS */
 .reveal { opacity: 1; transform: none; filter: none; }
 .js .reveal { opacity: 0; transform: translateY(24px); filter: none; transition: opacity 0.45s ease, transform 0.45s ease; }
@@ -1361,7 +1455,7 @@ footer a:hover { color: var(--accent); }
         Des sites web et de l'automatisation<br>
         <span class="line2">qui </span><span class="accent">génèrent des clients</span>
       </h1>
-      <p class="hero-desc">CC Développement accompagne les commerces locaux avec des sites performants, du SEO local et un assistant WhatsApp IA unique en son genre.</p>
+      <p class="hero-desc">CC Développement, le studio de Cyril Canon à Agde, accompagne les commerces locaux avec des sites performants, du SEO local, de l'automatisation et un assistant WhatsApp IA.</p>
       <div class="hero-actions">
         <a href="https://cal.com/cc-developpement/audit-gratuit" class="btn-primary" data-cal-link="cc-developpement/audit-gratuit" data-cal-config='{"layout":"modal"}'>Obtenir un audit gratuit</a>
         <a href="#projets" class="btn-secondary">Voir nos réalisations</a>
@@ -1376,8 +1470,8 @@ footer a:hover { color: var(--accent); }
     </div><!-- /hero-right-col -->
     <div class="hero-stats">
       <div>
-        <div class="hero-stat-value">8<span class="unit">+</span></div>
-        <div class="hero-stat-label">Sites créés</div>
+        <div class="hero-stat-value">8</div>
+        <div class="hero-stat-label">Projets présentés</div>
       </div>
       <div>
         <div class="hero-stat-value">90<span class="unit">+</span></div>
@@ -1440,7 +1534,7 @@ footer a:hover { color: var(--accent); }
         <div class="wa-demo-card">
           <div class="wa-demo-card-icon">🤖</div>
           <div class="wa-demo-card-title">Réponse instantanée</div>
-          <div class="wa-demo-card-desc">Votre assistant répond en moins de 3 secondes, même à 3h du matin.</div>
+          <div class="wa-demo-card-desc">Votre assistant répond automatiquement, même à 3h du matin.</div>
         </div>
         <div class="wa-demo-card">
           <div class="wa-demo-card-icon">📅</div>
@@ -1459,6 +1553,7 @@ footer a:hover { color: var(--accent); }
         <svg width="20" height="20" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
         Testez l'assistant maintenant
       </a>
+      <p class="wa-demo-note">Le 09 39 24 50 43 est le numéro de démonstration de l'assistant IA (AssistPro Business), pas un numéro de contact. Pour me joindre : <a href="tel:+33620262153">06 20 26 21 53</a>.</p>
     </div>
   </div>
 </section>
@@ -1468,7 +1563,7 @@ footer a:hover { color: var(--accent); }
   <div class="section-container">
     <div class="section-tag reveal">Mon parcours</div>
     <h2 class="section-heading reveal">De la piste<br><span class="muted">au digital.</span></h2>
-    <p class="section-desc reveal">La même discipline qu'en compétition, appliquée à votre business: plus de visibilité locale, plus de demandes entrantes, plus de régularité.</p>
+    <p class="section-desc reveal">La même discipline qu'en compétition, appliquée à votre business : plus de visibilité locale, plus de demandes entrantes, plus de régularité.</p>
     <div class="parcours-timeline reveal">
       <div class="parcours-step" data-step="01">
         <div class="step-photo">
@@ -1526,6 +1621,7 @@ footer a:hover { color: var(--accent); }
         </div>
       </div>
     </div>
+    <p class="reveal"><a class="proof-link" href="/a-propos">En savoir plus sur Cyril Canon : parcours, méthode et coordonnées →</a></p>
   </div>
 </section>
 
@@ -1534,7 +1630,8 @@ footer a:hover { color: var(--accent); }
   <div class="section-container">
     <div class="section-tag reveal">Réalisations</div>
     <h2 class="section-heading reveal">Projets<br><span class="muted">sélectionnés.</span></h2>
-    <p class="section-desc reveal">Ici, pas de site vitrine "joli mais inutile". Chaque projet vise des résultats concrets: visibilité Google locale, crédibilité, appels et devis.</p>
+    <p class="section-desc reveal">Ici, pas de site vitrine "joli mais inutile". Chaque projet vise des résultats concrets : visibilité Google locale, crédibilité, appels et devis.</p>
+    <p class="citable reveal">Les réalisations de CC Développement, studio web basé à Agde, sont consultables en ligne. Pour Roz In Winter, galerie d'art contemporain au 59 rue Royale à Versailles, un site Webador a été remplacé par une plateforme Next.js, Supabase et Stripe, livrée en 2,5 mois : 261 œuvres, 29 artistes, 12 langues, un back-office de 34 sections et des automatisations n8n. Une <a href="/case-study-roz-in-winter">étude de cas détaillée</a> est publiée. À Agde, le restaurant La Marina dispose de la réservation en ligne, d'une carte modifiable depuis un back-office et d'un site en 5 langues. Le Divino, restaurant de cuisine française place Jean Jaurès, dispose d'un site avec un back-office de 14 modules, d'un menu QR à table et d'un écran d'affichage en salle. Artimon Bike, loueur de vélos, a également son site en ligne. Pour votre propre site, le forfait refonte est à 3 500 € HT, avec un délai de 3 semaines ; les projets plus larges sont étudiés sur devis.</p>
     <div class="showreel reveal">
       <video autoplay muted loop playsinline preload="metadata" poster="./assets/video/showreel-ccdev-poster.jpg" aria-label="Showreel CC Développement : Roz In Winter, La Marina, Artimon Bike">
         <source src="./assets/video/showreel-ccdev.mp4" type="video/mp4">
@@ -1676,8 +1773,8 @@ footer a:hover { color: var(--accent); }
           <div class="project-title">Artimon Bike</div>
           <div class="project-desc">Site vitrine SEO-optimisé pour location de vélos électriques à Marseillan. Rich snippets, schema.org, Google Business Profile intégré. Objectif de performance : Lighthouse 90+.</div>
           <div class="project-stack">
-            <span class="stack-tag">React</span>
-            <span class="stack-tag">Cloudflare Pages</span>
+            <span class="stack-tag">Next.js</span>
+            <span class="stack-tag">Vercel</span>
             <span class="stack-tag">Schema.org</span>
             <span class="stack-tag">SEO Local</span>
           </div>
@@ -1725,7 +1822,7 @@ footer a:hover { color: var(--accent); }
             <span class="stack-tag">Next.js</span>
             <span class="stack-tag">Claude Code</span>
             <span class="stack-tag">Cloudflare</span>
-            <span class="stack-tag">MongoDB</span>
+            <span class="stack-tag">Supabase</span>
           </div>
           <div class="project-metrics">
             <div class="metric"><strong>-30 à 50%</strong> vs agence</div>
@@ -1743,7 +1840,8 @@ footer a:hover { color: var(--accent); }
   <div class="section-container">
     <div class="section-tag reveal">Services</div>
     <h2 class="section-heading reveal">Ce que je<br><span class="muted">peux faire pour vous.</span></h2>
-    <p class="section-desc reveal">Interlocuteur unique, exécution rapide, zéro coûts cachés: une alternative claire aux agences lourdes et plus chères.</p>
+    <p class="section-desc reveal">Interlocuteur unique, exécution rapide, zéro coût caché : une alternative claire aux agences lourdes et plus chères.</p>
+    <p class="citable reveal">CC Développement est le studio de Cyril Canon, développeur web freelance installé à Agde, dans l'Hérault. Il conçoit des sites et des automatisations pour les TPE, les commerces, les restaurants et les PME. Les prix sont publics : une landing page coûte 1 800 € HT et se livre en 2 semaines, un site vitrine de 5 pages avec réservation 2 800 € HT en 3 semaines, une refonte 3 500 € HT en 3 semaines, un e-commerce jusqu'à 30 produits 4 500 € HT en 4 à 6 semaines et un SaaS MVP 8 000 € HT en 6 à 8 semaines. Une automatisation simple démarre à 500 € HT. Le devis est envoyé sous 48h. Le paiement se fait en trois fois : 40 % à la commande, 30 % en préproduction et 30 % à la mise en ligne. L'hébergement de la première année est offert, le nom de domaine reste à votre charge et le code source vous est transféré à la livraison.</p>
     <div class="services-grid reveal">
       <div class="service-card">
         <div class="service-icon">🌐</div>
@@ -1784,7 +1882,7 @@ footer a:hover { color: var(--accent); }
       <div class="service-card">
         <div class="service-icon">📈</div>
         <div class="service-title">Google Ads : Campagnes publicitaires</div>
-        <div class="service-desc">Campagnes Google Ads rentables pour générer des leads rapidement. Création, gestion et optimisation de vos annonces Google.</div>
+        <div class="service-desc">Campagnes Google Ads pour générer des demandes de clients. Création, gestion et optimisation de vos annonces Google.</div>
         <div class="service-price">Dégressif : 25% à 10% du budget pub (min. 250€/mois)</div>
       </div>
     </div>
@@ -1822,7 +1920,7 @@ footer a:hover { color: var(--accent); }
     <h2 class="section-heading reveal">Derniers articles<br><span class="muted">du blog.</span></h2>
     <div class="blog-preview-grid reveal">
       <a href="/blog/creation-site-internet-agde-guide-complet-2026" class="blog-preview-card">
-        <img src="./Images/blog-creation-site.webp" alt="Création de site internet à Agde" class="blog-preview-img" loading="lazy">
+        <img src="./Images/blog-creation-site.webp" width="1280" height="720" alt="Création de site internet à Agde" class="blog-preview-img" loading="lazy">
         <div class="blog-preview-content">
           <span class="blog-preview-tag">Création web</span>
           <h3>Création de site internet à Agde : le guide complet 2026</h3>
@@ -1831,7 +1929,7 @@ footer a:hover { color: var(--accent); }
         </div>
       </a>
       <a href="/blog/seo-local-herault-restaurants-artisans" class="blog-preview-card">
-        <img src="./Images/blog-seo-local.webp" alt="SEO local Hérault restaurants artisans" class="blog-preview-img" loading="lazy">
+        <img src="./Images/blog-seo-local.webp" width="1280" height="720" alt="SEO local Hérault restaurants artisans" class="blog-preview-img" loading="lazy">
         <div class="blog-preview-content">
           <span class="blog-preview-tag">SEO local</span>
           <h3>SEO local dans l'Hérault : le guide pour restaurants et artisans</h3>
@@ -1840,7 +1938,7 @@ footer a:hover { color: var(--accent); }
         </div>
       </a>
       <a href="/blog/combien-coute-site-vitrine-tpe-2026" class="blog-preview-card">
-        <img src="./Images/blog-tarifs-site.webp" alt="Tarifs site vitrine TPE 2026" class="blog-preview-img" loading="lazy">
+        <img src="./Images/blog-tarifs-site.webp" width="1280" height="720" alt="Tarifs site vitrine TPE 2026" class="blog-preview-img" loading="lazy">
         <div class="blog-preview-content">
           <span class="blog-preview-tag">Tarifs</span>
           <h3>Combien coûte un site vitrine pour TPE en 2026 ?</h3>
@@ -1862,7 +1960,7 @@ footer a:hover { color: var(--accent); }
       <div class="stack-item"><span class="stack-item-dot" style="background:var(--blue)"></span> React</div>
       <div class="stack-item"><span class="stack-item-dot" style="background:var(--green)"></span> Node.js</div>
       <div class="stack-item"><span class="stack-item-dot" style="background:var(--amber)"></span> Cloudflare Pages</div>
-      <div class="stack-item"><span class="stack-item-dot" style="background:var(--green)"></span> MongoDB</div>
+      <div class="stack-item"><span class="stack-item-dot" style="background:var(--green)"></span> Supabase</div>
       <div class="stack-item"><span class="stack-item-dot" style="background:var(--purple)"></span> Claude Code</div>
       <div class="stack-item"><span class="stack-item-dot" style="background:var(--blue)"></span> Tailwind CSS</div>
       <div class="stack-item"><span class="stack-item-dot" style="background:var(--accent)"></span> Make.com</div>
@@ -1888,9 +1986,9 @@ footer a:hover { color: var(--accent); }
     <p class="section-desc reveal">Des pages conçues pour convertir et se positionner sur des recherches locales à forte intention.</p>
     <div class="proofs-grid reveal">
       <article class="proof-card">
-        <div class="proof-kpi">95+</div>
+        <div class="proof-kpi">98/100</div>
         <h3 class="proof-title">Performance mesurée</h3>
-        <p class="proof-desc">Sites optimisés Core Web Vitals avec chargement rapide et structure SEO propre.</p>
+        <p class="proof-desc">Page d'accueil, PageSpeed Insights (Lighthouse), mesure de laboratoire du 27/11/2026 : Performance 98 sur mobile, 100 sur ordinateur. Pas encore de données terrain.</p>
       </article>
       <article class="proof-card">
         <div class="proof-kpi">Agde</div>
@@ -1913,37 +2011,37 @@ footer a:hover { color: var(--accent); }
   <div class="section-container">
     <div class="section-tag reveal">Nouveau</div>
     <h2 class="section-heading reveal">Un assistant IA<br><span class="muted">sur WhatsApp.</span></h2>
-    <p class="section-desc reveal">Votre assistant professionnel disponible 24h/24 sur WhatsApp. Il gere vos reservations, repond a vos clients, et vous envoie un briefing chaque matin.</p>
+    <p class="section-desc reveal">Votre assistant professionnel disponible 24h/24 sur WhatsApp. Il gère vos réservations, répond à vos clients et vous envoie un briefing chaque matin.</p>
     <div class="wa-features-grid reveal">
       <div class="wa-feature">
         <div class="wa-feature-icon">📅</div>
-        <div class="wa-feature-title">Reservations automatiques</div>
-        <div class="wa-feature-desc">Vos clients reservent directement via WhatsApp. L'assistant gere les creneaux, confirmations et rappels.</div>
+        <div class="wa-feature-title">Réservations automatiques</div>
+        <div class="wa-feature-desc">Vos clients réservent directement via WhatsApp. L'assistant gère les créneaux, confirmations et rappels.</div>
       </div>
       <div class="wa-feature">
         <div class="wa-feature-icon">📱</div>
-        <div class="wa-feature-title">Posts reseaux sociaux</div>
-        <div class="wa-feature-desc">Generez vos publications Instagram et Facebook en un message. Texte, hashtags et timing optimises.</div>
+        <div class="wa-feature-title">Posts réseaux sociaux</div>
+        <div class="wa-feature-desc">Générez vos publications Instagram et Facebook en un message. Texte, hashtags et timing optimisés.</div>
       </div>
       <div class="wa-feature">
         <div class="wa-feature-icon">⭐</div>
         <div class="wa-feature-title">Avis Google</div>
-        <div class="wa-feature-desc">Suivi et reponses aux avis clients. L'assistant vous alerte et propose des reponses adaptees.</div>
+        <div class="wa-feature-desc">Suivi et réponses aux avis clients. L'assistant vous alerte et propose des réponses adaptées.</div>
       </div>
       <div class="wa-feature">
         <div class="wa-feature-icon">☀️</div>
-        <div class="wa-feature-title">Resume matinal</div>
-        <div class="wa-feature-desc">Chaque matin, recevez un briefing: reservations du jour, taches, meteo, evenements locaux.</div>
+        <div class="wa-feature-title">Résumé matinal</div>
+        <div class="wa-feature-desc">Chaque matin, recevez un briefing : réservations du jour, tâches, météo, événements locaux.</div>
       </div>
       <div class="wa-feature">
         <div class="wa-feature-icon">💬</div>
-        <div class="wa-feature-title">Reponses clients 24/7</div>
-        <div class="wa-feature-desc">L'assistant repond aux questions frequentes de vos clients meme en dehors de vos horaires.</div>
+        <div class="wa-feature-title">Réponses clients 24/7</div>
+        <div class="wa-feature-desc">L'assistant répond aux questions fréquentes de vos clients, même en dehors de vos horaires.</div>
       </div>
       <div class="wa-feature">
         <div class="wa-feature-icon">📊</div>
         <div class="wa-feature-title">Tableau de bord</div>
-        <div class="wa-feature-desc">Statistiques de frequentation, reservations et interactions directement dans votre conversation.</div>
+        <div class="wa-feature-desc">Statistiques de fréquentation, réservations et interactions directement dans votre conversation.</div>
       </div>
     </div>
     <div class="wa-cta-block reveal">
@@ -1952,6 +2050,7 @@ footer a:hover { color: var(--accent); }
         <svg width="20" height="20" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
         Tester l'assistant WhatsApp
       </a>
+      <p class="wa-demo-note">Le 09 39 24 50 43 est le numéro de démonstration de l'assistant IA (AssistPro Business), pas un numéro de contact. Pour me joindre : <a href="tel:+33620262153">06 20 26 21 53</a>.</p>
     </div>
   </div>
 </section>
@@ -1964,35 +2063,35 @@ footer a:hover { color: var(--accent); }
     <div class="faq-list reveal">
       <details class="faq-item">
         <summary><h3>Qui est CC Développement ?</h3></summary>
-        <p>CC Développement est un studio web indépendant basé à Agde dans l'Hérault, dirigé par Cyril Canon (SIREN 444 114 011). Il conçoit des sites web sur-mesure, optimise le SEO local et automatise les processus avec l'IA pour les TPE, indépendants et PME de l'Hérault et d'Occitanie.</p>
+        <p>CC Développement est un studio web indépendant basé à Agde dans l'Hérault, dirigé par Cyril Canon (SIREN 444 114 011), développeur web freelance. Il conçoit des sites web sur-mesure, travaille le SEO local et automatise les processus avec l'IA pour les TPE, indépendants et PME de l'Hérault et d'Occitanie.</p>
       </details>
       <details class="faq-item">
         <summary><h3>Quels services propose CC Développement ?</h3></summary>
-        <p>Création de sites vitrines et e-commerce performants (Core Web Vitals > 90), référencement local Google Business Profile, automatisation IA avec AssistPro Business, audits SEO et accompagnement stratégique. Tous les projets sont chiffrés en amont avec un devis transparent sous 48h.</p>
+        <p>CC Développement crée des sites vitrines et e-commerce (objectif Lighthouse 90+), travaille le référencement local et la fiche Google Business Profile, met en place des automatisations et l'assistant WhatsApp AssistPro Business, et réalise des audits SEO. Chaque projet est chiffré en amont, avec un devis détaillé envoyé sous 48h.</p>
       </details>
       <details class="faq-item">
         <summary><h3>Combien coûte un site web avec CC Développement ?</h3></summary>
-        <p>Les offres démarrent à 1 800 € HT pour une landing page, 2 800 € pour un site vitrine avec réservation, 3 500 € pour une refonte, 4 500 € pour un e-commerce jusqu'à 30 produits et 8 000 € pour une première version d'application SaaS. Les plateformes sur-mesure vont de 7 500 à 14 500 € HT et plus. La <a href="/tarifs">grille tarifaire complète</a> est disponible et un <a href="/estimateur">estimateur en ligne</a> donne une fourchette en moins de 2 minutes.</p>
+        <p>Les <a href="/tarifs">prix publics</a> démarrent à 1 800 € HT pour une landing page, 2 800 € pour un site vitrine avec réservation, 3 500 € pour une refonte, 4 500 € pour un e-commerce jusqu'à 30 produits et 8 000 € pour un SaaS MVP. L'<a href="/estimateur">estimateur en ligne</a> affiche le total HT et TTC en 4 étapes.</p>
       </details>
       <details class="faq-item">
         <summary><h3>Quelle zone géographique CC Développement couvre-t-il ?</h3></summary>
-        <p>L'agence est basée à Agde et intervient en priorité dans tout l'Hérault (Agde, Béziers, Sète, Montpellier, Pézenas, Marseillan) et l'Occitanie. Les missions à distance sont également proposées partout en France, avec rendez-vous en visio.</p>
+        <p>CC Développement est basé au 27 Rue Basse à Agde et intervient en priorité dans l'Hérault : Agde, Cap d'Agde, Vias, Marseillan, Mèze, Pézenas, Sète, Béziers et Montpellier, puis dans toute l'Occitanie. Des missions à distance sont aussi proposées partout en France, avec des rendez-vous en visio.</p>
       </details>
       <details class="faq-item">
         <summary><h3>Combien de temps prend la création d'un site web ?</h3></summary>
-        <p>Une landing page est livrée en 2 semaines, un site vitrine avec réservation ou une refonte en 3 semaines, un e-commerce en 4 à 6 semaines et une application SaaS en 6 à 8 semaines, selon la complexité et la réactivité du client. Chaque projet inclut un planning détaillé et des points hebdomadaires.</p>
+        <p>Une landing page est livrée en 2 semaines, un site vitrine avec réservation ou une refonte en 3 semaines, un e-commerce en 4 à 6 semaines et un SaaS MVP en 6 à 8 semaines. Les plateformes sur-mesure demandent 5 à 12 semaines. Le délai réel dépend aussi de la complexité et de la réactivité du client.</p>
       </details>
       <details class="faq-item">
         <summary><h3>Le site est-il optimisé pour le SEO et les moteurs IA ?</h3></summary>
-        <p>Oui. Tous les sites créés intègrent les bonnes pratiques SEO classique (Core Web Vitals, Schema.org, contenu géolocalisé) et GEO 2026 (structures Q/R, FAQ Schema, robots.txt explicite pour bots IA, llms.txt). Voir notre <a href="/blog/seo-ia-chatgpt-perplexity-google-ai-2026">guide GEO 2026</a>.</p>
+        <p>Oui. Les sites créés intègrent les bonnes pratiques SEO (Core Web Vitals, Schema.org, contenu géolocalisé) et GEO : questions et réponses, FAQ balisée, robots.txt ouvert aux robots IA et fichier llms.txt. Aucun classement ni aucune citation par un moteur ne peut être garanti. Voir notre <a href="/blog/seo-ia-chatgpt-perplexity-google-ai-2026">guide GEO 2026</a>.</p>
       </details>
       <details class="faq-item">
         <summary><h3>Comment réserver un audit gratuit avec Cyril Canon ?</h3></summary>
-        <p>Un audit stratégique gratuit de 30 minutes est proposé via <a href="https://cal.com/cc-developpement/audit-gratuit" data-cal-link="cc-developpement/audit-gratuit" data-cal-config='{"layout":"modal"}'>Cal.com</a>. Le rendez-vous se déroule en visio et inclut une analyse de la présence en ligne actuelle, des recommandations concrètes et un devis sous 48h.</p>
+        <p>Un audit stratégique gratuit de 30 minutes se réserve en ligne via <a href="https://cal.com/cc-developpement/audit-gratuit" data-cal-link="cc-developpement/audit-gratuit" data-cal-config='{"layout":"modal"}'>Cal.com</a>. Le rendez-vous se déroule en visio et comprend une analyse de votre présence en ligne actuelle et des recommandations concrètes. Si vous souhaitez donner suite, un devis détaillé vous est envoyé sous 48h, sans engagement.</p>
       </details>
       <details class="faq-item">
         <summary><h3>CC Développement propose-t-il de l'automatisation IA ?</h3></summary>
-        <p>Oui, via l'offre <a href="/assist-pro-business">AssistPro Business</a> : un assistant IA configuré sur-mesure pour automatiser les réponses clients, la qualification de leads et les workflows internes. Compatible WhatsApp, email et formulaires web, conçu spécifiquement pour les TPE et indépendants.</p>
+        <p>Oui. CC Développement met en place des automatisations avec n8n, Make et l'IA (relances, réservations, factures, avis Google, CRM), à partir de 500 € HT pour une automatisation simple. L'offre <a href="/assist-pro-business">AssistPro Business</a> ajoute un assistant IA sur WhatsApp pour répondre aux clients et gérer les réservations des TPE et indépendants.</p>
       </details>
     </div>
   </div>
@@ -2029,7 +2128,7 @@ footer a:hover { color: var(--accent); }
 <!-- MAP -->
 <section class="map-section">
   <div class="map-container">
-    <iframe data-src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2893.5!2d3.4731!3d43.3107!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12b1a8f5b4f5f5f5%3A0x0!2s27+Rue+Basse%2C+34300+Agde!5e0!3m2!1sfr!2sfr!4v1" title="Carte Google Maps - CC Developpement a Agde" allowfullscreen loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+    <iframe data-src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2893.5!2d3.4731!3d43.3107!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12b1a8f5b4f5f5f5%3A0x0!2s27+Rue+Basse%2C+34300+Agde!5e0!3m2!1sfr!2sfr!4v1" title="Carte Google Maps : CC Développement à Agde" allowfullscreen loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
   </div>
 </section>
 
@@ -2039,7 +2138,9 @@ footer a:hover { color: var(--accent); }
   <div class="footer-cal">
     <a href="https://cal.com/cc-developpement/audit-gratuit" class="btn-cal--outline" data-cal-link="cc-developpement/audit-gratuit" data-cal-config='{"layout":"modal"}'>📅 Réserve ton audit gratuit (30 min)</a>
   </div>
-  <p>© 2026 CC Développement · Cyril Canon · SIREN : 444 114 011 · 27 Rue Basse, 34300 Agde · <a href="/mentions-legales">Mentions légales</a> · <a href="/rgpd-confidentialite">Politique de confidentialité</a> · <a href="#" data-cookie-preferences class="footer-cookie-link">Gérer mes préférences cookies</a></p>
+  <p class="footer-links"><a href="/developpeur-web-sete">Développeur web à Sète</a> · <a href="/developpeur-web-marseillan">Développeur web à Marseillan</a> · <a href="/developpeur-web-meze">Développeur web à Mèze</a> · <a href="/developpeur-web-pezenas">Développeur web à Pézenas</a> · <a href="/developpeur-web-vias">Développeur web à Vias</a> · <a href="/developpeur-web-beziers">Développeur web à Béziers</a> · <a href="/developpeur-web-montpellier">Développeur web à Montpellier</a></p>
+  <p class="footer-links"><a href="/creation-site-web-agde">Création de site web à Agde</a> · <a href="/seo-local-herault">SEO local dans l'Hérault</a> · <a href="/automatisation-agde">Automatisation à Agde</a> · <a href="/a-propos">À propos</a></p>
+  <p>© 2026 CC Développement · Cyril Canon · SIREN : 444 114 011 · 27 Rue Basse, 34300 Agde · <a href="tel:+33620262153">06 20 26 21 53</a> · <a href="/mentions-legales">Mentions légales</a> · <a href="/rgpd-confidentialite">Politique de confidentialité</a> · <a href="#" data-cookie-preferences class="footer-cookie-link">Gérer mes préférences cookies</a></p>
 </footer>
 
 <!-- MOBILE STICKY CAL.COM BAR -->

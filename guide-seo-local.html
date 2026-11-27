@@ -4,8 +4,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="format-detection" content="telephone=no">
-<title>Guide Gratuit : 7 Erreurs SEO Local qui Coulent les TPE | CC Développement</title>
-<meta name="description" content="Téléchargez le guide gratuit des 7 erreurs SEO local les plus fréquentes chez les TPE en 2026. Exemples concrets dans l'Hérault et solutions actionnables.">
+<title>Guide SEO local gratuit : 7 erreurs | CC Développement</title>
+<meta name="description" content="Guide gratuit : 7 erreurs SEO local des TPE en 2026, avec des exemples dans l'Hérault et des solutions à appliquer. Par CC Développement, à Agde.">
 <meta name="robots" content="index,follow">
 <link rel="canonical" href="https://ccdeveloppement.eu/guide-seo-local">
 <meta name="theme-color" content="#09090B">
@@ -17,12 +17,14 @@
 <link rel="preload" href="./fonts/Morena-Bold-Embedded.otf" as="font" type="font/otf" crossorigin>
 <meta property="og:locale" content="fr_FR">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Guide Gratuit : 7 Erreurs SEO Local qui Coulent les TPE">
-<meta property="og:description" content="Téléchargez le guide gratuit. 7 erreurs concrètes + solutions actionnables pour les TPE de l'Hérault.">
+<meta property="og:title" content="Guide SEO local gratuit : 7 erreurs des TPE">
+<meta property="og:description" content="Guide gratuit : 7 erreurs SEO local des TPE en 2026, avec des exemples dans l'Hérault et des solutions à appliquer. Par CC Développement, à Agde.">
 <meta property="og:url" content="https://ccdeveloppement.eu/guide-seo-local">
 <meta property="og:image" content="https://ccdeveloppement.eu/og-image.jpg">
 <meta property="og:site_name" content="CC Développement">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Guide SEO local gratuit : 7 erreurs des TPE">
+<meta name="twitter:description" content="Guide gratuit : 7 erreurs SEO local des TPE en 2026, avec des exemples dans l'Hérault et des solutions à appliquer. Par CC Développement, à Agde.">
 <meta name="twitter:image" content="https://ccdeveloppement.eu/og-image.jpg">
 <link rel="preconnect" href="https://app.cal.com">
 <script type="application/ld+json">
@@ -33,16 +35,9 @@
   "description": "Guide pratique des 7 erreurs SEO local les plus fréquentes en 2026, avec exemples concrets dans l'Hérault.",
   "url": "https://ccdeveloppement.eu/guide-seo-local",
   "datePublished": "2026-04-15",
-  "dateModified": "2026-05-17",
-  "author": {
-    "@type": "Person",
-    "name": "Cyril Canon",
-    "url": "https://ccdeveloppement.eu/"
-  },
-  "publisher": {
-    "@type": "Organization",
-    "name": "CC Developpement"
-  }
+  "dateModified": "2026-11-27",
+  "author": {"@type": "Person", "@id": "https://ccdeveloppement.eu/#cyril-canon", "name": "Cyril Canon", "url": "https://ccdeveloppement.eu/a-propos"},
+  "publisher": {"@type": "Organization", "@id": "https://ccdeveloppement.eu/#organization", "name": "CC Développement", "logo": {"@type": "ImageObject", "url": "https://ccdeveloppement.eu/android-chrome-512x512.png", "width": 512, "height": 512}}
 }
 </script>
 <style>
@@ -64,7 +59,7 @@ a:hover{opacity:.8;}
 
 /* NAV */
 .top-nav{position:sticky;top:0;z-index:20;background:rgba(9,9,11,0.92);backdrop-filter:blur(12px);border-bottom:1px solid rgba(255,255,255,0.06);}
-.top-nav-inner{max-width:960px;margin:0 auto;padding:12px 24px;display:flex;justify-content:space-between;align-items:center;gap:12px;}
+.top-nav-inner{max-width:960px;margin:0 auto;padding:12px 24px;display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:12px;}
 .top-nav a{color:var(--gray-light);text-decoration:none;font-size:16px;}
 .top-nav a:hover{color:var(--white);}
 .top-nav .cta{background:var(--accent);color:var(--black);padding:12px 18px;border-radius:10px;font-size:16px;}
@@ -132,11 +127,6 @@ a:hover{opacity:.8;}
 .toc-text{font-size:16px;color:var(--gray-light);line-height:1.5;}
 .toc-text strong{color:var(--white);display:block;margin-bottom:4px;}
 
-/* SOCIAL PROOF */
-.proof{padding:60px 0;text-align:center;}
-.proof-stats{display:flex;justify-content:center;gap:48px;flex-wrap:wrap;margin-top:24px;}
-.proof-stat .num{font-size:36px;color:var(--accent);}
-.proof-stat .label{font-size:14px;color:var(--gray-light);margin-top:4px;}
 
 /* CTA BOTTOM */
 .cta-bottom{padding:80px 0;background:var(--dark);text-align:center;position:relative;overflow:hidden;}
@@ -158,7 +148,6 @@ a:hover{opacity:.8;}
 @media(max-width:600px){
   .hero{padding:80px 0 40px;}
   .form-card{padding:28px 20px;}
-  .proof-stats{gap:24px;}
   .benefits-grid{grid-template-columns:1fr;}
   .pdf-frame{max-width:200px;padding:24px 20px;}
 }
@@ -237,16 +226,17 @@ a:hover{opacity:.8;}
 <section class="benefits">
   <div class="container">
     <h2 style="text-align:center;font-size:28px;">Dans ce guide, tu vas découvrir</h2>
+    <p class="citable" style="max-width:820px;margin:16px auto 32px;color:#B6B6C0;font-size:16px;line-height:1.75;text-align:center;font-weight:400;">Ce guide gratuit est rédigé par Cyril Canon, de CC Développement, studio web installé à Agde, dans l'Hérault. Il s'adresse aux restaurateurs, artisans, commerçants et indépendants qui veulent être trouvés sur Google par les clients de leur zone : fiche Google Business Profile, vitesse sur mobile, pages locales, avis, cohérence du nom, de l'adresse et du téléphone, contenu et suivi. Il est envoyé par e-mail, sans frais, après inscription au formulaire. Si tu préfères être accompagné, un audit SEO local de 30 minutes en visio est gratuit. La base de référencement local est incluse dans chaque site créé par CC Développement, dès 1 800 € HT pour une landing page livrée en 2 semaines. Une page locale supplémentaire, rédigée et optimisée pour un service ou une ville, coûte 500 € HT. Le devis est envoyé sous 48h. Aucun classement sur Google n'est promis.</p>
     <div class="benefits-grid">
       <div class="benefit-card">
         <div class="benefit-icon">1</div>
         <div class="benefit-title">7 erreurs concrètes</div>
-        <div class="benefit-desc">Pas de théorie vague : chaque erreur est illustrée avec un cas réel de TPE dans l'Hérault.</div>
+        <div class="benefit-desc">Pas de théorie vague : chaque erreur est illustrée par un exemple local et sa solution.</div>
       </div>
       <div class="benefit-card">
         <div class="benefit-icon">2</div>
         <div class="benefit-title">Solutions actionnables</div>
-        <div class="benefit-desc">Pour chaque erreur, un plan d'action en 5 étapes que tu peux appliquer dès aujourd'hui.</div>
+        <div class="benefit-desc">Pour chaque erreur, des actions que tu peux appliquer dès aujourd'hui.</div>
       </div>
       <div class="benefit-card">
         <div class="benefit-icon">3</div>
@@ -264,19 +254,19 @@ a:hover{opacity:.8;}
     <ol class="toc-list">
       <li class="toc-item">
         <span class="toc-num">01</span>
-        <div class="toc-text"><strong>Fiche Google Business incomplète</strong>Pourquoi 60 % des fiches GBP de l'Hérault ratent le pack local</div>
+        <div class="toc-text"><strong>Fiche Google Business incomplète</strong>Les champs à compléter pour viser le pack local</div>
       </li>
       <li class="toc-item">
         <span class="toc-num">02</span>
-        <div class="toc-text"><strong>Site non optimisé mobile</strong>8 secondes de chargement = 78 % de rebond</div>
+        <div class="toc-text"><strong>Site non optimisé mobile</strong>Quand la lenteur sur mobile fait partir les visiteurs</div>
       </li>
       <li class="toc-item">
         <span class="toc-num">03</span>
-        <div class="toc-text"><strong>Pas de pages locales ciblées</strong>Comment un électricien a x3 son trafic avec 5 pages</div>
+        <div class="toc-text"><strong>Pas de pages locales ciblées</strong>Pourquoi une seule page ne couvre pas plusieurs villes</div>
       </li>
       <li class="toc-item">
         <span class="toc-num">04</span>
-        <div class="toc-text"><strong>Avis Google négligés</strong>Pourquoi 87 avis battent 12 avis mieux notés</div>
+        <div class="toc-text"><strong>Avis Google négligés</strong>Collecter des avis et y répondre</div>
       </li>
       <li class="toc-item">
         <span class="toc-num">05</span>
@@ -284,34 +274,13 @@ a:hover{opacity:.8;}
       </li>
       <li class="toc-item">
         <span class="toc-num">06</span>
-        <div class="toc-text"><strong>Aucun contenu local</strong>+160 % de trafic avec 4 articles de blog</div>
+        <div class="toc-text"><strong>Aucun contenu local</strong>Quels sujets locaux publier sur ton site</div>
       </li>
       <li class="toc-item">
         <span class="toc-num">07</span>
-        <div class="toc-text"><strong>Pas de suivi des performances</strong>200 €/mois de pub jetés par la fenêtre</div>
+        <div class="toc-text"><strong>Pas de suivi des performances</strong>Mesurer avant de payer de la publicité</div>
       </li>
     </ol>
-  </div>
-</section>
-
-<!-- SOCIAL PROOF -->
-<section class="proof">
-  <div class="container">
-    <h2 style="font-size:24px;color:var(--gray-light);">CC Développement en chiffres</h2>
-    <div class="proof-stats">
-      <div class="proof-stat">
-        <div class="num">50+</div>
-        <div class="label">audits SEO réalisés</div>
-      </div>
-      <div class="proof-stat">
-        <div class="num">34</div>
-        <div class="label">entreprises accompagnées</div>
-      </div>
-      <div class="proof-stat">
-        <div class="num">97%</div>
-        <div class="label">de satisfaction client</div>
-      </div>
-    </div>
   </div>
 </section>
 
@@ -319,7 +288,7 @@ a:hover{opacity:.8;}
 <section class="cta-bottom">
   <div class="container">
     <h2>Prêt à corriger <span>tes erreurs SEO</span> ?</h2>
-    <p>Télécharge le guide gratuit maintenant et commence à remonter sur Google dès cette semaine.</p>
+    <p>Télécharge le guide gratuit et commence à corriger ta visibilité locale dès cette semaine.</p>
     <a href="#lead-form-card" class="btn-cta-big">Je veux le guide gratuit</a>
   </div>
 </section>
@@ -327,7 +296,7 @@ a:hover{opacity:.8;}
 <!-- FOOTER -->
 <footer class="footer">
   <div class="footer-cal"><a href="https://cal.com/cc-developpement/audit-gratuit" class="btn-cal--outline" data-cal-link="cc-developpement/audit-gratuit" data-cal-config='{"layout":"modal"}'>Réserve ton audit gratuit (30 min)</a></div>
-  CC Développement · Cyril Canon · SIREN : 444 114 011 · 27 Rue Basse, 34300 Agde<br>© 2026 · Tous droits réservés · <a href="/mentions-legales" style="color:var(--gray-dim);text-decoration:none;">Mentions légales</a> · <a href="/rgpd-confidentialite" style="color:var(--gray-dim);text-decoration:none;">Politique de confidentialité</a> · <a href="#" data-cookie-preferences class="footer-cookie-link" style="color:var(--gray-dim);text-decoration:none;">Gérer mes préférences cookies</a>
+  CC Développement · Cyril Canon · SIREN : 444 114 011 · 27 Rue Basse, 34300 Agde · <a href="tel:+33620262153" style="color:var(--gray-dim);text-decoration:none;">06 20 26 21 53</a><br>© 2026 · Tous droits réservés · <a href="/a-propos" style="color:var(--gray-dim);text-decoration:none;">À propos</a> · <a href="/mentions-legales" style="color:var(--gray-dim);text-decoration:none;">Mentions légales</a> · <a href="/rgpd-confidentialite" style="color:var(--gray-dim);text-decoration:none;">Politique de confidentialité</a> · <a href="#" data-cookie-preferences class="footer-cookie-link" style="color:var(--gray-dim);text-decoration:none;">Gérer mes préférences cookies</a>
 </footer>
 
 <!-- FORM LOGIC : Soumission au formulaire Brevo (pas d'API key côté client) -->

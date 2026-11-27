@@ -24,6 +24,17 @@ const PAGES = [
   { file: "guide-tarifs.html",                                     url: "/guide-tarifs",                                                priority: 0.7,  changefreq: "monthly" },
   { file: "mentions-legales.html",                                 url: "/mentions-legales",                                            priority: 0.3,  changefreq: "yearly"  },
   { file: "rgpd-confidentialite.html",                             url: "/rgpd-confidentialite",                                        priority: 0.3,  changefreq: "yearly"  },
+  { file: "a-propos.html",                                                 url: "/a-propos",                                                   priority: 0.8, changefreq: "monthly" },
+  { file: "automatisation-agde.html",                                      url: "/automatisation-agde",                                        priority: 0.9, changefreq: "monthly" },
+  { file: "assist-pro-business.html",                                      url: "/assist-pro-business",                                        priority: 0.85, changefreq: "monthly" },
+  { file: "blog/seo-ia-chatgpt-perplexity-google-ai-2026.html",            url: "/blog/seo-ia-chatgpt-perplexity-google-ai-2026",              priority: 0.8, changefreq: "monthly" },
+  { file: "developpeur-web-sete.html",                                     url: "/developpeur-web-sete",                                       priority: 0.8, changefreq: "monthly" },
+  { file: "developpeur-web-marseillan.html",                               url: "/developpeur-web-marseillan",                                 priority: 0.8, changefreq: "monthly" },
+  { file: "developpeur-web-meze.html",                                     url: "/developpeur-web-meze",                                       priority: 0.8, changefreq: "monthly" },
+  { file: "developpeur-web-pezenas.html",                                  url: "/developpeur-web-pezenas",                                    priority: 0.8, changefreq: "monthly" },
+  { file: "developpeur-web-vias.html",                                     url: "/developpeur-web-vias",                                       priority: 0.8, changefreq: "monthly" },
+  { file: "developpeur-web-beziers.html",                                  url: "/developpeur-web-beziers",                                    priority: 0.8, changefreq: "monthly" },
+  { file: "developpeur-web-montpellier.html",                              url: "/developpeur-web-montpellier",                                priority: 0.8, changefreq: "monthly" },
 ];
 
 function lastmod(filePath) {
