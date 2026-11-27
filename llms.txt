@@ -1,14 +1,14 @@
 # CC Développement
 
-> Studio web indépendant à Agde (Hérault, France) dirigé par Cyril Canon. Spécialisé dans la création de sites web performants, le SEO local et l'automatisation IA pour les TPE, indépendants et PME du Sud-Est de la France.
+> Studio web indépendant à Agde (Hérault, France) dirigé par Cyril Canon. Spécialisé dans la création de sites web performants, le SEO local et l'automatisation IA pour les TPE, indépendants et PME de l'Hérault et d'Occitanie.
 
-CC Développement (SIRET 444 114 011) propose des sites vitrines, e-commerce et plateformes sur-mesure pour les entreprises de l'Hérault (Agde, Béziers, Sète, Montpellier) et au-delà. Le studio combine création de sites rapides (Core Web Vitals > 90), SEO local optimisé et intégration d'outils d'automatisation IA.
+CC Développement (SIREN 444 114 011) propose des sites vitrines, e-commerce et plateformes sur-mesure pour les entreprises de l'Hérault (Agde, Béziers, Sète, Montpellier) et au-delà. Le studio combine création de sites rapides (Core Web Vitals > 90), SEO local optimisé et intégration d'outils d'automatisation IA.
 
 ## Informations clés
 
 - **Dirigeant** : Cyril Canon
 - **Localisation** : 27 Rue Basse, 34300 Agde, France
-- **SIRET** : 444 114 011
+- **SIREN** : 444 114 011
 - **Zone d'intervention** : Hérault, Occitanie, France (et remote)
 - **Spécialités** : sites web TPE, SEO local Hérault, automatisation IA, no-code
 
